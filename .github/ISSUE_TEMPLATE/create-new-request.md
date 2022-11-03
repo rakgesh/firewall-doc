@@ -1,7 +1,7 @@
 ---
 name: Create new request
 about: Suggest a new class or controller that has to be created
-title: ''
+title: Create class ...
 labels: create new
 assignees: ''
 
