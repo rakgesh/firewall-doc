@@ -22,7 +22,6 @@ public class HostGroupObject {
     private String name;
     @NonNull
     private String description;
-    @NonNull
     private String[] membersId;
 
 }

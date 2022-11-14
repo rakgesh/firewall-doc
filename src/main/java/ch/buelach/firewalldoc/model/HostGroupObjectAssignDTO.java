@@ -5,9 +5,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Getter
-public class HostGroupObjectCreateDTO {
-
-    private String name;
-    private String description;
-    
+public class HostGroupObjectAssignDTO {
+    private String hgoId;
+    private String[] hoIds;
 }

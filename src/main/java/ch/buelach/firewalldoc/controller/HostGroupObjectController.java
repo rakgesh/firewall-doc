@@ -26,7 +26,7 @@ public class HostGroupObjectController {
     @PostMapping("")
     public ResponseEntity<HostGroupObject> createHostGroupObject(
             @RequestBody HostGroupObjectCreateDTO hgoDTO) {
-                HostGroupObject hgoDAO = new HostGroupObject(hgoDTO.getName(), hgoDTO.getDescription(), hgoDTO.getMembersId());
+                HostGroupObject hgoDAO = new HostGroupObject(hgoDTO.getName(), hgoDTO.getDescription());
                 HostGroupObject hgo = hostGroupObjectRepository.save(hgoDAO);
         return new ResponseEntity<>(hgo, HttpStatus.CREATED);
     }
