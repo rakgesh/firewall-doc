@@ -9,5 +9,4 @@ public class NetworkGroupObjectCreateDTO {
 
     private String name;
     private String description;
-    private String[] membersId;
 }

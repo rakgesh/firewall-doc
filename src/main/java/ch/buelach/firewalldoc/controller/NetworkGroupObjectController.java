@@ -27,8 +27,7 @@ public class NetworkGroupObjectController {
     @PostMapping("")
     public ResponseEntity<NetworkGroupObject> createNetworkGroupObject(
             @RequestBody NetworkGroupObjectCreateDTO ngoDTO) {
-        NetworkGroupObject ngoDAO = new NetworkGroupObject(ngoDTO.getName(), ngoDTO.getDescription(),
-                ngoDTO.getMembersId());
+        NetworkGroupObject ngoDAO = new NetworkGroupObject(ngoDTO.getName(), ngoDTO.getDescription());
         NetworkGroupObject ngo = networkGroupObjectRepository.save(ngoDAO);
         return new ResponseEntity<>(ngo, HttpStatus.CREATED);
     }
