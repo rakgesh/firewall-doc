@@ -22,8 +22,7 @@ public class HostGroupObjectService {
     public Optional<HostGroupObject> assignHoToHgroupO(String hgoID, List<String> hoIds) {
 
         if (hostGroupObjectRepository.findById(hgoID).isPresent()) {
-            Optional<HostGroupObject> hgoToAssign = hostGroupObjectRepository.findById(hgoID);
-            HostGroupObject hostGroupObject = hgoToAssign.get();
+            HostGroupObject hostGroupObject = hostGroupObjectRepository.findById(hgoID).get();
             List<String> hoPresent = hoIds.stream().filter(x -> hostObjectRepository.findById(x).isPresent())
                     .collect(Collectors.toList());
             if (hostGroupObject.getMembersId() != null) {
