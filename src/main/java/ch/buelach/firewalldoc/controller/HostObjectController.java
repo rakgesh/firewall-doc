@@ -26,7 +26,7 @@ public class HostObjectController {
     @PostMapping("")
     public ResponseEntity<HostObject> createHostObject(
             @RequestBody HostObjectCreateDTO hoDTO) {
-                HostObject hoDAO = new HostObject(hoDTO.getName(), hoDTO.getName(), hoDTO.getDescription());
+                HostObject hoDAO = new HostObject(hoDTO.getName(), hoDTO.getIp(), hoDTO.getDescription());
                 HostObject ho = hostObjectRepository.save(hoDAO);
         return new ResponseEntity<>(ho, HttpStatus.CREATED);
     }
