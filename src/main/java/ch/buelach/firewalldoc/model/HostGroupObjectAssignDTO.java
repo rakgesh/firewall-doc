@@ -1,5 +1,7 @@
 package ch.buelach.firewalldoc.model;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -7,5 +9,5 @@ import lombok.NoArgsConstructor;
 @Getter
 public class HostGroupObjectAssignDTO {
     private String hgoId;
-    private String[] hoIds;
+    private List<String> hoIds;
 }

@@ -21,9 +21,9 @@ public class ServiceController {
     @Autowired
     HostGroupObjectService hostGroupObjectService;
 
-    @PostMapping("hostObjectsToHostGroupObject")
-    public ResponseEntity<HostGroupObject> assignHostObjectsToHostGroupObject(@RequestBody HostGroupObjectAssignDTO assignDTO) {
-        Optional<HostGroupObject> optHostGroupObject = hostGroupObjectService.assignHostObjectsToHostGroupObject(assignDTO.getHgoId(), assignDTO.getHoIds());
+    @PostMapping("HoToHGroupo")
+    public ResponseEntity<HostGroupObject> assignHoToHgroupO(@RequestBody HostGroupObjectAssignDTO assignDTO) {
+        Optional<HostGroupObject> optHostGroupObject = hostGroupObjectService.assignHoToHgroupO(assignDTO.getHgoId(), assignDTO.getHoIds());
         return optHostGroupObject.isPresent() ? new ResponseEntity<>(optHostGroupObject.get(), HttpStatus.OK) : new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
     

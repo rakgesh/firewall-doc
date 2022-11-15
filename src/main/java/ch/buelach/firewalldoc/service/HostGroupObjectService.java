@@ -1,6 +1,8 @@
 package ch.buelach.firewalldoc.service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,24 +19,23 @@ public class HostGroupObjectService {
     @Autowired
     HostObjectRepository hostObjectRepository;
 
-    public Optional<HostGroupObject> assignHostObjectsToHostGroupObject(String hgoID, String[] hoIds) {
-        
-        int count = 0;
+    public Optional<HostGroupObject> assignHoToHgroupO(String hgoID, List<String> hoIds) {
 
-        for (int i = 0; i < hoIds.length; i++) {
-            if (hostObjectRepository.findById(hoIds[i]).isPresent()) {
-                count++;
+        if (hostGroupObjectRepository.findById(hgoID).isPresent()) {
+            Optional<HostGroupObject> hgoToAssign = hostGroupObjectRepository.findById(hgoID);
+            HostGroupObject hostGroupObject = hgoToAssign.get();
+            List<String> hoPresent = hoIds.stream().filter(x -> hostObjectRepository.findById(x).isPresent())
+                    .collect(Collectors.toList());
+            if (hostGroupObject.getMembersId() != null) {
+                List<String> hoNew = hoPresent.stream().filter(x -> !hostGroupObject.getMembersId().contains(x))
+                        .collect(Collectors.toList());
+                hostGroupObject.getMembersId().addAll(hoNew);
+            } else {
+                hostGroupObject.setMembersId(hoPresent);
             }
-                Optional<HostGroupObject> hostGroupObjectToAssign = hostGroupObjectRepository.findById(hgoID);
-                if (hostGroupObjectToAssign.isPresent()) {
-                    HostGroupObject hgo = hostGroupObjectToAssign.get();
-                    if (count == (hoIds.length-1)) {
-                        hgo.setMembersId(hoIds);
-                        hostGroupObjectRepository.save(hgo);
-                        return Optional.of(hgo);
-                    }
-                }   
-            }
-            return Optional.empty();
+            hostGroupObjectRepository.save(hostGroupObject);
+            return Optional.of(hostGroupObject);
         }
+        return Optional.empty();
     }
+}
