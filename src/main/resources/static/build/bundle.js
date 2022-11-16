@@ -1716,39 +1716,35 @@ var app = (function () {
     const file$3 = "src\\pages\\Home.svelte";
 
     function create_fragment$3(ctx) {
-    	let body;
     	let h1;
     	let t1;
     	let h4;
 
     	const block = {
     		c: function create() {
-    			body = element("body");
     			h1 = element("h1");
     			h1.textContent = "Das isch blöd platziert";
     			t1 = space();
     			h4 = element("h4");
     			h4.textContent = "Host Object kann man testen";
-    			add_location(h1, file$3, 1, 0, 55);
-    			add_location(h4, file$3, 2, 0, 89);
-    			set_style(body, "margin-top", "15px");
-    			set_style(body, "margin-left", "-250px");
-    			add_location(body, file$3, 0, 0, 0);
+    			add_location(h1, file$3, 0, 0, 0);
+    			add_location(h4, file$3, 1, 0, 34);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, body, anchor);
-    			append_dev(body, h1);
-    			append_dev(body, t1);
-    			append_dev(body, h4);
+    			insert_dev(target, h1, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, h4, anchor);
     		},
     		p: noop$1,
     		i: noop$1,
     		o: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(body);
+    			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(h4);
     		}
     	};
 
@@ -5262,6 +5258,7 @@ var app = (function () {
     const file = "src\\App.svelte";
 
     function create_fragment(ctx) {
+    	let div5;
     	let div4;
     	let div3;
     	let div0;
@@ -5274,12 +5271,12 @@ var app = (function () {
     	let t2;
     	let div2;
     	let t3;
-    	let div7;
+    	let div8;
     	let nav;
     	let button;
     	let span;
     	let t4;
-    	let div5;
+    	let div6;
     	let ul;
     	let li0;
     	let a0;
@@ -5305,13 +5302,14 @@ var app = (function () {
     	let li7;
     	let a7;
     	let t20;
-    	let div6;
+    	let div7;
     	let router;
     	let current;
     	router = new Router({ props: { routes }, $$inline: true });
 
     	const block = {
     		c: function create() {
+    			div5 = element("div");
     			div4 = element("div");
     			div3 = element("div");
     			div0 = element("div");
@@ -5324,12 +5322,12 @@ var app = (function () {
     			t2 = space();
     			div2 = element("div");
     			t3 = space();
-    			div7 = element("div");
+    			div8 = element("div");
     			nav = element("nav");
     			button = element("button");
     			span = element("span");
     			t4 = space();
-    			div5 = element("div");
+    			div6 = element("div");
     			ul = element("ul");
     			li0 = element("li");
     			a0 = element("a");
@@ -5337,7 +5335,7 @@ var app = (function () {
     			t6 = space();
     			li1 = element("li");
     			a1 = element("a");
-    			a1.textContent = "Firewall Rules";
+    			a1.textContent = "Firewall-Rules";
     			t8 = space();
     			li2 = element("li");
     			a2 = element("a");
@@ -5345,47 +5343,50 @@ var app = (function () {
     			t10 = space();
     			li3 = element("li");
     			a3 = element("a");
-    			a3.textContent = "Network Objects";
+    			a3.textContent = "Network-Objects";
     			t12 = space();
     			li4 = element("li");
     			a4 = element("a");
-    			a4.textContent = "Network Group Objects";
+    			a4.textContent = "Network-Group-Objects";
     			t14 = space();
     			li5 = element("li");
     			a5 = element("a");
-    			a5.textContent = "Host Objects";
+    			a5.textContent = "Host-Objects";
     			t16 = space();
     			li6 = element("li");
     			a6 = element("a");
-    			a6.textContent = "Host Group Objects";
+    			a6.textContent = "Host-Group-Objects";
     			t18 = space();
     			li7 = element("li");
     			a7 = element("a");
-    			a7.textContent = "Use Cases";
+    			a7.textContent = "Use-Cases";
     			t20 = space();
-    			div6 = element("div");
+    			div7 = element("div");
     			create_component(router.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = "https://www.buelach.ch/fileadmin/cd/Images/logo_stadtbuelach.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Stadt Bülach Logo");
     			set_style(img, "height", "50px");
     			set_style(img, "width", "231px");
-    			add_location(img, file, 7, 21, 228);
+    			add_location(img, file, 8, 21, 303);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file, 7, 4, 211);
-    			add_location(center, file, 12, 52, 434);
+    			add_location(div0, file, 8, 4, 286);
+    			add_location(center, file, 13, 52, 514);
     			set_style(h1, "font-weight", "bold");
-    			add_location(h1, file, 12, 21, 403);
+    			add_location(h1, file, 13, 21, 483);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file, 12, 4, 386);
+    			add_location(div1, file, 13, 4, 466);
     			attr_dev(div2, "class", "col");
-    			add_location(div2, file, 13, 1, 488);
+    			add_location(div2, file, 14, 1, 569);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file, 6, 0, 189);
-    			set_style(div4, "margin-top", "15px");
-    			set_style(div4, "margin-bottom", "15px");
-    			add_location(div4, file, 5, 0, 136);
+    			add_location(div3, file, 7, 0, 263);
+    			set_style(div4, "padding-top", "15px");
+    			set_style(div4, "padding-bottom", "15px");
+    			add_location(div4, file, 6, 0, 207);
+    			attr_dev(div5, "class", "container-fluid");
+    			set_style(div5, "background-color", "#ececee");
+    			add_location(div5, file, 5, 0, 141);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file, 30, 6, 898);
+    			add_location(span, file, 33, 6, 1019);
     			attr_dev(button, "class", "navbar-toggler");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
@@ -5393,69 +5394,69 @@ var app = (function () {
     			attr_dev(button, "aria-controls", "navbarNav");
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-label", "Toggle navigation");
-    			add_location(button, file, 21, 4, 666);
+    			add_location(button, file, 24, 4, 778);
     			attr_dev(a0, "class", "nav-link");
     			attr_dev(a0, "href", "#/home");
-    			add_location(a0, file, 35, 3, 1072);
+    			add_location(a0, file, 38, 3, 1204);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file, 34, 2, 1047);
+    			add_location(li0, file, 37, 8, 1178);
     			attr_dev(a1, "class", "nav-link");
     			attr_dev(a1, "aria-current", "page");
     			attr_dev(a1, "href", "#/firewall-rules");
-    			add_location(a1, file, 38, 10, 1165);
+    			add_location(a1, file, 41, 10, 1298);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file, 37, 8, 1133);
+    			add_location(li1, file, 40, 6, 1265);
     			attr_dev(a2, "class", "nav-link");
     			attr_dev(a2, "href", "#/contexts");
-    			add_location(a2, file, 43, 10, 1326);
+    			add_location(a2, file, 46, 10, 1464);
     			attr_dev(li2, "class", "nav-item");
-    			add_location(li2, file, 42, 8, 1294);
+    			add_location(li2, file, 45, 8, 1431);
     			attr_dev(a3, "class", "nav-link");
     			attr_dev(a3, "href", "#/network-Objects");
-    			add_location(a3, file, 47, 10, 1434);
+    			add_location(a3, file, 50, 10, 1576);
     			attr_dev(li3, "class", "nav-item");
-    			add_location(li3, file, 46, 8, 1402);
+    			add_location(li3, file, 49, 8, 1543);
     			attr_dev(a4, "class", "nav-link");
     			attr_dev(a4, "href", "#/network-Group-Objects");
-    			add_location(a4, file, 50, 10, 1547);
+    			add_location(a4, file, 53, 10, 1688);
     			attr_dev(li4, "class", "nav-item");
-    			add_location(li4, file, 49, 8, 1515);
+    			add_location(li4, file, 52, 4, 1655);
     			attr_dev(a5, "class", "nav-link");
     			attr_dev(a5, "href", "#/host-Objects");
-    			add_location(a5, file, 54, 10, 1725);
+    			add_location(a5, file, 57, 10, 1836);
     			attr_dev(li5, "class", "nav-item");
-    			set_style(li5, "background-color", "wheat");
-    			add_location(li5, file, 53, 8, 1659);
+    			add_location(li5, file, 56, 8, 1803);
     			attr_dev(a6, "class", "nav-link");
     			attr_dev(a6, "href", "#/host-Group-Objects");
-    			add_location(a6, file, 57, 10, 1838);
+    			add_location(a6, file, 60, 10, 1952);
     			attr_dev(li6, "class", "nav-item");
-    			add_location(li6, file, 56, 8, 1806);
+    			add_location(li6, file, 59, 8, 1919);
     			attr_dev(a7, "class", "nav-link");
     			attr_dev(a7, "href", "#/use-cases");
-    			add_location(a7, file, 60, 10, 1963);
+    			add_location(a7, file, 63, 10, 2080);
     			attr_dev(li7, "class", "nav-item");
-    			add_location(li7, file, 59, 8, 1931);
+    			add_location(li7, file, 62, 8, 2047);
     			attr_dev(ul, "class", "navbar-nav mx-auto");
-    			add_location(ul, file, 33, 6, 1013);
-    			attr_dev(div5, "class", "collapse navbar-collapse");
-    			attr_dev(div5, "id", "navbarNav");
-    			add_location(div5, file, 32, 4, 953);
-    			attr_dev(nav, "class", "navbar navbar-expand-lg ");
+    			add_location(ul, file, 36, 6, 1137);
+    			attr_dev(div6, "class", "collapse navbar-collapse");
+    			attr_dev(div6, "id", "navbarNav");
+    			add_location(div6, file, 35, 4, 1076);
+    			attr_dev(nav, "class", "navbar navbar-expand-lg");
     			set_style(nav, "background-color", "#969FAA");
-    			set_style(nav, "font-weight", "bold");
     			set_style(nav, "color", "black");
-    			add_location(nav, file, 17, 2, 544);
-    			attr_dev(div6, "class", "container");
-    			add_location(div6, file, 66, 2, 2065);
-    			attr_dev(div7, "id", "app");
-    			add_location(div7, file, 16, 0, 527);
+    			set_style(nav, "height", "38pt");
+    			add_location(nav, file, 20, 2, 658);
+    			attr_dev(div7, "class", "container");
+    			add_location(div7, file, 69, 2, 2188);
+    			attr_dev(div8, "id", "app");
+    			add_location(div8, file, 19, 0, 640);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div4);
     			append_dev(div4, div3);
     			append_dev(div3, div0);
     			append_dev(div0, img);
@@ -5466,13 +5467,13 @@ var app = (function () {
     			append_dev(div3, t2);
     			append_dev(div3, div2);
     			insert_dev(target, t3, anchor);
-    			insert_dev(target, div7, anchor);
-    			append_dev(div7, nav);
+    			insert_dev(target, div8, anchor);
+    			append_dev(div8, nav);
     			append_dev(nav, button);
     			append_dev(button, span);
     			append_dev(nav, t4);
-    			append_dev(nav, div5);
-    			append_dev(div5, ul);
+    			append_dev(nav, div6);
+    			append_dev(div6, ul);
     			append_dev(ul, li0);
     			append_dev(li0, a0);
     			append_dev(ul, t6);
@@ -5496,9 +5497,9 @@ var app = (function () {
     			append_dev(ul, t18);
     			append_dev(ul, li7);
     			append_dev(li7, a7);
-    			append_dev(div7, t20);
-    			append_dev(div7, div6);
-    			mount_component(router, div6, null);
+    			append_dev(div8, t20);
+    			append_dev(div8, div7);
+    			mount_component(router, div7, null);
     			current = true;
     		},
     		p: noop$1,
@@ -5512,9 +5513,9 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div5);
     			if (detaching) detach_dev(t3);
-    			if (detaching) detach_dev(div7);
+    			if (detaching) detach_dev(div8);
     			destroy_component(router);
     		}
     	};

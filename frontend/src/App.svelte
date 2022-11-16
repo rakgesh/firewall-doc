@@ -3,7 +3,8 @@
   import Home from "./pages/Home.svelte";
   import routes from "./routes";
 </script>
-<div style="margin-top: 15px; margin-bottom: 15px;">
+<div class="container-fluid" style="background-color: #ececee;">
+<div style="padding-top: 15px; padding-bottom: 15px;">
 <div class="row">
     <div class="col"><img
 		src="https://www.buelach.ch/fileadmin/cd/Images/logo_stadtbuelach.png"
@@ -14,10 +15,12 @@
 	<div class="col"></div> 
 </div>
 </div>
+</div>
+<!-- Navigation -->
 <div id="app">
   <nav
-    class="navbar navbar-expand-lg "
-    style="background-color: #969FAA; font-weight: bold; color: black;"
+    class="navbar navbar-expand-lg"
+    style="background-color: #969FAA; color: black; height: 38pt;"
   >
     <button
       class="navbar-toggler"
@@ -32,12 +35,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
-		<li class="nav-item">
+        <li class="nav-item">
 			<a class="nav-link" href="#/home">Home</a>
 		  </li>
-        <li class="nav-item">
+      <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#/firewall-rules"
-            >Firewall Rules</a
+            >Firewall-Rules</a
           >
         </li>
         <li class="nav-item">
@@ -45,20 +48,20 @@
         </li>
 		
         <li class="nav-item">
-          <a class="nav-link" href="#/network-Objects">Network Objects</a>
+          <a class="nav-link" href="#/network-Objects">Network-Objects</a>
 		</li>
-        <li class="nav-item">
+    <li class="nav-item">
           <a class="nav-link" href="#/network-Group-Objects"
-            >Network Group Objects</a>
-        </li>
-        <li class="nav-item"  style="background-color: wheat;">
-          <a class="nav-link" href="#/host-Objects">Host Objects</a>
+            >Network-Group-Objects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/host-Group-Objects">Host Group Objects</a>
+          <a class="nav-link" href="#/host-Objects">Host-Objects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/use-cases">Use Cases</a>
+          <a class="nav-link" href="#/host-Group-Objects">Host-Group-Objects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/use-cases">Use-Cases</a>
         </li>
       </ul>
     </div>

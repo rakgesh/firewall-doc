@@ -7,9 +7,16 @@ body {
     font-size: 16pt;
 }
 .navbar .navbar-nav .nav-link:hover{
-    color: #b80a0a;
+    color: #000;
 }
 
-nav li {
-    text-align: center;
+.nav-item {
+
+    margin-right: 15px; 
+
+}
+
+.nav-item:hover {
+    background-color: #c73834;
+
 }
