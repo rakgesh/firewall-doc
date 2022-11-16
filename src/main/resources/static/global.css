@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 16pt;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #b80a0a;
+}
+
+nav li {
+    text-align: center;
+}
