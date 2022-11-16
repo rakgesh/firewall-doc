@@ -4808,7 +4808,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (101:8) {#each hostObjects as hostObject}
+    // (79:4) {#each hostObjects as hostObject}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -4836,10 +4836,10 @@ var app = (function () {
     			td2 = element("td");
     			t4 = text(t4_value);
     			t5 = space();
-    			add_location(td0, file$1, 102, 16, 2811);
-    			add_location(td1, file$1, 103, 16, 2855);
-    			add_location(td2, file$1, 104, 16, 2897);
-    			add_location(tr, file$1, 101, 12, 2789);
+    			add_location(td0, file$1, 80, 8, 1876);
+    			add_location(td1, file$1, 81, 8, 1912);
+    			add_location(td2, file$1, 82, 8, 1946);
+    			add_location(tr, file$1, 79, 6, 1862);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -4867,7 +4867,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(101:8) {#each hostObjects as hostObject}",
+    		source: "(79:4) {#each hostObjects as hostObject}",
     		ctx
     	});
 
@@ -4875,40 +4875,48 @@ var app = (function () {
     }
 
     function create_fragment$1(ctx) {
-    	let h10;
-    	let t1;
-    	let form;
-    	let div1;
-    	let div0;
-    	let label0;
-    	let t3;
-    	let input0;
-    	let t4;
     	let div4;
-    	let div2;
-    	let label1;
-    	let t6;
-    	let input1;
-    	let t7;
     	let div3;
-    	let label2;
-    	let t9;
-    	let input2;
-    	let t10;
-    	let button;
-    	let t12;
-    	let h11;
-    	let t14;
+    	let div0;
+    	let h30;
+    	let t1;
+    	let div1;
+    	let t2;
+    	let div2;
+    	let button0;
+    	let t4;
     	let table;
     	let thead;
     	let tr;
     	let th0;
-    	let t16;
+    	let t6;
     	let th1;
-    	let t18;
+    	let t8;
     	let th2;
-    	let t20;
+    	let t10;
     	let tbody;
+    	let t11;
+    	let h31;
+    	let t13;
+    	let form;
+    	let div6;
+    	let div5;
+    	let label0;
+    	let t15;
+    	let input0;
+    	let t16;
+    	let div9;
+    	let div7;
+    	let label1;
+    	let t18;
+    	let input1;
+    	let t19;
+    	let div8;
+    	let label2;
+    	let t21;
+    	let input2;
+    	let t22;
+    	let button1;
     	let mounted;
     	let dispose;
     	let each_value = /*hostObjects*/ ctx[0];
@@ -4921,175 +4929,200 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			h10 = element("h1");
-    			h10.textContent = "Create Host Object";
-    			t1 = space();
-    			form = element("form");
-    			div1 = element("div");
-    			div0 = element("div");
-    			label0 = element("label");
-    			label0.textContent = "Name";
-    			t3 = space();
-    			input0 = element("input");
-    			t4 = space();
     			div4 = element("div");
-    			div2 = element("div");
-    			label1 = element("label");
-    			label1.textContent = "IP";
-    			t6 = space();
-    			input1 = element("input");
-    			t7 = space();
     			div3 = element("div");
-    			label2 = element("label");
-    			label2.textContent = "Description";
-    			t9 = space();
-    			input2 = element("input");
-    			t10 = space();
-    			button = element("button");
-    			button.textContent = "Submit";
-    			t12 = space();
-    			h11 = element("h1");
-    			h11.textContent = "All Host Objects";
-    			t14 = space();
+    			div0 = element("div");
+    			h30 = element("h3");
+    			h30.textContent = "All Host Objects";
+    			t1 = space();
+    			div1 = element("div");
+    			t2 = space();
+    			div2 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "Add Host-Object";
+    			t4 = space();
     			table = element("table");
     			thead = element("thead");
     			tr = element("tr");
     			th0 = element("th");
     			th0.textContent = "Name";
-    			t16 = space();
+    			t6 = space();
     			th1 = element("th");
     			th1.textContent = "IP";
-    			t18 = space();
+    			t8 = space();
     			th2 = element("th");
     			th2.textContent = "Description";
-    			t20 = space();
+    			t10 = space();
     			tbody = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h10, "class", "mt-3");
-    			add_location(h10, file$1, 54, 0, 1379);
+    			t11 = space();
+    			h31 = element("h3");
+    			h31.textContent = "Create Host Object";
+    			t13 = space();
+    			form = element("form");
+    			div6 = element("div");
+    			div5 = element("div");
+    			label0 = element("label");
+    			label0.textContent = "Name";
+    			t15 = space();
+    			input0 = element("input");
+    			t16 = space();
+    			div9 = element("div");
+    			div7 = element("div");
+    			label1 = element("label");
+    			label1.textContent = "IP";
+    			t18 = space();
+    			input1 = element("input");
+    			t19 = space();
+    			div8 = element("div");
+    			label2 = element("label");
+    			label2.textContent = "Description";
+    			t21 = space();
+    			input2 = element("input");
+    			t22 = space();
+    			button1 = element("button");
+    			button1.textContent = "Submit";
+    			set_style(h30, "margin-top", "15px");
+    			set_style(h30, "font-weight", "bold");
+    			add_location(h30, file$1, 56, 6, 1240);
+    			attr_dev(div0, "class", "col");
+    			add_location(div0, file$1, 55, 4, 1215);
+    			attr_dev(div1, "class", "col");
+    			add_location(div1, file$1, 58, 4, 1328);
+    			attr_dev(button0, "type", "button");
+    			attr_dev(button0, "class", "btn");
+    			set_style(button0, "margin-top", "9px");
+    			set_style(button0, "background-color", "#c73834");
+    			set_style(button0, "color", "#fff");
+    			add_location(button0, file$1, 60, 6, 1410);
+    			attr_dev(div2, "class", "col");
+    			set_style(div2, "text-align-last", "right");
+    			add_location(div2, file$1, 59, 4, 1353);
+    			attr_dev(div3, "class", "row");
+    			add_location(div3, file$1, 54, 2, 1192);
+    			attr_dev(div4, "class", "container-fluid");
+    			add_location(div4, file$1, 53, 0, 1159);
+    			attr_dev(th0, "scope", "col");
+    			add_location(th0, file$1, 72, 6, 1685);
+    			attr_dev(th1, "scope", "col");
+    			add_location(th1, file$1, 73, 6, 1718);
+    			attr_dev(th2, "scope", "col");
+    			add_location(th2, file$1, 74, 6, 1749);
+    			add_location(tr, file$1, 71, 4, 1673);
+    			add_location(thead, file$1, 70, 2, 1660);
+    			add_location(tbody, file$1, 77, 2, 1808);
+    			attr_dev(table, "class", "table table-striped table-hover");
+    			add_location(table, file$1, 69, 0, 1609);
+    			attr_dev(h31, "class", "mt-3");
+    			add_location(h31, file$1, 88, 0, 2031);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$1, 58, 12, 1509);
+    			add_location(label0, file$1, 92, 6, 2149);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$1, 59, 12, 1572);
-    			attr_dev(div0, "class", "col");
-    			add_location(div0, file$1, 57, 8, 1478);
-    			attr_dev(div1, "class", "row mb-3");
-    			add_location(div1, file$1, 56, 4, 1446);
+    			add_location(input0, file$1, 93, 6, 2206);
+    			attr_dev(div5, "class", "col");
+    			add_location(div5, file$1, 91, 4, 2124);
+    			attr_dev(div6, "class", "row mb-3");
+    			add_location(div6, file$1, 90, 2, 2096);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$1, 69, 12, 1831);
+    			add_location(label1, file$1, 103, 6, 2409);
     			attr_dev(input1, "class", "form-select");
     			attr_dev(input1, "id", "ip");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$1, 70, 12, 1890);
-    			attr_dev(div2, "class", "col");
-    			add_location(div2, file$1, 68, 8, 1800);
+    			add_location(input1, file$1, 104, 6, 2462);
+    			attr_dev(div7, "class", "col");
+    			add_location(div7, file$1, 102, 4, 2384);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "description");
-    			add_location(label2, file$1, 78, 12, 2104);
+    			add_location(label2, file$1, 112, 6, 2624);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "description");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$1, 79, 12, 2181);
-    			attr_dev(div3, "class", "col");
-    			add_location(div3, file$1, 77, 8, 2073);
-    			attr_dev(div4, "class", "row mb-3");
-    			add_location(div4, file$1, 67, 4, 1768);
-    			attr_dev(button, "type", "button");
-    			attr_dev(button, "class", "btn btn-primary");
-    			add_location(button, file$1, 87, 4, 2391);
+    			add_location(input2, file$1, 113, 6, 2695);
+    			attr_dev(div8, "class", "col");
+    			add_location(div8, file$1, 111, 4, 2599);
+    			attr_dev(div9, "class", "row mb-3");
+    			add_location(div9, file$1, 101, 2, 2356);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "class", "btn btn-primary");
+    			add_location(button1, file$1, 121, 2, 2859);
     			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$1, 55, 0, 1421);
-    			add_location(h11, file$1, 90, 0, 2493);
-    			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$1, 94, 12, 2582);
-    			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$1, 95, 12, 2621);
-    			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$1, 96, 12, 2658);
-    			add_location(tr, file$1, 93, 8, 2564);
-    			add_location(thead, file$1, 92, 4, 2547);
-    			add_location(tbody, file$1, 99, 4, 2725);
-    			attr_dev(table, "class", "table");
-    			add_location(table, file$1, 91, 0, 2520);
+    			add_location(form, file$1, 89, 0, 2073);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h10, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, form, anchor);
-    			append_dev(form, div1);
-    			append_dev(div1, div0);
-    			append_dev(div0, label0);
-    			append_dev(div0, t3);
-    			append_dev(div0, input0);
-    			set_input_value(input0, /*hostObject*/ ctx[1].name);
-    			append_dev(form, t4);
-    			append_dev(form, div4);
-    			append_dev(div4, div2);
-    			append_dev(div2, label1);
-    			append_dev(div2, t6);
-    			append_dev(div2, input1);
-    			set_input_value(input1, /*hostObject*/ ctx[1].ip);
-    			append_dev(div4, t7);
+    			insert_dev(target, div4, anchor);
     			append_dev(div4, div3);
-    			append_dev(div3, label2);
-    			append_dev(div3, t9);
-    			append_dev(div3, input2);
-    			set_input_value(input2, /*hostObject*/ ctx[1].description);
-    			append_dev(form, t10);
-    			append_dev(form, button);
-    			insert_dev(target, t12, anchor);
-    			insert_dev(target, h11, anchor);
-    			insert_dev(target, t14, anchor);
+    			append_dev(div3, div0);
+    			append_dev(div0, h30);
+    			append_dev(div3, t1);
+    			append_dev(div3, div1);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
+    			append_dev(div2, button0);
+    			insert_dev(target, t4, anchor);
     			insert_dev(target, table, anchor);
     			append_dev(table, thead);
     			append_dev(thead, tr);
     			append_dev(tr, th0);
-    			append_dev(tr, t16);
+    			append_dev(tr, t6);
     			append_dev(tr, th1);
-    			append_dev(tr, t18);
+    			append_dev(tr, t8);
     			append_dev(tr, th2);
-    			append_dev(table, t20);
+    			append_dev(table, t10);
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
+    			insert_dev(target, t11, anchor);
+    			insert_dev(target, h31, anchor);
+    			insert_dev(target, t13, anchor);
+    			insert_dev(target, form, anchor);
+    			append_dev(form, div6);
+    			append_dev(div6, div5);
+    			append_dev(div5, label0);
+    			append_dev(div5, t15);
+    			append_dev(div5, input0);
+    			set_input_value(input0, /*hostObject*/ ctx[1].name);
+    			append_dev(form, t16);
+    			append_dev(form, div9);
+    			append_dev(div9, div7);
+    			append_dev(div7, label1);
+    			append_dev(div7, t18);
+    			append_dev(div7, input1);
+    			set_input_value(input1, /*hostObject*/ ctx[1].ip);
+    			append_dev(div9, t19);
+    			append_dev(div9, div8);
+    			append_dev(div8, label2);
+    			append_dev(div8, t21);
+    			append_dev(div8, input2);
+    			set_input_value(input2, /*hostObject*/ ctx[1].description);
+    			append_dev(form, t22);
+    			append_dev(form, button1);
+
     			if (!mounted) {
     				dispose = [
     					listen_dev(input0, "input", /*input0_input_handler*/ ctx[3]),
     					listen_dev(input1, "input", /*input1_input_handler*/ ctx[4]),
     					listen_dev(input2, "input", /*input2_input_handler*/ ctx[5]),
-    					listen_dev(button, "click", /*createHostObject*/ ctx[2], false, false, false)
+    					listen_dev(button1, "click", /*createHostObject*/ ctx[2], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*hostObject*/ 2 && input0.value !== /*hostObject*/ ctx[1].name) {
-    				set_input_value(input0, /*hostObject*/ ctx[1].name);
-    			}
-
-    			if (dirty & /*hostObject*/ 2 && input1.value !== /*hostObject*/ ctx[1].ip) {
-    				set_input_value(input1, /*hostObject*/ ctx[1].ip);
-    			}
-
-    			if (dirty & /*hostObject*/ 2 && input2.value !== /*hostObject*/ ctx[1].description) {
-    				set_input_value(input2, /*hostObject*/ ctx[1].description);
-    			}
-
     			if (dirty & /*hostObjects*/ 1) {
     				each_value = /*hostObjects*/ ctx[0];
     				validate_each_argument(each_value);
@@ -5113,18 +5146,30 @@ var app = (function () {
 
     				each_blocks.length = each_value.length;
     			}
+
+    			if (dirty & /*hostObject*/ 2 && input0.value !== /*hostObject*/ ctx[1].name) {
+    				set_input_value(input0, /*hostObject*/ ctx[1].name);
+    			}
+
+    			if (dirty & /*hostObject*/ 2 && input1.value !== /*hostObject*/ ctx[1].ip) {
+    				set_input_value(input1, /*hostObject*/ ctx[1].ip);
+    			}
+
+    			if (dirty & /*hostObject*/ 2 && input2.value !== /*hostObject*/ ctx[1].description) {
+    				set_input_value(input2, /*hostObject*/ ctx[1].description);
+    			}
     		},
     		i: noop$1,
     		o: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h10);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(form);
-    			if (detaching) detach_dev(t12);
-    			if (detaching) detach_dev(h11);
-    			if (detaching) detach_dev(t14);
+    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(table);
     			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(h31);
+    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(form);
     			mounted = false;
     			run_all(dispose);
     		}

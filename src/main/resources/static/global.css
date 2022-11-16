@@ -20,3 +20,10 @@ body {
     background-color: #c73834;
 
 }
+
+thead {
+    font-size: 18px;
+    background-color: #404040;
+    color: #FFF;
+    border-bottom: #c73834 solid 5px; 
+}
