@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'agfa_rotis_sans_serifregular';
 }
 
 .navbar .navbar-nav .nav-link {
@@ -26,4 +26,13 @@ thead {
     background-color: #404040;
     color: #FFF;
     border-bottom: #c73834 solid 5px; 
+}
+
+@font-face {
+    font-family: 'agfa_rotis_sans_serifregular';
+    src: url('at646_-webfont.woff2') format('woff2'),
+         url('at646_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: bold;
+
 }

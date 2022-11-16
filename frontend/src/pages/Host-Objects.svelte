@@ -61,6 +61,7 @@
       <button
         type="button"
         class="btn"
+        data-toggle="modal" data-target="#crateHO"
         style="margin-top: 9px; background-color: #c73834; color: #fff"
         >Add Host-Object</button
       >
@@ -73,6 +74,8 @@
       <th scope="col">Name</th>
       <th scope="col">IP</th>
       <th scope="col">Description</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -81,46 +84,62 @@
         <td>{hostObject.name}</td>
         <td>{hostObject.ip}</td>
         <td>{hostObject.description}</td>
+        <td>edit</td>
+        <td>delete</td>
       </tr>
     {/each}
   </tbody>
 </table>
+<p> Sortieren | Bearbeiten | Löschen | Schriftart </p>
 
-<h3 class="mt-3">Create Host Object</h3>
-<form class="mb-5">
-  <div class="row mb-3">
-    <div class="col">
-      <label class="form-label" for="name">Name</label>
-      <input
-        bind:value={hostObject.name}
-        class="form-control"
-        id="name"
-        type="text"
-      />
+<div class="modal fade" id="crateHO" tabindex="-1" role="dialog" aria-labelledby="formCreateHostObject" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="crateHostObject">Create Host-Object</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mb-5">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="name">Name</label>
+              <input
+                bind:value={hostObject.name}
+                class="form-control"
+                id="name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="ip">IP</label>
+              <input
+                bind:value={hostObject.ip}
+                class="form-control"
+                id="ip"
+                type="text"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label" for="description">Description</label>
+              <input
+                bind:value={hostObject.description}
+                class="form-control"
+                id="description"
+                type="text"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn" style="background-color: #c73834; color: #fff" on:click={createHostObject}>Create</button>
+      </div>
     </div>
   </div>
-  <div class="row mb-3">
-    <div class="col">
-      <label class="form-label" for="ip">IP</label>
-      <input
-        bind:value={hostObject.ip}
-        class="form-select"
-        id="ip"
-        type="text"
-      />
-    </div>
-    <div class="col">
-      <label class="form-label" for="description">Description</label>
-      <input
-        bind:value={hostObject.description}
-        class="form-control"
-        id="description"
-        type="text"
-      />
-    </div>
-  </div>
-  <button type="button" class="btn btn-primary" on:click={createHostObject}
-    >Submit</button
-  >
-</form>
-
+</div>

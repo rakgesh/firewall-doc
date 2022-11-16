@@ -3,6 +3,7 @@
   import Home from "./pages/Home.svelte";
   import routes from "./routes";
 </script>
+
 <div class="container-fluid" style="background-color: #ececee;">
 <div style="padding-top: 15px; padding-bottom: 15px;">
 <div class="row">
