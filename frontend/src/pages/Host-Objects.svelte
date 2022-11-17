@@ -1,6 +1,7 @@
 <script>
   import axios from "axios";
 
+
   // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
   const api_root = "http://localhost:8080";
 
@@ -49,6 +50,50 @@
         console.log(error);
       });
   }
+
+
+  
+  let sortBy = {col: "name", ascending: true};
+	
+	$: sort = (column) => {
+		
+		if (sortBy.col == column) {
+			sortBy.ascending = !sortBy.ascending
+		} else {
+			sortBy.col = column
+			sortBy.ascending = true
+		}
+		
+		// Modifier to sorting function for ascending or descending
+		let sortModifier = (sortBy.ascending) ? 1 : -1;
+		
+		let sort = (a, b) => 
+			(a[column] < b[column]) 
+			? -1 * sortModifier 
+			: (a[column] > b[column]) 
+			? 1 * sortModifier 
+			: 0;
+		
+      hostObjects = hostObjects.sort(sort);
+	}
+
+// search
+function searchName() {
+    var config = {
+      method: "get",
+      url: api_root + "/host-object/searchHostObjectName",
+      headers: {},
+    };
+
+  axios(config)
+  .then(function (response) {
+    searchName();
+  })
+  .catch(function (error) {
+        console.log(error);
+      });
+  }
+
 </script>
 
 <div class="container-fluid">
@@ -68,13 +113,14 @@
     </div>
   </div>
 </div>
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover" id="allHostObjects">
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">IP</th>
-      <th scope="col">Description</th>
-      <th scope="col"></th>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <th scope="col">Name  <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
+      <th scope="col" on:click={sort("ip")}>IP  <i class="fa fa-fw fa-sort"></i></th>
+      <th scope="col" on:click={sort("description")}>Description  <i class="fa fa-fw fa-sort"></i></th>
+      <th scope="col" ></th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -90,7 +136,7 @@
     {/each}
   </tbody>
 </table>
-<p> Sortieren | Bearbeiten | Löschen | Schriftart </p>
+<p> Bearbeiten | Löschen </p>
 
 <div class="modal fade" id="crateHO" tabindex="-1" role="dialog" aria-labelledby="formCreateHostObject" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -111,6 +157,7 @@
                 class="form-control"
                 id="name"
                 type="text"
+                placeholder="H_<ZONE>_<HOST-NAME>"
               />
             </div>
           </div>
@@ -143,3 +190,7 @@
     </div>
   </div>
 </div>
+
+<!--------------->
+
+<input type="text" id="myInput" onkeyup={searchName()} placeholder="Search for names..">

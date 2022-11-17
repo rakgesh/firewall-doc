@@ -12,7 +12,8 @@ body {
 
 .nav-item {
 
-    margin-right: 15px; 
+    margin-right: 15px;
+    font-weight: bold; 
 
 }
 
@@ -36,3 +37,5 @@ thead {
     font-style: bold;
 
 }
+
+
