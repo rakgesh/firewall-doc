@@ -1,5 +1,7 @@
 package ch.buelach.firewalldoc.model;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,5 +11,6 @@ public class HostGroupObjectCreateDTO {
 
     private String name;
     private String description;
+    private List<String> membersId;
     
 }

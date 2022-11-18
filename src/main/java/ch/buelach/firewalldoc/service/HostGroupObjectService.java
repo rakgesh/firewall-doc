@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ch.buelach.firewalldoc.model.HostGroupObject;
+import ch.buelach.firewalldoc.model.HostObject;
 import ch.buelach.firewalldoc.repository.HostGroupObjectRepository;
 import ch.buelach.firewalldoc.repository.HostObjectRepository;
 
@@ -37,4 +38,18 @@ public class HostGroupObjectService {
         }
         return Optional.empty();
     }
+
+    public Optional<List<HostObject>> getHoOfHgroup(String hgoID) {
+       /* HostGroupObject hostGroupObject = hostGroupObjectRepository.findById(hgoID).get();
+        List<HostObject> hostObjects = hostObjectRepository.findAll();
+        List<HostObject> members;
+        List<String> membersId = hostGroupObject.getMembersId();
+        for (String m : membersId) {
+         HostObject member = hostObjects.stream().filter(x -> x.getId().equals(m)).findFirst().get();
+        members.add(member);
+    }*/
+        return null;
+    
+
+}
 }
