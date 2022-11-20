@@ -17,6 +17,7 @@ import ch.buelach.firewalldoc.model.HostGroupObjectAssignDTO;
 import ch.buelach.firewalldoc.model.HostObjectsToHostGroup;
 import ch.buelach.firewalldoc.model.NetworkGroupObject;
 import ch.buelach.firewalldoc.model.NetworkGroupObjectAssignDTO;
+import ch.buelach.firewalldoc.model.NetworkObjectsToNetworkGroup;
 import ch.buelach.firewalldoc.service.HostGroupObjectService;
 import ch.buelach.firewalldoc.service.NetworkGroupObjectService;
 
@@ -46,6 +47,13 @@ public class ServiceController {
         List<HostObjectsToHostGroup> all = hostGroupObjectService.getHoOfHgroup();
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
+
+    @GetMapping("/findNo")
+    public ResponseEntity<List<NetworkObjectsToNetworkGroup>> getNoOfNgroup() {
+        List<NetworkObjectsToNetworkGroup> all = networkGroupObjectService.getNoOfNgroup();
+        return new ResponseEntity<>(all, HttpStatus.OK);
+    }
+
     }
     
 

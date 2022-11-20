@@ -6,17 +6,18 @@
  
   const api_root = "http://localhost:8080";
 //-----------------------------
+
   let hostGroupObjects = [];
   let hostGroupObject = {
     name: null,
     description: null,
-    membersId: null
+    membersId: null,
   };
 
   function getHostGroupObjects() {
     var config = {
       method: "get",
-      url: api_root + "/host-group-object",
+      url: api_root + "/api/service/findHo",
       headers: {},
     };
 
@@ -33,7 +34,7 @@
 
 //-----------------------------
 
-  function createHostGroupObject() {
+function createHostGroupObject() {
     var config = {
       method: "post",
       url: api_root + "/host-group-object",
@@ -46,43 +47,37 @@
     axios(config)
       .then(function (response) {
         alert("Host Group Object created");
-        getHostObjects();
+        getHostGroupObjects();
       })
       .catch(function (error) {
-        alert("Could not create Host Object");
+        alert("Could not create Host Group Object");
         console.log(error);
       });
   }
 
 //-----------------------------
-let hostGroupObjects1 = [];
-  let hostGroupObject1 = {
-    name: null,
-    description: null,
-    membersId: null
-  };
 
-  function getHostGroupObjects1() {
+let hostObjects = [];
+  
+  function getHostObjects() {
     var config = {
       method: "get",
-      url: api_root + "/api/service/findHo",
+      url: api_root + "/host-object",
       headers: {},
     };
 
     axios(config)
       .then(function (response) {
-        hostGroupObjects1 = response.data;
+        hostObjects = response.data;
       })
       .catch(function (error) {
-        alert("Could not get Host Group Objects");
+        alert("Could not get Host Objects");
         console.log(error);
       });
   }
-  getHostGroupObjects1();
-  
-  //-----------------------------
+  getHostObjects();
 
-
+//-----------------------------
 
   let sortBy = {col: "name", ascending: true};
 	
@@ -133,7 +128,7 @@ let hostGroupObjects1 = [];
   <thead>
     <tr>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col">Name <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
+      <th scope="col">Name <span on:click={sort("hgoName")}> <i class="fa fa-fw fa-sort"></i></span></th>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <th scope="col">Members</th>
       <th scope="col" >Description</th>
@@ -142,7 +137,7 @@ let hostGroupObjects1 = [];
     </tr>
   </thead>
   <tbody>
-    {#each hostGroupObjects1 as h1}
+    {#each hostGroupObjects as h1}
       <tr>
         <td>{h1.hgoName}</td>
         <td>
@@ -164,7 +159,7 @@ let hostGroupObjects1 = [];
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="crateHostObject">Create Host-Group-Object</h5>
+        <h5 class="modal-title" id="crateHostObject">Add Host-Group-Object</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -185,24 +180,28 @@ let hostGroupObjects1 = [];
           </div>
           <div class="row mb-3">
             <div class="col">
-              <label class="form-label" for="ip">Description</label>
+              <label class="form-label" for="description">Description</label>
               <input
                 bind:value={hostGroupObject.description}
-                class="form-control"
-                id="ip"
-                type="text"
-              />
-            </div>
-          </div>
-            <div class="row mb-3">
-            <div class="col">
-              <label class="form-label" for="description">Members</label>
-              <input
-                bind:value={hostGroupObject.membersId}
                 class="form-control"
                 id="description"
                 type="text"
               />
+            </div>
+          </div>
+          
+            <div class="row mb-3">
+            <div class="col">
+               
+              <label class="form-label" for="membersId">Members</label>
+            <select id="membersId"  type="text" class="form-control">
+              {#each hostObjects as h}
+                
+              
+              <option value="{h.id}">{h.name}</option>
+              {/each}
+            </select>
+              
             </div>
             
           </div>
@@ -210,7 +209,7 @@ let hostGroupObjects1 = [];
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn" style="background-color: #c73834; color: #fff" on:click={createHostGroupObject}>Create</button>
+        <button type="button" class="btn" style="background-color: #c73834; color: #fff" on:click={createHostGroupObject}>Add</button>
       </div>
     </div>
   </div>

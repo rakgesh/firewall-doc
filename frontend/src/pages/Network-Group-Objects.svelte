@@ -2,57 +2,83 @@
   import axios from "axios";
 
 
-  // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
-  const api_root = "http://localhost:8080";
 
-  let hostObjects = [];
-  let hostObject = {
+ 
+  const api_root = "http://localhost:8080";
+//-----------------------------
+
+  let networkGroupObjects = [];
+  let networkGroupObject = {
     name: null,
-    ip: null,
     description: null,
+    membersId: null,
   };
 
-  function getHostObjects() {
+  function getNetworkGroupObjects() {
     var config = {
       method: "get",
-      url: api_root + "/host-object",
+      url: api_root + "/api/service/findNo",
       headers: {},
     };
 
     axios(config)
       .then(function (response) {
-        hostObjects = response.data;
+        networkGroupObjects = response.data;
       })
       .catch(function (error) {
-        alert("Could not get Host Objects");
+        alert("Could not get Network Group Objects");
         console.log(error);
       });
   }
-  getHostObjects();
+  getNetworkGroupObjects();
 
-  function createHostObject() {
+//-----------------------------
+
+function createNetworkGroupObject() {
     var config = {
       method: "post",
-      url: api_root + "/host-object",
+      url: api_root + "/network-group-object",
       headers: {
         "Content-Type": "application/json",
       },
-      data: hostObject,
+      data: networkGroupObject,
     };
 
     axios(config)
       .then(function (response) {
-        alert("Host Object created");
-        getHostObjects();
+        alert("Network Group Object created");
+        getNetworkGroupObjects();
       })
       .catch(function (error) {
-        alert("Could not create Host Object");
+        alert("Could not create Network Group Object");
         console.log(error);
       });
   }
 
+//-----------------------------
 
+let networkObjects = [];
   
+  function getNetworkObjects() {
+    var config = {
+      method: "get",
+      url: api_root + "/network-object",
+      headers: {},
+    };
+
+    axios(config)
+      .then(function (response) {
+        networkObjects = response.data;
+      })
+      .catch(function (error) {
+        alert("Could not get Network Objects");
+        console.log(error);
+      });
+  }
+  getNetworkObjects();
+
+//-----------------------------
+
   let sortBy = {col: "name", ascending: true};
 	
 	$: sort = (column) => {
@@ -74,17 +100,17 @@
 			? 1 * sortModifier 
 			: 0;
 		
-      hostObjects = hostObjects.sort(sort);
+      networkGroupObjects = networkGroupObjects.sort(sort);
 	}
 
-
+// search
 
 </script>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h3 style="margin-top: 15px; font-weight: bold;">All Host Objects</h3>
+      <h3 style="margin-top: 15px; font-weight: bold;">All Network Group Objects</h3>
     </div>
     <div class="col" />
     <div class="col" style="text-align-last: right;">
@@ -93,7 +119,7 @@
         class="btn"
         data-toggle="modal" data-target="#crateHO"
         style="margin-top: 9px; background-color: #c73834; color: #fff"
-        >Add Host-Object</button
+        >Add Network-Group-Object</button
       >
     </div>
   </div>
@@ -102,23 +128,29 @@
   <thead>
     <tr>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col">Name  <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
-      <th scope="col" on:click={sort("ip")}>IP  <i class="fa fa-fw fa-sort"></i></th>
-      <th scope="col" on:click={sort("description")}>Description  <i class="fa fa-fw fa-sort"></i></th>
+      <th scope="col">Name <span on:click={sort("ngoName")}> <i class="fa fa-fw fa-sort"></i></span></th>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <th scope="col">Members</th>
+      <th scope="col" >Description</th>
       <th scope="col" ></th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    {#each hostObjects as hostObject}
+    {#each networkGroupObjects as n1}
       <tr>
-        <td>{hostObject.name}</td>
-        <td>{hostObject.ip}</td>
-        <td>{hostObject.description}</td>
+        <td>{n1.ngoName}</td>
+        <td>
+        {#each n1.members as member}
+        <li class="list-group-item">{member.name}</li>
+        <li class="list-group-item" style="font-style: italic;">{member.ip}</li>  
+        {/each}
+        </td>
+        <td>{n1.ngoDescription}</td>
         <td>edit</td>
         <td>delete</td>
       </tr>
-    {/each}
+      {/each}
   </tbody>
 </table>
 <p> Bearbeiten | Löschen </p>
@@ -127,7 +159,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="crateHostObject">Add Host-Object</h5>
+        <h5 class="modal-title" id="crateHostObject">Add Host-Group-Object</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -138,39 +170,46 @@
             <div class="col">
               <label class="form-label" for="name">Name</label>
               <input
-                bind:value={hostObject.name}
+                bind:value={networkGroupObject.name}
                 class="form-control"
                 id="name"
                 type="text"
-                placeholder="H_<ZONE>_<HOST-NAME>"
+                placeholder="HG_<ZONE>_<HOST-ART>"
               />
             </div>
           </div>
           <div class="row mb-3">
             <div class="col">
-              <label class="form-label" for="ip">IP</label>
-              <input
-                bind:value={hostObject.ip}
-                class="form-control"
-                id="ip"
-                type="text"
-              />
-            </div>
-            <div class="col">
               <label class="form-label" for="description">Description</label>
               <input
-                bind:value={hostObject.description}
+                bind:value={networkGroupObject.description}
                 class="form-control"
                 id="description"
                 type="text"
               />
             </div>
           </div>
+          
+            <div class="row mb-3">
+            <div class="col">
+               
+              <label class="form-label" for="membersId">Members</label>
+            <select id="membersId"  type="text" class="form-control">
+              {#each networkObjects as n}
+                
+              
+              <option value="{n.id}">{n.name}</option>
+              {/each}
+            </select>
+              
+            </div>
+            
+          </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn" style="background-color: #c73834; color: #fff" on:click={createHostObject}>Add</button>
+        <button type="button" class="btn" style="background-color: #c73834; color: #fff" on:click={createNetworkGroupObject}>Add</button>
       </div>
     </div>
   </div>
