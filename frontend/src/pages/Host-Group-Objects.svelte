@@ -3,9 +3,9 @@
 
 
 
-  // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
+ 
   const api_root = "http://localhost:8080";
-
+//-----------------------------
   let hostGroupObjects = [];
   let hostGroupObject = {
     name: null,
@@ -31,6 +31,8 @@
   }
   getHostGroupObjects();
 
+//-----------------------------
+
   function createHostGroupObject() {
     var config = {
       method: "post",
@@ -52,32 +54,36 @@
       });
   }
 
-
-  let hostObjects =[];
-  let hostObject = {
-    id: null,
+//-----------------------------
+let hostGroupObjects1 = [];
+  let hostGroupObject1 = {
     name: null,
-    ip: null
+    description: null,
+    membersId: null
   };
 
-  function getHostObjects() {
+  function getHostGroupObjects1() {
     var config = {
       method: "get",
-      url: api_root + "/host-object",
+      url: api_root + "/api/service/findHo",
       headers: {},
     };
 
     axios(config)
       .then(function (response) {
-        hostObjects = response.data;
+        hostGroupObjects1 = response.data;
       })
       .catch(function (error) {
-        alert("Could not get Host Objects");
+        alert("Could not get Host Group Objects");
         console.log(error);
       });
   }
-  getHostObjects();
+  getHostGroupObjects1();
   
+  //-----------------------------
+
+
+
   let sortBy = {col: "name", ascending: true};
 	
 	$: sort = (column) => {
@@ -103,21 +109,6 @@
 	}
 
 // search
-function searchName() {
-    var config = {
-      method: "get",
-      url: api_root + "/host-object/searchHostObjectName",
-      headers: {},
-    };
-
-  axios(config)
-  .then(function (response) {
-    searchName();
-  })
-  .catch(function (error) {
-        console.log(error);
-      });
-  }
 
 </script>
 
@@ -142,7 +133,7 @@ function searchName() {
   <thead>
     <tr>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col">Name  <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
+      <th scope="col">Name <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <th scope="col">Members</th>
       <th scope="col" >Description</th>
@@ -151,15 +142,20 @@ function searchName() {
     </tr>
   </thead>
   <tbody>
-    {#each hostGroupObjects as hostGroupObject}
+    {#each hostGroupObjects1 as h1}
       <tr>
-        <td>{hostGroupObject.name}</td>
-        <td>{hostGroupObject.membersId}</td>
-        <td>{hostGroupObject.description}</td>
+        <td>{h1.hgoName}</td>
+        <td>
+        {#each h1.members as member}
+        <li class="list-group-item">{member.name}</li>
+        <li class="list-group-item" style="font-style: italic;">{member.ip}</li>  
+        {/each}
+        </td>
+        <td>{h1.hgoDescription}</td>
         <td>edit</td>
         <td>delete</td>
       </tr>
-    {/each}
+      {/each}
   </tbody>
 </table>
 <p> Bearbeiten | Löschen </p>
@@ -202,7 +198,7 @@ function searchName() {
             <div class="col">
               <label class="form-label" for="description">Members</label>
               <input
-                bind:value={hostObject.id}
+                bind:value={hostGroupObject.membersId}
                 class="form-control"
                 id="description"
                 type="text"
