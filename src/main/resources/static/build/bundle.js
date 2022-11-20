@@ -5242,7 +5242,7 @@ var app = (function () {
     			add_location(button2, file$4, 210, 8, 5685);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
-    			set_style(button3, "background-color", "#c73834");
+    			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			add_location(button3, file$4, 211, 8, 5778);
     			attr_dev(div13, "class", "modal-footer");
@@ -5961,7 +5961,7 @@ var app = (function () {
     			add_location(button2, file$3, 171, 8, 4757);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
-    			set_style(button3, "background-color", "#c73834");
+    			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			add_location(button3, file$3, 172, 8, 4850);
     			attr_dev(div12, "class", "modal-footer");
@@ -6705,7 +6705,7 @@ var app = (function () {
     			add_location(button2, file$2, 188, 8, 5483);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
-    			set_style(button3, "background-color", "#c73834");
+    			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			add_location(button3, file$2, 189, 8, 5576);
     			attr_dev(div15, "class", "modal-footer");
@@ -7589,7 +7589,7 @@ var app = (function () {
     			add_location(button2, file$1, 210, 8, 5763);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
-    			set_style(button3, "background-color", "#c73834");
+    			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			add_location(button3, file$1, 211, 8, 5856);
     			attr_dev(div13, "class", "modal-footer");

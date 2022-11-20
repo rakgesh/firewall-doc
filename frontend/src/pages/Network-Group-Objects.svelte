@@ -209,7 +209,7 @@ let networkObjects = [];
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn" style="background-color: #c73834; color: #fff" on:click={createNetworkGroupObject}>Add</button>
+        <button type="button" class="btn" style="background-color: #008000; color: #fff" on:click={createNetworkGroupObject}>Add</button>
       </div>
     </div>
   </div>
