@@ -14,6 +14,10 @@
     membersId: null,
   };
 
+  function addMembersId() {
+    networkGroupObject.membersId.push
+  }
+
   function getNetworkGroupObjects() {
     var config = {
       method: "get",
@@ -143,7 +147,7 @@ let networkObjects = [];
         <td>
         {#each n1.members as member}
         <li class="list-group-item">{member.name}</li>
-        <li class="list-group-item" style="font-style: italic;">{member.ip}</li>  
+        <li class="list-group-item" style="font-style: italic;">{member.ip}{member.subnet}</li>  
         {/each}
         </td>
         <td>{n1.ngoDescription}</td>
@@ -194,7 +198,7 @@ let networkObjects = [];
             <div class="col">
                
               <label class="form-label" for="membersId">Members</label>
-            <select id="membersId"  type="text" class="form-control">
+            <select id="membersId"  type="text" class="form-control" bind:value={networkGroupObject.membersId}>
               {#each networkObjects as n}
                 
               

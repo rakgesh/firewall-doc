@@ -62,6 +62,9 @@
           <a class="nav-link" href="#/host-Group-Objects">Host-Group-Objects</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#/service-Group-Objects">Service-Group-Objects</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#/use-cases">Use-Cases</a>
         </li>
       </ul>

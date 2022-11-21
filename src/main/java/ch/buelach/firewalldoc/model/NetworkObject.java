@@ -26,5 +26,6 @@ public class NetworkObject {
     private String subnet;
     @NonNull
     private String description;
-    
+
+
 }
