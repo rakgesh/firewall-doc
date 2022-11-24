@@ -45,7 +45,7 @@
           getUseCases();
         })
         .catch(function (error) {
-          alert("Could not create USe Case");
+          alert("Could not create Use Case");
           console.log(error);
         });
     }
