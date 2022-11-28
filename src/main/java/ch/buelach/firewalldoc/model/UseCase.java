@@ -1,5 +1,7 @@
 package ch.buelach.firewalldoc.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -22,5 +24,7 @@ public class UseCase {
     private String name;
     @NonNull
     private String description;
+    @NonNull
+    private List<String> tags;
     
 }

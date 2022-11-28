@@ -815,7 +815,7 @@ var app = (function () {
     const { Error: Error_1, Object: Object_1, console: console_1$6 } = globals;
 
     // (267:0) {:else}
-    function create_else_block(ctx) {
+    function create_else_block$1(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -897,7 +897,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block$1.name,
     		type: "else",
     		source: "(267:0) {:else}",
     		ctx
@@ -907,7 +907,7 @@ var app = (function () {
     }
 
     // (260:0) {#if componentParams}
-    function create_if_block(ctx) {
+    function create_if_block$1(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -992,7 +992,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(260:0) {#if componentParams}",
     		ctx
@@ -1006,7 +1006,7 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block, create_else_block];
+    	const if_block_creators = [create_if_block$1, create_else_block$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -4810,27 +4810,127 @@ var app = (function () {
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[2] = list[i];
+    	child_ctx[3] = list[i];
     	return child_ctx;
     }
 
-    // (114:6) {#each contexts as context}
+    // (152:4) {:else}
+    function create_else_block(ctx) {
+    	let div;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "No data available";
+    			add_location(div, file$6, 152, 6, 3680);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    		},
+    		p: noop$1,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(152:4) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (138:4) {#if visibleData.length}
+    function create_if_block(ctx) {
+    	let tbody;
+    	let each_value = /*visibleData*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			tbody = element("tbody");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			add_location(tbody, file$6, 139, 4, 3373);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tbody, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*visibleData*/ 1) {
+    				each_value = /*visibleData*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tbody);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(138:4) {#if visibleData.length}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (141:6) {#each visibleData as context}
     function create_each_block$5(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*context*/ ctx[2].name + "";
+    	let t0_value = /*context*/ ctx[3].name + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*context*/ ctx[2].ip + "";
+    	let t2_value = /*context*/ ctx[3].ip + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*context*/ ctx[2].subnet + "";
+    	let t4_value = /*context*/ ctx[3].subnet + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*context*/ ctx[2].description + "";
+    	let t6_value = /*context*/ ctx[3].description + "";
     	let t6;
     	let t7;
     	let td4;
@@ -4859,13 +4959,13 @@ var app = (function () {
     			td5 = element("td");
     			td5.textContent = "delete";
     			t11 = space();
-    			add_location(td0, file$6, 115, 10, 3018);
-    			add_location(td1, file$6, 116, 10, 3053);
-    			add_location(td2, file$6, 117, 10, 3086);
-    			add_location(td3, file$6, 118, 10, 3123);
-    			add_location(td4, file$6, 119, 10, 3165);
-    			add_location(td5, file$6, 120, 10, 3190);
-    			add_location(tr, file$6, 114, 8, 3002);
+    			add_location(td0, file$6, 142, 8, 3440);
+    			add_location(td1, file$6, 143, 8, 3473);
+    			add_location(td2, file$6, 144, 8, 3504);
+    			add_location(td3, file$6, 145, 8, 3539);
+    			add_location(td4, file$6, 146, 8, 3579);
+    			add_location(td5, file$6, 147, 8, 3602);
+    			add_location(tr, file$6, 141, 6, 3426);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -4887,10 +4987,10 @@ var app = (function () {
     			append_dev(tr, t11);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*contexts*/ 1 && t0_value !== (t0_value = /*context*/ ctx[2].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*contexts*/ 1 && t2_value !== (t2_value = /*context*/ ctx[2].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*contexts*/ 1 && t4_value !== (t4_value = /*context*/ ctx[2].subnet + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*contexts*/ 1 && t6_value !== (t6_value = /*context*/ ctx[2].description + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*visibleData*/ 1 && t0_value !== (t0_value = /*context*/ ctx[3].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*visibleData*/ 1 && t2_value !== (t2_value = /*context*/ ctx[3].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*visibleData*/ 1 && t4_value !== (t4_value = /*context*/ ctx[3].subnet + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*visibleData*/ 1 && t6_value !== (t6_value = /*context*/ ctx[3].description + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -4901,7 +5001,7 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(114:6) {#each contexts as context}",
+    		source: "(141:6) {#each visibleData as context}",
     		ctx
     	});
 
@@ -4909,7 +5009,7 @@ var app = (function () {
     }
 
     function create_fragment$7(ctx) {
-    	let div4;
+    	let div9;
     	let div3;
     	let div0;
     	let h3;
@@ -4919,82 +5019,92 @@ var app = (function () {
     	let div2;
     	let button0;
     	let t4;
+    	let div8;
+    	let div4;
+    	let input0;
+    	let t5;
+    	let div5;
+    	let t6;
+    	let div6;
+    	let t7;
+    	let div7;
+    	let t8;
     	let table;
     	let thead;
     	let tr;
     	let th0;
-    	let t5;
+    	let t9;
     	let span0;
     	let i;
-    	let t6;
-    	let th1;
-    	let t8;
-    	let th2;
     	let t10;
-    	let th3;
+    	let th1;
     	let t12;
-    	let th4;
-    	let t13;
-    	let th5;
+    	let th2;
     	let t14;
-    	let tbody;
-    	let t15;
-    	let div18;
-    	let div17;
-    	let div16;
-    	let div5;
-    	let h5;
+    	let th3;
+    	let t16;
+    	let th4;
     	let t17;
+    	let th5;
+    	let t18;
+    	let t19;
+    	let div23;
+    	let div22;
+    	let div21;
+    	let div10;
+    	let h5;
+    	let t21;
     	let button1;
     	let span1;
-    	let t19;
-    	let div14;
+    	let t23;
+    	let div19;
     	let form;
-    	let div7;
-    	let div6;
-    	let label0;
-    	let t21;
-    	let input0;
-    	let t22;
-    	let div9;
-    	let div8;
-    	let label1;
-    	let t24;
-    	let input1;
-    	let t25;
-    	let div11;
-    	let div10;
-    	let label2;
-    	let t27;
-    	let input2;
-    	let t28;
-    	let div13;
     	let div12;
-    	let label3;
-    	let t30;
-    	let input3;
-    	let t31;
+    	let div11;
+    	let label0;
+    	let t25;
+    	let input1;
+    	let t26;
+    	let div14;
+    	let div13;
+    	let label1;
+    	let t28;
+    	let input2;
+    	let t29;
+    	let div16;
     	let div15;
+    	let label2;
+    	let t31;
+    	let input3;
+    	let t32;
+    	let div18;
+    	let div17;
+    	let label3;
+    	let t34;
+    	let input4;
+    	let t35;
+    	let div20;
     	let button2;
-    	let t33;
+    	let t37;
     	let button3;
     	let mounted;
     	let dispose;
-    	let each_value = /*contexts*/ ctx[0];
-    	validate_each_argument(each_value);
-    	let each_blocks = [];
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	function select_block_type(ctx, dirty) {
+    		if (/*visibleData*/ ctx[0].length) return create_if_block;
+    		return create_else_block;
     	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
-    			div4 = element("div");
+    			div9 = element("div");
     			div3 = element("div");
     			div0 = element("div");
     			h3 = element("h3");
-    			h3.textContent = "All Contexts";
+    			h3.textContent = "Contexts";
     			t1 = space();
     			div1 = element("div");
     			t2 = space();
@@ -5002,215 +5112,235 @@ var app = (function () {
     			button0 = element("button");
     			button0.textContent = "Add Context";
     			t4 = space();
+    			div8 = element("div");
+    			div4 = element("div");
+    			input0 = element("input");
+    			t5 = space();
+    			div5 = element("div");
+    			t6 = space();
+    			div6 = element("div");
+    			t7 = space();
+    			div7 = element("div");
+    			t8 = space();
     			table = element("table");
     			thead = element("thead");
     			tr = element("tr");
     			th0 = element("th");
-    			t5 = text("Name");
+    			t9 = text("Name ");
     			span0 = element("span");
     			i = element("i");
-    			t6 = space();
+    			t10 = space();
     			th1 = element("th");
     			th1.textContent = "IP";
-    			t8 = space();
+    			t12 = space();
     			th2 = element("th");
     			th2.textContent = "Subnet";
-    			t10 = space();
+    			t14 = space();
     			th3 = element("th");
     			th3.textContent = "Description";
-    			t12 = space();
+    			t16 = space();
     			th4 = element("th");
-    			t13 = space();
-    			th5 = element("th");
-    			t14 = space();
-    			tbody = element("tbody");
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			t15 = space();
-    			div18 = element("div");
-    			div17 = element("div");
-    			div16 = element("div");
-    			div5 = element("div");
-    			h5 = element("h5");
-    			h5.textContent = "Add Use-Case";
     			t17 = space();
+    			th5 = element("th");
+    			t18 = space();
+    			if_block.c();
+    			t19 = space();
+    			div23 = element("div");
+    			div22 = element("div");
+    			div21 = element("div");
+    			div10 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Add Context";
+    			t21 = space();
     			button1 = element("button");
     			span1 = element("span");
     			span1.textContent = "×";
-    			t19 = space();
-    			div14 = element("div");
+    			t23 = space();
+    			div19 = element("div");
     			form = element("form");
-    			div7 = element("div");
-    			div6 = element("div");
+    			div12 = element("div");
+    			div11 = element("div");
     			label0 = element("label");
     			label0.textContent = "Name";
-    			t21 = space();
-    			input0 = element("input");
-    			t22 = space();
-    			div9 = element("div");
-    			div8 = element("div");
+    			t25 = space();
+    			input1 = element("input");
+    			t26 = space();
+    			div14 = element("div");
+    			div13 = element("div");
     			label1 = element("label");
     			label1.textContent = "IP";
-    			t24 = space();
-    			input1 = element("input");
-    			t25 = space();
-    			div11 = element("div");
-    			div10 = element("div");
+    			t28 = space();
+    			input2 = element("input");
+    			t29 = space();
+    			div16 = element("div");
+    			div15 = element("div");
     			label2 = element("label");
     			label2.textContent = "Subnet";
-    			t27 = space();
-    			input2 = element("input");
-    			t28 = space();
-    			div13 = element("div");
-    			div12 = element("div");
+    			t31 = space();
+    			input3 = element("input");
+    			t32 = space();
+    			div18 = element("div");
+    			div17 = element("div");
     			label3 = element("label");
     			label3.textContent = "Description";
-    			t30 = space();
-    			input3 = element("input");
-    			t31 = space();
-    			div15 = element("div");
+    			t34 = space();
+    			input4 = element("input");
+    			t35 = space();
+    			div20 = element("div");
     			button2 = element("button");
     			button2.textContent = "Close";
-    			t33 = space();
+    			t37 = space();
     			button3 = element("button");
     			button3.textContent = "Add";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$6, 86, 8, 2041);
+    			add_location(h3, file$6, 96, 8, 2106);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$6, 85, 6, 2014);
+    			add_location(div0, file$6, 95, 6, 2079);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$6, 88, 6, 2129);
+    			add_location(div1, file$6, 98, 6, 2190);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
     			attr_dev(button0, "data-target", "#createC");
-    			set_style(button0, "margin-top", "9px");
+    			set_style(button0, "margin-top", "19px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$6, 90, 8, 2215);
+    			add_location(button0, file$6, 100, 8, 2276);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$6, 89, 6, 2156);
+    			add_location(div2, file$6, 99, 6, 2217);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$6, 84, 4, 1989);
-    			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$6, 83, 0, 1954);
+    			add_location(div3, file$6, 94, 4, 2054);
+    			attr_dev(input0, "class", "form-control");
+    			attr_dev(input0, "id", "search");
+    			attr_dev(input0, "type", "text");
+    			set_style(input0, "margin-bottom", "10px");
+    			attr_dev(input0, "placeholder", "search...");
+    			add_location(input0, file$6, 111, 4, 2588);
+    			attr_dev(div4, "class", "col");
+    			add_location(div4, file$6, 110, 6, 2565);
+    			attr_dev(div5, "class", "col");
+    			add_location(div5, file$6, 120, 2, 2780);
+    			attr_dev(div6, "class", "col");
+    			add_location(div6, file$6, 121, 2, 2802);
+    			attr_dev(div7, "class", "col");
+    			add_location(div7, file$6, 122, 2, 2824);
+    			attr_dev(div8, "class", "row g-3");
+    			add_location(div8, file$6, 109, 4, 2536);
+    			attr_dev(div9, "class", "container-fluid");
+    			add_location(div9, file$6, 93, 0, 2019);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$6, 104, 59, 2698);
-    			add_location(span0, file$6, 104, 28, 2667);
+    			add_location(i, file$6, 129, 60, 3083);
+    			add_location(span0, file$6, 129, 29, 3052);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$6, 104, 8, 2647);
+    			add_location(th0, file$6, 129, 8, 3031);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$6, 105, 8, 2752);
+    			add_location(th1, file$6, 130, 8, 3137);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$6, 106, 8, 2785);
+    			add_location(th2, file$6, 131, 8, 3170);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$6, 107, 8, 2822);
+    			add_location(th3, file$6, 132, 8, 3207);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$6, 108, 8, 2864);
+    			add_location(th4, file$6, 133, 8, 3249);
     			attr_dev(th5, "scope", "col");
-    			add_location(th5, file$6, 109, 8, 2896);
-    			add_location(tr, file$6, 102, 6, 2567);
-    			add_location(thead, file$6, 101, 4, 2552);
-    			add_location(tbody, file$6, 112, 4, 2950);
+    			add_location(th5, file$6, 134, 8, 3281);
+    			add_location(tr, file$6, 127, 6, 2951);
+    			add_location(thead, file$6, 126, 4, 2936);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allContexts");
-    			add_location(table, file$6, 100, 2, 2482);
+    			add_location(table, file$6, 125, 2, 2866);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "crateContext");
-    			add_location(h5, file$6, 131, 10, 3544);
+    			add_location(h5, file$6, 161, 10, 4014);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$6, 133, 12, 3705);
+    			add_location(span1, file$6, 163, 12, 4174);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$6, 132, 10, 3615);
-    			attr_dev(div5, "class", "modal-header");
-    			add_location(div5, file$6, 130, 8, 3506);
+    			add_location(button1, file$6, 162, 10, 4084);
+    			attr_dev(div10, "class", "modal-header");
+    			add_location(div10, file$6, 160, 8, 3976);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$6, 140, 16, 3933);
-    			attr_dev(input0, "class", "form-control");
-    			attr_dev(input0, "id", "name");
-    			attr_dev(input0, "type", "text");
-    			add_location(input0, file$6, 141, 16, 4000);
-    			attr_dev(div6, "class", "col");
-    			add_location(div6, file$6, 139, 14, 3898);
-    			attr_dev(div7, "class", "row mb-3");
-    			add_location(div7, file$6, 138, 12, 3860);
+    			add_location(label0, file$6, 170, 16, 4402);
+    			attr_dev(input1, "class", "form-control");
+    			attr_dev(input1, "id", "name");
+    			attr_dev(input1, "type", "text");
+    			add_location(input1, file$6, 171, 16, 4469);
+    			attr_dev(div11, "class", "col");
+    			add_location(div11, file$6, 169, 14, 4367);
+    			attr_dev(div12, "class", "row mb-3");
+    			add_location(div12, file$6, 168, 12, 4329);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$6, 151, 18, 4304);
-    			attr_dev(input1, "class", "form-control");
-    			attr_dev(input1, "id", "description");
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$6, 152, 18, 4369);
-    			attr_dev(div8, "class", "col");
-    			add_location(div8, file$6, 150, 16, 4267);
-    			attr_dev(div9, "class", "row mb-3");
-    			add_location(div9, file$6, 149, 12, 4227);
-    			attr_dev(label2, "class", "form-label");
-    			attr_dev(label2, "for", "subnet");
-    			add_location(label2, file$6, 162, 18, 4694);
+    			add_location(label1, file$6, 181, 18, 4777);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "description");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$6, 163, 18, 4767);
-    			attr_dev(div10, "class", "col");
-    			add_location(div10, file$6, 161, 16, 4657);
-    			attr_dev(div11, "class", "row mb-3");
-    			add_location(div11, file$6, 160, 14, 4617);
-    			attr_dev(label3, "class", "form-label");
-    			attr_dev(label3, "for", "description");
-    			add_location(label3, file$6, 173, 16, 5090);
+    			add_location(input2, file$6, 182, 18, 4842);
+    			attr_dev(div13, "class", "col");
+    			add_location(div13, file$6, 180, 16, 4740);
+    			attr_dev(div14, "class", "row mb-3");
+    			add_location(div14, file$6, 179, 14, 4700);
+    			attr_dev(label2, "class", "form-label");
+    			attr_dev(label2, "for", "subnet");
+    			add_location(label2, file$6, 192, 18, 5163);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "description");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$6, 174, 16, 5171);
-    			attr_dev(div12, "class", "col");
-    			add_location(div12, file$6, 172, 14, 5055);
-    			attr_dev(div13, "class", "row mb-3");
-    			add_location(div13, file$6, 171, 12, 5017);
+    			add_location(input3, file$6, 193, 18, 5236);
+    			attr_dev(div15, "class", "col");
+    			add_location(div15, file$6, 191, 16, 5126);
+    			attr_dev(div16, "class", "row mb-3");
+    			add_location(div16, file$6, 190, 14, 5086);
+    			attr_dev(label3, "class", "form-label");
+    			attr_dev(label3, "for", "description");
+    			add_location(label3, file$6, 203, 16, 5569);
+    			attr_dev(input4, "class", "form-control");
+    			attr_dev(input4, "id", "description");
+    			attr_dev(input4, "type", "text");
+    			add_location(input4, file$6, 204, 16, 5650);
+    			attr_dev(div17, "class", "col");
+    			add_location(div17, file$6, 202, 14, 5534);
+    			attr_dev(div18, "class", "row mb-3");
+    			add_location(div18, file$6, 201, 16, 5496);
     			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$6, 137, 10, 3827);
-    			attr_dev(div14, "class", "modal-body");
-    			add_location(div14, file$6, 136, 8, 3791);
+    			add_location(form, file$6, 167, 10, 4296);
+    			attr_dev(div19, "class", "modal-body");
+    			add_location(div19, file$6, 166, 8, 4260);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$6, 185, 10, 5481);
+    			add_location(button2, file$6, 215, 10, 5952);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$6, 186, 10, 5576);
-    			attr_dev(div15, "class", "modal-footer");
-    			add_location(div15, file$6, 184, 8, 5443);
-    			attr_dev(div16, "class", "modal-content");
-    			add_location(div16, file$6, 129, 6, 3469);
-    			attr_dev(div17, "class", "modal-dialog modal-dialog-centered");
-    			attr_dev(div17, "role", "document");
-    			add_location(div17, file$6, 128, 4, 3397);
-    			attr_dev(div18, "class", "modal fade");
-    			attr_dev(div18, "id", "createC");
-    			attr_dev(div18, "tabindex", "-1");
-    			attr_dev(div18, "role", "dialog");
-    			attr_dev(div18, "aria-labelledby", "formCreateContext");
-    			attr_dev(div18, "aria-hidden", "true");
-    			add_location(div18, file$6, 127, 2, 3271);
+    			add_location(button3, file$6, 216, 10, 6047);
+    			attr_dev(div20, "class", "modal-footer");
+    			add_location(div20, file$6, 214, 8, 5914);
+    			attr_dev(div21, "class", "modal-content");
+    			add_location(div21, file$6, 159, 6, 3939);
+    			attr_dev(div22, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div22, "role", "document");
+    			add_location(div22, file$6, 158, 4, 3867);
+    			attr_dev(div23, "class", "modal fade");
+    			attr_dev(div23, "id", "createC");
+    			attr_dev(div23, "tabindex", "-1");
+    			attr_dev(div23, "role", "dialog");
+    			attr_dev(div23, "aria-labelledby", "formCreateContext");
+    			attr_dev(div23, "aria-hidden", "true");
+    			add_location(div23, file$6, 157, 2, 3741);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div3);
+    			insert_dev(target, div9, anchor);
+    			append_dev(div9, div3);
     			append_dev(div3, div0);
     			append_dev(div0, h3);
     			append_dev(div3, t1);
@@ -5218,93 +5348,100 @@ var app = (function () {
     			append_dev(div3, t2);
     			append_dev(div3, div2);
     			append_dev(div2, button0);
-    			insert_dev(target, t4, anchor);
+    			append_dev(div9, t4);
+    			append_dev(div9, div8);
+    			append_dev(div8, div4);
+    			append_dev(div4, input0);
+    			set_input_value(input0, /*searchText*/ ctx[1]);
+    			append_dev(div8, t5);
+    			append_dev(div8, div5);
+    			append_dev(div8, t6);
+    			append_dev(div8, div6);
+    			append_dev(div8, t7);
+    			append_dev(div8, div7);
+    			insert_dev(target, t8, anchor);
     			insert_dev(target, table, anchor);
     			append_dev(table, thead);
     			append_dev(thead, tr);
     			append_dev(tr, th0);
-    			append_dev(th0, t5);
+    			append_dev(th0, t9);
     			append_dev(th0, span0);
     			append_dev(span0, i);
-    			append_dev(tr, t6);
-    			append_dev(tr, th1);
-    			append_dev(tr, t8);
-    			append_dev(tr, th2);
     			append_dev(tr, t10);
-    			append_dev(tr, th3);
+    			append_dev(tr, th1);
     			append_dev(tr, t12);
+    			append_dev(tr, th2);
+    			append_dev(tr, t14);
+    			append_dev(tr, th3);
+    			append_dev(tr, t16);
     			append_dev(tr, th4);
-    			append_dev(tr, t13);
+    			append_dev(tr, t17);
     			append_dev(tr, th5);
-    			append_dev(table, t14);
-    			append_dev(table, tbody);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(tbody, null);
-    			}
-
-    			insert_dev(target, t15, anchor);
-    			insert_dev(target, div18, anchor);
-    			append_dev(div18, div17);
-    			append_dev(div17, div16);
-    			append_dev(div16, div5);
-    			append_dev(div5, h5);
-    			append_dev(div5, t17);
-    			append_dev(div5, button1);
+    			append_dev(table, t18);
+    			if_block.m(table, null);
+    			insert_dev(target, t19, anchor);
+    			insert_dev(target, div23, anchor);
+    			append_dev(div23, div22);
+    			append_dev(div22, div21);
+    			append_dev(div21, div10);
+    			append_dev(div10, h5);
+    			append_dev(div10, t21);
+    			append_dev(div10, button1);
     			append_dev(button1, span1);
-    			append_dev(div16, t19);
-    			append_dev(div16, div14);
-    			append_dev(div14, form);
-    			append_dev(form, div7);
-    			append_dev(div7, div6);
-    			append_dev(div6, label0);
-    			append_dev(div6, t21);
-    			append_dev(div6, input0);
-    			set_input_value(input0, /*context*/ ctx[2].name);
-    			append_dev(form, t22);
-    			append_dev(form, div9);
-    			append_dev(div9, div8);
-    			append_dev(div8, label1);
-    			append_dev(div8, t24);
-    			append_dev(div8, input1);
-    			set_input_value(input1, /*context*/ ctx[2].ip);
-    			append_dev(form, t25);
-    			append_dev(form, div11);
-    			append_dev(div11, div10);
-    			append_dev(div10, label2);
-    			append_dev(div10, t27);
-    			append_dev(div10, input2);
-    			set_input_value(input2, /*context*/ ctx[2].subnet);
-    			append_dev(form, t28);
-    			append_dev(form, div13);
-    			append_dev(div13, div12);
-    			append_dev(div12, label3);
-    			append_dev(div12, t30);
-    			append_dev(div12, input3);
-    			set_input_value(input3, /*context*/ ctx[2].description);
-    			append_dev(div16, t31);
+    			append_dev(div21, t23);
+    			append_dev(div21, div19);
+    			append_dev(div19, form);
+    			append_dev(form, div12);
+    			append_dev(div12, div11);
+    			append_dev(div11, label0);
+    			append_dev(div11, t25);
+    			append_dev(div11, input1);
+    			set_input_value(input1, /*context*/ ctx[3].name);
+    			append_dev(form, t26);
+    			append_dev(form, div14);
+    			append_dev(div14, div13);
+    			append_dev(div13, label1);
+    			append_dev(div13, t28);
+    			append_dev(div13, input2);
+    			set_input_value(input2, /*context*/ ctx[3].ip);
+    			append_dev(form, t29);
+    			append_dev(form, div16);
     			append_dev(div16, div15);
-    			append_dev(div15, button2);
-    			append_dev(div15, t33);
-    			append_dev(div15, button3);
+    			append_dev(div15, label2);
+    			append_dev(div15, t31);
+    			append_dev(div15, input3);
+    			set_input_value(input3, /*context*/ ctx[3].subnet);
+    			append_dev(form, t32);
+    			append_dev(form, div18);
+    			append_dev(div18, div17);
+    			append_dev(div17, label3);
+    			append_dev(div17, t34);
+    			append_dev(div17, input4);
+    			set_input_value(input4, /*context*/ ctx[3].description);
+    			append_dev(div21, t35);
+    			append_dev(div21, div20);
+    			append_dev(div20, button2);
+    			append_dev(div20, t37);
+    			append_dev(div20, button3);
 
     			if (!mounted) {
     				dispose = [
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[7]),
     					listen_dev(
     						span0,
     						"click",
     						function () {
-    							if (is_function(/*sort*/ ctx[1]("name"))) /*sort*/ ctx[1]("name").apply(this, arguments);
+    							if (is_function(/*sort*/ ctx[2]("name"))) /*sort*/ ctx[2]("name").apply(this, arguments);
     						},
     						false,
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[7]),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[8]),
-    					listen_dev(button3, "click", /*createContext*/ ctx[3], false, false, false)
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[8]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[9]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[10]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[11]),
+    					listen_dev(button3, "click", /*createContext*/ ctx[4], false, false, false)
     				];
 
     				mounted = true;
@@ -5313,55 +5450,47 @@ var app = (function () {
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
 
-    			if (dirty & /*contexts*/ 1) {
-    				each_value = /*contexts*/ ctx[0];
-    				validate_each_argument(each_value);
-    				let i;
+    			if (dirty & /*searchText*/ 2 && input0.value !== /*searchText*/ ctx[1]) {
+    				set_input_value(input0, /*searchText*/ ctx[1]);
+    			}
 
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$5(ctx, each_value, i);
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
 
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block$5(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(tbody, null);
-    					}
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(table, null);
     				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty & /*context*/ 4 && input0.value !== /*context*/ ctx[2].name) {
-    				set_input_value(input0, /*context*/ ctx[2].name);
+    			if (dirty & /*context*/ 8 && input1.value !== /*context*/ ctx[3].name) {
+    				set_input_value(input1, /*context*/ ctx[3].name);
     			}
 
-    			if (dirty & /*context*/ 4 && input1.value !== /*context*/ ctx[2].ip) {
-    				set_input_value(input1, /*context*/ ctx[2].ip);
+    			if (dirty & /*context*/ 8 && input2.value !== /*context*/ ctx[3].ip) {
+    				set_input_value(input2, /*context*/ ctx[3].ip);
     			}
 
-    			if (dirty & /*context*/ 4 && input2.value !== /*context*/ ctx[2].subnet) {
-    				set_input_value(input2, /*context*/ ctx[2].subnet);
+    			if (dirty & /*context*/ 8 && input3.value !== /*context*/ ctx[3].subnet) {
+    				set_input_value(input3, /*context*/ ctx[3].subnet);
     			}
 
-    			if (dirty & /*context*/ 4 && input3.value !== /*context*/ ctx[2].description) {
-    				set_input_value(input3, /*context*/ ctx[2].description);
+    			if (dirty & /*context*/ 8 && input4.value !== /*context*/ ctx[3].description) {
+    				set_input_value(input4, /*context*/ ctx[3].description);
     			}
     		},
     		i: noop$1,
     		o: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
-    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(div9);
+    			if (detaching) detach_dev(t8);
     			if (detaching) detach_dev(table);
-    			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(t15);
-    			if (detaching) detach_dev(div18);
+    			if_block.d();
+    			if (detaching) detach_dev(t19);
+    			if (detaching) detach_dev(div23);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -5393,6 +5522,9 @@ var app = (function () {
     		description: null
     	};
 
+    	let visibleData;
+    	let searchText;
+
     	function getContexts() {
     		var config = {
     			method: "get",
@@ -5401,7 +5533,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(0, contexts = response.data);
+    			$$invalidate(5, contexts = response.data);
     		}).catch(function (error) {
     			alert("Could not get Contexts");
     			console.log(error);
@@ -5434,23 +5566,28 @@ var app = (function () {
     	});
 
     	function input0_input_handler() {
-    		context.name = this.value;
-    		$$invalidate(2, context);
+    		searchText = this.value;
+    		$$invalidate(1, searchText);
     	}
 
     	function input1_input_handler() {
-    		context.ip = this.value;
-    		$$invalidate(2, context);
+    		context.name = this.value;
+    		$$invalidate(3, context);
     	}
 
     	function input2_input_handler() {
-    		context.subnet = this.value;
-    		$$invalidate(2, context);
+    		context.ip = this.value;
+    		$$invalidate(3, context);
     	}
 
     	function input3_input_handler() {
+    		context.subnet = this.value;
+    		$$invalidate(3, context);
+    	}
+
+    	function input4_input_handler() {
     		context.description = this.value;
-    		$$invalidate(2, context);
+    		$$invalidate(3, context);
     	}
 
     	$$self.$capture_state = () => ({
@@ -5458,6 +5595,8 @@ var app = (function () {
     		api_root: api_root$5,
     		contexts,
     		context,
+    		visibleData,
+    		searchText,
     		getContexts,
     		createContext,
     		sortBy,
@@ -5465,10 +5604,12 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('contexts' in $$props) $$invalidate(0, contexts = $$props.contexts);
-    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
-    		if ('sortBy' in $$props) $$invalidate(4, sortBy = $$props.sortBy);
-    		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
+    		if ('contexts' in $$props) $$invalidate(5, contexts = $$props.contexts);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
+    		if ('visibleData' in $$props) $$invalidate(0, visibleData = $$props.visibleData);
+    		if ('searchText' in $$props) $$invalidate(1, searchText = $$props.searchText);
+    		if ('sortBy' in $$props) $$invalidate(6, sortBy = $$props.sortBy);
+    		if ('sort' in $$props) $$invalidate(2, sort = $$props.sort);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -5476,13 +5617,23 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*sortBy, contexts*/ 17) {
-    			$$invalidate(1, sort = column => {
+    		if ($$self.$$.dirty & /*searchText, contexts*/ 34) {
+    			{
+    				$$invalidate(0, visibleData = searchText
+    				? contexts.filter(e => {
+    						return e.name.toLowerCase().match(`${searchText.toLowerCase()}.*`) || e.ip.match(`${searchText}.*`);
+    					})
+    				: contexts);
+    			}
+    		}
+
+    		if ($$self.$$.dirty & /*sortBy, visibleData*/ 65) {
+    			$$invalidate(2, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(4, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(6, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(4, sortBy.col = column, sortBy);
-    					$$invalidate(4, sortBy.ascending = true, sortBy);
+    					$$invalidate(6, sortBy.col = column, sortBy);
+    					$$invalidate(6, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -5492,21 +5643,24 @@ var app = (function () {
     				? -1 * sortModifier
     				: a[column] > b[column] ? 1 * sortModifier : 0;
 
-    				$$invalidate(0, contexts = contexts.sort(sort));
+    				$$invalidate(0, visibleData = visibleData.sort(sort));
     			});
     		}
     	};
 
     	return [
-    		contexts,
+    		visibleData,
+    		searchText,
     		sort,
     		context,
     		createContext,
+    		contexts,
     		sortBy,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
-    		input3_input_handler
+    		input3_input_handler,
+    		input4_input_handler
     	];
     }
 
@@ -8831,7 +8985,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (111:6) {#each useCases as useCase}
+    // (118:6) {#each useCases as useCase}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -8843,9 +8997,13 @@ var app = (function () {
     	let t2;
     	let t3;
     	let td2;
+    	let t4_value = /*useCase*/ ctx[2].tags + "";
+    	let t4;
     	let t5;
     	let td3;
     	let t7;
+    	let td4;
+    	let t9;
 
     	const block = {
     		c: function create() {
@@ -8857,16 +9015,20 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			td2 = element("td");
-    			td2.textContent = "edit";
+    			t4 = text(t4_value);
     			t5 = space();
     			td3 = element("td");
-    			td3.textContent = "delete";
+    			td3.textContent = "edit";
     			t7 = space();
-    			add_location(td0, file$1, 112, 10, 3021);
-    			add_location(td1, file$1, 113, 10, 3056);
-    			add_location(td2, file$1, 114, 10, 3098);
-    			add_location(td3, file$1, 115, 10, 3123);
-    			add_location(tr, file$1, 111, 8, 3005);
+    			td4 = element("td");
+    			td4.textContent = "delete";
+    			t9 = space();
+    			add_location(td0, file$1, 119, 10, 3040);
+    			add_location(td1, file$1, 120, 10, 3075);
+    			add_location(td2, file$1, 121, 10, 3117);
+    			add_location(td3, file$1, 122, 10, 3152);
+    			add_location(td4, file$1, 123, 10, 3177);
+    			add_location(tr, file$1, 118, 8, 3024);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8877,13 +9039,17 @@ var app = (function () {
     			append_dev(td1, t2);
     			append_dev(tr, t3);
     			append_dev(tr, td2);
+    			append_dev(td2, t4);
     			append_dev(tr, t5);
     			append_dev(tr, td3);
     			append_dev(tr, t7);
+    			append_dev(tr, td4);
+    			append_dev(tr, t9);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*useCases*/ 1 && t0_value !== (t0_value = /*useCase*/ ctx[2].name + "")) set_data_dev(t0, t0_value);
     			if (dirty & /*useCases*/ 1 && t2_value !== (t2_value = /*useCase*/ ctx[2].description + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*useCases*/ 1 && t4_value !== (t4_value = /*useCase*/ ctx[2].tags + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -8894,7 +9060,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(111:6) {#each useCases as useCase}",
+    		source: "(118:6) {#each useCases as useCase}",
     		ctx
     	});
 
@@ -8918,46 +9084,52 @@ var app = (function () {
     	let th0;
     	let t5;
     	let span0;
-    	let i0;
+    	let i;
     	let t6;
     	let th1;
-    	let t7;
-    	let i1;
     	let t8;
     	let th2;
-    	let t9;
-    	let th3;
     	let t10;
-    	let tbody;
+    	let th3;
     	let t11;
-    	let p;
+    	let th4;
+    	let t12;
+    	let tbody;
     	let t13;
+    	let p;
+    	let t15;
+    	let div16;
+    	let div15;
     	let div14;
-    	let div13;
-    	let div12;
     	let div5;
     	let h5;
-    	let t15;
+    	let t17;
     	let button1;
     	let span1;
-    	let t17;
-    	let div10;
+    	let t19;
+    	let div12;
     	let form;
     	let div7;
     	let div6;
     	let label0;
-    	let t19;
+    	let t21;
     	let input0;
-    	let t20;
+    	let t22;
     	let div9;
     	let div8;
     	let label1;
-    	let t22;
+    	let t24;
     	let input1;
-    	let t23;
-    	let div11;
-    	let button2;
     	let t25;
+    	let div11;
+    	let div10;
+    	let label2;
+    	let t27;
+    	let input2;
+    	let t28;
+    	let div13;
+    	let button2;
+    	let t30;
     	let button3;
     	let mounted;
     	let dispose;
@@ -8989,66 +9161,75 @@ var app = (function () {
     			th0 = element("th");
     			t5 = text("Name  ");
     			span0 = element("span");
-    			i0 = element("i");
+    			i = element("i");
     			t6 = space();
     			th1 = element("th");
-    			t7 = text("Description  ");
-    			i1 = element("i");
+    			th1.textContent = "Description";
     			t8 = space();
     			th2 = element("th");
-    			t9 = space();
-    			th3 = element("th");
+    			th2.textContent = "Tags (Standort/Bereich)";
     			t10 = space();
+    			th3 = element("th");
+    			t11 = space();
+    			th4 = element("th");
+    			t12 = space();
     			tbody = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t11 = space();
+    			t13 = space();
     			p = element("p");
     			p.textContent = "Bearbeiten | Löschen";
-    			t13 = space();
+    			t15 = space();
+    			div16 = element("div");
+    			div15 = element("div");
     			div14 = element("div");
-    			div13 = element("div");
-    			div12 = element("div");
     			div5 = element("div");
     			h5 = element("h5");
     			h5.textContent = "Add Use-Case";
-    			t15 = space();
+    			t17 = space();
     			button1 = element("button");
     			span1 = element("span");
     			span1.textContent = "×";
-    			t17 = space();
-    			div10 = element("div");
+    			t19 = space();
+    			div12 = element("div");
     			form = element("form");
     			div7 = element("div");
     			div6 = element("div");
     			label0 = element("label");
     			label0.textContent = "Name";
-    			t19 = space();
+    			t21 = space();
     			input0 = element("input");
-    			t20 = space();
+    			t22 = space();
     			div9 = element("div");
     			div8 = element("div");
     			label1 = element("label");
     			label1.textContent = "Description";
-    			t22 = space();
+    			t24 = space();
     			input1 = element("input");
-    			t23 = space();
+    			t25 = space();
     			div11 = element("div");
+    			div10 = element("div");
+    			label2 = element("label");
+    			label2.textContent = "Tags (Standort/Organisation)";
+    			t27 = space();
+    			input2 = element("input");
+    			t28 = space();
+    			div13 = element("div");
     			button2 = element("button");
     			button2.textContent = "Close";
-    			t25 = space();
+    			t30 = space();
     			button3 = element("button");
     			button3.textContent = "Add";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$1, 85, 8, 2045);
+    			add_location(h3, file$1, 91, 8, 2074);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$1, 84, 6, 2018);
+    			add_location(div0, file$1, 90, 6, 2047);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$1, 87, 6, 2134);
+    			add_location(div1, file$1, 93, 6, 2163);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -9056,95 +9237,106 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$1, 89, 8, 2220);
+    			add_location(button0, file$1, 95, 8, 2249);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$1, 88, 6, 2161);
+    			add_location(div2, file$1, 94, 6, 2190);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$1, 83, 4, 1993);
+    			add_location(div3, file$1, 89, 4, 2022);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$1, 82, 0, 1958);
-    			attr_dev(i0, "class", "fa fa-fw fa-sort");
-    			add_location(i0, file$1, 103, 61, 2706);
-    			add_location(span0, file$1, 103, 30, 2675);
+    			add_location(div4, file$1, 88, 0, 1987);
+    			attr_dev(i, "class", "fa fa-fw fa-sort");
+    			add_location(i, file$1, 109, 61, 2735);
+    			add_location(span0, file$1, 109, 30, 2704);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$1, 103, 8, 2653);
-    			attr_dev(i1, "class", "fa fa-fw fa-sort");
-    			add_location(i1, file$1, 104, 68, 2820);
+    			add_location(th0, file$1, 109, 8, 2682);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$1, 104, 8, 2760);
+    			add_location(th1, file$1, 110, 8, 2789);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$1, 105, 8, 2867);
+    			add_location(th2, file$1, 111, 8, 2832);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$1, 106, 8, 2899);
-    			add_location(tr, file$1, 101, 6, 2573);
-    			add_location(thead, file$1, 100, 4, 2558);
-    			add_location(tbody, file$1, 109, 4, 2953);
+    			add_location(th3, file$1, 112, 8, 2886);
+    			attr_dev(th4, "scope", "col");
+    			add_location(th4, file$1, 113, 8, 2918);
+    			add_location(tr, file$1, 107, 6, 2602);
+    			add_location(thead, file$1, 106, 4, 2587);
+    			add_location(tbody, file$1, 116, 4, 2972);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allUseCases");
-    			add_location(table, file$1, 99, 2, 2488);
-    			add_location(p, file$1, 120, 2, 3198);
+    			add_location(table, file$1, 105, 2, 2517);
+    			add_location(p, file$1, 128, 2, 3252);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "crateUseCase");
-    			add_location(h5, file$1, 126, 10, 3508);
+    			add_location(h5, file$1, 134, 10, 3562);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$1, 128, 12, 3669);
+    			add_location(span1, file$1, 136, 12, 3723);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$1, 127, 10, 3579);
+    			add_location(button1, file$1, 135, 10, 3633);
     			attr_dev(div5, "class", "modal-header");
-    			add_location(div5, file$1, 125, 8, 3470);
+    			add_location(div5, file$1, 133, 8, 3524);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$1, 135, 16, 3897);
+    			add_location(label0, file$1, 143, 16, 3951);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$1, 136, 16, 3964);
+    			add_location(input0, file$1, 144, 16, 4018);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$1, 134, 14, 3862);
+    			add_location(div6, file$1, 142, 14, 3916);
     			attr_dev(div7, "class", "row mb-3");
-    			add_location(div7, file$1, 133, 12, 3824);
+    			add_location(div7, file$1, 141, 12, 3878);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "description");
-    			add_location(label1, file$1, 146, 16, 4264);
+    			add_location(label1, file$1, 154, 16, 4318);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "description");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$1, 147, 16, 4345);
+    			add_location(input1, file$1, 155, 16, 4399);
     			attr_dev(div8, "class", "col");
-    			add_location(div8, file$1, 145, 14, 4229);
+    			add_location(div8, file$1, 153, 14, 4283);
     			attr_dev(div9, "class", "row mb-3");
-    			add_location(div9, file$1, 144, 12, 4191);
+    			add_location(div9, file$1, 152, 12, 4245);
+    			attr_dev(label2, "class", "form-label");
+    			attr_dev(label2, "for", "description");
+    			add_location(label2, file$1, 165, 16, 4713);
+    			attr_dev(input2, "class", "form-control");
+    			attr_dev(input2, "id", "description");
+    			attr_dev(input2, "type", "text");
+    			add_location(input2, file$1, 166, 16, 4812);
+    			attr_dev(div10, "class", "col");
+    			add_location(div10, file$1, 164, 14, 4678);
+    			attr_dev(div11, "class", "row mb-3");
+    			add_location(div11, file$1, 163, 12, 4640);
     			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$1, 132, 10, 3791);
-    			attr_dev(div10, "class", "modal-body");
-    			add_location(div10, file$1, 131, 8, 3755);
+    			add_location(form, file$1, 140, 10, 3845);
+    			attr_dev(div12, "class", "modal-body");
+    			add_location(div12, file$1, 139, 8, 3809);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$1, 158, 10, 4655);
+    			add_location(button2, file$1, 177, 10, 5115);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
-    			add_location(button3, file$1, 159, 10, 4750);
-    			attr_dev(div11, "class", "modal-footer");
-    			add_location(div11, file$1, 157, 8, 4617);
-    			attr_dev(div12, "class", "modal-content");
-    			add_location(div12, file$1, 124, 6, 3433);
-    			attr_dev(div13, "class", "modal-dialog modal-dialog-centered");
-    			attr_dev(div13, "role", "document");
-    			add_location(div13, file$1, 123, 4, 3361);
-    			attr_dev(div14, "class", "modal fade");
-    			attr_dev(div14, "id", "crateUC");
-    			attr_dev(div14, "tabindex", "-1");
-    			attr_dev(div14, "role", "dialog");
-    			attr_dev(div14, "aria-labelledby", "formCreateUseCase");
-    			attr_dev(div14, "aria-hidden", "true");
-    			add_location(div14, file$1, 122, 2, 3235);
+    			add_location(button3, file$1, 178, 10, 5210);
+    			attr_dev(div13, "class", "modal-footer");
+    			add_location(div13, file$1, 176, 8, 5077);
+    			attr_dev(div14, "class", "modal-content");
+    			add_location(div14, file$1, 132, 6, 3487);
+    			attr_dev(div15, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div15, "role", "document");
+    			add_location(div15, file$1, 131, 4, 3415);
+    			attr_dev(div16, "class", "modal fade");
+    			attr_dev(div16, "id", "crateUC");
+    			attr_dev(div16, "tabindex", "-1");
+    			attr_dev(div16, "role", "dialog");
+    			attr_dev(div16, "aria-labelledby", "formCreateUseCase");
+    			attr_dev(div16, "aria-hidden", "true");
+    			add_location(div16, file$1, 130, 2, 3289);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9166,54 +9358,61 @@ var app = (function () {
     			append_dev(tr, th0);
     			append_dev(th0, t5);
     			append_dev(th0, span0);
-    			append_dev(span0, i0);
+    			append_dev(span0, i);
     			append_dev(tr, t6);
     			append_dev(tr, th1);
-    			append_dev(th1, t7);
-    			append_dev(th1, i1);
     			append_dev(tr, t8);
     			append_dev(tr, th2);
-    			append_dev(tr, t9);
+    			append_dev(tr, t10);
     			append_dev(tr, th3);
-    			append_dev(table, t10);
+    			append_dev(tr, t11);
+    			append_dev(tr, th4);
+    			append_dev(table, t12);
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
-    			insert_dev(target, t11, anchor);
-    			insert_dev(target, p, anchor);
     			insert_dev(target, t13, anchor);
-    			insert_dev(target, div14, anchor);
-    			append_dev(div14, div13);
-    			append_dev(div13, div12);
-    			append_dev(div12, div5);
+    			insert_dev(target, p, anchor);
+    			insert_dev(target, t15, anchor);
+    			insert_dev(target, div16, anchor);
+    			append_dev(div16, div15);
+    			append_dev(div15, div14);
+    			append_dev(div14, div5);
     			append_dev(div5, h5);
-    			append_dev(div5, t15);
+    			append_dev(div5, t17);
     			append_dev(div5, button1);
     			append_dev(button1, span1);
-    			append_dev(div12, t17);
-    			append_dev(div12, div10);
-    			append_dev(div10, form);
+    			append_dev(div14, t19);
+    			append_dev(div14, div12);
+    			append_dev(div12, form);
     			append_dev(form, div7);
     			append_dev(div7, div6);
     			append_dev(div6, label0);
-    			append_dev(div6, t19);
+    			append_dev(div6, t21);
     			append_dev(div6, input0);
     			set_input_value(input0, /*useCase*/ ctx[2].name);
-    			append_dev(form, t20);
+    			append_dev(form, t22);
     			append_dev(form, div9);
     			append_dev(div9, div8);
     			append_dev(div8, label1);
-    			append_dev(div8, t22);
+    			append_dev(div8, t24);
     			append_dev(div8, input1);
     			set_input_value(input1, /*useCase*/ ctx[2].description);
-    			append_dev(div12, t23);
-    			append_dev(div12, div11);
-    			append_dev(div11, button2);
-    			append_dev(div11, t25);
-    			append_dev(div11, button3);
+    			append_dev(form, t25);
+    			append_dev(form, div11);
+    			append_dev(div11, div10);
+    			append_dev(div10, label2);
+    			append_dev(div10, t27);
+    			append_dev(div10, input2);
+    			set_input_value(input2, /*useCase*/ ctx[2].tags);
+    			append_dev(div14, t28);
+    			append_dev(div14, div13);
+    			append_dev(div13, button2);
+    			append_dev(div13, t30);
+    			append_dev(div13, button3);
 
     			if (!mounted) {
     				dispose = [
@@ -9227,18 +9426,9 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(
-    						th1,
-    						"click",
-    						function () {
-    							if (is_function(/*sort*/ ctx[1]("description"))) /*sort*/ ctx[1]("description").apply(this, arguments);
-    						},
-    						false,
-    						false,
-    						false
-    					),
     					listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
     					listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[7]),
     					listen_dev(button3, "click", /*createUseCase*/ ctx[3], false, false, false)
     				];
 
@@ -9279,6 +9469,10 @@ var app = (function () {
     			if (dirty & /*useCase*/ 4 && input1.value !== /*useCase*/ ctx[2].description) {
     				set_input_value(input1, /*useCase*/ ctx[2].description);
     			}
+
+    			if (dirty & /*useCase*/ 4 && input2.value !== /*useCase*/ ctx[2].tags) {
+    				set_input_value(input2, /*useCase*/ ctx[2].tags);
+    			}
     		},
     		i: noop$1,
     		o: noop$1,
@@ -9287,10 +9481,10 @@ var app = (function () {
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(table);
     			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(t11);
-    			if (detaching) detach_dev(p);
     			if (detaching) detach_dev(t13);
-    			if (detaching) detach_dev(div14);
+    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(t15);
+    			if (detaching) detach_dev(div16);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -9314,7 +9508,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Use_Cases', slots, []);
     	let useCases = [];
-    	let useCase = { name: null, description: null };
+    	let useCase = { name: null, description: null, tags: [] };
 
     	function getUseCases() {
     		var config = {
@@ -9364,6 +9558,11 @@ var app = (function () {
 
     	function input1_input_handler() {
     		useCase.description = this.value;
+    		$$invalidate(2, useCase);
+    	}
+
+    	function input2_input_handler() {
+    		useCase.tags = this.value;
     		$$invalidate(2, useCase);
     	}
 
@@ -9418,7 +9617,8 @@ var app = (function () {
     		createUseCase,
     		sortBy,
     		input0_input_handler,
-    		input1_input_handler
+    		input1_input_handler,
+    		input2_input_handler
     	];
     }
 

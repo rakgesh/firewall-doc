@@ -26,7 +26,7 @@ public class UseCaseController {
     @PostMapping("")
     public ResponseEntity<UseCase> createUseCase(
             @RequestBody UseCaseCreateDTO uDTO) {
-        UseCase uDAO = new UseCase(uDTO.getName(), uDTO.getDescription());
+        UseCase uDAO = new UseCase(uDTO.getName(), uDTO.getDescription(), uDTO.getTags());
         UseCase u = useCaseRepository.save(uDAO);
         return new ResponseEntity<>(u, HttpStatus.CREATED);
     }

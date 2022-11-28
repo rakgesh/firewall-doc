@@ -12,6 +12,10 @@
       subnet: null,
       description: null,
     };
+    let visibleData;
+    let searchText;
+
+ 
   
     function getContexts() {
       var config = {
@@ -31,6 +35,12 @@
     }
     getContexts();
   
+
+    $: {
+      visibleData = searchText ? contexts.filter(e => {return e.name.toLowerCase().match(`${searchText.toLowerCase()}.*`) || e.ip.match(`${searchText}.*`)}) : contexts
+    }
+    
+
     function createContext() {
       var config = {
         method: "post",
@@ -54,28 +64,28 @@
   
     
     let sortBy = {col: "name", ascending: true};
-      
-      $: sort = (column) => {
-          
-          if (sortBy.col == column) {
-              sortBy.ascending = !sortBy.ascending
-          } else {
-              sortBy.col = column
-              sortBy.ascending = true
-          }
-          
-          // Modifier to sorting function for ascending or descending
-          let sortModifier = (sortBy.ascending) ? 1 : -1;
-          
-          let sort = (a, b) => 
-              (a[column] < b[column]) 
-              ? -1 * sortModifier 
-              : (a[column] > b[column]) 
-              ? 1 * sortModifier 
-              : 0;
-          
-        contexts = contexts.sort(sort);
-      }
+	
+	$: sort = (column) => {
+		
+		if (sortBy.col == column) {
+			sortBy.ascending = !sortBy.ascending
+		} else {
+			sortBy.col = column
+			sortBy.ascending = true
+		}
+		
+		// Modifier to sorting function for ascending or descending
+		let sortModifier = (sortBy.ascending) ? 1 : -1;
+		
+		let sort = (a, b) => 
+			(a[column] < b[column]) 
+			? -1 * sortModifier 
+			: (a[column] > b[column]) 
+			? 1 * sortModifier 
+			: 0;
+		
+      visibleData = visibleData.sort(sort);
+	}
   
   
   
@@ -84,7 +94,7 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 style="margin-top: 15px; font-weight: bold;">All Contexts</h3>
+        <h3 style="margin-top: 15px; font-weight: bold;">Contexts</h3>
       </div>
       <div class="col" />
       <div class="col" style="text-align-last: right;">
@@ -92,17 +102,32 @@
           type="button"
           class="btn"
           data-toggle="modal" data-target="#createC"
-          style="margin-top: 9px; background-color: #c73834; color: #fff"
+          style="margin-top: 19px; background-color: #c73834; color: #fff"
           >Add Context</button
         >
       </div>
     </div>
+    <div class="row g-3">
+      <div class="col">
+    <input
+      bind:value={searchText}
+      class="form-control"
+      id="search"
+      type="text"
+      style="margin-bottom: 10px;"
+      placeholder="search..."
+    />
+  </div>
+  <div class="col"/>
+  <div class="col"/>
+  <div class="col"/>
+</div>  
   </div>
   <table class="table table-striped table-hover" id="allContexts">
     <thead>
       <tr>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <th scope="col">Name<span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
+        <th scope="col">Name <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
         <th scope="col">IP</th>
         <th scope="col">Subnet</th>
         <th scope="col">Description</th>
@@ -110,18 +135,23 @@
         <th scope="col"></th>
       </tr>
     </thead>
+    {#if visibleData.length}
+      
     <tbody>
-      {#each contexts as context}
-        <tr>
-          <td>{context.name}</td>
-          <td>{context.ip}</td>
-          <td>{context.subnet}</td>
-          <td>{context.description}</td>
-          <td>edit</td>
-          <td>delete</td>
-        </tr>
+      {#each visibleData as context}
+      <tr>
+        <td>{context.name}</td>
+        <td>{context.ip}</td>
+        <td>{context.subnet}</td>
+        <td>{context.description}</td>
+        <td>edit</td>
+        <td>delete</td>
+      </tr>
       {/each}
     </tbody>
+    {:else}
+      <div>No data available</div>
+    {/if}
   </table>
 
   
@@ -129,7 +159,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="crateContext">Add Use-Case</h5>
+          <h5 class="modal-title" id="crateContext">Add Context</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -140,19 +170,19 @@
               <div class="col">
                 <label class="form-label" for="name">Name</label>
                 <input
-                  bind:value={context.name}
-                  class="form-control"
+                bind:value={context.name}
+                class="form-control"
                   id="name"
                   type="text"
-                />
+                  />
+                </div>
               </div>
-            </div>
-            <div class="row mb-3">
+              <div class="row mb-3">
                 <div class="col">
                   <label class="form-label" for="ip">IP</label>
                   <input
-                    bind:value={context.ip}
-                    class="form-control"
+                  bind:value={context.ip}
+                  class="form-control"
                     id="description"
                     type="text"
                   />
@@ -166,17 +196,17 @@
                     class="form-control"
                     id="description"
                     type="text"
-                  />
+                    />
+                  </div>
                 </div>
-              </div>
-            <div class="row mb-3">
+                <div class="row mb-3">
               <div class="col">
                 <label class="form-label" for="description">Description</label>
                 <input
-                  bind:value={context.description}
-                  class="form-control"
-                  id="description"
-                  type="text"
+                bind:value={context.description}
+                class="form-control"
+                id="description"
+                type="text"
                 />
               </div>
             </div>

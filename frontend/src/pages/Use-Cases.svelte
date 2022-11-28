@@ -9,8 +9,12 @@
     let useCase = {
       name: null,
       description: null,
+      tags: [],
     };
-  
+
+    
+
+
     function getUseCases() {
       var config = {
         method: "get",
@@ -30,6 +34,8 @@
     getUseCases();
   
     function createUseCase() {
+
+
       var config = {
         method: "post",
         url: api_root + "/use-case",
@@ -102,7 +108,8 @@
       <tr>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <th scope="col">Name  <span on:click={sort("name")}> <i class="fa fa-fw fa-sort"></i></span></th>
-        <th scope="col" on:click={sort("description")}>Description  <i class="fa fa-fw fa-sort"></i></th>
+        <th scope="col">Description </th>
+        <th scope="col">Tags (Standort/Bereich)</th>
         <th scope="col" ></th>
         <th scope="col"></th>
       </tr>
@@ -112,6 +119,7 @@
         <tr>
           <td>{useCase.name}</td>
           <td>{useCase.description}</td>
+          <td>{useCase.tags}</td>
           <td>edit</td>
           <td>delete</td>
         </tr>
@@ -147,6 +155,17 @@
                 <label class="form-label" for="description">Description</label>
                 <input
                   bind:value={useCase.description}
+                  class="form-control"
+                  id="description"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label" for="description">Tags (Standort/Organisation) </label>
+                <input
+                  bind:value={useCase.tags}
                   class="form-control"
                   id="description"
                   type="text"
