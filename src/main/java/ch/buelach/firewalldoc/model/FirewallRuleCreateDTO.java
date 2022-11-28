@@ -11,7 +11,7 @@ public class FirewallRuleCreateDTO {
     private String contextId;
     private String sourceId;
     private String destinationId;
-    private String securityGroupObjectId;
+    private String serviceGroupObjectId;
     private String useCaseId;
 
 }

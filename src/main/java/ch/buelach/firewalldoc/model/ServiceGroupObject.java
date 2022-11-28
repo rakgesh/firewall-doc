@@ -1,5 +1,7 @@
 package ch.buelach.firewalldoc.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -21,7 +23,7 @@ public class ServiceGroupObject {
     @NonNull
     private String name;
     @NonNull
-    private String[] port;
+    private List<String> port;
     @NonNull
     private String description;
 

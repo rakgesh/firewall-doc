@@ -26,7 +26,7 @@ public class FirewallRuleController {
     @PostMapping("")
     public ResponseEntity<FirewallRule> createFirewallRule(
         @RequestBody FirewallRuleCreateDTO fwRuleDTO) {
-            FirewallRule fwRuleDAO = new FirewallRule(fwRuleDTO.getFwTypeId(), fwRuleDTO.getContextId(), fwRuleDTO.getSourceId(), fwRuleDTO.getDestinationId(), fwRuleDTO.getSecurityGroupObjectId(), fwRuleDTO.getUseCaseId());
+            FirewallRule fwRuleDAO = new FirewallRule(fwRuleDTO.getFwTypeId(), fwRuleDTO.getContextId(), fwRuleDTO.getSourceId(), fwRuleDTO.getDestinationId(), fwRuleDTO.getServiceGroupObjectId(), fwRuleDTO.getUseCaseId());
             FirewallRule fwRule = firewallRuleRepository.save(fwRuleDAO);
             return new ResponseEntity<>(fwRule, HttpStatus.CREATED);
         }

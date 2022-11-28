@@ -11,9 +11,9 @@
       description: null,
       tags: [],
     };
-
     
-
+  
+    
 
     function getUseCases() {
       var config = {
@@ -34,8 +34,6 @@
     getUseCases();
   
     function createUseCase() {
-
-
       var config = {
         method: "post",
         url: api_root + "/use-case",
@@ -164,12 +162,16 @@
             <div class="row mb-3">
               <div class="col">
                 <label class="form-label" for="description">Tags (Standort/Organisation) </label>
+                {#each useCase.tags as tag}
+                  
+                
                 <input
-                  bind:value={useCase.tags}
+                  bind:value={tag}
                   class="form-control"
-                  id="description"
+                  id="tag"
                   type="text"
                 />
+                {/each}
               </div>
             </div>
           </form>

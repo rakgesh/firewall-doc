@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.buelach.firewalldoc.model.FirewallRuleDetail;
 import ch.buelach.firewalldoc.model.HostGroupObject;
 import ch.buelach.firewalldoc.model.HostGroupObjectAssignDTO;
 import ch.buelach.firewalldoc.model.HostObjectsToHostGroup;
 import ch.buelach.firewalldoc.model.NetworkGroupObject;
 import ch.buelach.firewalldoc.model.NetworkGroupObjectAssignDTO;
 import ch.buelach.firewalldoc.model.NetworkObjectsToNetworkGroup;
+import ch.buelach.firewalldoc.service.FirewallRuleService;
 import ch.buelach.firewalldoc.service.HostGroupObjectService;
 import ch.buelach.firewalldoc.service.NetworkGroupObjectService;
 
@@ -29,6 +31,8 @@ public class ServiceController {
     HostGroupObjectService hostGroupObjectService;
     @Autowired
     NetworkGroupObjectService networkGroupObjectService;
+    @Autowired
+    FirewallRuleService firewallRuleService;
 
     @PostMapping("/HoToHGroupo")
     public ResponseEntity<HostGroupObject> assignHoToHgroupO(@RequestBody HostGroupObjectAssignDTO assignDTO) {
@@ -51,6 +55,12 @@ public class ServiceController {
     @GetMapping("/findNo")
     public ResponseEntity<List<NetworkObjectsToNetworkGroup>> getNoOfNgroup() {
         List<NetworkObjectsToNetworkGroup> all = networkGroupObjectService.getNoOfNgroup();
+        return new ResponseEntity<>(all, HttpStatus.OK);
+    }
+
+    @GetMapping("/findFwD")
+    public ResponseEntity<List<FirewallRuleDetail>> getFwDetail() {
+        List<FirewallRuleDetail> all = firewallRuleService.getFirewallruleDetail();
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
 

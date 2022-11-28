@@ -46,6 +46,7 @@ public class HostGroupObjectService {
         List<HostGroupObject> allHostGroupObjects = hostGroupObjectRepository.findAll();
         List<HostObject> allHostObjects = hostObjectRepository.findAll();
         List<HostObjectsToHostGroup> all = new ArrayList<HostObjectsToHostGroup>();
+        
         for (HostGroupObject hgo: allHostGroupObjects) {
             HostObjectsToHostGroup one = new HostObjectsToHostGroup();
             one.setHgoId(hgo.getId());

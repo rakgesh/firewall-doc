@@ -27,7 +27,7 @@ public class FirewallRule {
     @NonNull
     private String destinationId;
     @NonNull
-    private String securityGroupObjectId;
+    private String serviceGroupObjectId;
     @NonNull
     private String useCaseId;
     private FirewallStatus firewallStatus = FirewallStatus.REQUESTED_FOR_APPROVAL;

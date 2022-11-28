@@ -3,8 +3,6 @@ package ch.buelach.firewalldoc.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +27,7 @@ public class ContextController {
 
     @PostMapping("")
     public ResponseEntity<Context> createContext(
-        @Valid @RequestBody ContextCreateDTO cDTO) {
+        @RequestBody ContextCreateDTO cDTO) {
         Context cDAO = new Context(cDTO.getName(), cDTO.getIp(), cDTO.getSubnet(), cDTO.getDescription());
         Context c = contextRepository.save(cDAO);
         return new ResponseEntity<>(c, HttpStatus.CREATED);
