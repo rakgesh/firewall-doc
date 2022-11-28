@@ -13,6 +13,8 @@
     subnet: null,
     description: null,
   };
+  let visibleData;
+    let searchText;
 
   function getNetworkObjects() {
     var config = {
@@ -31,6 +33,10 @@
       });
   }
   getNetworkObjects();
+
+  $: {
+      visibleData = searchText ? networkObjects.filter(e => {return e.name.toLowerCase().match(`${searchText.toLowerCase()}.*`) || e.ip.match(`${searchText}.*`) || e.description.toLowerCase().match(`${searchText.toLowerCase()}.*`)}) : networkObjects
+    }
 
   function createNetworkObject() {
     var config = {
@@ -76,7 +82,7 @@
 			? 1 * sortModifier 
 			: 0;
 		
-      networkObjects = networkObjects.sort(sort);
+      visibleData = visibleData.sort(sort);
 	}
 
 
@@ -86,7 +92,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h3 style="margin-top: 15px; font-weight: bold;">All Network Objects</h3>
+      <h3 style="margin-top: 15px; font-weight: bold;">Network Objects</h3>
     </div>
     <div class="col" />
     <div class="col" style="text-align-last: right;">
@@ -99,6 +105,21 @@
       >
     </div>
   </div>
+  <div class="row g-3">
+    <div class="col">
+  <input
+    bind:value={searchText}
+    class="form-control"
+    id="search"
+    type="text"
+    style="margin-bottom: 10px;"
+    placeholder="search..."
+  />
+</div>
+<div class="col"/>
+<div class="col"/>
+<div class="col"/>
+</div>  
 </div>
 <table class="table table-striped table-hover" id="allHostObjects">
   <thead>
@@ -113,7 +134,7 @@
     </tr>
   </thead>
   <tbody>
-    {#each networkObjects as networkObject}
+    {#each visibleData as networkObject}
       <tr>
         <td>{networkObject.name}</td>
         <td>{networkObject.ip}</td>

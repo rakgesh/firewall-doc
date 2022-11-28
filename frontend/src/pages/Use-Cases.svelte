@@ -1,5 +1,6 @@
 <script>
     import axios from "axios";
+  import { each } from "svelte/internal";
   
   
     // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
@@ -34,6 +35,8 @@
     getUseCases();
   
     function createUseCase() {
+      var tags = useCase.tags.split(", ");
+      useCase.tags = tags;
       var config = {
         method: "post",
         url: api_root + "/use-case",
@@ -87,7 +90,7 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 style="margin-top: 15px; font-weight: bold;">All Use Cases</h3>
+        <h3 style="margin-top: 15px; font-weight: bold;">Use Cases</h3>
       </div>
       <div class="col" />
       <div class="col" style="text-align-last: right;">
@@ -117,7 +120,9 @@
         <tr>
           <td>{useCase.name}</td>
           <td>{useCase.description}</td>
-          <td>{useCase.tags}</td>
+          <td>{#each useCase.tags as tags}
+            {tags};
+            {/each}</td>
           <td>edit</td>
           <td>delete</td>
         </tr>
@@ -162,16 +167,12 @@
             <div class="row mb-3">
               <div class="col">
                 <label class="form-label" for="description">Tags (Standort/Organisation) </label>
-                {#each useCase.tags as tag}
-                  
-                
                 <input
-                  bind:value={tag}
+                  bind:value={useCase.tags}
                   class="form-control"
                   id="tag"
                   type="text"
                 />
-                {/each}
               </div>
             </div>
           </form>

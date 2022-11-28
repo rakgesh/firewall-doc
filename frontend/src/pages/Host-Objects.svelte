@@ -156,6 +156,8 @@
                 type="text"
               />
             </div>
+          </div>
+          <div class="row mb-3">
             <div class="col">
               <label class="form-label" for="description">Description</label>
               <input

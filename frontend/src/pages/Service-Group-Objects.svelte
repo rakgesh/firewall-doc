@@ -34,6 +34,8 @@
     getServiceGroupObjects();
   
     function createServiceGroupObject() {
+      var port = serviceGroupObject.port.split(", ");
+      serviceGroupObject.port = port;
       var config = {
         method: "post",
         url: api_root + "/service-group-object",
@@ -115,7 +117,11 @@
       {#each serviceGroupObjects as serviceGroupObject}
         <tr>
           <td>{serviceGroupObject.name}</td>
-          <td>{serviceGroupObject.port}</td>
+          <td>
+            {#each serviceGroupObject.port as port}
+          <li class="list-group-item">{port}</li>
+          {/each}
+        </td>
           <td>{serviceGroupObject.description}</td>
           <td>edit</td>
           <td>delete</td>
@@ -149,6 +155,17 @@
             </div>
             <div class="row mb-3">
               <div class="col">
+                <label class="form-label" for="description">Ports</label>
+                <input
+                  bind:value={serviceGroupObject.port}
+                  class="form-control"
+                  id="tag"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
                 <label class="form-label" for="description">Description</label>
                 <input
                   bind:value={serviceGroupObject.description}
@@ -156,21 +173,6 @@
                   id="description"
                   type="text"
                 />
-              </div>
-            </div>
-            <div class="row mb-3">
-              <div class="col">
-                <label class="form-label" for="description">Ports</label>
-                {#each serviceGroupObject.port as p}
-                  
-                
-                <input
-                  bind:value={p}
-                  class="form-control"
-                  id="tag"
-                  type="text"
-                />
-                {/each}
               </div>
             </div>
           </form>

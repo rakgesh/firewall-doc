@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ch.buelach.firewalldoc.model.Context;
 import ch.buelach.firewalldoc.model.FirewallRule;
 import ch.buelach.firewalldoc.model.FirewallRuleDetail;
 import ch.buelach.firewalldoc.model.FirewallType;
@@ -50,6 +51,7 @@ public class FirewallRuleService {
         List<FirewallRuleDetail> all = new ArrayList<FirewallRuleDetail>();
         List<FirewallRule> allFirewallRules = firewallRuleRepository.findAll();
         List<FirewallType> allFirewallTypes = firewallTypeRepository.findAll();
+        List<Context> allContexts = contextRepository.findAll();
         List<HostObject> allHostObjects = hostObjectRepository.findAll();
         List<HostGroupObject> allHostGroupObject = hostGroupObjectRepository.findAll();
         List<NetworkObject> allNetworkObject = networkObjectRepository.findAll();
@@ -64,6 +66,12 @@ public class FirewallRuleService {
             for (FirewallType ft : allFirewallTypes) {
                 if (ft.getId().equals(f.getFwTypeId())) {
                     one.setFwType(ft);
+                }                
+            }
+
+            for (Context c : allContexts) {
+                if (c.getId().equals(f.getContextId())) {
+                    one.setContext(c);
                 }                
             }
 
