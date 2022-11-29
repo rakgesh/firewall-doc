@@ -13,7 +13,7 @@
       tags: [],
     };
     
-  
+    let useCaseEdit;
     
 
     function getUseCases() {
@@ -57,6 +57,23 @@
         });
     }
   
+    function getUseCaseToEdit() {
+      var config = {
+        method: "get",
+        url: api_root + "/use-case" + id,
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+            useCaseEdit = response.data;
+        })
+        .catch(function (error) {
+          alert("Could not get Use Cases");
+          console.log(error);
+        });
+    }
+    
   
     
     let sortBy = {col: "name", ascending: true};

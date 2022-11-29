@@ -11341,13 +11341,13 @@ var app = (function () {
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[11] = list[i];
+    	child_ctx[13] = list[i];
     	return child_ctx;
     }
 
-    // (123:14) {#each useCase.tags as tags}
+    // (140:14) {#each useCase.tags as tags}
     function create_each_block_1(ctx) {
-    	let t0_value = /*tags*/ ctx[11] + "";
+    	let t0_value = /*tags*/ ctx[13] + "";
     	let t0;
     	let t1;
 
@@ -11361,7 +11361,7 @@ var app = (function () {
     			insert_dev(target, t1, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*useCases*/ 1 && t0_value !== (t0_value = /*tags*/ ctx[11] + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*useCases*/ 1 && t0_value !== (t0_value = /*tags*/ ctx[13] + "")) set_data_dev(t0, t0_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t0);
@@ -11373,14 +11373,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(123:14) {#each useCase.tags as tags}",
+    		source: "(140:14) {#each useCase.tags as tags}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (119:6) {#each useCases as useCase}
+    // (136:6) {#each useCases as useCase}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -11429,18 +11429,18 @@ var app = (function () {
     			td4 = element("td");
     			i1 = element("i");
     			t6 = space();
-    			add_location(td0, file$1, 120, 10, 3157);
-    			add_location(td1, file$1, 121, 10, 3192);
-    			add_location(td2, file$1, 122, 10, 3234);
+    			add_location(td0, file$1, 137, 10, 3584);
+    			add_location(td1, file$1, 138, 10, 3619);
+    			add_location(td2, file$1, 139, 10, 3661);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$1, 125, 16, 3331);
-    			add_location(td3, file$1, 125, 12, 3327);
+    			add_location(i0, file$1, 142, 16, 3758);
+    			add_location(td3, file$1, 142, 12, 3754);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$1, 126, 16, 3416);
-    			add_location(td4, file$1, 126, 12, 3412);
-    			add_location(tr, file$1, 119, 8, 3141);
+    			add_location(i1, file$1, 143, 16, 3843);
+    			add_location(td4, file$1, 143, 12, 3839);
+    			add_location(tr, file$1, 136, 8, 3568);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11502,7 +11502,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(119:6) {#each useCases as useCase}",
+    		source: "(136:6) {#each useCases as useCase}",
     		ctx
     	});
 
@@ -11662,11 +11662,11 @@ var app = (function () {
     			button3.textContent = "Add";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$1, 92, 8, 2195);
+    			add_location(h3, file$1, 109, 8, 2622);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$1, 91, 6, 2168);
+    			add_location(div0, file$1, 108, 6, 2595);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$1, 94, 6, 2280);
+    			add_location(div1, file$1, 111, 6, 2707);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -11674,105 +11674,105 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$1, 96, 8, 2366);
+    			add_location(button0, file$1, 113, 8, 2793);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$1, 95, 6, 2307);
+    			add_location(div2, file$1, 112, 6, 2734);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$1, 90, 4, 2143);
+    			add_location(div3, file$1, 107, 4, 2570);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$1, 89, 0, 2108);
+    			add_location(div4, file$1, 106, 0, 2535);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$1, 110, 61, 2852);
-    			add_location(span0, file$1, 110, 30, 2821);
+    			add_location(i, file$1, 127, 61, 3279);
+    			add_location(span0, file$1, 127, 30, 3248);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$1, 110, 8, 2799);
+    			add_location(th0, file$1, 127, 8, 3226);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$1, 111, 8, 2906);
+    			add_location(th1, file$1, 128, 8, 3333);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$1, 112, 8, 2949);
+    			add_location(th2, file$1, 129, 8, 3376);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$1, 113, 8, 3003);
+    			add_location(th3, file$1, 130, 8, 3430);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$1, 114, 8, 3035);
-    			add_location(tr, file$1, 108, 6, 2719);
-    			add_location(thead, file$1, 107, 4, 2704);
-    			add_location(tbody, file$1, 117, 4, 3089);
+    			add_location(th4, file$1, 131, 8, 3462);
+    			add_location(tr, file$1, 125, 6, 3146);
+    			add_location(thead, file$1, 124, 4, 3131);
+    			add_location(tbody, file$1, 134, 4, 3516);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allUseCases");
-    			add_location(table, file$1, 106, 2, 2634);
+    			add_location(table, file$1, 123, 2, 3061);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "crateUseCase");
-    			add_location(h5, file$1, 136, 10, 3812);
+    			add_location(h5, file$1, 153, 10, 4239);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$1, 138, 12, 3973);
+    			add_location(span1, file$1, 155, 12, 4400);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$1, 137, 10, 3883);
+    			add_location(button1, file$1, 154, 10, 4310);
     			attr_dev(div5, "class", "modal-header");
-    			add_location(div5, file$1, 135, 8, 3774);
+    			add_location(div5, file$1, 152, 8, 4201);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$1, 145, 16, 4201);
+    			add_location(label0, file$1, 162, 16, 4628);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$1, 146, 16, 4268);
+    			add_location(input0, file$1, 163, 16, 4695);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$1, 144, 14, 4166);
+    			add_location(div6, file$1, 161, 14, 4593);
     			attr_dev(div7, "class", "row mb-3");
-    			add_location(div7, file$1, 143, 12, 4128);
+    			add_location(div7, file$1, 160, 12, 4555);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "description");
-    			add_location(label1, file$1, 156, 16, 4568);
+    			add_location(label1, file$1, 173, 16, 4995);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "description");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$1, 157, 16, 4649);
+    			add_location(input1, file$1, 174, 16, 5076);
     			attr_dev(div8, "class", "col");
-    			add_location(div8, file$1, 155, 14, 4533);
+    			add_location(div8, file$1, 172, 14, 4960);
     			attr_dev(div9, "class", "row mb-3");
-    			add_location(div9, file$1, 154, 12, 4495);
+    			add_location(div9, file$1, 171, 12, 4922);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "description");
-    			add_location(label2, file$1, 167, 16, 4963);
+    			add_location(label2, file$1, 184, 16, 5390);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "tag");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$1, 168, 16, 5062);
+    			add_location(input2, file$1, 185, 16, 5489);
     			attr_dev(div10, "class", "col");
-    			add_location(div10, file$1, 166, 14, 4928);
+    			add_location(div10, file$1, 183, 14, 5355);
     			attr_dev(div11, "class", "row mb-3");
-    			add_location(div11, file$1, 165, 12, 4890);
+    			add_location(div11, file$1, 182, 12, 5317);
     			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$1, 142, 10, 4095);
+    			add_location(form, file$1, 159, 10, 4522);
     			attr_dev(div12, "class", "modal-body");
-    			add_location(div12, file$1, 141, 8, 4059);
+    			add_location(div12, file$1, 158, 8, 4486);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$1, 179, 10, 5357);
+    			add_location(button2, file$1, 196, 10, 5784);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
-    			add_location(button3, file$1, 180, 10, 5452);
+    			add_location(button3, file$1, 197, 10, 5879);
     			attr_dev(div13, "class", "modal-footer");
-    			add_location(div13, file$1, 178, 8, 5319);
+    			add_location(div13, file$1, 195, 8, 5746);
     			attr_dev(div14, "class", "modal-content");
-    			add_location(div14, file$1, 134, 6, 3737);
+    			add_location(div14, file$1, 151, 6, 4164);
     			attr_dev(div15, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div15, "role", "document");
-    			add_location(div15, file$1, 133, 4, 3665);
+    			add_location(div15, file$1, 150, 4, 4092);
     			attr_dev(div16, "class", "modal fade");
     			attr_dev(div16, "id", "crateUC");
     			attr_dev(div16, "tabindex", "-1");
     			attr_dev(div16, "role", "dialog");
     			attr_dev(div16, "aria-labelledby", "formCreateUseCase");
     			attr_dev(div16, "aria-hidden", "true");
-    			add_location(div16, file$1, 132, 2, 3539);
+    			add_location(div16, file$1, 149, 2, 3966);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11941,6 +11941,7 @@ var app = (function () {
     	validate_slots('Use_Cases', slots, []);
     	let useCases = [];
     	let useCase = { name: null, description: null, tags: [] };
+    	let useCaseEdit;
 
     	function getUseCases() {
     		var config = {
@@ -11979,6 +11980,21 @@ var app = (function () {
     		});
     	}
 
+    	function getUseCaseToEdit() {
+    		var config = {
+    			method: "get",
+    			url: api_root + "/use-case" + id,
+    			headers: {}
+    		};
+
+    		axios(config).then(function (response) {
+    			useCaseEdit = response.data;
+    		}).catch(function (error) {
+    			alert("Could not get Use Cases");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -12007,8 +12023,10 @@ var app = (function () {
     		api_root,
     		useCases,
     		useCase,
+    		useCaseEdit,
     		getUseCases,
     		createUseCase,
+    		getUseCaseToEdit,
     		sortBy,
     		sort
     	});
@@ -12016,6 +12034,7 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('useCases' in $$props) $$invalidate(0, useCases = $$props.useCases);
     		if ('useCase' in $$props) $$invalidate(2, useCase = $$props.useCase);
+    		if ('useCaseEdit' in $$props) useCaseEdit = $$props.useCaseEdit;
     		if ('sortBy' in $$props) $$invalidate(4, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
