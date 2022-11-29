@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.FirewallTypeCreateDTO;
 import ch.buelach.firewalldoc.repository.FirewallTypeRepository;
 
 @RestController
-@RequestMapping("/firewall-type")
+@RequestMapping("/api/firewall-type")
 public class FirewallTypeController {
     @Autowired
     FirewallTypeRepository firewallTypeRepository;

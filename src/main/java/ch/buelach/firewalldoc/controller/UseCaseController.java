@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.UseCaseCreateDTO;
 import ch.buelach.firewalldoc.repository.UseCaseRepository;
 
 @RestController
-@RequestMapping("/use-case")
+@RequestMapping("/api/use-case")
 public class UseCaseController {
     @Autowired
     UseCaseRepository useCaseRepository;

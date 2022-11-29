@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.ServiceGroupObjectCreateDTO;
 import ch.buelach.firewalldoc.repository.ServiceGroupObjectRepository;
 
 @RestController
-@RequestMapping("/service-group-object")
+@RequestMapping("/api/service-group-object")
 public class ServiceGroupObjectController {
     @Autowired
     ServiceGroupObjectRepository serviceGroupObjectRepository;

@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.NetworkGroupObjectCreateDTO;
 import ch.buelach.firewalldoc.repository.NetworkGroupObjectRepository;
 
 @RestController
-@RequestMapping("/network-group-object")
+@RequestMapping("/api/network-group-object")
 public class NetworkGroupObjectController {
 
     @Autowired

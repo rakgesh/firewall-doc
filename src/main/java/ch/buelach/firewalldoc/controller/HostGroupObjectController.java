@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.HostGroupObjectCreateDTO;
 import ch.buelach.firewalldoc.repository.HostGroupObjectRepository;
 
 @RestController
-@RequestMapping("/host-group-object")
+@RequestMapping("/api/host-group-object")
 public class HostGroupObjectController {
     @Autowired
     HostGroupObjectRepository hostGroupObjectRepository;

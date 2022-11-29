@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.FirewallRuleCreateDTO;
 import ch.buelach.firewalldoc.repository.FirewallRuleRepository;
 
 @RestController
-@RequestMapping("/firewall-rule")
+@RequestMapping("/api/firewall-rule")
 public class FirewallRuleController {
     @Autowired
     FirewallRuleRepository firewallRuleRepository;

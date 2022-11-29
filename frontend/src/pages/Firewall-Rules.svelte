@@ -1,12 +1,12 @@
 <script>
     import axios from "axios";
-  import { each, set_now } from "svelte/internal";
+
  
   
   
   
    
-    const api_root = "http://localhost:8080";
+    const api_root = "http://localhost:8080/api";
   //-----------------------------
   
     let firewallRules = [];
@@ -22,7 +22,7 @@
     function getFirewallRules() {
       var config = {
         method: "get",
-        url: api_root + "/api/service/findFwD",
+        url: api_root + "/service/findFwD",
         headers: {},
       };
   
@@ -181,15 +181,14 @@
             {/each}
             <li class="list-group-item">{fwr.sgo.name}</li>
         </td>
-        <td>{fwr.uc.name}</td>
+        <td><a href="http://localhost:8080/use-case/{fwr.uc.id}">{fwr.uc.name}</a></td>
         <td>{fwr.firewallStatus}</td>
-          <td>edit</td>
-          <td>delete</td>
+          <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
+          <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
         </tr>
         {/each}
     </tbody>
   </table>
-  <p> Bearbeiten | Löschen </p>
   
   <div class="modal fade" id="createFWR" tabindex="-1" role="dialog" aria-labelledby="formCreateFirewallRule" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">

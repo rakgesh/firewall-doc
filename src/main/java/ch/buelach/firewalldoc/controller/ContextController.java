@@ -19,7 +19,7 @@ import ch.buelach.firewalldoc.model.ContextCreateDTO;
 import ch.buelach.firewalldoc.repository.ContextRepository;
 
 @RestController
-@RequestMapping("/context")
+@RequestMapping("/api/context")
 public class ContextController {
 
     @Autowired

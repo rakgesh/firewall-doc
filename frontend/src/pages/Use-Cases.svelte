@@ -4,7 +4,7 @@
   
   
     // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
-    const api_root = "http://localhost:8080";
+    const api_root = "http://localhost:8080/api";
   
     let useCases = [];
     let useCase = {
@@ -123,13 +123,12 @@
           <td>{#each useCase.tags as tags}
             {tags};
             {/each}</td>
-          <td>edit</td>
-          <td>delete</td>
+            <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
+            <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
         </tr>
       {/each}
     </tbody>
   </table>
-  <p> Bearbeiten | Löschen </p>
   
   <div class="modal fade" id="crateUC" tabindex="-1" role="dialog" aria-labelledby="formCreateUseCase" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">

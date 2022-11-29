@@ -18,7 +18,7 @@ import ch.buelach.firewalldoc.model.NetworkObjectCreateDTO;
 import ch.buelach.firewalldoc.repository.NetworkObjectRepository;
 
 @RestController
-@RequestMapping("/network-object")
+@RequestMapping("/api/network-object")
 public class NetworkObjectController {
 
     @Autowired

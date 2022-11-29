@@ -20,7 +20,7 @@ import ch.buelach.firewalldoc.model.HostObjectCreateDTO;
 import ch.buelach.firewalldoc.repository.HostObjectRepository;
 
 @RestController
-@RequestMapping("/host-object")
+@RequestMapping("/api/host-object")
 public class HostObjectController {
     @Autowired
     HostObjectRepository hostObjectRepository;
