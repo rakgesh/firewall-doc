@@ -1,11 +1,8 @@
 <script>
   import axios from "axios";
 
-
-
- 
   const api_root = "http://localhost:8080/api";
-//-----------------------------
+  //-----------------------------
 
   let hostGroupObjects = [];
   let hostGroupObject = {
@@ -13,6 +10,8 @@
     description: null,
     membersId: null,
   };
+
+  let selection = [];
 
   function getHostGroupObjects() {
     var config = {
@@ -32,9 +31,10 @@
   }
   getHostGroupObjects();
 
-//-----------------------------
+  //-----------------------------
 
-function createHostGroupObject() {
+  function createHostGroupObject() {
+    hostGroupObject.membersId = selection;
     var config = {
       method: "post",
       url: api_root + "/host-group-object",
@@ -55,10 +55,10 @@ function createHostGroupObject() {
       });
   }
 
-//-----------------------------
+  //-----------------------------
 
-let hostObjects = [];
-  
+  let hostObjects = [];
+
   function getHostObjects() {
     var config = {
       method: "get",
@@ -77,47 +77,48 @@ let hostObjects = [];
   }
   getHostObjects();
 
-//-----------------------------
+  //-----------------------------
 
-  let sortBy = {col: "name", ascending: true};
-	
-	$: sort = (column) => {
-		
-		if (sortBy.col == column) {
-			sortBy.ascending = !sortBy.ascending
-		} else {
-			sortBy.col = column
-			sortBy.ascending = true
-		}
-		
-		// Modifier to sorting function for ascending or descending
-		let sortModifier = (sortBy.ascending) ? 1 : -1;
-		
-		let sort = (a, b) => 
-			(a[column] < b[column]) 
-			? -1 * sortModifier 
-			: (a[column] > b[column]) 
-			? 1 * sortModifier 
-			: 0;
-		
-      hostGroupObjects = hostGroupObjects.sort(sort);
-	}
+  let sortBy = { col: "name", ascending: true };
 
-// search
+  $: sort = (column) => {
+    if (sortBy.col == column) {
+      sortBy.ascending = !sortBy.ascending;
+    } else {
+      sortBy.col = column;
+      sortBy.ascending = true;
+    }
 
+    // Modifier to sorting function for ascending or descending
+    let sortModifier = sortBy.ascending ? 1 : -1;
+
+    let sort = (a, b) =>
+      a[column] < b[column]
+        ? -1 * sortModifier
+        : a[column] > b[column]
+        ? 1 * sortModifier
+        : 0;
+
+    hostGroupObjects = hostGroupObjects.sort(sort);
+  };
+
+  // search
 </script>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h3 style="margin-top: 15px; font-weight: bold;">All Host Group Objects</h3>
+      <h3 style="margin-top: 15px; font-weight: bold;">
+        All Host Group Objects
+      </h3>
     </div>
     <div class="col" />
     <div class="col" style="text-align-last: right;">
       <button
         type="button"
         class="btn"
-        data-toggle="modal" data-target="#crateHO"
+        data-toggle="modal"
+        data-target="#crateHO"
         style="margin-top: 9px; background-color: #c73834; color: #fff"
         >Add Host-Group-Object</button
       >
@@ -128,12 +129,16 @@ let hostObjects = [];
   <thead>
     <tr>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col">Name <span on:click={sort("hgoName")}> <i class="fa fa-fw fa-sort"></i></span></th>
+      <th scope="col"
+        >Name <span on:click={sort("hgoName")}>
+          <i class="fa fa-fw fa-sort" /></span
+        ></th
+      >
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <th scope="col">Members</th>
-      <th scope="col" >Description</th>
-      <th scope="col" ></th>
-      <th scope="col"></th>
+      <th scope="col">Description</th>
+      <th scope="col" />
+      <th scope="col" />
     </tr>
   </thead>
   <tbody>
@@ -141,26 +146,39 @@ let hostObjects = [];
       <tr>
         <td>{h1.hgoName}</td>
         <td>
-        {#each h1.members as member}
-        <li class="list-group-item">{member.name}</li>
-        <li class="list-group-item" style="font-style: italic;">{member.ip}</li>  
-        {/each}
+          {#each h1.members as member}
+            <li class="list-group-item">{member.name}</li>
+            <li class="list-group-item" style="font-style: italic;">
+              {member.ip}
+            </li>
+          {/each}
         </td>
         <td>{h1.hgoDescription}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
-          <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
+        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" /></td>
+        <td><i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
-      {/each}
+    {/each}
   </tbody>
 </table>
 
-
-<div class="modal fade" id="crateHO" tabindex="-1" role="dialog" aria-labelledby="formCreateHostObject" aria-hidden="true">
+<div
+  class="modal fade"
+  id="crateHO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formCreateHostObject"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="crateHostObject">Add Host-Group-Object</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -189,27 +207,65 @@ let hostObjects = [];
               />
             </div>
           </div>
-          
-            <div class="row mb-3">
+          <!----------------------
+          <div class="row mb-3">
             <div class="col">
-               
               <label class="form-label" for="membersId">Members</label>
-            <select id="membersId"  type="text" class="form-control">
-              {#each hostObjects as h}
-                
-              
-              <option value="{h.id}">{h.name}</option>
-              {/each}
-            </select>
-              
+              <div class="list-group">
+                {#each hostObjects as h}
+                  <label class="list-group-item">
+                    <input
+                      class="form-check-input me-1"
+                      type="checkbox"
+                      value={h.id}
+                      bind:group={selection}
+                      on
+                    />
+                    {h.name} || {h.ip}
+                  </label>
+                {/each}
+              </div>
             </div>
-            
+          </div>
+          ---------------------------------->
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="membersId">Members</label><br>
+              <button type="button" class="btn" style="background-color: none; color: #000; border-color: #D3D3D3; width: 466px; text-align: left;" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+             + Select Members
+            </button>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body" style="border: 0;">
+                <div class="list-group" style="width: 466px; margin-left: -16px; margin-top: -17px;">
+                  {#each hostObjects as h}
+                    <label class="list-group-item">
+                      <input
+                        class="form-check-input me-1"
+                        type="checkbox"
+                        value={h.id}
+                        bind:group={selection}
+                        on
+                      />
+                      {h.name} || {h.ip}
+                    </label>
+                  {/each}
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn" style="background-color: #008000; color: #fff" on:click={createHostGroupObject}>Add</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          style="background-color: #008000; color: #fff"
+          on:click={createHostGroupObject}>Add</button
+        >
       </div>
     </div>
   </div>
