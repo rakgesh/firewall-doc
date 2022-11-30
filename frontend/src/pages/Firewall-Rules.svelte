@@ -18,6 +18,15 @@
         serviceGroupObjectId: null,
         useCaseId: null,
     };
+
+    let fwTypes = [];
+    let contexts = [];
+    let hostOs = [];
+    let hostGs = [];
+    let networkOs = [];
+    let networkGs = [];
+    let serviceGs = [];
+    let usecases = [];
   
     function getFirewallRules() {
       var config = {
@@ -62,7 +71,159 @@
     }
   
   //-----------------------------
-    
+
+//-----------fwTypes------------------------------
+  function getfwTypes() {
+      var config = {
+        method: "get",
+        url: api_root + "/firewall-type",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          fwTypes = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getfwTypes();
+//-----------------------------------------------
+
+//-----------contexts------------------------------
+function getcontexts() {
+      var config = {
+        method: "get",
+        url: api_root + "/context",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          contexts = response.data;
+        })
+        .catch(function (error) {
+        });
+    }
+    getcontexts();
+//-----------------------------------------------
+
+//-----------hostOs------------------------------
+function getHostOs() {
+      var config = {
+        method: "get",
+        url: api_root + "/host-object",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          hostOs = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getHostOs();
+//-----------------------------------------------
+
+//-----------hostGs------------------------------
+function getHostGs() {
+      var config = {
+        method: "get",
+        url: api_root + "/host-group-object",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          hostGs = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getHostGs();
+//-----------------------------------------------
+
+//-----------networkOs------------------------------
+function getNetworkOs() {
+      var config = {
+        method: "get",
+        url: api_root + "/network-object",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          networkOs = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getNetworkOs();
+//-----------------------------------------------
+
+//-----------networkGs------------------------------
+function getNetworkGs() {
+      var config = {
+        method: "get",
+        url: api_root + "/network-group-object",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          networkGs = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getNetworkGs();
+//-----------------------------------------------
+
+//-----------serviceGs------------------------------
+function getServiceGs() {
+      var config = {
+        method: "get",
+        url: api_root + "/service-group-object",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          serviceGs = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getServiceGs();
+//-----------------------------------------------
+
+//-----------usecases------------------------------
+function getUseCases() {
+      var config = {
+        method: "get",
+        url: api_root + "/use-case",
+        headers: {},
+      };
+  
+      axios(config)
+        .then(function (response) {
+          usecases = response.data;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    getUseCases();
+//-----------------------------------------------
+
+   
     let sortBy = {col: "fwType", ascending: true};
       
       $: sort = (column) => {
@@ -176,10 +337,11 @@
           {/if}
     </td>
     <td>
+      <li class="list-group-item">{fwr.sgo.name}</li>
             {#each fwr.sgo.port as port}
             <li class="list-group-item">{port}</li>  
             {/each}
-            <li class="list-group-item">{fwr.sgo.name}</li>
+            
         </td>
         <td>{fwr.uc.name}</td>
         <td>{fwr.firewallStatus}</td>
@@ -203,24 +365,22 @@
           <form class="mb-5">
             <div class="row mb-3">
               <div class="col">
-                <label class="form-label" for="name">FW Type</label>
-                <input
-                  bind:value={firewallRule.fwTypeId}
-                  class="form-control"
-                  id="fwType"
-                  type="text"
-                />
+                <label class="form-label" for="fwType">FW Type</label>
+                <select class="form-select" aria-label="fwType">
+                {#each fwTypes as fwT}
+                <option value={fwT.id}>{fwT.name}</option>
+                {/each}
+              </select>
               </div>
             </div>
             <div class="row mb-3">
               <div class="col">
                 <label class="form-label" for="context">Context</label>
-                <input
-                  bind:value={firewallRule.contextId}
-                  class="form-control"
-                  id="context"
-                  type="text"
-                />
+                <select class="form-select" aria-label="context">
+                  {#each contexts as c}
+                  <option value={c.id}>{c.name}</option>
+                  {/each}
+                </select>
               </div>
             </div>
             <div class="row mb-3">
@@ -248,12 +408,18 @@
               <div class="row mb-3">
                 <div class="col">
                   <label class="form-label" for="sgo">Service Group Object</label>
-                  <input
-                    bind:value={firewallRule.serviceGroupObjectId}
-                    class="form-control"
-                    id="sgo"
-                    type="text"
-                  />
+                  <select class="form-select" aria-label="sgo">
+                    {#each serviceGs as s}
+                    <option value={s.id}>
+                      <ul class="list-group">
+                      <li class="list-group-item">{s.name}</li>
+                      {#each s.port as p}
+                      <li class="list-group-item" style="font-style: italic;">{p}</li>
+                      {/each}
+                    </ul>
+                    </option>
+                    {/each}
+                  </select>
                 </div>
               </div>
               <div class="row mb-3">
