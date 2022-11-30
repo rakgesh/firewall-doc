@@ -19,6 +19,11 @@
     tags: [],
   };
 
+  let useCaseDelete = {
+    id: null,
+    name: null,
+  }  
+
   let tagsBeforeEdit = [];
 
   function getUseCases() {
@@ -91,6 +96,28 @@
       })
       .catch(function (error) {
         alert("Could not edit Use Case");
+        console.log(error);
+      });
+  }
+
+  function getUseCaseToDelete(ucD) {
+    useCaseDelete.id = ucD.id;
+    useCaseDelete.name = ucD.name;
+  }
+
+  function deleteUseCase(id) {
+    var config = {
+      method: "delete",
+      url: api_root + "/use-case/" + id,
+    };
+
+    axios(config)
+      .then(function (response) {
+        alert("Use Case deleted");
+        getUseCases();
+      })
+      .catch(function (error) {
+        alert("Could not delete Use Case");
         console.log(error);
       });
   }
@@ -174,7 +201,13 @@
             /></button
           ></td
         >
-        <td><i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#deleteUC"
+          on:click={() => getUseCaseToDelete(useCase)}
+          >
+          <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
     {/each}
   </tbody>
@@ -340,4 +373,43 @@
       </div>
     </div>
   </div>
+</div>
+
+<div
+  class="modal fade"
+  id="deleteUC"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditUseCase"
+  aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="deleteUseCase">Delete Use-Case</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Are you sure, that you want to delete the use case <strong>"{useCaseDelete.name}"</strong>?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        >Close</button
+      >
+      <button
+        type="button"
+        class="btn"
+        style="background-color: #c73834; color: #fff"
+        on:click={deleteUseCase(useCaseDelete.id)}>Delete</button
+      >
+    </div>
+  </div>
+</div>
 </div>
