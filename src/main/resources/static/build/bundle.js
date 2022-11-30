@@ -4765,48 +4765,96 @@ var app = (function () {
 
     function get_each_context$7(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[28] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[28] = list[i];
+    	child_ctx[31] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[31] = list[i];
+    	child_ctx[34] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[34] = list[i];
+    	child_ctx[37] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[37] = list[i];
+    	child_ctx[40] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_5(ctx, list, i) {
     	const child_ctx = ctx.slice();
+    	child_ctx[43] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_6(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[34] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_7(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[37] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_8(ctx, list, i) {
+    	const child_ctx = ctx.slice();
     	child_ctx[40] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_9(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[43] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_10(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[54] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_11(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[57] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_12(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[60] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_13(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[63] = list[i];
     	return child_ctx;
     }
 
     // (301:12) {#if fwr.sho}
     function create_if_block_7(ctx) {
     	let li0;
-    	let t0_value = /*fwr*/ ctx[37].sho.name + "";
+    	let t0_value = /*fwr*/ ctx[60].sho.name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[37].sho.ip + "";
+    	let t2_value = /*fwr*/ ctx[60].sho.ip + "";
     	let t2;
 
     	const block = {
@@ -4817,9 +4865,10 @@ var app = (function () {
     			li1 = element("li");
     			t2 = text(t2_value);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 301, 12, 8297);
+    			add_location(li0, file$8, 301, 12, 8298);
     			attr_dev(li1, "class", "list-group-item");
-    			add_location(li1, file$8, 302, 12, 8358);
+    			set_style(li1, "font-style", "italic");
+    			add_location(li1, file$8, 302, 12, 8359);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -4829,8 +4878,8 @@ var app = (function () {
     			append_dev(li1, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[37].sho.name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[37].sho.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[60].sho.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[60].sho.ip + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -4853,7 +4902,7 @@ var app = (function () {
     // (306:12) {#if fwr.shgo}
     function create_if_block_6(ctx) {
     	let li;
-    	let t_value = /*fwr*/ ctx[37].shgo.name + "";
+    	let t_value = /*fwr*/ ctx[60].shgo.name + "";
     	let t;
 
     	const block = {
@@ -4861,14 +4910,14 @@ var app = (function () {
     			li = element("li");
     			t = text(t_value);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 306, 12, 8475);
+    			add_location(li, file$8, 306, 12, 8504);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[37].shgo.name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[60].shgo.name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -4889,13 +4938,13 @@ var app = (function () {
     // (310:10) {#if fwr.sno}
     function create_if_block_5(ctx) {
     	let li0;
-    	let t0_value = /*fwr*/ ctx[37].sno.name + "";
+    	let t0_value = /*fwr*/ ctx[60].sno.name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[37].sno.ip + "";
+    	let t2_value = /*fwr*/ ctx[60].sno.ip + "";
     	let t2;
-    	let t3_value = /*fwr*/ ctx[37].sno.subnet + "";
+    	let t3_value = /*fwr*/ ctx[60].sno.subnet + "";
     	let t3;
 
     	const block = {
@@ -4907,9 +4956,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text(t3_value);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 310, 10, 8579);
+    			add_location(li0, file$8, 310, 10, 8608);
     			attr_dev(li1, "class", "list-group-item");
-    			add_location(li1, file$8, 311, 10, 8638);
+    			set_style(li1, "font-style", "italic");
+    			add_location(li1, file$8, 311, 10, 8667);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -4920,9 +4970,9 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[37].sno.name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[37].sno.ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[37].sno.subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[60].sno.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[60].sno.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[60].sno.subnet + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -4945,7 +4995,7 @@ var app = (function () {
     // (315:10) {#if fwr.sngo}
     function create_if_block_4(ctx) {
     	let li;
-    	let t_value = /*fwr*/ ctx[37].sngo.name + "";
+    	let t_value = /*fwr*/ ctx[60].sngo.name + "";
     	let t;
 
     	const block = {
@@ -4953,14 +5003,14 @@ var app = (function () {
     			li = element("li");
     			t = text(t_value);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 315, 12, 8768);
+    			add_location(li, file$8, 315, 12, 8825);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[37].sngo.name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[60].sngo.name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -4981,11 +5031,11 @@ var app = (function () {
     // (321:10) {#if fwr.dho}
     function create_if_block_3(ctx) {
     	let li0;
-    	let t0_value = /*fwr*/ ctx[37].dho.name + "";
+    	let t0_value = /*fwr*/ ctx[60].dho.name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[37].dho.ip + "";
+    	let t2_value = /*fwr*/ ctx[60].dho.ip + "";
     	let t2;
 
     	const block = {
@@ -4996,9 +5046,10 @@ var app = (function () {
     			li1 = element("li");
     			t2 = text(t2_value);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 321, 12, 8903);
+    			add_location(li0, file$8, 321, 12, 8960);
     			attr_dev(li1, "class", "list-group-item");
-    			add_location(li1, file$8, 322, 12, 8964);
+    			set_style(li1, "font-style", "italic");
+    			add_location(li1, file$8, 322, 12, 9021);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5008,8 +5059,8 @@ var app = (function () {
     			append_dev(li1, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[37].dho.name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[37].dho.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[60].dho.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[60].dho.ip + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -5032,7 +5083,7 @@ var app = (function () {
     // (326:10) {#if fwr.dhgo}
     function create_if_block_2(ctx) {
     	let li;
-    	let t_value = /*fwr*/ ctx[37].dhgo.name + "";
+    	let t_value = /*fwr*/ ctx[60].dhgo.name + "";
     	let t;
 
     	const block = {
@@ -5040,14 +5091,14 @@ var app = (function () {
     			li = element("li");
     			t = text(t_value);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 326, 12, 9077);
+    			add_location(li, file$8, 326, 12, 9162);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[37].dhgo.name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[60].dhgo.name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -5068,13 +5119,13 @@ var app = (function () {
     // (330:10) {#if fwr.dno}
     function create_if_block_1(ctx) {
     	let li0;
-    	let t0_value = /*fwr*/ ctx[37].dno.name + "";
+    	let t0_value = /*fwr*/ ctx[60].dno.name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[37].dno.ip + "";
+    	let t2_value = /*fwr*/ ctx[60].dno.ip + "";
     	let t2;
-    	let t3_value = /*fwr*/ ctx[37].dno.subnet + "";
+    	let t3_value = /*fwr*/ ctx[60].dno.subnet + "";
     	let t3;
 
     	const block = {
@@ -5086,9 +5137,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text(t3_value);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 330, 12, 9183);
+    			add_location(li0, file$8, 330, 12, 9268);
     			attr_dev(li1, "class", "list-group-item");
-    			add_location(li1, file$8, 331, 12, 9244);
+    			set_style(li1, "font-style", "italic");
+    			add_location(li1, file$8, 331, 12, 9329);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5099,9 +5151,9 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[37].dno.name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[37].dno.ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[37].dno.subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[60].dno.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[60].dno.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[60].dno.subnet + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -5124,7 +5176,7 @@ var app = (function () {
     // (335:10) {#if fwr.dngo}
     function create_if_block$1(ctx) {
     	let li;
-    	let t_value = /*fwr*/ ctx[37].dngo.name + "";
+    	let t_value = /*fwr*/ ctx[60].dngo.name + "";
     	let t;
 
     	const block = {
@@ -5132,14 +5184,14 @@ var app = (function () {
     			li = element("li");
     			t = text(t_value);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 335, 12, 9376);
+    			add_location(li, file$8, 335, 12, 9489);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[37].dngo.name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*fwr*/ ctx[60].dngo.name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -5158,9 +5210,9 @@ var app = (function () {
     }
 
     // (341:12) {#each fwr.sgo.port as port}
-    function create_each_block_5(ctx) {
+    function create_each_block_13(ctx) {
     	let li;
-    	let t_value = /*port*/ ctx[40] + "";
+    	let t_value = /*port*/ ctx[63] + "";
     	let t;
 
     	const block = {
@@ -5168,14 +5220,15 @@ var app = (function () {
     			li = element("li");
     			t = text(t_value);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 341, 12, 9583);
+    			set_style(li, "font-style", "italic");
+    			add_location(li, file$8, 341, 12, 9696);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*port*/ ctx[40] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t_value !== (t_value = /*port*/ ctx[63] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -5184,7 +5237,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_5.name,
+    		id: create_each_block_13.name,
     		type: "each",
     		source: "(341:12) {#each fwr.sgo.port as port}",
     		ctx
@@ -5194,14 +5247,14 @@ var app = (function () {
     }
 
     // (294:6) {#each firewallRules as fwr}
-    function create_each_block_4(ctx) {
+    function create_each_block_12(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*fwr*/ ctx[37].fwType.name + "";
+    	let t0_value = /*fwr*/ ctx[60].fwType.name + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*fwr*/ ctx[37].context.name + "";
+    	let t2_value = /*fwr*/ ctx[60].context.name + "";
     	let t2;
     	let t3;
     	let td2;
@@ -5216,16 +5269,16 @@ var app = (function () {
     	let t11;
     	let td4;
     	let li;
-    	let t12_value = /*fwr*/ ctx[37].sgo.name + "";
+    	let t12_value = /*fwr*/ ctx[60].sgo.name + "";
     	let t12;
     	let t13;
     	let t14;
     	let td5;
-    	let t15_value = /*fwr*/ ctx[37].uc.name + "";
+    	let t15_value = /*fwr*/ ctx[60].uc.name + "";
     	let t15;
     	let t16;
     	let td6;
-    	let t17_value = /*fwr*/ ctx[37].firewallStatus + "";
+    	let t17_value = /*fwr*/ ctx[60].firewallStatus + "";
     	let t17;
     	let t18;
     	let td7;
@@ -5234,20 +5287,20 @@ var app = (function () {
     	let td8;
     	let i1;
     	let t20;
-    	let if_block0 = /*fwr*/ ctx[37].sho && create_if_block_7(ctx);
-    	let if_block1 = /*fwr*/ ctx[37].shgo && create_if_block_6(ctx);
-    	let if_block2 = /*fwr*/ ctx[37].sno && create_if_block_5(ctx);
-    	let if_block3 = /*fwr*/ ctx[37].sngo && create_if_block_4(ctx);
-    	let if_block4 = /*fwr*/ ctx[37].dho && create_if_block_3(ctx);
-    	let if_block5 = /*fwr*/ ctx[37].dhgo && create_if_block_2(ctx);
-    	let if_block6 = /*fwr*/ ctx[37].dno && create_if_block_1(ctx);
-    	let if_block7 = /*fwr*/ ctx[37].dngo && create_if_block$1(ctx);
-    	let each_value_5 = /*fwr*/ ctx[37].sgo.port;
-    	validate_each_argument(each_value_5);
+    	let if_block0 = /*fwr*/ ctx[60].sho && create_if_block_7(ctx);
+    	let if_block1 = /*fwr*/ ctx[60].shgo && create_if_block_6(ctx);
+    	let if_block2 = /*fwr*/ ctx[60].sno && create_if_block_5(ctx);
+    	let if_block3 = /*fwr*/ ctx[60].sngo && create_if_block_4(ctx);
+    	let if_block4 = /*fwr*/ ctx[60].dho && create_if_block_3(ctx);
+    	let if_block5 = /*fwr*/ ctx[60].dhgo && create_if_block_2(ctx);
+    	let if_block6 = /*fwr*/ ctx[60].dno && create_if_block_1(ctx);
+    	let if_block7 = /*fwr*/ ctx[60].dngo && create_if_block$1(ctx);
+    	let each_value_13 = /*fwr*/ ctx[60].sgo.port;
+    	validate_each_argument(each_value_13);
     	let each_blocks = [];
 
-    	for (let i = 0; i < each_value_5.length; i += 1) {
-    		each_blocks[i] = create_each_block_5(get_each_context_5(ctx, each_value_5, i));
+    	for (let i = 0; i < each_value_13.length; i += 1) {
+    		each_blocks[i] = create_each_block_13(get_each_context_13(ctx, each_value_13, i));
     	}
 
     	const block = {
@@ -5299,24 +5352,24 @@ var app = (function () {
     			td8 = element("td");
     			i1 = element("i");
     			t20 = space();
-    			add_location(td0, file$8, 295, 10, 8163);
-    			add_location(td1, file$8, 297, 10, 8213);
-    			add_location(td2, file$8, 299, 8, 8252);
-    			add_location(td3, file$8, 319, 8, 8860);
+    			add_location(td0, file$8, 295, 10, 8164);
+    			add_location(td1, file$8, 297, 10, 8214);
+    			add_location(td2, file$8, 299, 8, 8253);
+    			add_location(td3, file$8, 319, 8, 8917);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 339, 6, 9480);
-    			add_location(td4, file$8, 338, 4, 9468);
-    			add_location(td5, file$8, 345, 8, 9684);
-    			add_location(td6, file$8, 346, 8, 9716);
+    			add_location(li, file$8, 339, 6, 9593);
+    			add_location(td4, file$8, 338, 4, 9581);
+    			add_location(td5, file$8, 345, 8, 9825);
+    			add_location(td6, file$8, 346, 8, 9857);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$8, 347, 14, 9761);
-    			add_location(td7, file$8, 347, 10, 9757);
+    			add_location(i0, file$8, 347, 14, 9902);
+    			add_location(td7, file$8, 347, 10, 9898);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$8, 348, 14, 9844);
-    			add_location(td8, file$8, 348, 10, 9840);
-    			add_location(tr, file$8, 294, 8, 8147);
+    			add_location(i1, file$8, 348, 14, 9985);
+    			add_location(td8, file$8, 348, 10, 9981);
+    			add_location(tr, file$8, 294, 8, 8148);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -5368,10 +5421,10 @@ var app = (function () {
     			append_dev(tr, t20);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[37].fwType.name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[37].context.name + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[60].fwType.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[60].context.name + "")) set_data_dev(t2, t2_value);
 
-    			if (/*fwr*/ ctx[37].sho) {
+    			if (/*fwr*/ ctx[60].sho) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
@@ -5384,7 +5437,7 @@ var app = (function () {
     				if_block0 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].shgo) {
+    			if (/*fwr*/ ctx[60].shgo) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
@@ -5397,7 +5450,7 @@ var app = (function () {
     				if_block1 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].sno) {
+    			if (/*fwr*/ ctx[60].sno) {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
@@ -5410,7 +5463,7 @@ var app = (function () {
     				if_block2 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].sngo) {
+    			if (/*fwr*/ ctx[60].sngo) {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
     				} else {
@@ -5423,7 +5476,7 @@ var app = (function () {
     				if_block3 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].dho) {
+    			if (/*fwr*/ ctx[60].dho) {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
@@ -5436,7 +5489,7 @@ var app = (function () {
     				if_block4 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].dhgo) {
+    			if (/*fwr*/ ctx[60].dhgo) {
     				if (if_block5) {
     					if_block5.p(ctx, dirty);
     				} else {
@@ -5449,7 +5502,7 @@ var app = (function () {
     				if_block5 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].dno) {
+    			if (/*fwr*/ ctx[60].dno) {
     				if (if_block6) {
     					if_block6.p(ctx, dirty);
     				} else {
@@ -5462,7 +5515,7 @@ var app = (function () {
     				if_block6 = null;
     			}
 
-    			if (/*fwr*/ ctx[37].dngo) {
+    			if (/*fwr*/ ctx[60].dngo) {
     				if (if_block7) {
     					if_block7.p(ctx, dirty);
     				} else {
@@ -5475,20 +5528,20 @@ var app = (function () {
     				if_block7 = null;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t12_value !== (t12_value = /*fwr*/ ctx[37].sgo.name + "")) set_data_dev(t12, t12_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t12_value !== (t12_value = /*fwr*/ ctx[60].sgo.name + "")) set_data_dev(t12, t12_value);
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_5 = /*fwr*/ ctx[37].sgo.port;
-    				validate_each_argument(each_value_5);
+    				each_value_13 = /*fwr*/ ctx[60].sgo.port;
+    				validate_each_argument(each_value_13);
     				let i;
 
-    				for (i = 0; i < each_value_5.length; i += 1) {
-    					const child_ctx = get_each_context_5(ctx, each_value_5, i);
+    				for (i = 0; i < each_value_13.length; i += 1) {
+    					const child_ctx = get_each_context_13(ctx, each_value_13, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks[i] = create_each_block_5(child_ctx);
+    						each_blocks[i] = create_each_block_13(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(td4, null);
     					}
@@ -5498,11 +5551,11 @@ var app = (function () {
     					each_blocks[i].d(1);
     				}
 
-    				each_blocks.length = each_value_5.length;
+    				each_blocks.length = each_value_13.length;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t15_value !== (t15_value = /*fwr*/ ctx[37].uc.name + "")) set_data_dev(t15, t15_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t17_value !== (t17_value = /*fwr*/ ctx[37].firewallStatus + "")) set_data_dev(t17, t17_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t15_value !== (t15_value = /*fwr*/ ctx[60].uc.name + "")) set_data_dev(t15, t15_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t17_value !== (t17_value = /*fwr*/ ctx[60].firewallStatus + "")) set_data_dev(t17, t17_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -5520,7 +5573,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_4.name,
+    		id: create_each_block_12.name,
     		type: "each",
     		source: "(294:6) {#each firewallRules as fwr}",
     		ctx
@@ -5529,10 +5582,10 @@ var app = (function () {
     	return block;
     }
 
-    // (370:16) {#each fwTypes as fwT}
-    function create_each_block_3(ctx) {
+    // (371:16) {#each fwTypes as fwT}
+    function create_each_block_11(ctx) {
     	let option;
-    	let t_value = /*fwT*/ ctx[34].name + "";
+    	let t_value = /*fwT*/ ctx[57].name + "";
     	let t;
     	let option_value_value;
 
@@ -5540,18 +5593,362 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*fwT*/ ctx[34].id;
+    			option.__value = option_value_value = /*fwT*/ ctx[57].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 370, 16, 10826);
+    			add_location(option, file$8, 371, 16, 11046);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*fwTypes*/ 8 && t_value !== (t_value = /*fwT*/ ctx[34].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*fwTypes*/ 8 && t_value !== (t_value = /*fwT*/ ctx[57].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*fwTypes*/ 8 && option_value_value !== (option_value_value = /*fwT*/ ctx[34].id)) {
+    			if (dirty[0] & /*fwTypes*/ 8 && option_value_value !== (option_value_value = /*fwT*/ ctx[57].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_11.name,
+    		type: "each",
+    		source: "(371:16) {#each fwTypes as fwT}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (382:18) {#each contexts as c}
+    function create_each_block_10(ctx) {
+    	let option;
+    	let t_value = /*c*/ ctx[54].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*c*/ ctx[54].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 382, 18, 11530);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*contexts*/ 16 && t_value !== (t_value = /*c*/ ctx[54].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*contexts*/ 16 && option_value_value !== (option_value_value = /*c*/ ctx[54].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_10.name,
+    		type: "each",
+    		source: "(382:18) {#each contexts as c}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (394:20) {#each hostOs as ho}
+    function create_each_block_9(ctx) {
+    	let option;
+    	let t_value = /*ho*/ ctx[43].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*ho*/ ctx[43].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 394, 20, 12074);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[43].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[43].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_9.name,
+    		type: "each",
+    		source: "(394:20) {#each hostOs as ho}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (399:20) {#each hostGs as hg}
+    function create_each_block_8(ctx) {
+    	let option;
+    	let t_value = /*hg*/ ctx[40].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*hg*/ ctx[40].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 399, 20, 12295);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[40].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[40].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_8.name,
+    		type: "each",
+    		source: "(399:20) {#each hostGs as hg}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (404:20) {#each networkOs as no}
+    function create_each_block_7(ctx) {
+    	let option;
+    	let t_value = /*no*/ ctx[37].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*no*/ ctx[37].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 404, 20, 12516);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[37].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[37].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_7.name,
+    		type: "each",
+    		source: "(404:20) {#each networkOs as no}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (409:20) {#each networkGs as ng}
+    function create_each_block_6(ctx) {
+    	let option;
+    	let t_value = /*ng*/ ctx[34].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*ng*/ ctx[34].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 409, 20, 12743);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[34].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[34].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_6.name,
+    		type: "each",
+    		source: "(409:20) {#each networkGs as ng}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (422:20) {#each hostOs as ho}
+    function create_each_block_5(ctx) {
+    	let option;
+    	let t_value = /*ho*/ ctx[43].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*ho*/ ctx[43].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 422, 20, 13350);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[43].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[43].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_5.name,
+    		type: "each",
+    		source: "(422:20) {#each hostOs as ho}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (427:20) {#each hostGs as hg}
+    function create_each_block_4(ctx) {
+    	let option;
+    	let t_value = /*hg*/ ctx[40].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*hg*/ ctx[40].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 427, 20, 13571);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[40].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[40].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_4.name,
+    		type: "each",
+    		source: "(427:20) {#each hostGs as hg}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (432:20) {#each networkOs as no}
+    function create_each_block_3(ctx) {
+    	let option;
+    	let t_value = /*no*/ ctx[37].name + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*no*/ ctx[37].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 432, 20, 13792);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[37].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[37].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -5565,17 +5962,17 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(370:16) {#each fwTypes as fwT}",
+    		source: "(432:20) {#each networkOs as no}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (380:18) {#each contexts as c}
+    // (437:20) {#each networkGs as ng}
     function create_each_block_2$2(ctx) {
     	let option;
-    	let t_value = /*c*/ ctx[31].name + "";
+    	let t_value = /*ng*/ ctx[34].name + "";
     	let t;
     	let option_value_value;
 
@@ -5583,18 +5980,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*c*/ ctx[31].id;
+    			option.__value = option_value_value = /*ng*/ ctx[34].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 380, 18, 11230);
+    			add_location(option, file$8, 437, 20, 14019);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*contexts*/ 16 && t_value !== (t_value = /*c*/ ctx[31].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[34].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*contexts*/ 16 && option_value_value !== (option_value_value = /*c*/ ctx[31].id)) {
+    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[34].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -5608,36 +6005,42 @@ var app = (function () {
     		block,
     		id: create_each_block_2$2.name,
     		type: "each",
-    		source: "(380:18) {#each contexts as c}",
+    		source: "(437:20) {#each networkGs as ng}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (416:22) {#each s.port as p}
+    // (449:20) {#each serviceGs as sgo}
     function create_each_block_1$4(ctx) {
-    	let li;
-    	let t_value = /*p*/ ctx[28] + "";
+    	let option;
+    	let t_value = /*sgo*/ ctx[31].name + "";
     	let t;
+    	let option_value_value;
 
     	const block = {
     		c: function create() {
-    			li = element("li");
+    			option = element("option");
     			t = text(t_value);
-    			attr_dev(li, "class", "list-group-item");
-    			set_style(li, "font-style", "italic");
-    			add_location(li, file$8, 416, 22, 12674);
+    			option.__value = option_value_value = /*sgo*/ ctx[31].id;
+    			option.value = option.__value;
+    			add_location(option, file$8, 449, 20, 14577);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			append_dev(li, t);
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*serviceGs*/ 32 && t_value !== (t_value = /*p*/ ctx[28] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*serviceGs*/ 512 && t_value !== (t_value = /*sgo*/ ctx[31].name + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*serviceGs*/ 512 && option_value_value !== (option_value_value = /*sgo*/ ctx[31].id)) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(option);
     		}
     	};
 
@@ -5645,100 +6048,42 @@ var app = (function () {
     		block,
     		id: create_each_block_1$4.name,
     		type: "each",
-    		source: "(416:22) {#each s.port as p}",
+    		source: "(449:20) {#each serviceGs as sgo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (412:20) {#each serviceGs as s}
+    // (460:20) {#each usecases as u}
     function create_each_block$7(ctx) {
     	let option;
-    	let ul;
-    	let li;
-    	let t0_value = /*s*/ ctx[25].name + "";
-    	let t0;
-    	let t1;
-    	let t2;
+    	let t_value = /*u*/ ctx[28].name + "";
+    	let t;
     	let option_value_value;
-    	let each_value_1 = /*s*/ ctx[25].port;
-    	validate_each_argument(each_value_1);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks[i] = create_each_block_1$4(get_each_context_1$4(ctx, each_value_1, i));
-    	}
 
     	const block = {
     		c: function create() {
     			option = element("option");
-    			ul = element("ul");
-    			li = element("li");
-    			t0 = text(t0_value);
-    			t1 = space();
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			t2 = space();
-    			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 414, 22, 12566);
-    			attr_dev(ul, "class", "list-group");
-    			add_location(ul, file$8, 413, 22, 12519);
-    			option.__value = option_value_value = /*s*/ ctx[25].id;
+    			t = text(t_value);
+    			option.__value = option_value_value = /*u*/ ctx[28].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 412, 20, 12474);
+    			add_location(option, file$8, 460, 20, 15078);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
-    			append_dev(option, ul);
-    			append_dev(ul, li);
-    			append_dev(li, t0);
-    			append_dev(ul, t1);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(ul, null);
-    			}
-
-    			append_dev(option, t2);
+    			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*serviceGs*/ 32 && t0_value !== (t0_value = /*s*/ ctx[25].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*usecases*/ 1024 && t_value !== (t_value = /*u*/ ctx[28].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*serviceGs*/ 32) {
-    				each_value_1 = /*s*/ ctx[25].port;
-    				validate_each_argument(each_value_1);
-    				let i;
-
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1$4(ctx, each_value_1, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block_1$4(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(ul, null);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value_1.length;
-    			}
-
-    			if (dirty[0] & /*serviceGs*/ 32 && option_value_value !== (option_value_value = /*s*/ ctx[25].id)) {
+    			if (dirty[0] & /*usecases*/ 1024 && option_value_value !== (option_value_value = /*u*/ ctx[28].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(option);
-    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -5746,7 +6091,7 @@ var app = (function () {
     		block,
     		id: create_each_block$7.name,
     		type: "each",
-    		source: "(412:20) {#each serviceGs as s}",
+    		source: "(460:20) {#each usecases as u}",
     		ctx
     	});
 
@@ -5824,36 +6169,50 @@ var app = (function () {
     	let label0;
     	let t27;
     	let select0;
+    	let option0;
     	let t28;
     	let div9;
     	let div8;
     	let label1;
     	let t30;
     	let select1;
+    	let option1;
     	let t31;
     	let div11;
     	let div10;
     	let label2;
     	let t33;
-    	let input0;
+    	let select2;
+    	let option2;
+    	let optgroup0;
+    	let optgroup1;
+    	let optgroup2;
+    	let optgroup3;
     	let t34;
     	let div13;
     	let div12;
     	let label3;
     	let t36;
-    	let input1;
+    	let select3;
+    	let option3;
+    	let optgroup4;
+    	let optgroup5;
+    	let optgroup6;
+    	let optgroup7;
     	let t37;
     	let div15;
     	let div14;
     	let label4;
     	let t39;
-    	let select2;
+    	let select4;
+    	let option4;
     	let t40;
     	let div17;
     	let div16;
     	let label5;
     	let t42;
-    	let input2;
+    	let select5;
+    	let option5;
     	let t43;
     	let div19;
     	let button2;
@@ -5861,31 +6220,103 @@ var app = (function () {
     	let button3;
     	let mounted;
     	let dispose;
-    	let each_value_4 = /*firewallRules*/ ctx[0];
+    	let each_value_12 = /*firewallRules*/ ctx[0];
+    	validate_each_argument(each_value_12);
+    	let each_blocks_12 = [];
+
+    	for (let i = 0; i < each_value_12.length; i += 1) {
+    		each_blocks_12[i] = create_each_block_12(get_each_context_12(ctx, each_value_12, i));
+    	}
+
+    	let each_value_11 = /*fwTypes*/ ctx[3];
+    	validate_each_argument(each_value_11);
+    	let each_blocks_11 = [];
+
+    	for (let i = 0; i < each_value_11.length; i += 1) {
+    		each_blocks_11[i] = create_each_block_11(get_each_context_11(ctx, each_value_11, i));
+    	}
+
+    	let each_value_10 = /*contexts*/ ctx[4];
+    	validate_each_argument(each_value_10);
+    	let each_blocks_10 = [];
+
+    	for (let i = 0; i < each_value_10.length; i += 1) {
+    		each_blocks_10[i] = create_each_block_10(get_each_context_10(ctx, each_value_10, i));
+    	}
+
+    	let each_value_9 = /*hostOs*/ ctx[5];
+    	validate_each_argument(each_value_9);
+    	let each_blocks_9 = [];
+
+    	for (let i = 0; i < each_value_9.length; i += 1) {
+    		each_blocks_9[i] = create_each_block_9(get_each_context_9(ctx, each_value_9, i));
+    	}
+
+    	let each_value_8 = /*hostGs*/ ctx[6];
+    	validate_each_argument(each_value_8);
+    	let each_blocks_8 = [];
+
+    	for (let i = 0; i < each_value_8.length; i += 1) {
+    		each_blocks_8[i] = create_each_block_8(get_each_context_8(ctx, each_value_8, i));
+    	}
+
+    	let each_value_7 = /*networkOs*/ ctx[7];
+    	validate_each_argument(each_value_7);
+    	let each_blocks_7 = [];
+
+    	for (let i = 0; i < each_value_7.length; i += 1) {
+    		each_blocks_7[i] = create_each_block_7(get_each_context_7(ctx, each_value_7, i));
+    	}
+
+    	let each_value_6 = /*networkGs*/ ctx[8];
+    	validate_each_argument(each_value_6);
+    	let each_blocks_6 = [];
+
+    	for (let i = 0; i < each_value_6.length; i += 1) {
+    		each_blocks_6[i] = create_each_block_6(get_each_context_6(ctx, each_value_6, i));
+    	}
+
+    	let each_value_5 = /*hostOs*/ ctx[5];
+    	validate_each_argument(each_value_5);
+    	let each_blocks_5 = [];
+
+    	for (let i = 0; i < each_value_5.length; i += 1) {
+    		each_blocks_5[i] = create_each_block_5(get_each_context_5(ctx, each_value_5, i));
+    	}
+
+    	let each_value_4 = /*hostGs*/ ctx[6];
     	validate_each_argument(each_value_4);
-    	let each_blocks_3 = [];
+    	let each_blocks_4 = [];
 
     	for (let i = 0; i < each_value_4.length; i += 1) {
-    		each_blocks_3[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
+    		each_blocks_4[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
     	}
 
-    	let each_value_3 = /*fwTypes*/ ctx[3];
+    	let each_value_3 = /*networkOs*/ ctx[7];
     	validate_each_argument(each_value_3);
-    	let each_blocks_2 = [];
+    	let each_blocks_3 = [];
 
     	for (let i = 0; i < each_value_3.length; i += 1) {
-    		each_blocks_2[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
+    		each_blocks_3[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
     	}
 
-    	let each_value_2 = /*contexts*/ ctx[4];
+    	let each_value_2 = /*networkGs*/ ctx[8];
     	validate_each_argument(each_value_2);
-    	let each_blocks_1 = [];
+    	let each_blocks_2 = [];
 
     	for (let i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
+    		each_blocks_2[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
     	}
 
-    	let each_value = /*serviceGs*/ ctx[5];
+    	let each_value_1 = /*serviceGs*/ ctx[9];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$4(get_each_context_1$4(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*usecases*/ ctx[10];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -5951,8 +6382,8 @@ var app = (function () {
     			t20 = space();
     			tbody = element("tbody");
 
-    			for (let i = 0; i < each_blocks_3.length; i += 1) {
-    				each_blocks_3[i].c();
+    			for (let i = 0; i < each_blocks_12.length; i += 1) {
+    				each_blocks_12[i].c();
     			}
 
     			t21 = space();
@@ -5975,9 +6406,10 @@ var app = (function () {
     			label0.textContent = "FW Type";
     			t27 = space();
     			select0 = element("select");
+    			option0 = element("option");
 
-    			for (let i = 0; i < each_blocks_2.length; i += 1) {
-    				each_blocks_2[i].c();
+    			for (let i = 0; i < each_blocks_11.length; i += 1) {
+    				each_blocks_11[i].c();
     			}
 
     			t28 = space();
@@ -5987,9 +6419,10 @@ var app = (function () {
     			label1.textContent = "Context";
     			t30 = space();
     			select1 = element("select");
+    			option1 = element("option");
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
+    			for (let i = 0; i < each_blocks_10.length; i += 1) {
+    				each_blocks_10[i].c();
     			}
 
     			t31 = space();
@@ -5998,24 +6431,75 @@ var app = (function () {
     			label2 = element("label");
     			label2.textContent = "Source";
     			t33 = space();
-    			input0 = element("input");
+    			select2 = element("select");
+    			option2 = element("option");
+    			optgroup0 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_9.length; i += 1) {
+    				each_blocks_9[i].c();
+    			}
+
+    			optgroup1 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_8.length; i += 1) {
+    				each_blocks_8[i].c();
+    			}
+
+    			optgroup2 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_7.length; i += 1) {
+    				each_blocks_7[i].c();
+    			}
+
+    			optgroup3 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_6.length; i += 1) {
+    				each_blocks_6[i].c();
+    			}
+
     			t34 = space();
     			div13 = element("div");
     			div12 = element("div");
     			label3 = element("label");
     			label3.textContent = "Destination";
     			t36 = space();
-    			input1 = element("input");
+    			select3 = element("select");
+    			option3 = element("option");
+    			optgroup4 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_5.length; i += 1) {
+    				each_blocks_5[i].c();
+    			}
+
+    			optgroup5 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_4.length; i += 1) {
+    				each_blocks_4[i].c();
+    			}
+
+    			optgroup6 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_3.length; i += 1) {
+    				each_blocks_3[i].c();
+    			}
+
+    			optgroup7 = element("optgroup");
+
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].c();
+    			}
+
     			t37 = space();
     			div15 = element("div");
     			div14 = element("div");
     			label4 = element("label");
     			label4.textContent = "Service Group Object";
     			t39 = space();
-    			select2 = element("select");
+    			select4 = element("select");
+    			option4 = element("option");
 
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
     			}
 
     			t40 = space();
@@ -6024,7 +6508,13 @@ var app = (function () {
     			label5 = element("label");
     			label5.textContent = "Use Case";
     			t42 = space();
-    			input2 = element("input");
+    			select5 = element("select");
+    			option5 = element("option");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
     			t43 = space();
     			div19 = element("div");
     			button2 = element("button");
@@ -6034,11 +6524,11 @@ var app = (function () {
     			button3.textContent = "Add";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$8, 257, 8, 6195);
+    			add_location(h3, file$8, 257, 8, 6196);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$8, 256, 6, 6168);
+    			add_location(div0, file$8, 256, 6, 6169);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$8, 259, 6, 6285);
+    			add_location(div1, file$8, 259, 6, 6286);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -6046,161 +6536,204 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$8, 261, 8, 6371);
+    			add_location(button0, file$8, 261, 8, 6372);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$8, 260, 6, 6312);
+    			add_location(div2, file$8, 260, 6, 6313);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$8, 255, 4, 6143);
+    			add_location(div3, file$8, 255, 4, 6144);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$8, 254, 2, 6108);
+    			add_location(div4, file$8, 254, 2, 6109);
     			attr_dev(i0, "class", "fa fa-fw fa-sort");
-    			add_location(i0, file$8, 275, 65, 6872);
-    			add_location(span0, file$8, 275, 32, 6839);
+    			add_location(i0, file$8, 275, 65, 6873);
+    			add_location(span0, file$8, 275, 32, 6840);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$8, 275, 8, 6815);
+    			add_location(th0, file$8, 275, 8, 6816);
     			attr_dev(i1, "class", "fa fa-fw fa-sort");
-    			add_location(i1, file$8, 277, 66, 7050);
-    			add_location(span1, file$8, 277, 32, 7016);
+    			add_location(i1, file$8, 277, 66, 7051);
+    			add_location(span1, file$8, 277, 32, 7017);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$8, 277, 8, 6992);
+    			add_location(th1, file$8, 277, 8, 6993);
     			attr_dev(i2, "class", "fa fa-fw fa-sort");
-    			add_location(i2, file$8, 279, 65, 7227);
-    			add_location(span2, file$8, 279, 32, 7194);
+    			add_location(i2, file$8, 279, 65, 7228);
+    			add_location(span2, file$8, 279, 32, 7195);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$8, 279, 8, 7170);
+    			add_location(th2, file$8, 279, 8, 7171);
     			attr_dev(i3, "class", "fa fa-fw fa-sort");
-    			add_location(i3, file$8, 281, 75, 7414);
-    			add_location(span3, file$8, 281, 37, 7376);
+    			add_location(i3, file$8, 281, 75, 7415);
+    			add_location(span3, file$8, 281, 37, 7377);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$8, 281, 8, 7347);
+    			add_location(th3, file$8, 281, 8, 7348);
     			attr_dev(i4, "class", "fa fa-fw fa-sort");
-    			add_location(i4, file$8, 283, 63, 7589);
-    			add_location(span4, file$8, 283, 31, 7557);
+    			add_location(i4, file$8, 283, 63, 7590);
+    			add_location(span4, file$8, 283, 31, 7558);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$8, 283, 8, 7534);
+    			add_location(th4, file$8, 283, 8, 7535);
     			attr_dev(i5, "class", "fa fa-fw fa-sort");
-    			add_location(i5, file$8, 285, 68, 7769);
-    			add_location(span5, file$8, 285, 34, 7735);
+    			add_location(i5, file$8, 285, 68, 7770);
+    			add_location(span5, file$8, 285, 34, 7736);
     			attr_dev(th5, "scope", "col");
-    			add_location(th5, file$8, 285, 8, 7709);
+    			add_location(th5, file$8, 285, 8, 7710);
     			attr_dev(i6, "class", "fa fa-fw fa-sort");
-    			add_location(i6, file$8, 287, 73, 7954);
-    			add_location(span6, file$8, 287, 32, 7913);
+    			add_location(i6, file$8, 287, 73, 7955);
+    			add_location(span6, file$8, 287, 32, 7914);
     			attr_dev(th6, "scope", "col");
-    			add_location(th6, file$8, 287, 8, 7889);
+    			add_location(th6, file$8, 287, 8, 7890);
     			attr_dev(th7, "scope", "col");
-    			add_location(th7, file$8, 288, 8, 8008);
+    			add_location(th7, file$8, 288, 8, 8009);
     			attr_dev(th8, "scope", "col");
-    			add_location(th8, file$8, 289, 8, 8040);
-    			add_location(tr, file$8, 273, 6, 6735);
-    			add_location(thead, file$8, 272, 4, 6720);
-    			add_location(tbody, file$8, 292, 4, 8094);
+    			add_location(th8, file$8, 289, 8, 8041);
+    			add_location(tr, file$8, 273, 6, 6736);
+    			add_location(thead, file$8, 272, 4, 6721);
+    			add_location(tbody, file$8, 292, 4, 8095);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allFirwallRules");
-    			add_location(table, file$8, 271, 2, 6646);
+    			add_location(table, file$8, 271, 2, 6647);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "createFirewallRule");
-    			add_location(h5, file$8, 358, 10, 10249);
+    			add_location(h5, file$8, 358, 10, 10390);
     			attr_dev(span7, "aria-hidden", "true");
-    			add_location(span7, file$8, 360, 12, 10420);
+    			add_location(span7, file$8, 360, 12, 10561);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$8, 359, 10, 10330);
+    			add_location(button1, file$8, 359, 10, 10471);
     			attr_dev(div5, "class", "modal-header");
-    			add_location(div5, file$8, 357, 8, 10211);
+    			add_location(div5, file$8, 357, 8, 10352);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "fwType");
-    			add_location(label0, file$8, 367, 16, 10648);
+    			add_location(label0, file$8, 367, 16, 10789);
+    			option0.hidden = true;
+    			option0.__value = "";
+    			option0.value = option0.__value;
+    			add_location(option0, file$8, 369, 18, 10964);
     			attr_dev(select0, "class", "form-select");
     			attr_dev(select0, "aria-label", "fwType");
-    			add_location(select0, file$8, 368, 16, 10720);
+    			if (/*firewallRule*/ ctx[2].fwTypeId === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[13].call(select0));
+    			add_location(select0, file$8, 368, 16, 10861);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$8, 366, 14, 10613);
+    			add_location(div6, file$8, 366, 14, 10754);
     			attr_dev(div7, "class", "row mb-3");
-    			add_location(div7, file$8, 365, 12, 10575);
+    			add_location(div7, file$8, 365, 12, 10716);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "context");
-    			add_location(label1, file$8, 377, 16, 11047);
+    			add_location(label1, file$8, 378, 16, 11267);
+    			option1.hidden = true;
+    			option1.__value = "";
+    			option1.value = option1.__value;
+    			add_location(option1, file$8, 380, 18, 11445);
     			attr_dev(select1, "class", "form-select");
     			attr_dev(select1, "aria-label", "context");
-    			add_location(select1, file$8, 378, 16, 11120);
+    			if (/*firewallRule*/ ctx[2].contextId === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[14].call(select1));
+    			add_location(select1, file$8, 379, 16, 11340);
     			attr_dev(div8, "class", "col");
-    			add_location(div8, file$8, 376, 14, 11012);
+    			add_location(div8, file$8, 377, 14, 11232);
     			attr_dev(div9, "class", "row mb-3");
-    			add_location(div9, file$8, 375, 12, 10974);
+    			add_location(div9, file$8, 376, 12, 11194);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "source");
-    			add_location(label2, file$8, 387, 18, 11455);
-    			attr_dev(input0, "class", "form-control");
-    			attr_dev(input0, "id", "source");
-    			attr_dev(input0, "type", "text");
-    			add_location(input0, file$8, 388, 18, 11528);
+    			add_location(label2, file$8, 389, 18, 11755);
+    			option2.hidden = true;
+    			option2.__value = "";
+    			option2.value = option2.__value;
+    			add_location(option2, file$8, 391, 20, 11933);
+    			attr_dev(optgroup0, "label", "Host Objects");
+    			add_location(optgroup0, file$8, 392, 20, 11979);
+    			attr_dev(optgroup1, "label", "Host Group Objects");
+    			add_location(optgroup1, file$8, 397, 18, 12194);
+    			attr_dev(optgroup2, "label", "Network Objects");
+    			add_location(optgroup2, file$8, 402, 18, 12415);
+    			attr_dev(optgroup3, "label", "Network Group Objects");
+    			add_location(optgroup3, file$8, 407, 18, 12636);
+    			attr_dev(select2, "class", "form-select");
+    			attr_dev(select2, "aria-label", "source");
+    			if (/*firewallRule*/ ctx[2].sourceId === void 0) add_render_callback(() => /*select2_change_handler*/ ctx[15].call(select2));
+    			add_location(select2, file$8, 390, 18, 11828);
     			attr_dev(div10, "class", "col");
-    			add_location(div10, file$8, 386, 16, 11418);
+    			add_location(div10, file$8, 388, 16, 11718);
     			attr_dev(div11, "class", "row mb-3");
-    			add_location(div11, file$8, 385, 12, 11378);
+    			add_location(div11, file$8, 387, 12, 11678);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "destination");
-    			add_location(label3, file$8, 398, 18, 11859);
-    			attr_dev(input1, "class", "form-control");
-    			attr_dev(input1, "id", "context");
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$8, 399, 18, 11942);
+    			add_location(label3, file$8, 417, 18, 13011);
+    			option3.hidden = true;
+    			option3.__value = "";
+    			option3.value = option3.__value;
+    			add_location(option3, file$8, 419, 20, 13209);
+    			attr_dev(optgroup4, "label", "Host Objects");
+    			add_location(optgroup4, file$8, 420, 20, 13255);
+    			attr_dev(optgroup5, "label", "Host Group Objects");
+    			add_location(optgroup5, file$8, 425, 18, 13470);
+    			attr_dev(optgroup6, "label", "Network Objects");
+    			add_location(optgroup6, file$8, 430, 18, 13691);
+    			attr_dev(optgroup7, "label", "Network Group Objects");
+    			add_location(optgroup7, file$8, 435, 18, 13912);
+    			attr_dev(select3, "class", "form-select");
+    			attr_dev(select3, "aria-label", "destination");
+    			if (/*firewallRule*/ ctx[2].destinationId === void 0) add_render_callback(() => /*select3_change_handler*/ ctx[16].call(select3));
+    			add_location(select3, file$8, 418, 18, 13094);
     			attr_dev(div12, "class", "col");
-    			add_location(div12, file$8, 397, 16, 11822);
+    			add_location(div12, file$8, 416, 16, 12974);
     			attr_dev(div13, "class", "row mb-3");
-    			add_location(div13, file$8, 396, 14, 11782);
+    			add_location(div13, file$8, 415, 14, 12934);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "sgo");
-    			add_location(label4, file$8, 409, 18, 12279);
-    			attr_dev(select2, "class", "form-select");
-    			attr_dev(select2, "aria-label", "sgo");
-    			add_location(select2, file$8, 410, 18, 12363);
+    			add_location(label4, file$8, 445, 18, 14287);
+    			option4.hidden = true;
+    			option4.__value = "";
+    			option4.value = option4.__value;
+    			add_location(option4, file$8, 447, 20, 14485);
+    			attr_dev(select4, "class", "form-select");
+    			attr_dev(select4, "aria-label", "sgo");
+    			if (/*firewallRule*/ ctx[2].serviceGroupObjectId === void 0) add_render_callback(() => /*select4_change_handler*/ ctx[17].call(select4));
+    			add_location(select4, file$8, 446, 18, 14371);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$8, 408, 16, 12242);
+    			add_location(div14, file$8, 444, 16, 14250);
     			attr_dev(div15, "class", "row mb-3");
-    			add_location(div15, file$8, 407, 14, 12202);
+    			add_location(div15, file$8, 443, 14, 14210);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "uc");
-    			add_location(label5, file$8, 426, 18, 13024);
-    			attr_dev(input2, "class", "form-control");
-    			attr_dev(input2, "id", "uc");
-    			attr_dev(input2, "type", "text");
-    			add_location(input2, file$8, 427, 18, 13095);
+    			add_location(label5, file$8, 456, 18, 14816);
+    			option5.hidden = true;
+    			option5.__value = "";
+    			option5.value = option5.__value;
+    			add_location(option5, file$8, 458, 20, 14989);
+    			attr_dev(select5, "class", "form-select");
+    			attr_dev(select5, "aria-label", "uc");
+    			if (/*firewallRule*/ ctx[2].useCaseId === void 0) add_render_callback(() => /*select5_change_handler*/ ctx[18].call(select5));
+    			add_location(select5, file$8, 457, 18, 14887);
     			attr_dev(div16, "class", "col");
-    			add_location(div16, file$8, 425, 16, 12987);
+    			add_location(div16, file$8, 455, 16, 14779);
     			attr_dev(div17, "class", "row mb-3");
-    			add_location(div17, file$8, 424, 14, 12947);
+    			add_location(div17, file$8, 454, 14, 14739);
     			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$8, 364, 10, 10542);
+    			add_location(form, file$8, 364, 10, 10683);
     			attr_dev(div18, "class", "modal-body");
-    			add_location(div18, file$8, 363, 8, 10506);
+    			add_location(div18, file$8, 363, 8, 10647);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$8, 439, 10, 13429);
+    			add_location(button2, file$8, 469, 10, 15319);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
-    			add_location(button3, file$8, 440, 10, 13524);
+    			add_location(button3, file$8, 470, 10, 15414);
     			attr_dev(div19, "class", "modal-footer");
-    			add_location(div19, file$8, 438, 8, 13391);
+    			add_location(div19, file$8, 468, 8, 15281);
     			attr_dev(div20, "class", "modal-content");
-    			add_location(div20, file$8, 356, 6, 10174);
+    			add_location(div20, file$8, 356, 6, 10315);
     			attr_dev(div21, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div21, "role", "document");
-    			add_location(div21, file$8, 355, 4, 10102);
+    			add_location(div21, file$8, 355, 4, 10243);
     			attr_dev(div22, "class", "modal fade");
     			attr_dev(div22, "id", "createFWR");
     			attr_dev(div22, "tabindex", "-1");
     			attr_dev(div22, "role", "dialog");
     			attr_dev(div22, "aria-labelledby", "formCreateFirewallRule");
     			attr_dev(div22, "aria-hidden", "true");
-    			add_location(div22, file$8, 354, 2, 9969);
+    			add_location(div22, file$8, 354, 2, 10110);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6260,8 +6793,8 @@ var app = (function () {
     			append_dev(table, t20);
     			append_dev(table, tbody);
 
-    			for (let i = 0; i < each_blocks_3.length; i += 1) {
-    				each_blocks_3[i].m(tbody, null);
+    			for (let i = 0; i < each_blocks_12.length; i += 1) {
+    				each_blocks_12[i].m(tbody, null);
     			}
 
     			insert_dev(target, t21, anchor);
@@ -6281,54 +6814,116 @@ var app = (function () {
     			append_dev(div6, label0);
     			append_dev(div6, t27);
     			append_dev(div6, select0);
+    			append_dev(select0, option0);
 
-    			for (let i = 0; i < each_blocks_2.length; i += 1) {
-    				each_blocks_2[i].m(select0, null);
+    			for (let i = 0; i < each_blocks_11.length; i += 1) {
+    				each_blocks_11[i].m(select0, null);
     			}
 
+    			select_option(select0, /*firewallRule*/ ctx[2].fwTypeId);
     			append_dev(form, t28);
     			append_dev(form, div9);
     			append_dev(div9, div8);
     			append_dev(div8, label1);
     			append_dev(div8, t30);
     			append_dev(div8, select1);
+    			append_dev(select1, option1);
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(select1, null);
+    			for (let i = 0; i < each_blocks_10.length; i += 1) {
+    				each_blocks_10[i].m(select1, null);
     			}
 
+    			select_option(select1, /*firewallRule*/ ctx[2].contextId);
     			append_dev(form, t31);
     			append_dev(form, div11);
     			append_dev(div11, div10);
     			append_dev(div10, label2);
     			append_dev(div10, t33);
-    			append_dev(div10, input0);
-    			set_input_value(input0, /*firewallRule*/ ctx[2].sourceId);
+    			append_dev(div10, select2);
+    			append_dev(select2, option2);
+    			append_dev(select2, optgroup0);
+
+    			for (let i = 0; i < each_blocks_9.length; i += 1) {
+    				each_blocks_9[i].m(optgroup0, null);
+    			}
+
+    			append_dev(select2, optgroup1);
+
+    			for (let i = 0; i < each_blocks_8.length; i += 1) {
+    				each_blocks_8[i].m(optgroup1, null);
+    			}
+
+    			append_dev(select2, optgroup2);
+
+    			for (let i = 0; i < each_blocks_7.length; i += 1) {
+    				each_blocks_7[i].m(optgroup2, null);
+    			}
+
+    			append_dev(select2, optgroup3);
+
+    			for (let i = 0; i < each_blocks_6.length; i += 1) {
+    				each_blocks_6[i].m(optgroup3, null);
+    			}
+
+    			select_option(select2, /*firewallRule*/ ctx[2].sourceId);
     			append_dev(form, t34);
     			append_dev(form, div13);
     			append_dev(div13, div12);
     			append_dev(div12, label3);
     			append_dev(div12, t36);
-    			append_dev(div12, input1);
-    			set_input_value(input1, /*firewallRule*/ ctx[2].destinationId);
+    			append_dev(div12, select3);
+    			append_dev(select3, option3);
+    			append_dev(select3, optgroup4);
+
+    			for (let i = 0; i < each_blocks_5.length; i += 1) {
+    				each_blocks_5[i].m(optgroup4, null);
+    			}
+
+    			append_dev(select3, optgroup5);
+
+    			for (let i = 0; i < each_blocks_4.length; i += 1) {
+    				each_blocks_4[i].m(optgroup5, null);
+    			}
+
+    			append_dev(select3, optgroup6);
+
+    			for (let i = 0; i < each_blocks_3.length; i += 1) {
+    				each_blocks_3[i].m(optgroup6, null);
+    			}
+
+    			append_dev(select3, optgroup7);
+
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].m(optgroup7, null);
+    			}
+
+    			select_option(select3, /*firewallRule*/ ctx[2].destinationId);
     			append_dev(form, t37);
     			append_dev(form, div15);
     			append_dev(div15, div14);
     			append_dev(div14, label4);
     			append_dev(div14, t39);
-    			append_dev(div14, select2);
+    			append_dev(div14, select4);
+    			append_dev(select4, option4);
 
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(select2, null);
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select4, null);
     			}
 
+    			select_option(select4, /*firewallRule*/ ctx[2].serviceGroupObjectId);
     			append_dev(form, t40);
     			append_dev(form, div17);
     			append_dev(div17, div16);
     			append_dev(div16, label5);
     			append_dev(div16, t42);
-    			append_dev(div16, input2);
-    			set_input_value(input2, /*firewallRule*/ ctx[2].useCaseId);
+    			append_dev(div16, select5);
+    			append_dev(select5, option5);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select5, null);
+    			}
+
+    			select_option(select5, /*firewallRule*/ ctx[2].useCaseId);
     			append_dev(div20, t43);
     			append_dev(div20, div19);
     			append_dev(div19, button2);
@@ -6407,10 +7002,13 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[8]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[9]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[10]),
-    					listen_dev(button3, "click", /*createFirewallRule*/ ctx[6], false, false, false)
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[13]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[14]),
+    					listen_dev(select2, "change", /*select2_change_handler*/ ctx[15]),
+    					listen_dev(select3, "change", /*select3_change_handler*/ ctx[16]),
+    					listen_dev(select4, "change", /*select4_change_handler*/ ctx[17]),
+    					listen_dev(select5, "change", /*select5_change_handler*/ ctx[18]),
+    					listen_dev(button3, "click", /*createFirewallRule*/ ctx[11], false, false, false)
     				];
 
     				mounted = true;
@@ -6420,19 +7018,247 @@ var app = (function () {
     			ctx = new_ctx;
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_4 = /*firewallRules*/ ctx[0];
+    				each_value_12 = /*firewallRules*/ ctx[0];
+    				validate_each_argument(each_value_12);
+    				let i;
+
+    				for (i = 0; i < each_value_12.length; i += 1) {
+    					const child_ctx = get_each_context_12(ctx, each_value_12, i);
+
+    					if (each_blocks_12[i]) {
+    						each_blocks_12[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_12[i] = create_each_block_12(child_ctx);
+    						each_blocks_12[i].c();
+    						each_blocks_12[i].m(tbody, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_12.length; i += 1) {
+    					each_blocks_12[i].d(1);
+    				}
+
+    				each_blocks_12.length = each_value_12.length;
+    			}
+
+    			if (dirty[0] & /*fwTypes*/ 8) {
+    				each_value_11 = /*fwTypes*/ ctx[3];
+    				validate_each_argument(each_value_11);
+    				let i;
+
+    				for (i = 0; i < each_value_11.length; i += 1) {
+    					const child_ctx = get_each_context_11(ctx, each_value_11, i);
+
+    					if (each_blocks_11[i]) {
+    						each_blocks_11[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_11[i] = create_each_block_11(child_ctx);
+    						each_blocks_11[i].c();
+    						each_blocks_11[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_11.length; i += 1) {
+    					each_blocks_11[i].d(1);
+    				}
+
+    				each_blocks_11.length = each_value_11.length;
+    			}
+
+    			if (dirty[0] & /*firewallRule, fwTypes*/ 12) {
+    				select_option(select0, /*firewallRule*/ ctx[2].fwTypeId);
+    			}
+
+    			if (dirty[0] & /*contexts*/ 16) {
+    				each_value_10 = /*contexts*/ ctx[4];
+    				validate_each_argument(each_value_10);
+    				let i;
+
+    				for (i = 0; i < each_value_10.length; i += 1) {
+    					const child_ctx = get_each_context_10(ctx, each_value_10, i);
+
+    					if (each_blocks_10[i]) {
+    						each_blocks_10[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_10[i] = create_each_block_10(child_ctx);
+    						each_blocks_10[i].c();
+    						each_blocks_10[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_10.length; i += 1) {
+    					each_blocks_10[i].d(1);
+    				}
+
+    				each_blocks_10.length = each_value_10.length;
+    			}
+
+    			if (dirty[0] & /*firewallRule, fwTypes*/ 12) {
+    				select_option(select1, /*firewallRule*/ ctx[2].contextId);
+    			}
+
+    			if (dirty[0] & /*hostOs*/ 32) {
+    				each_value_9 = /*hostOs*/ ctx[5];
+    				validate_each_argument(each_value_9);
+    				let i;
+
+    				for (i = 0; i < each_value_9.length; i += 1) {
+    					const child_ctx = get_each_context_9(ctx, each_value_9, i);
+
+    					if (each_blocks_9[i]) {
+    						each_blocks_9[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_9[i] = create_each_block_9(child_ctx);
+    						each_blocks_9[i].c();
+    						each_blocks_9[i].m(optgroup0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_9.length; i += 1) {
+    					each_blocks_9[i].d(1);
+    				}
+
+    				each_blocks_9.length = each_value_9.length;
+    			}
+
+    			if (dirty[0] & /*hostGs*/ 64) {
+    				each_value_8 = /*hostGs*/ ctx[6];
+    				validate_each_argument(each_value_8);
+    				let i;
+
+    				for (i = 0; i < each_value_8.length; i += 1) {
+    					const child_ctx = get_each_context_8(ctx, each_value_8, i);
+
+    					if (each_blocks_8[i]) {
+    						each_blocks_8[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_8[i] = create_each_block_8(child_ctx);
+    						each_blocks_8[i].c();
+    						each_blocks_8[i].m(optgroup1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_8.length; i += 1) {
+    					each_blocks_8[i].d(1);
+    				}
+
+    				each_blocks_8.length = each_value_8.length;
+    			}
+
+    			if (dirty[0] & /*networkOs*/ 128) {
+    				each_value_7 = /*networkOs*/ ctx[7];
+    				validate_each_argument(each_value_7);
+    				let i;
+
+    				for (i = 0; i < each_value_7.length; i += 1) {
+    					const child_ctx = get_each_context_7(ctx, each_value_7, i);
+
+    					if (each_blocks_7[i]) {
+    						each_blocks_7[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_7[i] = create_each_block_7(child_ctx);
+    						each_blocks_7[i].c();
+    						each_blocks_7[i].m(optgroup2, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_7.length; i += 1) {
+    					each_blocks_7[i].d(1);
+    				}
+
+    				each_blocks_7.length = each_value_7.length;
+    			}
+
+    			if (dirty[0] & /*networkGs*/ 256) {
+    				each_value_6 = /*networkGs*/ ctx[8];
+    				validate_each_argument(each_value_6);
+    				let i;
+
+    				for (i = 0; i < each_value_6.length; i += 1) {
+    					const child_ctx = get_each_context_6(ctx, each_value_6, i);
+
+    					if (each_blocks_6[i]) {
+    						each_blocks_6[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_6[i] = create_each_block_6(child_ctx);
+    						each_blocks_6[i].c();
+    						each_blocks_6[i].m(optgroup3, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_6.length; i += 1) {
+    					each_blocks_6[i].d(1);
+    				}
+
+    				each_blocks_6.length = each_value_6.length;
+    			}
+
+    			if (dirty[0] & /*firewallRule, fwTypes*/ 12) {
+    				select_option(select2, /*firewallRule*/ ctx[2].sourceId);
+    			}
+
+    			if (dirty[0] & /*hostOs*/ 32) {
+    				each_value_5 = /*hostOs*/ ctx[5];
+    				validate_each_argument(each_value_5);
+    				let i;
+
+    				for (i = 0; i < each_value_5.length; i += 1) {
+    					const child_ctx = get_each_context_5(ctx, each_value_5, i);
+
+    					if (each_blocks_5[i]) {
+    						each_blocks_5[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_5[i] = create_each_block_5(child_ctx);
+    						each_blocks_5[i].c();
+    						each_blocks_5[i].m(optgroup4, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_5.length; i += 1) {
+    					each_blocks_5[i].d(1);
+    				}
+
+    				each_blocks_5.length = each_value_5.length;
+    			}
+
+    			if (dirty[0] & /*hostGs*/ 64) {
+    				each_value_4 = /*hostGs*/ ctx[6];
     				validate_each_argument(each_value_4);
     				let i;
 
     				for (i = 0; i < each_value_4.length; i += 1) {
     					const child_ctx = get_each_context_4(ctx, each_value_4, i);
 
+    					if (each_blocks_4[i]) {
+    						each_blocks_4[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_4[i] = create_each_block_4(child_ctx);
+    						each_blocks_4[i].c();
+    						each_blocks_4[i].m(optgroup5, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_4.length; i += 1) {
+    					each_blocks_4[i].d(1);
+    				}
+
+    				each_blocks_4.length = each_value_4.length;
+    			}
+
+    			if (dirty[0] & /*networkOs*/ 128) {
+    				each_value_3 = /*networkOs*/ ctx[7];
+    				validate_each_argument(each_value_3);
+    				let i;
+
+    				for (i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
+
     					if (each_blocks_3[i]) {
     						each_blocks_3[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks_3[i] = create_each_block_4(child_ctx);
+    						each_blocks_3[i] = create_each_block_3(child_ctx);
     						each_blocks_3[i].c();
-    						each_blocks_3[i].m(tbody, null);
+    						each_blocks_3[i].m(optgroup6, null);
     					}
     				}
 
@@ -6440,23 +7266,23 @@ var app = (function () {
     					each_blocks_3[i].d(1);
     				}
 
-    				each_blocks_3.length = each_value_4.length;
+    				each_blocks_3.length = each_value_3.length;
     			}
 
-    			if (dirty[0] & /*fwTypes*/ 8) {
-    				each_value_3 = /*fwTypes*/ ctx[3];
-    				validate_each_argument(each_value_3);
+    			if (dirty[0] & /*networkGs*/ 256) {
+    				each_value_2 = /*networkGs*/ ctx[8];
+    				validate_each_argument(each_value_2);
     				let i;
 
-    				for (i = 0; i < each_value_3.length; i += 1) {
-    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
 
     					if (each_blocks_2[i]) {
     						each_blocks_2[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks_2[i] = create_each_block_3(child_ctx);
+    						each_blocks_2[i] = create_each_block_2$2(child_ctx);
     						each_blocks_2[i].c();
-    						each_blocks_2[i].m(select0, null);
+    						each_blocks_2[i].m(optgroup7, null);
     					}
     				}
 
@@ -6464,23 +7290,27 @@ var app = (function () {
     					each_blocks_2[i].d(1);
     				}
 
-    				each_blocks_2.length = each_value_3.length;
+    				each_blocks_2.length = each_value_2.length;
     			}
 
-    			if (dirty[0] & /*contexts*/ 16) {
-    				each_value_2 = /*contexts*/ ctx[4];
-    				validate_each_argument(each_value_2);
+    			if (dirty[0] & /*firewallRule, fwTypes*/ 12) {
+    				select_option(select3, /*firewallRule*/ ctx[2].destinationId);
+    			}
+
+    			if (dirty[0] & /*serviceGs*/ 512) {
+    				each_value_1 = /*serviceGs*/ ctx[9];
+    				validate_each_argument(each_value_1);
     				let i;
 
-    				for (i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$4(ctx, each_value_1, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks_1[i] = create_each_block_2$2(child_ctx);
+    						each_blocks_1[i] = create_each_block_1$4(child_ctx);
     						each_blocks_1[i].c();
-    						each_blocks_1[i].m(select1, null);
+    						each_blocks_1[i].m(select4, null);
     					}
     				}
 
@@ -6488,19 +7318,15 @@ var app = (function () {
     					each_blocks_1[i].d(1);
     				}
 
-    				each_blocks_1.length = each_value_2.length;
+    				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty[0] & /*firewallRule*/ 4 && input0.value !== /*firewallRule*/ ctx[2].sourceId) {
-    				set_input_value(input0, /*firewallRule*/ ctx[2].sourceId);
+    			if (dirty[0] & /*firewallRule, fwTypes*/ 12) {
+    				select_option(select4, /*firewallRule*/ ctx[2].serviceGroupObjectId);
     			}
 
-    			if (dirty[0] & /*firewallRule*/ 4 && input1.value !== /*firewallRule*/ ctx[2].destinationId) {
-    				set_input_value(input1, /*firewallRule*/ ctx[2].destinationId);
-    			}
-
-    			if (dirty[0] & /*serviceGs*/ 32) {
-    				each_value = /*serviceGs*/ ctx[5];
+    			if (dirty[0] & /*usecases*/ 1024) {
+    				each_value = /*usecases*/ ctx[10];
     				validate_each_argument(each_value);
     				let i;
 
@@ -6512,7 +7338,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$7(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(select2, null);
+    						each_blocks[i].m(select5, null);
     					}
     				}
 
@@ -6523,8 +7349,8 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty[0] & /*firewallRule*/ 4 && input2.value !== /*firewallRule*/ ctx[2].useCaseId) {
-    				set_input_value(input2, /*firewallRule*/ ctx[2].useCaseId);
+    			if (dirty[0] & /*firewallRule, fwTypes*/ 12) {
+    				select_option(select5, /*firewallRule*/ ctx[2].useCaseId);
     			}
     		},
     		i: noop$1,
@@ -6533,9 +7359,18 @@ var app = (function () {
     			if (detaching) detach_dev(div4);
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(table);
-    			destroy_each(each_blocks_3, detaching);
+    			destroy_each(each_blocks_12, detaching);
     			if (detaching) detach_dev(t21);
     			if (detaching) detach_dev(div22);
+    			destroy_each(each_blocks_11, detaching);
+    			destroy_each(each_blocks_10, detaching);
+    			destroy_each(each_blocks_9, detaching);
+    			destroy_each(each_blocks_8, detaching);
+    			destroy_each(each_blocks_7, detaching);
+    			destroy_each(each_blocks_6, detaching);
+    			destroy_each(each_blocks_5, detaching);
+    			destroy_each(each_blocks_4, detaching);
+    			destroy_each(each_blocks_3, detaching);
     			destroy_each(each_blocks_2, detaching);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
@@ -6602,7 +7437,7 @@ var app = (function () {
     	function createFirewallRule() {
     		var config = {
     			method: "post",
-    			url: api_root$7 + "/firwall-rule",
+    			url: api_root$7 + "/firewall-rule",
     			headers: { "Content-Type": "application/json" },
     			data: firewallRule
     		};
@@ -6661,7 +7496,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			hostOs = response.data;
+    			$$invalidate(5, hostOs = response.data);
     		}).catch(function (error) {
     			console.log(error);
     		});
@@ -6679,7 +7514,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			hostGs = response.data;
+    			$$invalidate(6, hostGs = response.data);
     		}).catch(function (error) {
     			console.log(error);
     		});
@@ -6697,7 +7532,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			networkOs = response.data;
+    			$$invalidate(7, networkOs = response.data);
     		}).catch(function (error) {
     			console.log(error);
     		});
@@ -6715,7 +7550,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			networkGs = response.data;
+    			$$invalidate(8, networkGs = response.data);
     		}).catch(function (error) {
     			console.log(error);
     		});
@@ -6733,7 +7568,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(5, serviceGs = response.data);
+    			$$invalidate(9, serviceGs = response.data);
     		}).catch(function (error) {
     			console.log(error);
     		});
@@ -6751,7 +7586,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			usecases = response.data;
+    			$$invalidate(10, usecases = response.data);
     		}).catch(function (error) {
     			console.log(error);
     		});
@@ -6768,19 +7603,40 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$7.warn(`<Firewall_Rules> was created with unknown prop '${key}'`);
     	});
 
-    	function input0_input_handler() {
-    		firewallRule.sourceId = this.value;
+    	function select0_change_handler() {
+    		firewallRule.fwTypeId = select_value(this);
     		$$invalidate(2, firewallRule);
+    		$$invalidate(3, fwTypes);
     	}
 
-    	function input1_input_handler() {
-    		firewallRule.destinationId = this.value;
+    	function select1_change_handler() {
+    		firewallRule.contextId = select_value(this);
     		$$invalidate(2, firewallRule);
+    		$$invalidate(3, fwTypes);
     	}
 
-    	function input2_input_handler() {
-    		firewallRule.useCaseId = this.value;
+    	function select2_change_handler() {
+    		firewallRule.sourceId = select_value(this);
     		$$invalidate(2, firewallRule);
+    		$$invalidate(3, fwTypes);
+    	}
+
+    	function select3_change_handler() {
+    		firewallRule.destinationId = select_value(this);
+    		$$invalidate(2, firewallRule);
+    		$$invalidate(3, fwTypes);
+    	}
+
+    	function select4_change_handler() {
+    		firewallRule.serviceGroupObjectId = select_value(this);
+    		$$invalidate(2, firewallRule);
+    		$$invalidate(3, fwTypes);
+    	}
+
+    	function select5_change_handler() {
+    		firewallRule.useCaseId = select_value(this);
+    		$$invalidate(2, firewallRule);
+    		$$invalidate(3, fwTypes);
     	}
 
     	$$self.$capture_state = () => ({
@@ -6815,13 +7671,13 @@ var app = (function () {
     		if ('firewallRule' in $$props) $$invalidate(2, firewallRule = $$props.firewallRule);
     		if ('fwTypes' in $$props) $$invalidate(3, fwTypes = $$props.fwTypes);
     		if ('contexts' in $$props) $$invalidate(4, contexts = $$props.contexts);
-    		if ('hostOs' in $$props) hostOs = $$props.hostOs;
-    		if ('hostGs' in $$props) hostGs = $$props.hostGs;
-    		if ('networkOs' in $$props) networkOs = $$props.networkOs;
-    		if ('networkGs' in $$props) networkGs = $$props.networkGs;
-    		if ('serviceGs' in $$props) $$invalidate(5, serviceGs = $$props.serviceGs);
-    		if ('usecases' in $$props) usecases = $$props.usecases;
-    		if ('sortBy' in $$props) $$invalidate(7, sortBy = $$props.sortBy);
+    		if ('hostOs' in $$props) $$invalidate(5, hostOs = $$props.hostOs);
+    		if ('hostGs' in $$props) $$invalidate(6, hostGs = $$props.hostGs);
+    		if ('networkOs' in $$props) $$invalidate(7, networkOs = $$props.networkOs);
+    		if ('networkGs' in $$props) $$invalidate(8, networkGs = $$props.networkGs);
+    		if ('serviceGs' in $$props) $$invalidate(9, serviceGs = $$props.serviceGs);
+    		if ('usecases' in $$props) $$invalidate(10, usecases = $$props.usecases);
+    		if ('sortBy' in $$props) $$invalidate(12, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -6830,13 +7686,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*sortBy, firewallRules*/ 129) {
+    		if ($$self.$$.dirty[0] & /*sortBy, firewallRules*/ 4097) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(7, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(12, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(7, sortBy.col = column, sortBy);
-    					$$invalidate(7, sortBy.ascending = true, sortBy);
+    					$$invalidate(12, sortBy.col = column, sortBy);
+    					$$invalidate(12, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -6857,19 +7713,27 @@ var app = (function () {
     		firewallRule,
     		fwTypes,
     		contexts,
+    		hostOs,
+    		hostGs,
+    		networkOs,
+    		networkGs,
     		serviceGs,
+    		usecases,
     		createFirewallRule,
     		sortBy,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
+    		select0_change_handler,
+    		select1_change_handler,
+    		select2_change_handler,
+    		select3_change_handler,
+    		select4_change_handler,
+    		select5_change_handler
     	];
     }
 
     class Firewall_Rules extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {}, null, [-1, -1]);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {}, null, [-1, -1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -6899,7 +7763,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "No data available";
-    			add_location(div, file$7, 152, 6, 3792);
+    			add_location(div, file$7, 152, 6, 3793);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6940,7 +7804,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(tbody, file$7, 139, 4, 3377);
+    			add_location(tbody, file$7, 139, 4, 3378);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tbody, anchor);
@@ -7038,19 +7902,19 @@ var app = (function () {
     			td5 = element("td");
     			i1 = element("i");
     			t9 = space();
-    			add_location(td0, file$7, 142, 8, 3444);
-    			add_location(td1, file$7, 143, 8, 3477);
-    			add_location(td2, file$7, 144, 8, 3508);
-    			add_location(td3, file$7, 145, 8, 3543);
+    			add_location(td0, file$7, 142, 8, 3445);
+    			add_location(td1, file$7, 143, 8, 3478);
+    			add_location(td2, file$7, 144, 8, 3509);
+    			add_location(td3, file$7, 145, 8, 3544);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$7, 146, 12, 3587);
-    			add_location(td4, file$7, 146, 8, 3583);
+    			add_location(i0, file$7, 146, 12, 3588);
+    			add_location(td4, file$7, 146, 8, 3584);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$7, 147, 14, 3670);
-    			add_location(td5, file$7, 147, 10, 3666);
-    			add_location(tr, file$7, 141, 6, 3430);
+    			add_location(i1, file$7, 147, 14, 3671);
+    			add_location(td5, file$7, 147, 10, 3667);
+    			add_location(tr, file$7, 141, 6, 3431);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -7304,123 +8168,123 @@ var app = (function () {
     			attr_dev(input0, "type", "text");
     			set_style(input0, "margin-bottom", "10px");
     			attr_dev(input0, "placeholder", "search...");
-    			add_location(input0, file$7, 111, 4, 2592);
+    			add_location(input0, file$7, 111, 4, 2593);
     			attr_dev(div4, "class", "col");
-    			add_location(div4, file$7, 110, 6, 2569);
+    			add_location(div4, file$7, 110, 6, 2570);
     			attr_dev(div5, "class", "col");
-    			add_location(div5, file$7, 120, 2, 2784);
+    			add_location(div5, file$7, 120, 2, 2785);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$7, 121, 2, 2806);
+    			add_location(div6, file$7, 121, 2, 2807);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$7, 122, 2, 2828);
+    			add_location(div7, file$7, 122, 2, 2829);
     			attr_dev(div8, "class", "row g-3");
-    			add_location(div8, file$7, 109, 4, 2540);
+    			add_location(div8, file$7, 109, 4, 2541);
     			attr_dev(div9, "class", "container-fluid");
     			add_location(div9, file$7, 93, 0, 2023);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$7, 129, 60, 3087);
-    			add_location(span0, file$7, 129, 29, 3056);
+    			add_location(i, file$7, 129, 60, 3088);
+    			add_location(span0, file$7, 129, 29, 3057);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$7, 129, 8, 3035);
+    			add_location(th0, file$7, 129, 8, 3036);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$7, 130, 8, 3141);
+    			add_location(th1, file$7, 130, 8, 3142);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$7, 131, 8, 3174);
+    			add_location(th2, file$7, 131, 8, 3175);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$7, 132, 8, 3211);
+    			add_location(th3, file$7, 132, 8, 3212);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$7, 133, 8, 3253);
+    			add_location(th4, file$7, 133, 8, 3254);
     			attr_dev(th5, "scope", "col");
-    			add_location(th5, file$7, 134, 8, 3285);
-    			add_location(tr, file$7, 127, 6, 2955);
-    			add_location(thead, file$7, 126, 4, 2940);
+    			add_location(th5, file$7, 134, 8, 3286);
+    			add_location(tr, file$7, 127, 6, 2956);
+    			add_location(thead, file$7, 126, 4, 2941);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allContexts");
-    			add_location(table, file$7, 125, 2, 2870);
+    			add_location(table, file$7, 125, 2, 2871);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "crateContext");
-    			add_location(h5, file$7, 161, 10, 4126);
+    			add_location(h5, file$7, 161, 10, 4127);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$7, 163, 12, 4286);
+    			add_location(span1, file$7, 163, 12, 4287);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$7, 162, 10, 4196);
+    			add_location(button1, file$7, 162, 10, 4197);
     			attr_dev(div10, "class", "modal-header");
-    			add_location(div10, file$7, 160, 8, 4088);
+    			add_location(div10, file$7, 160, 8, 4089);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$7, 170, 16, 4514);
+    			add_location(label0, file$7, 170, 16, 4515);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "name");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$7, 171, 16, 4581);
+    			add_location(input1, file$7, 171, 16, 4582);
     			attr_dev(div11, "class", "col");
-    			add_location(div11, file$7, 169, 14, 4479);
+    			add_location(div11, file$7, 169, 14, 4480);
     			attr_dev(div12, "class", "row mb-3");
-    			add_location(div12, file$7, 168, 12, 4441);
+    			add_location(div12, file$7, 168, 12, 4442);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$7, 181, 18, 4889);
+    			add_location(label1, file$7, 181, 18, 4890);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "description");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$7, 182, 18, 4954);
+    			add_location(input2, file$7, 182, 18, 4955);
     			attr_dev(div13, "class", "col");
-    			add_location(div13, file$7, 180, 16, 4852);
+    			add_location(div13, file$7, 180, 16, 4853);
     			attr_dev(div14, "class", "row mb-3");
-    			add_location(div14, file$7, 179, 14, 4812);
+    			add_location(div14, file$7, 179, 14, 4813);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "subnet");
-    			add_location(label2, file$7, 192, 18, 5275);
+    			add_location(label2, file$7, 192, 18, 5276);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "description");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$7, 193, 18, 5348);
+    			add_location(input3, file$7, 193, 18, 5349);
     			attr_dev(div15, "class", "col");
-    			add_location(div15, file$7, 191, 16, 5238);
+    			add_location(div15, file$7, 191, 16, 5239);
     			attr_dev(div16, "class", "row mb-3");
-    			add_location(div16, file$7, 190, 14, 5198);
+    			add_location(div16, file$7, 190, 14, 5199);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "description");
-    			add_location(label3, file$7, 203, 16, 5681);
+    			add_location(label3, file$7, 203, 16, 5682);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "description");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$7, 204, 16, 5762);
+    			add_location(input4, file$7, 204, 16, 5763);
     			attr_dev(div17, "class", "col");
-    			add_location(div17, file$7, 202, 14, 5646);
+    			add_location(div17, file$7, 202, 14, 5647);
     			attr_dev(div18, "class", "row mb-3");
-    			add_location(div18, file$7, 201, 16, 5608);
+    			add_location(div18, file$7, 201, 16, 5609);
     			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$7, 167, 10, 4408);
+    			add_location(form, file$7, 167, 10, 4409);
     			attr_dev(div19, "class", "modal-body");
-    			add_location(div19, file$7, 166, 8, 4372);
+    			add_location(div19, file$7, 166, 8, 4373);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$7, 215, 10, 6064);
+    			add_location(button2, file$7, 215, 10, 6065);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$7, 216, 10, 6159);
+    			add_location(button3, file$7, 216, 10, 6160);
     			attr_dev(div20, "class", "modal-footer");
-    			add_location(div20, file$7, 214, 8, 6026);
+    			add_location(div20, file$7, 214, 8, 6027);
     			attr_dev(div21, "class", "modal-content");
-    			add_location(div21, file$7, 159, 6, 4051);
+    			add_location(div21, file$7, 159, 6, 4052);
     			attr_dev(div22, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div22, "role", "document");
-    			add_location(div22, file$7, 158, 4, 3979);
+    			add_location(div22, file$7, 158, 4, 3980);
     			attr_dev(div23, "class", "modal fade");
     			attr_dev(div23, "id", "createC");
     			attr_dev(div23, "tabindex", "-1");
     			attr_dev(div23, "role", "dialog");
     			attr_dev(div23, "aria-labelledby", "formCreateContext");
     			attr_dev(div23, "aria-hidden", "true");
-    			add_location(div23, file$7, 157, 2, 3853);
+    			add_location(div23, file$7, 157, 2, 3854);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

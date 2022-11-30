@@ -53,7 +53,7 @@
   function createFirewallRule() {
       var config = {
         method: "post",
-        url: api_root + "/firwall-rule",
+        url: api_root + "/firewall-rule",
         headers: {
           "Content-Type": "application/json",
         },
@@ -300,7 +300,7 @@ function getUseCases() {
         <td>
             {#if fwr.sho}
             <li class="list-group-item">{fwr.sho.name}</li>
-            <li class="list-group-item">{fwr.sho.ip}</li>           
+            <li class="list-group-item" style="font-style: italic;">{fwr.sho.ip}</li>           
           {/if}
 
             {#if fwr.shgo}
@@ -309,7 +309,7 @@ function getUseCases() {
 
           {#if fwr.sno}
           <li class="list-group-item">{fwr.sno.name}</li>
-          <li class="list-group-item">{fwr.sno.ip}{fwr.sno.subnet}</li>          
+          <li class="list-group-item" style="font-style: italic;">{fwr.sno.ip}{fwr.sno.subnet}</li>          
           {/if}
 
           {#if fwr.sngo}
@@ -320,7 +320,7 @@ function getUseCases() {
         <td>
           {#if fwr.dho}
             <li class="list-group-item">{fwr.dho.name}</li>
-            <li class="list-group-item">{fwr.dho.ip}</li>         
+            <li class="list-group-item" style="font-style: italic;">{fwr.dho.ip}</li>         
           {/if}
 
           {#if fwr.dhgo}
@@ -329,7 +329,7 @@ function getUseCases() {
 
           {#if fwr.dno}
             <li class="list-group-item">{fwr.dno.name}</li>
-            <li class="list-group-item">{fwr.dno.ip}{fwr.dno.subnet}</li>            
+            <li class="list-group-item" style="font-style: italic;">{fwr.dno.ip}{fwr.dno.subnet}</li>            
           {/if}
 
           {#if fwr.dngo}
@@ -339,7 +339,7 @@ function getUseCases() {
     <td>
       <li class="list-group-item">{fwr.sgo.name}</li>
             {#each fwr.sgo.port as port}
-            <li class="list-group-item">{port}</li>  
+            <li class="list-group-item" style="font-style: italic;">{port}</li>  
             {/each}
             
         </td>
@@ -366,7 +366,8 @@ function getUseCases() {
             <div class="row mb-3">
               <div class="col">
                 <label class="form-label" for="fwType">FW Type</label>
-                <select class="form-select" aria-label="fwType">
+                <select class="form-select" aria-label="fwType" bind:value={firewallRule.fwTypeId}>
+                  <option hidden></option>
                 {#each fwTypes as fwT}
                 <option value={fwT.id}>{fwT.name}</option>
                 {/each}
@@ -376,7 +377,8 @@ function getUseCases() {
             <div class="row mb-3">
               <div class="col">
                 <label class="form-label" for="context">Context</label>
-                <select class="form-select" aria-label="context">
+                <select class="form-select" aria-label="context" bind:value={firewallRule.contextId}>
+                  <option hidden></option>
                   {#each contexts as c}
                   <option value={c.id}>{c.name}</option>
                   {/each}
@@ -386,38 +388,66 @@ function getUseCases() {
             <div class="row mb-3">
                 <div class="col">
                   <label class="form-label" for="source">Source</label>
-                  <input
-                    bind:value={firewallRule.sourceId}
-                    class="form-control"
-                    id="source"
-                    type="text"
-                  />
+                  <select class="form-select" aria-label="source" bind:value={firewallRule.sourceId}>
+                    <option hidden></option>
+                    <optgroup label="Host Objects">
+                    {#each hostOs as ho}
+                    <option value={ho.id}>{ho.name}</option>
+                    {/each}
+                  </optgroup>
+                  <optgroup label="Host Group Objects">
+                    {#each hostGs as hg}
+                    <option value={hg.id}>{hg.name}</option>
+                    {/each}
+                  </optgroup>
+                  <optgroup label="Network Objects">
+                    {#each networkOs as no}
+                    <option value={no.id}>{no.name}</option>
+                    {/each}
+                  </optgroup>
+                  <optgroup label="Network Group Objects">
+                    {#each networkGs as ng}
+                    <option value={ng.id}>{ng.name}</option>
+                    {/each}
+                  </optgroup>
+                  </select>
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col">
                   <label class="form-label" for="destination">Destination</label>
-                  <input
-                    bind:value={firewallRule.destinationId}
-                    class="form-control"
-                    id="context"
-                    type="text"
-                  />
+                  <select class="form-select" aria-label="destination" bind:value={firewallRule.destinationId}>
+                    <option hidden></option>
+                    <optgroup label="Host Objects">
+                    {#each hostOs as ho}
+                    <option value={ho.id}>{ho.name}</option>
+                    {/each}
+                  </optgroup>
+                  <optgroup label="Host Group Objects">
+                    {#each hostGs as hg}
+                    <option value={hg.id}>{hg.name}</option>
+                    {/each}
+                  </optgroup>
+                  <optgroup label="Network Objects">
+                    {#each networkOs as no}
+                    <option value={no.id}>{no.name}</option>
+                    {/each}
+                  </optgroup>
+                  <optgroup label="Network Group Objects">
+                    {#each networkGs as ng}
+                    <option value={ng.id}>{ng.name}</option>
+                    {/each}
+                  </optgroup>
+                  </select>
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col">
                   <label class="form-label" for="sgo">Service Group Object</label>
-                  <select class="form-select" aria-label="sgo">
-                    {#each serviceGs as s}
-                    <option value={s.id}>
-                      <ul class="list-group">
-                      <li class="list-group-item">{s.name}</li>
-                      {#each s.port as p}
-                      <li class="list-group-item" style="font-style: italic;">{p}</li>
-                      {/each}
-                    </ul>
-                    </option>
+                  <select class="form-select" aria-label="sgo" bind:value={firewallRule.serviceGroupObjectId}>
+                    <option hidden></option>
+                    {#each serviceGs as sgo}
+                    <option value={sgo.id}>{sgo.name}</option>
                     {/each}
                   </select>
                 </div>
@@ -425,12 +455,12 @@ function getUseCases() {
               <div class="row mb-3">
                 <div class="col">
                   <label class="form-label" for="uc">Use Case</label>
-                  <input
-                    bind:value={firewallRule.useCaseId}
-                    class="form-control"
-                    id="uc"
-                    type="text"
-                  />
+                  <select class="form-select" aria-label="uc" bind:value={firewallRule.useCaseId}>
+                    <option hidden></option>
+                    {#each usecases as u}
+                    <option value={u.id}>{u.name}</option>
+                    {/each}
+                  </select>
                 </div>
               </div>
               

@@ -102,7 +102,7 @@
           type="button"
           class="btn"
           data-toggle="modal" data-target="#createC"
-          style="margin-top: 19px; background-color: #c73834; color: #fff"
+          style="margin-top: 19px; background-color: #c73834; color: #fff;"
           >Add Context</button
         >
       </div>
