@@ -9,12 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.UseCase;
 import ch.buelach.firewalldoc.model.UseCaseCreateDTO;
+import ch.buelach.firewalldoc.model.UseCaseEditDTO;
 import ch.buelach.firewalldoc.repository.UseCaseRepository;
 
 @RestController
@@ -46,5 +48,15 @@ public class UseCaseController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PutMapping("")
+    public ResponseEntity<UseCase> editContext(@RequestBody UseCaseEditDTO ucEditDTO) {
+        UseCase uDAO = useCaseRepository.findById(ucEditDTO.getId()).get();
+        uDAO.setName(ucEditDTO.getName());
+        uDAO.setDescription(ucEditDTO.getDescription());
+        uDAO.setTags(ucEditDTO.getTags());
+        UseCase u = useCaseRepository.save(uDAO);
+        return new ResponseEntity<>(u, HttpStatus.OK); 
+        }
 
 }

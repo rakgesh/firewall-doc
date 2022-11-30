@@ -9,13 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-// import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.Context;
 import ch.buelach.firewalldoc.model.ContextCreateDTO;
+import ch.buelach.firewalldoc.model.ContextEditDTO;
 import ch.buelach.firewalldoc.repository.ContextRepository;
 
 @RestController
@@ -49,15 +50,13 @@ public class ContextController {
         }
     }
 
-    /*
-    @PutMapping("/{id}/edit")
-    public ResponseEntity<Context> editContext(@PathVariable String id) {
-        Optional<Context> optContext = contextRepository.findById(id);
-            
+    @PutMapping("/{id}")
+    public ResponseEntity<Context> editContext(@RequestBody ContextEditDTO cEditDTO) {
+        Context c = contextRepository.findById(cEditDTO.getId()).get();
+        c.setName(cEditDTO.getName());
+        c.setDescription(cEditDTO.getDescription());
+        // noch fertig machen           
         return new ResponseEntity<>(c, HttpStatus.CREATED); 
         }
 
-        "/([0-9]|[1-2][0-9]|3[0-2])$"gm
-
-         */
 }
