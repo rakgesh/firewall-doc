@@ -181,7 +181,7 @@
             {/each}
             <li class="list-group-item">{fwr.sgo.name}</li>
         </td>
-        <td><a href="http://localhost:8080/use-case/{fwr.uc.id}">{fwr.uc.name}</a></td>
+        <td>{fwr.uc.name}</td>
         <td>{fwr.firewallStatus}</td>
           <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
           <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
