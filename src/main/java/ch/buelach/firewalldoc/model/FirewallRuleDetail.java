@@ -12,13 +12,13 @@ public class FirewallRuleDetail {
     private FirewallType fwType;
     private Context context;
     private HostObject sHo;
-    private HostGroupObject sHgo;
+    private HostObjectsToHostGroup sHgoWithHo;
     private NetworkObject sNo;
-    private NetworkGroupObject sNgo;
+    private NetworkObjectsToNetworkGroup sNgoWithNo;
     private HostObject dHo;
-    private HostGroupObject dHgo;
+    private HostObjectsToHostGroup dHgoWithHo;
     private NetworkObject dNo;
-    private NetworkGroupObject dNgo;
+    private NetworkObjectsToNetworkGroup dNgoWithNo;
     private ServiceGroupObject sgo;
     private UseCase uc; 
     private FirewallStatus firewallStatus;

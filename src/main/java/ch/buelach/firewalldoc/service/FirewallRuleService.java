@@ -9,10 +9,10 @@ import ch.buelach.firewalldoc.model.Context;
 import ch.buelach.firewalldoc.model.FirewallRule;
 import ch.buelach.firewalldoc.model.FirewallRuleDetail;
 import ch.buelach.firewalldoc.model.FirewallType;
-import ch.buelach.firewalldoc.model.HostGroupObject;
 import ch.buelach.firewalldoc.model.HostObject;
-import ch.buelach.firewalldoc.model.NetworkGroupObject;
+import ch.buelach.firewalldoc.model.HostObjectsToHostGroup;
 import ch.buelach.firewalldoc.model.NetworkObject;
+import ch.buelach.firewalldoc.model.NetworkObjectsToNetworkGroup;
 import ch.buelach.firewalldoc.model.ServiceGroupObject;
 import ch.buelach.firewalldoc.model.UseCase;
 import ch.buelach.firewalldoc.repository.ContextRepository;
@@ -45,7 +45,10 @@ public class FirewallRuleService {
     ServiceGroupObjectRepository serviceGroupObjectRepository;
     @Autowired
     UseCaseRepository useCaseRepository;
-    
+    @Autowired
+    HostGroupObjectService hostGroupObjectService;
+    @Autowired
+    NetworkGroupObjectService networkGroupObjectService;
 
     public List<FirewallRuleDetail> getFirewallruleDetail() {
         List<FirewallRuleDetail> all = new ArrayList<FirewallRuleDetail>();
@@ -53,9 +56,9 @@ public class FirewallRuleService {
         List<FirewallType> allFirewallTypes = firewallTypeRepository.findAll();
         List<Context> allContexts = contextRepository.findAll();
         List<HostObject> allHostObjects = hostObjectRepository.findAll();
-        List<HostGroupObject> allHostGroupObject = hostGroupObjectRepository.findAll();
+        List<HostObjectsToHostGroup> allHostGroupObjectWithHo =  hostGroupObjectService.getHoOfHgroup();
         List<NetworkObject> allNetworkObject = networkObjectRepository.findAll();
-        List<NetworkGroupObject> allNetworkGroupObject = networkGroupObjectRepository.findAll();
+        List<NetworkObjectsToNetworkGroup> allNetworkGroupObjectsWithNo = networkGroupObjectService.getNoOfNgroup();
         List<ServiceGroupObject> allServiceGroupObjects = serviceGroupObjectRepository.findAll();
         List<UseCase> allUseCases = useCaseRepository.findAll();
 
@@ -81,9 +84,9 @@ public class FirewallRuleService {
                 } 
             }
 
-            for (HostGroupObject hgo : allHostGroupObject) {
-                if (hgo.getId().equals(f.getSourceId())) {
-                    one.setSHgo(hgo);
+            for (HostObjectsToHostGroup hgo : allHostGroupObjectWithHo) {
+                if (hgo.getHgoId().equals(f.getSourceId())) {
+                    one.setSHgoWithHo(hgo);
                 }
             }
             
@@ -93,9 +96,9 @@ public class FirewallRuleService {
                 }
             }
 
-            for (NetworkGroupObject ngo : allNetworkGroupObject) {
-                if (ngo.getId().equals(f.getSourceId())) {
-                    one.setSNgo(ngo);
+            for (NetworkObjectsToNetworkGroup ngo : allNetworkGroupObjectsWithNo) {
+                if (ngo.getNgoId().equals(f.getSourceId())) {
+                    one.setSNgoWithNo(ngo);
                 }
             }
 
@@ -105,9 +108,9 @@ public class FirewallRuleService {
                 } 
             }
 
-            for (HostGroupObject hgo : allHostGroupObject) {
-                if (hgo.getId().equals(f.getDestinationId())) {
-                    one.setDHgo(hgo);
+            for (HostObjectsToHostGroup hgo : allHostGroupObjectWithHo) {
+                if (hgo.getHgoId().equals(f.getDestinationId())) {
+                    one.setDHgoWithHo(hgo);
                 }
             }
             
@@ -117,9 +120,9 @@ public class FirewallRuleService {
                 }
             }
 
-            for (NetworkGroupObject ngo : allNetworkGroupObject) {
-                if (ngo.getId().equals(f.getDestinationId())) {
-                    one.setDNgo(ngo);
+            for (NetworkObjectsToNetworkGroup ngo : allNetworkGroupObjectsWithNo) {
+                if (ngo.getNgoId().equals(f.getDestinationId())) {
+                    one.setDNgoWithNo(ngo);
                 }
             }
 

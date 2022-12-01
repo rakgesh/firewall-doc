@@ -239,15 +239,12 @@
                 <div class="list-group" style="width: 466px; margin-left: -16px; margin-top: -17px;">
                   {#each hostObjects as h}
                     <label class="list-group-item">
-                      <input
-                        class="form-check-input me-1"
-                        type="checkbox"
-                        value={h.id}
-                        bind:group={selection}
-                        on
-                      />
-                      {h.name} || {h.ip}
-                    </label>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" value={h.id}
+                        bind:group={selection}  >
+                        <label class="form-check-label" for="flexSwitchCheckDefault">{h.name} || {h.ip}</label>
+                      </div>
+                      </label>
                   {/each}
                 </div>
               </div>
@@ -270,5 +267,7 @@
     </div>
   </div>
 </div>
+
+    
 
 <!--------------->
