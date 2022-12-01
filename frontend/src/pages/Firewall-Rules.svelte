@@ -321,7 +321,7 @@
     </tr>
   </thead>
   <tbody>
-    {#each firewallRules as fwr, i}
+    {#each firewallRules as fwr}
       <tr>
         <td>{fwr.fwType.name}</td>
 
@@ -334,14 +334,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#source{fwr.sho.id}{+1}"
+                data-bs-target="#source{fwr.sho.id}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="source"
               >
                 {fwr.sho.name}
               </button>
             </li>
-            <div class="collapse" id="source{fwr.sho.id}{+1}">
+            <div class="collapse" id="source{fwr.sho.id}{fwr.fwId}">
               <li class="list-group-item" style="font-style: italic;">
                 {fwr.sho.ip}
               </li>
@@ -354,14 +354,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#source{fwr.shgoWithHo.hgoId}"
+                data-bs-target="#source{fwr.shgoWithHo.hgoId}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="source"
               >
                 {fwr.shgoWithHo.hgoName}
               </button>
             </li>
-            <div class="collapse" id="source{fwr.shgoWithHo.hgoId}">
+            <div class="collapse" id="source{fwr.shgoWithHo.hgoId}{fwr.fwId}">
               {#each fwr.shgoWithHo.members as m}
                 <li class="list-group-item" style="font-style: italic;">
                   {m.name}
@@ -379,14 +379,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#source{fwr.sno.id}"
+                data-bs-target="#source{fwr.sno.id}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="source"
               >
                 {fwr.sno.name}
               </button>
             </li>
-            <div class="collapse" id="source{fwr.sno.id}">
+            <div class="collapse" id="source{fwr.sno.id}{fwr.fwId}">
               <li class="list-group-item" style="font-style: italic;">
                 {fwr.sno.ip}{fwr.sno.subnet}
               </li>
@@ -399,14 +399,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#source{fwr.sngoWithNo.ngoId}"
+                data-bs-target="#source{fwr.sngoWithNo.ngoId}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="source"
               >
                 {fwr.sngoWithNo.ngoName}
               </button>
             </li>
-            <div class="collapse" id="source{fwr.sngoWithNo.ngoId}">
+            <div class="collapse" id="source{fwr.sngoWithNo.ngoId}{fwr.fwId}">
               {#each fwr.sngoWithNo.members as m}
                 <li class="list-group-item" style="font-style: italic;">
                   {m.name}
@@ -427,14 +427,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#destination{fwr.dho.id}"
+                data-bs-target="#destination{fwr.dho.id}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="destination"
               >
                 {fwr.dho.name}
               </button>
             </li>
-            <div class="collapse" id="destination{fwr.dho.id}">
+            <div class="collapse" id="destination{fwr.dho.id}{fwr.fwId}">
               <li class="list-group-item" style="font-style: italic;">
                 {fwr.dho.ip}
               </li>
@@ -447,14 +447,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#destination{fwr.dhgoWithHo.hgoId}"
+                data-bs-target="#destination{fwr.dhgoWithHo.hgoId}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="destination"
               >
                 {fwr.dhgoWithHo.hgoName}
               </button>
             </li>
-            <div class="collapse" id="destination{fwr.dhgoWithHo.hgoId}">
+            <div class="collapse" id="destination{fwr.dhgoWithHo.hgoId}{fwr.fwId}">
               {#each fwr.dhgoWithHo.members as m}
                 <li class="list-group-item" style="font-style: italic;">
                   {m.name}
@@ -472,14 +472,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#destination{fwr.dno.id}"
+                data-bs-target="#destination{fwr.dno.id}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="destination"
               >
                 {fwr.dno.name}
               </button>
             </li>
-            <div class="collapse" id="destination{fwr.dno.id}">
+            <div class="collapse" id="destination{fwr.dno.id}{fwr.fwId}">
               <li class="list-group-item" style="font-style: italic;">
                 {fwr.dno.ip}{fwr.dno.subnet}
               </li>
@@ -492,14 +492,14 @@
                 style="border: none; background: none; text-decoration: underline;"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#destination{fwr.dngoWithNo.ngoId}"
+                data-bs-target="#destination{fwr.dngoWithNo.ngoId}{fwr.fwId}"
                 aria-expanded="false"
                 aria-controls="destination"
               >
                 {fwr.dngoWithNo.ngoName}
               </button>
             </li>
-            <div class="collapse" id="destination{fwr.dngoWithNo.ngoId}">
+            <div class="collapse" id="destination{fwr.dngoWithNo.ngoId}{fwr.fwId}">
               {#each fwr.dngoWithNo.members as m}
                 <li class="list-group-item" style="font-style: italic;">
                   {m.name}
@@ -519,14 +519,14 @@
               style="border: none; background: none; text-decoration: underline;"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#collapseExample{fwr.sgo.id}"
+              data-bs-target="#port{fwr.sgo.id}{fwr.fwId}"
               aria-expanded="false"
               aria-controls="collapseExample"
             >
               {fwr.sgo.name}
             </button>
           </li>
-          <div class="collapse" id="collapseExample{fwr.sgo.id}">
+          <div class="collapse" id="port{fwr.sgo.id}{fwr.fwId}">
             {#each fwr.sgo.port as port}
               <li class="list-group-item" style="font-style: italic;">
                 {port}
