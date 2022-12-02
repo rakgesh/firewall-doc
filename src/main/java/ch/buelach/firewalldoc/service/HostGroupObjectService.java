@@ -2,7 +2,6 @@ package ch.buelach.firewalldoc.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,25 +20,6 @@ public class HostGroupObjectService {
     HostGroupObjectRepository hostGroupObjectRepository;
     @Autowired
     HostObjectRepository hostObjectRepository;
-
-    public Optional<HostGroupObject> assignHoToHgroupO(String hgoID, List<String> hoIds) {
-
-        if (hostGroupObjectRepository.findById(hgoID).isPresent()) {
-            HostGroupObject hostGroupObject = hostGroupObjectRepository.findById(hgoID).get();
-            List<String> hoPresent = hoIds.stream().filter(x -> hostObjectRepository.findById(x).isPresent())
-                    .collect(Collectors.toList());
-            if (hostGroupObject.getMembersId() != null) {
-                List<String> hoNew = hoPresent.stream().filter(x -> !hostGroupObject.getMembersId().contains(x))
-                        .collect(Collectors.toList());
-                hostGroupObject.getMembersId().addAll(hoNew);
-            } else {
-                hostGroupObject.setMembersId(hoPresent);
-            }
-            hostGroupObjectRepository.save(hostGroupObject);
-            return Optional.of(hostGroupObject);
-        }
-        return Optional.empty();
-    }
 
 
     public List<HostObjectsToHostGroup> getHoOfHgroup() {

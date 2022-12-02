@@ -331,7 +331,7 @@
           {#if fwr.sho}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#source{fwr.sho.id}{fwr.fwId}"
@@ -351,7 +351,7 @@
           {#if fwr.shgoWithHo}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#source{fwr.shgoWithHo.hgoId}{fwr.fwId}"
@@ -376,7 +376,7 @@
           {#if fwr.sno}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#source{fwr.sno.id}{fwr.fwId}"
@@ -396,7 +396,7 @@
           {#if fwr.sngoWithNo}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#source{fwr.sngoWithNo.ngoId}{fwr.fwId}"
@@ -424,7 +424,7 @@
           {#if fwr.dho}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#destination{fwr.dho.id}{fwr.fwId}"
@@ -444,7 +444,7 @@
           {#if fwr.dhgoWithHo}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#destination{fwr.dhgoWithHo.hgoId}{fwr.fwId}"
@@ -469,7 +469,7 @@
           {#if fwr.dno}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#destination{fwr.dno.id}{fwr.fwId}"
@@ -489,7 +489,7 @@
           {#if fwr.dngoWithNo}
             <li class="list-group-item">
               <button
-                style="border: none; background: none; text-decoration: underline;"
+                style="border: none; background: none;"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#destination{fwr.dngoWithNo.ngoId}{fwr.fwId}"
@@ -516,7 +516,7 @@
         <td>
           <li class="list-group-item">
             <button
-              style="border: none; background: none; text-decoration: underline;"
+              style="border: none; background: none;"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#port{fwr.sgo.id}{fwr.fwId}"
@@ -536,7 +536,7 @@
         </td>
         <td>
           <button
-            style="border: none; background: none; text-decoration: underline;"
+            style="border: none; background: none;"
             data-toggle="modal"
             data-target="#getUC"
             on:click={() => getusecase(fwr.uc)}>{fwr.uc.name}</button
