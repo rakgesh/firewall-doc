@@ -14,6 +14,8 @@
     membersId: null,
   };
 
+  let selection = [];
+
   function addMembersId() {
     networkGroupObject.membersId.push
   }
@@ -39,6 +41,7 @@
 //-----------------------------
 
 function createNetworkGroupObject() {
+  networkGroupObject.membersId = selection;
     var config = {
       method: "post",
       url: api_root + "/network-group-object",
@@ -162,7 +165,7 @@ let networkObjects = [];
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="crateHostObject">Add Host-Group-Object</h5>
+        <h5 class="modal-title" id="crateHostObject">Add Network-Group-Object</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -177,7 +180,7 @@ let networkObjects = [];
                 class="form-control"
                 id="name"
                 type="text"
-                placeholder="HG_<ZONE>_<HOST-ART>"
+                placeholder="NG_<ZONE>_<NETZWERK-ART>"
               />
             </div>
           </div>
@@ -192,21 +195,28 @@ let networkObjects = [];
               />
             </div>
           </div>
-          
-            <div class="row mb-3">
+          <div class="row mb-3">
             <div class="col">
-               
-              <label class="form-label" for="membersId">Members</label>
-            <select id="membersId"  type="text" class="form-control" bind:value={networkGroupObject.membersId}>
-              {#each networkObjects as n}
-                
-              
-              <option value="{n.id}">{n.name}</option>
-              {/each}
-            </select>
-              
+              <label class="form-label" for="membersId">Members</label><br>
+              <button type="button" class="btn" style="background-color: none; color: #000; border-color: #D3D3D3; width: 466px; text-align: left;" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+             + Select Members
+            </button>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body" style="border: 0;">
+                <div class="list-group" style="width: 466px; margin-left: -16px; margin-top: -17px;">
+                  {#each networkObjects as n}
+                    <label class="list-group-item">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" value={n.id}
+                        bind:group={selection}  >
+                        <label class="form-check-label" for="flexSwitchCheckDefault">{n.name} || {n.ip}{n.subnet}</label>
+                      </div>
+                      </label>
+                  {/each}
+                </div>
+              </div>
             </div>
-            
+            </div>
           </div>
         </form>
       </div>
