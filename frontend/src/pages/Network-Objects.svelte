@@ -16,6 +16,14 @@
   let visibleData;
     let searchText;
 
+    let noEdit = {
+    id: null,
+    name: null,
+    ip: null,
+    subnet: null,
+    description: null,
+  };
+
   function getNetworkObjects() {
     var config = {
       method: "get",
@@ -59,6 +67,33 @@
       });
   }
 
+  function getNoToEdit(no) {
+    noEdit.id = no.id;
+    noEdit.name = no.name;
+    noEdit.ip = no.ip;
+    noEdit.subnet = no.subnet
+    noEdit.description = no.description;
+  }
+
+  function editNo() {
+    var config = {
+      method: "put",
+      url: api_root + "/network-object",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: noEdit,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getNetworkObjects();
+      })
+      .catch(function (error) {
+        alert("Could not edit Network Object");
+        console.log(error);
+      });
+  }
 
   
   let sortBy = {col: "name", ascending: true};
@@ -140,7 +175,16 @@
         <td>{networkObject.ip}</td>
         <td>{networkObject.subnet}</td>
         <td>{networkObject.description}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#editNO"
+          on:click={() => getNoToEdit(networkObject)}
+          ><i
+            class="fa fa-pencil-square-o fa-lg"
+            aria-hidden="true"
+          /></button
+        ></td>
           <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
       </tr>
     {/each}
@@ -213,4 +257,102 @@
   </div>
 </div>
 
-<!--------------->
+<div
+  class="modal fade"
+  id="editNO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditNetworkObject"
+  aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="editNetworkObject">Edit Network-Object</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form class="mb-5">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="id">Id</label>
+            <input
+              bind:value={noEdit.id}
+              class="form-control"
+              id="id"
+              type="text"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="name">Name</label>
+            <input
+              bind:value={noEdit.name}
+              class="form-control"
+              id="name"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="ip"
+              >IP
+            </label>
+            <input
+              bind:value={noEdit.ip}
+              class="form-control"
+              id="ip"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="subnet"
+              >Subnet
+            </label>
+            <input
+              bind:value={noEdit.subnet}
+              class="form-control"
+              id="ip"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="description">Description</label>
+            <input
+              bind:value={noEdit.description}
+              class="form-control"
+              id="description"
+              type="text"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        >Close</button
+      >
+      <button
+        type="button"
+        class="btn"
+        style="background-color: #008000; color: #fff" data-dismiss="modal"
+        on:click={editNo}>Edit</button
+      >
+    </div>
+  </div>
+</div>
+</div>

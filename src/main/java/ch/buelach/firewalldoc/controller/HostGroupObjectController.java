@@ -9,12 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.HostGroupObject;
 import ch.buelach.firewalldoc.model.HostGroupObjectCreateDTO;
+import ch.buelach.firewalldoc.model.HostGroupObjectEditDTO;
 import ch.buelach.firewalldoc.repository.HostGroupObjectRepository;
 
 @RestController
@@ -45,6 +47,16 @@ public class HostGroupObjectController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PutMapping("")
+    public ResponseEntity<HostGroupObject> editHostGroupObject(@RequestBody HostGroupObjectEditDTO hgoEditDTO) {
+        HostGroupObject hgoDAO = hostGroupObjectRepository.findById(hgoEditDTO.getId()).get();
+        hgoDAO.setName(hgoEditDTO.getName());
+        hgoDAO.setDescription(hgoEditDTO.getDescription());
+        hgoDAO.setMembersId(hgoEditDTO.getMembersId());
+        HostGroupObject hgo = hostGroupObjectRepository.save(hgoDAO);
+        return new ResponseEntity<>(hgo, HttpStatus.OK);
     }
 
 }

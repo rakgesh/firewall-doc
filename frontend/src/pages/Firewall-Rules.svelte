@@ -29,6 +29,16 @@
     tags: null,
   };
 
+  let fwEdit = {
+    id: null,
+    fwTypeId: null,
+    contextId: null,
+    sourceId: null,
+    destinationId: null,
+    serviceGroupObjectId: null,
+    useCaseId: null,
+    };
+
   function getusecase(uc) {
     usecase.name = uc.name;
     usecase.description = uc.description;
@@ -227,6 +237,54 @@
   getUseCases();
   //-----------------------------------------------
 
+  function getFwToEdit(fw) {
+    fwEdit.id = fw.fwId;
+    fwEdit.fwTypeId = fw.fwType.id;
+    fwEdit.contextId =fw.context.id;
+    if (fw.sngoWithNo) {
+      fwEdit.sourceId = fw.sngoWithNo.ngoId
+    } else if (fw.sno) {
+      fwEdit.sourceId = fw.sno.id
+    } else if (fw.shgoWithHo) {
+      fwEdit.sourceId = fw.shgoWithHo.hgoId
+    } else if (fw.sho) {
+      fwEdit.sourceId = fw.sho.id
+    }
+
+    if (fw.dngoWithNo) {
+      fwEdit.destinationId = fw.dngoWithNo.ngoId
+    } else if (fw.dno) {
+      fwEdit.destinationId = fw.dno.id
+    } else if (fw.dhgoWithHo) {
+      fwEdit.destinationId = fw.dhgoWithHo.hgoId
+    } else if (fw.dho) {
+      fwEdit.destinationId = fw.dho.id
+    }
+    
+    fwEdit.serviceGroupObjectId = fw.sgo.id
+    fwEdit.useCaseId = fw.uc.id
+  }
+
+  function editFw() {
+    var config = {
+      method: "put",
+      url: api_root + "/firewall-rule",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: fwEdit,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getFirewallRules();
+      })
+      .catch(function (error) {
+        alert("Could not edit Firewall Rule");
+        console.log(error);
+      });
+  }
+
   let sortBy = { col: "fwType", ascending: true };
 
   $: sort = (column) => {
@@ -316,6 +374,7 @@
           <i class="fa fa-fw fa-sort" /></span
         ></th
       >
+      <th scope="col" />
       <th scope="col" />
       <th scope="col" />
     </tr>
@@ -543,7 +602,17 @@
           ></td
         >
         <td>{fwr.firewallStatus}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" /></td>
+        <td><i class="fa fa-check-square-o fa-lg" title="change status"></i></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#editFW"
+          on:click={() => getFwToEdit(fwr)}
+          ><i
+            class="fa fa-pencil-square-o fa-lg"
+            aria-hidden="true"
+          /></button
+        ></td>
         <td><i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
     {/each}
@@ -571,6 +640,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      
       <div class="modal-body">
         <form class="mb-5">
           <div class="row mb-3">
@@ -707,7 +777,185 @@
           type="button"
           class="btn"
           style="background-color: #008000; color: #fff"
-          on:click={createFirewallRule}>Add</button
+          on:click={createFirewallRule} data-dismiss="modal">Add</button
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div
+  class="modal fade"
+  id="editFW"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditFirewallRule"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editFirewallRule">Edit Fireall Rule</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mb-5">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="id">Id</label>
+              <input
+                bind:value={fwEdit.id}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="fwType">FW Type</label>
+              <select
+                class="form-select"
+                aria-label="fwType"
+                bind:value={fwEdit.fwTypeId}
+              >
+                <option hidden />
+                {#each fwTypes as fwT}
+                  <option value={fwT.id}>{fwT.name}</option>
+                {/each}
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="context">Context</label>
+              <select
+                class="form-select"
+                aria-label="context"
+                bind:value={fwEdit.contextId}
+              >
+                <option hidden />
+                {#each contexts as c}
+                  <option value={c.id}>{c.name}</option>
+                {/each}
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="source">Source</label>
+              <select
+                class="form-select"
+                aria-label="source"
+                bind:value={fwEdit.sourceId}
+              >
+                <option hidden />
+                <optgroup label="Host Objects">
+                  {#each hostOs as ho}
+                    <option value={ho.id}>{ho.name}</option>
+                  {/each}
+                </optgroup>
+                <optgroup label="Host Group Objects">
+                  {#each hostGs as hg}
+                    <option value={hg.hgoId}>{hg.hgoName}</option>
+                  {/each}
+                </optgroup>
+                <optgroup label="Network Objects">
+                  {#each networkOs as no}
+                    <option value={no.id}>{no.name}</option>
+                  {/each}
+                </optgroup>
+                <optgroup label="Network Group Objects">
+                  {#each networkGs as ng}
+                    <option value={ng.ngoId}>{ng.ngoName}</option>
+                  {/each}
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="destination">Destination</label>
+              <select
+                class="form-select"
+                aria-label="destination"
+                bind:value={fwEdit.destinationId}
+              >
+                <option hidden />
+                <optgroup label="Host Objects">
+                  {#each hostOs as ho}
+                    <option value={ho.id}>{ho.name}</option>
+                  {/each}
+                </optgroup>
+                <optgroup label="Host Group Objects">
+                  {#each hostGs as hg}
+                    <option value={hg.hgoId}>{hg.hgoName}</option>
+                  {/each}
+                </optgroup>
+                <optgroup label="Network Objects">
+                  {#each networkOs as no}
+                    <option value={no.id}>{no.name}</option>
+                  {/each}
+                </optgroup>
+                <optgroup label="Network Group Objects">
+                  {#each networkGs as ng}
+                    <option value={ng.ngoId}>{ng.ngoName}</option>
+                  {/each}
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="sgo">Service Group Object</label>
+              <select
+                class="form-select"
+                aria-label="sgo"
+                bind:value={fwEdit.serviceGroupObjectId}
+              >
+                <option hidden />
+                {#each serviceGs as sgo}
+                  <option value={sgo.id}>{sgo.name}</option>
+                {/each}
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="uc">Use Case</label>
+              <select
+                class="form-select"
+                aria-label="uc"
+                bind:value={fwEdit.useCaseId}
+              >
+                <option hidden />
+                {#each usecases as u}
+                  <option value={u.id}>{u.name}</option>
+                {/each}
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          style="background-color: #008000; color: #fff"
+          on:click={editFw} data-dismiss="modal">Edit</button
         >
       </div>
     </div>

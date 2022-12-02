@@ -11,6 +11,13 @@
     membersId: null,
   };
 
+  let hgoEdit = {
+    id: null,
+    name: null,
+    ip: null,
+    membersId: [],
+  };
+
   let selection = [];
 
   function getHostGroupObjects() {
@@ -35,6 +42,7 @@
 
   function createHostGroupObject() {
     hostGroupObject.membersId = selection;
+    selection = [];
     var config = {
       method: "post",
       url: api_root + "/host-group-object",
@@ -53,6 +61,8 @@
         alert("Could not create Host Group Object");
         console.log(error);
       });
+    hostGroupObject.name = null;
+    hostGroupObject.description = null;
   }
 
   //-----------------------------
@@ -78,6 +88,36 @@
   getHostObjects();
 
   //-----------------------------
+
+  function getHgoToEdit(hgo) {
+    hgoEdit.id = hgo.hgoId;
+    hgoEdit.name = hgo.hgoName;
+    hgoEdit.description = hgo.hgoDescription;
+    hgoEdit.membersId = hgo.membersId;
+    selection = hgoEdit.membersId;
+  }
+
+  function editHgo() {
+    hgoEdit.membersId = selection;
+    selection = [];
+    var config = {
+      method: "put",
+      url: api_root + "/host-group-object",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: hgoEdit,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getHostGroupObjects();
+      })
+      .catch(function (error) {
+        alert("Could not edit Host Group Object");
+        console.log(error);
+      });
+  }
 
   let sortBy = { col: "name", ascending: true };
 
@@ -144,8 +184,7 @@
   <tbody>
     {#each hostGroupObjects as h1}
       <tr>
-        <td>{h1.hgoName}</td>
-        <td>
+        <td>{h1.hgoName} </td><td>
           {#each h1.members as member}
             <li class="list-group-item">{member.name}</li>
             <li class="list-group-item" style="font-style: italic;">
@@ -154,7 +193,18 @@
           {/each}
         </td>
         <td>{h1.hgoDescription}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" /></td>
+        <td
+          ><button
+            style="border: none; background: none;"
+            data-toggle="modal"
+            data-target="#editHGO"
+            on:click={() => getHgoToEdit(h1)}
+            ><i
+              class="fa fa-pencil-square-o fa-lg"
+              aria-hidden="true"
+            /></button
+          ></td
+        >
         <td><i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
     {/each}
@@ -209,25 +259,46 @@
           </div>
           <div class="row mb-3">
             <div class="col">
-              <label class="form-label" for="membersId">Members</label><br>
-              <button type="button" class="btn" style="background-color: none; color: #000; border-color: #D3D3D3; width: 466px; text-align: left;" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-             + Select Members
-            </button>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body" style="border: 0;">
-                <div class="list-group" style="width: 466px; margin-left: -16px; margin-top: -17px;">
-                  {#each hostObjects as h}
-                    <label class="list-group-item">
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" value={h.id}
-                        bind:group={selection}  >
-                        <label class="form-check-label" for="flexSwitchCheckDefault">{h.name} || {h.ip}</label>
-                      </div>
+              <label class="form-label" for="membersId">Members</label><br />
+              <button
+                type="button"
+                class="btn"
+                style="background-color: none; color: #000; border-color: #D3D3D3; width: 466px; text-align: left;"
+                data-toggle="collapse"
+                data-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                + Select Members
+              </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body" style="border: 0;">
+                  <div
+                    class="list-group"
+                    style="width: 466px; margin-left: -16px; margin-top: -17px;"
+                  >
+                    {#each hostObjects as h}
+                      <label class="list-group-item">
+                        <div class="form-check form-switch">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            role="switch"
+                            id="flexSwitchCheckDefault"
+                            value={h.id}
+                            bind:group={selection}
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexSwitchCheckDefault"
+                            >{h.name} || {h.ip}</label
+                          >
+                        </div>
                       </label>
-                  {/each}
+                    {/each}
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </form>
@@ -247,6 +318,126 @@
   </div>
 </div>
 
-    
+<div
+  class="modal fade"
+  id="editHGO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditHostGroupObject"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editHostGroupObject">
+          Edit Host-Group-Object
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mb-5">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="id">Id</label>
+              <input
+                bind:value={hgoEdit.id}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="name">Name</label>
+              <input
+                bind:value={hgoEdit.name}
+                class="form-control"
+                id="name"
+                type="text"
+              />
+            </div>
+          </div>
 
-<!--------------->
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="description">Description</label>
+              <input
+                bind:value={hgoEdit.description}
+                class="form-control"
+                id="description"
+                type="text"
+              />
+
+              <div class="row mb-3">
+                <div class="col">
+                  <label class="form-label" for="membersId">Members</label><br
+                  />
+                  <button
+                    type="button"
+                    class="btn"
+                    style="background-color: none; color: #000; border-color: #D3D3D3; width: 466px; text-align: left;"
+                    data-toggle="collapse"
+                    data-target="#edit"
+                    aria-expanded="false"
+                    aria-controls="edit"
+                  >
+                    + Edit Members
+                  </button>
+                  <div class="collapse" id="edit">
+                    <div class="card card-body" style="border: 0;">
+                      <div
+                        class="list-group"
+                        style="width: 466px; margin-left: -16px; margin-top: -17px;"
+                      >
+                        {#each hostObjects as h}
+                          <label class="list-group-item">
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="flexSwitchCheckDefault"
+                                value={h.id}
+                                bind:group={selection}
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckDefault"
+                                >{h.name} || {h.ip}</label
+                              >
+                            </div>
+                          </label>
+                        {/each}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          style="background-color: #008000; color: #fff"
+          data-dismiss="modal"
+          on:click={editHgo}>Edit</button
+        >
+      </div>
+    </div>
+  </div>
+</div>

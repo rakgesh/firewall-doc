@@ -82,7 +82,7 @@
     }
     var config = {
       method: "put",
-      url: api_root + "/use-case/",
+      url: api_root + "/use-case",
       headers: {
         "Content-Type": "application/json",
       },

@@ -50,14 +50,18 @@ public class ContextController {
         }
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("")
     public ResponseEntity<Context> editContext(@RequestBody ContextEditDTO cEditDTO) {
-        Context c = contextRepository.findById(cEditDTO.getId()).get();
-        c.setName(cEditDTO.getName());
-        c.setDescription(cEditDTO.getDescription());
-        // noch fertig machen           
-        return new ResponseEntity<>(c, HttpStatus.CREATED); 
-        }
+        Context cDAO = contextRepository.findById(cEditDTO.getId()).get();
+        cDAO.setName(cEditDTO.getName());
+        cDAO.setIp(cEditDTO.getIp());
+        cDAO.setSubnet(cEditDTO.getSubnet());
+        cDAO.setDescription(cEditDTO.getDescription());
+        Context c = contextRepository.save(cDAO);
+        return new ResponseEntity<>(c, HttpStatus.OK);
+    }
+
+    
 
 
 }
