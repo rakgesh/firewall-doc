@@ -15,7 +15,13 @@
     let visibleData;
     let searchText;
 
- 
+    let cEdit = {
+    id: null,
+    name: null,
+    ip: null,
+    subnet: null,
+    description: null,
+  };
   
     function getContexts() {
       var config = {
@@ -60,6 +66,34 @@
           console.log(error);
         });
     }
+
+    function getCToEdit(c) {
+    cEdit.id = c.id;
+    cEdit.name = c.name;
+    cEdit.ip = c.ip;
+    cEdit.subnet = c.subnet
+    cEdit.description = c.description;
+  }
+
+  function editC() {
+    var config = {
+      method: "put",
+      url: api_root + "/context",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: cEdit,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getContexts();
+      })
+      .catch(function (error) {
+        alert("Could not edit Context");
+        console.log(error);
+      });
+  }
   
   
     
@@ -144,7 +178,16 @@
         <td>{context.ip}</td>
         <td>{context.subnet}</td>
         <td>{context.description}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#editC"
+          on:click={() => getCToEdit(context)}
+          ><i
+            class="fa fa-pencil-square-o fa-lg"
+            aria-hidden="true"
+          /></button
+        ></td>
           <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
       </tr>
       {/each}
@@ -219,3 +262,103 @@
       </div>
     </div>
   </div>
+
+  <div
+  class="modal fade"
+  id="editC"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditContext"
+  aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="editContext">Edit Network-Object</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form class="mb-5">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="id">Id</label>
+            <input
+              bind:value={cEdit.id}
+              class="form-control"
+              id="id"
+              type="text"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="name">Name</label>
+            <input
+              bind:value={cEdit.name}
+              class="form-control"
+              id="name"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="ip"
+              >IP
+            </label>
+            <input
+              bind:value={cEdit.ip}
+              class="form-control"
+              id="ip"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="subnet"
+              >Subnet
+            </label>
+            <input
+              bind:value={cEdit.subnet}
+              class="form-control"
+              id="ip"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="form-label" for="description">Description</label>
+            <input
+              bind:value={cEdit.description}
+              class="form-control"
+              id="description"
+              type="text"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        >Close</button
+      >
+      <button
+        type="button"
+        class="btn"
+        style="background-color: #008000; color: #fff" data-dismiss="modal"
+        on:click={editC}>Edit</button
+      >
+    </div>
+  </div>
+</div>
+</div>

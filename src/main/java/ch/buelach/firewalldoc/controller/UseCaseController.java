@@ -51,7 +51,7 @@ public class UseCaseController {
     }
 
     @PutMapping("")
-    public ResponseEntity<UseCase> editContext(@RequestBody UseCaseEditDTO ucEditDTO) {
+    public ResponseEntity<UseCase> editUseCase(@RequestBody UseCaseEditDTO ucEditDTO) {
         UseCase uDAO = useCaseRepository.findById(ucEditDTO.getId()).get();
         uDAO.setName(ucEditDTO.getName());
         uDAO.setDescription(ucEditDTO.getDescription());
@@ -61,7 +61,7 @@ public class UseCaseController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<UseCase> getContextToDeleteById(@PathVariable String id) {
+    public ResponseEntity<UseCase> getUseCaseToDeleteById(@PathVariable String id) {
         UseCase u = useCaseRepository.findById(id).get();
         useCaseRepository.delete(u);
         return new ResponseEntity<>(HttpStatus.OK);

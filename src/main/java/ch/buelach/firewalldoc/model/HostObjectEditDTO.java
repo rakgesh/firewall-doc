@@ -5,12 +5,10 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class ContextEditDTO {
+public class HostObjectEditDTO {
+
     private String id;
     private String name;
     private String ip;
-    private String subnet;
     private String description;
-    
-    
 }

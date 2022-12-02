@@ -12,6 +12,13 @@
     description: null,
   };
 
+  let hoEdit = {
+    id: null,
+    name: null,
+    ip: null,
+    description: null,
+  };
+
   function getHostObjects() {
     var config = {
       method: "get",
@@ -47,6 +54,33 @@
       })
       .catch(function (error) {
         alert("Could not create Host Object");
+        console.log(error);
+      });
+  }
+
+  function getHoToEdit(ho) {
+    hoEdit.id = ho.id;
+    hoEdit.name = ho.name;
+    hoEdit.ip = ho.ip;
+    hoEdit.description = ho.description;
+  }
+
+  function editHo() {
+    var config = {
+      method: "put",
+      url: api_root + "/host-object",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: hoEdit,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getHostObjects();
+      })
+      .catch(function (error) {
+        alert("Could not edit Host Object");
         console.log(error);
       });
   }
@@ -115,7 +149,16 @@
         <td>{hostObject.name}</td>
         <td>{hostObject.ip}</td>
         <td>{hostObject.description}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#editHO"
+          on:click={() => getHoToEdit(hostObject)}
+          ><i
+            class="fa fa-pencil-square-o fa-lg"
+            aria-hidden="true"
+          /></button
+        ></td>
           <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
       </tr>
     {/each}
@@ -177,4 +220,89 @@
   </div>
 </div>
 
-<!--------------->
+<div
+  class="modal fade"
+  id="editHO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditHostObject"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editHostObject">Edit Host-Object</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mb-5">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="id">Id</label>
+              <input
+                bind:value={hoEdit.id}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="name">Name</label>
+              <input
+                bind:value={hoEdit.name}
+                class="form-control"
+                id="name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="ip"
+                >IP
+              </label>
+              <input
+                bind:value={hoEdit.ip}
+                class="form-control"
+                id="ip"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="description">Description</label>
+              <input
+                bind:value={hoEdit.description}
+                class="form-control"
+                id="description"
+                type="text"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          style="background-color: #008000; color: #fff" data-dismiss="modal"
+          on:click={editHo}>Edit</button
+        >
+      </div>
+    </div>
+  </div>
+</div>

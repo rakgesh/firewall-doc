@@ -9,12 +9,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.FirewallRule;
 import ch.buelach.firewalldoc.model.FirewallRuleCreateDTO;
+import ch.buelach.firewalldoc.model.FirewallRuleEditDTO;
+import ch.buelach.firewalldoc.model.FirewallStatus;
 import ch.buelach.firewalldoc.repository.FirewallRuleRepository;
 
 @RestController
@@ -45,6 +48,20 @@ public class FirewallRuleController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PutMapping("")
+    public ResponseEntity<FirewallRule> editHostObject(@RequestBody FirewallRuleEditDTO fwEditDTO) {
+        FirewallRule fwDAO = firewallRuleRepository.findById(fwEditDTO.getId()).get();
+        fwDAO.setFwTypeId(fwEditDTO.getFwTypeId());
+        fwDAO.setContextId(fwEditDTO.getContextId());
+        fwDAO.setSourceId(fwEditDTO.getSourceId());
+        fwDAO.setDestinationId(fwEditDTO.getDestinationId());
+        fwDAO.setServiceGroupObjectId(fwEditDTO.getServiceGroupObjectId());
+        fwDAO.setUseCaseId(fwEditDTO.getUseCaseId());
+        fwDAO.setFirewallStatus(FirewallStatus.EDITED);
+        FirewallRule fw = firewallRuleRepository.save(fwDAO);
+        return new ResponseEntity<>(fw, HttpStatus.OK);
     }
     
 }

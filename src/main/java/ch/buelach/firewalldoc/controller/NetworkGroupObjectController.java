@@ -9,12 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.NetworkGroupObject;
 import ch.buelach.firewalldoc.model.NetworkGroupObjectCreateDTO;
+import ch.buelach.firewalldoc.model.NetworkGroupObjectEditDTO;
 import ch.buelach.firewalldoc.repository.NetworkGroupObjectRepository;
 
 @RestController
@@ -46,6 +48,16 @@ public class NetworkGroupObjectController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PutMapping("")
+    public ResponseEntity<NetworkGroupObject> editHostGroupObject(@RequestBody NetworkGroupObjectEditDTO ngoEditDTO) {
+        NetworkGroupObject ngoDAO = networkGroupObjectRepository.findById(ngoEditDTO.getId()).get();
+        ngoDAO.setName(ngoEditDTO.getName());
+        ngoDAO.setDescription(ngoEditDTO.getDescription());
+        ngoDAO.setMembersId(ngoEditDTO.getMembersId());
+        NetworkGroupObject ngo = networkGroupObjectRepository.save(ngoDAO);
+        return new ResponseEntity<>(ngo, HttpStatus.OK);
     }
 
 }

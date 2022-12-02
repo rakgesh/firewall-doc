@@ -14,11 +14,15 @@
     membersId: null,
   };
 
+  let ngoEdit = {
+    id: null,
+    name: null,
+    ip: null,
+    membersId: [],
+  };
+
   let selection = [];
 
-  function addMembersId() {
-    networkGroupObject.membersId.push
-  }
 
   function getNetworkGroupObjects() {
     var config = {
@@ -42,6 +46,7 @@
 
 function createNetworkGroupObject() {
   networkGroupObject.membersId = selection;
+  selection = [];
     var config = {
       method: "post",
       url: api_root + "/network-group-object",
@@ -60,6 +65,9 @@ function createNetworkGroupObject() {
         alert("Could not create Network Group Object");
         console.log(error);
       });
+
+      networkGroupObject.name = null;
+      networkGroupObject.description = null;
   }
 
 //-----------------------------
@@ -84,7 +92,36 @@ let networkObjects = [];
   }
   getNetworkObjects();
 
-//-----------------------------
+
+  function getNgoToEdit(ngo) {
+    ngoEdit.id = ngo.ngoId;
+    ngoEdit.name = ngo.ngoName;
+    ngoEdit.description = ngo.ngoDescription;
+    ngoEdit.membersId = ngo.membersId;
+    selection = ngoEdit.membersId;
+  }
+
+  function editNgo() {
+    ngoEdit.membersId = selection;
+    selection = [];
+    var config = {
+      method: "put",
+      url: api_root + "/network-group-object",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: ngoEdit,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getNetworkGroupObjects();
+      })
+      .catch(function (error) {
+        alert("Could not edit Network Group Object");
+        console.log(error);
+      });
+  }
 
   let sortBy = {col: "name", ascending: true};
 	
@@ -154,7 +191,16 @@ let networkObjects = [];
         {/each}
         </td>
         <td>{n1.ngoDescription}</td>
-        <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#editNGO"
+          on:click={() => getNgoToEdit(n1)}
+          ><i
+            class="fa fa-pencil-square-o fa-lg"
+            aria-hidden="true"
+          /></button
+        ></td>
           <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
       </tr>
       {/each}
@@ -228,4 +274,127 @@ let networkObjects = [];
   </div>
 </div>
 
-<!--------------->
+<div
+  class="modal fade"
+  id="editNGO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formEditNetworkGroupObject"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editNetworkGroupObject">
+          Edit Network-Group-Object
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mb-5">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="id">Id</label>
+              <input
+                bind:value={ngoEdit.id}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="name">Name</label>
+              <input
+                bind:value={ngoEdit.name}
+                class="form-control"
+                id="name"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="description">Description</label>
+              <input
+                bind:value={ngoEdit.description}
+                class="form-control"
+                id="description"
+                type="text"
+              />
+
+              <div class="row mb-3">
+                <div class="col">
+                  <label class="form-label" for="membersId">Members</label><br
+                  />
+                  <button
+                    type="button"
+                    class="btn"
+                    style="background-color: none; color: #000; border-color: #D3D3D3; width: 466px; text-align: left;"
+                    data-toggle="collapse"
+                    data-target="#edit"
+                    aria-expanded="false"
+                    aria-controls="edit"
+                  >
+                    + Edit Members
+                  </button>
+                  <div class="collapse" id="edit">
+                    <div class="card card-body" style="border: 0;">
+                      <div
+                        class="list-group"
+                        style="width: 466px; margin-left: -16px; margin-top: -17px;"
+                      >
+                        {#each networkObjects as n}
+                          <label class="list-group-item">
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="flexSwitchCheckDefault"
+                                value={n.id}
+                                bind:group={selection}
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckDefault"
+                                >{n.name} || {n.ip}{n.subnet}</label
+                              >
+                            </div>
+                          </label>
+                        {/each}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          style="background-color: #008000; color: #fff"
+          data-dismiss="modal"
+          on:click={editNgo}>Edit</button
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
