@@ -11118,32 +11118,32 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[12] = list[i];
+    	child_ctx[14] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[15] = list[i];
+    	child_ctx[17] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[18] = list[i];
+    	child_ctx[20] = list[i];
     	return child_ctx;
     }
 
-    // (148:8) {#each n1.members as member}
+    // (151:8) {#each n1.members as member}
     function create_each_block_2$1(ctx) {
     	let li0;
-    	let t0_value = /*member*/ ctx[18].name + "";
+    	let t0_value = /*member*/ ctx[20].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*member*/ ctx[18].ip + "";
+    	let t2_value = /*member*/ ctx[20].ip + "";
     	let t2;
-    	let t3_value = /*member*/ ctx[18].subnet + "";
+    	let t3_value = /*member*/ ctx[20].subnet + "";
     	let t3;
 
     	const block = {
@@ -11155,10 +11155,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text(t3_value);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$4, 148, 8, 3581);
+    			add_location(li0, file$4, 151, 8, 3651);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$4, 149, 8, 3637);
+    			add_location(li1, file$4, 152, 8, 3707);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -11169,9 +11169,9 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*member*/ ctx[18].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*networkGroupObjects*/ 1 && t2_value !== (t2_value = /*member*/ ctx[18].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*member*/ ctx[18].subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*member*/ ctx[20].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*networkGroupObjects*/ 1 && t2_value !== (t2_value = /*member*/ ctx[20].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*member*/ ctx[20].subnet + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -11184,24 +11184,24 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(148:8) {#each n1.members as member}",
+    		source: "(151:8) {#each n1.members as member}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (144:4) {#each networkGroupObjects as n1}
+    // (147:4) {#each networkGroupObjects as n1}
     function create_each_block_1$3(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*n1*/ ctx[15].ngoName + "";
+    	let t0_value = /*n1*/ ctx[17].ngoName + "";
     	let t0;
     	let t1;
     	let td1;
     	let t2;
     	let td2;
-    	let t3_value = /*n1*/ ctx[15].ngoDescription + "";
+    	let t3_value = /*n1*/ ctx[17].ngoDescription + "";
     	let t3;
     	let t4;
     	let td3;
@@ -11210,7 +11210,7 @@ var app = (function () {
     	let td4;
     	let i1;
     	let t6;
-    	let each_value_2 = /*n1*/ ctx[15].members;
+    	let each_value_2 = /*n1*/ ctx[17].members;
     	validate_each_argument(each_value_2);
     	let each_blocks = [];
 
@@ -11240,18 +11240,18 @@ var app = (function () {
     			td4 = element("td");
     			i1 = element("i");
     			t6 = space();
-    			add_location(td0, file$4, 145, 8, 3498);
-    			add_location(td1, file$4, 146, 8, 3529);
-    			add_location(td2, file$4, 152, 8, 3768);
+    			add_location(td0, file$4, 148, 8, 3568);
+    			add_location(td1, file$4, 149, 8, 3599);
+    			add_location(td2, file$4, 155, 8, 3838);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$4, 153, 12, 3810);
-    			add_location(td3, file$4, 153, 8, 3806);
+    			add_location(i0, file$4, 156, 12, 3880);
+    			add_location(td3, file$4, 156, 8, 3876);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$4, 154, 14, 3893);
-    			add_location(td4, file$4, 154, 10, 3889);
-    			add_location(tr, file$4, 144, 6, 3484);
+    			add_location(i1, file$4, 157, 14, 3963);
+    			add_location(td4, file$4, 157, 10, 3959);
+    			add_location(tr, file$4, 147, 6, 3554);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11276,10 +11276,10 @@ var app = (function () {
     			append_dev(tr, t6);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*n1*/ ctx[15].ngoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*n1*/ ctx[17].ngoName + "")) set_data_dev(t0, t0_value);
 
     			if (dirty & /*networkGroupObjects*/ 1) {
-    				each_value_2 = /*n1*/ ctx[15].members;
+    				each_value_2 = /*n1*/ ctx[17].members;
     				validate_each_argument(each_value_2);
     				let i;
 
@@ -11302,7 +11302,7 @@ var app = (function () {
     				each_blocks.length = each_value_2.length;
     			}
 
-    			if (dirty & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*n1*/ ctx[15].ngoDescription + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*n1*/ ctx[17].ngoDescription + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -11314,42 +11314,97 @@ var app = (function () {
     		block,
     		id: create_each_block_1$3.name,
     		type: "each",
-    		source: "(144:4) {#each networkGroupObjects as n1}",
+    		source: "(147:4) {#each networkGroupObjects as n1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (201:14) {#each networkObjects as n}
+    // (207:18) {#each networkObjects as n}
     function create_each_block$3(ctx) {
-    	let option;
-    	let t_value = /*n*/ ctx[12].name + "";
-    	let t;
-    	let option_value_value;
+    	let label1;
+    	let div;
+    	let input;
+    	let input_value_value;
+    	let t0;
+    	let label0;
+    	let t1_value = /*n*/ ctx[14].name + "";
+    	let t1;
+    	let t2;
+    	let t3_value = /*n*/ ctx[14].ip + "";
+    	let t3;
+    	let t4_value = /*n*/ ctx[14].subnet + "";
+    	let t4;
+    	let t5;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*n*/ ctx[12].id;
-    			option.value = option.__value;
-    			add_location(option, file$4, 203, 14, 5743);
+    			label1 = element("label");
+    			div = element("div");
+    			input = element("input");
+    			t0 = space();
+    			label0 = element("label");
+    			t1 = text(t1_value);
+    			t2 = text(" || ");
+    			t3 = text(t3_value);
+    			t4 = text(t4_value);
+    			t5 = space();
+    			attr_dev(input, "class", "form-check-input");
+    			attr_dev(input, "type", "checkbox");
+    			attr_dev(input, "role", "switch");
+    			attr_dev(input, "id", "flexSwitchCheckDefault");
+    			input.__value = input_value_value = /*n*/ ctx[14].id;
+    			input.value = input.__value;
+    			/*$$binding_groups*/ ctx[10][0].push(input);
+    			add_location(input, file$4, 209, 24, 6308);
+    			attr_dev(label0, "class", "form-check-label");
+    			attr_dev(label0, "for", "flexSwitchCheckDefault");
+    			add_location(label0, file$4, 211, 24, 6487);
+    			attr_dev(div, "class", "form-check form-switch");
+    			add_location(div, file$4, 208, 22, 6246);
+    			attr_dev(label1, "class", "list-group-item");
+    			add_location(label1, file$4, 207, 20, 6191);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*networkObjects*/ 8 && t_value !== (t_value = /*n*/ ctx[12].name + "")) set_data_dev(t, t_value);
+    			insert_dev(target, label1, anchor);
+    			append_dev(label1, div);
+    			append_dev(div, input);
+    			input.checked = ~/*selection*/ ctx[3].indexOf(input.__value);
+    			append_dev(div, t0);
+    			append_dev(div, label0);
+    			append_dev(label0, t1);
+    			append_dev(label0, t2);
+    			append_dev(label0, t3);
+    			append_dev(label0, t4);
+    			append_dev(label1, t5);
 
-    			if (dirty & /*networkObjects*/ 8 && option_value_value !== (option_value_value = /*n*/ ctx[12].id)) {
-    				prop_dev(option, "__value", option_value_value);
-    				option.value = option.__value;
+    			if (!mounted) {
+    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[9]);
+    				mounted = true;
     			}
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*networkObjects*/ 16 && input_value_value !== (input_value_value = /*n*/ ctx[14].id)) {
+    				prop_dev(input, "__value", input_value_value);
+    				input.value = input.__value;
+    			}
+
+    			if (dirty & /*selection*/ 8) {
+    				input.checked = ~/*selection*/ ctx[3].indexOf(input.__value);
+    			}
+
+    			if (dirty & /*networkObjects*/ 16 && t1_value !== (t1_value = /*n*/ ctx[14].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*networkObjects*/ 16 && t3_value !== (t3_value = /*n*/ ctx[14].ip + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*networkObjects*/ 16 && t4_value !== (t4_value = /*n*/ ctx[14].subnet + "")) set_data_dev(t4, t4_value);
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
+    			if (detaching) detach_dev(label1);
+    			/*$$binding_groups*/ ctx[10][0].splice(/*$$binding_groups*/ ctx[10][0].indexOf(input), 1);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -11357,7 +11412,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(201:14) {#each networkObjects as n}",
+    		source: "(207:18) {#each networkObjects as n}",
     		ctx
     	});
 
@@ -11393,16 +11448,16 @@ var app = (function () {
     	let t12;
     	let tbody;
     	let t13;
-    	let div16;
-    	let div15;
-    	let div14;
+    	let div19;
+    	let div18;
+    	let div17;
     	let div5;
     	let h5;
     	let t15;
     	let button1;
     	let span1;
     	let t17;
-    	let div12;
+    	let div15;
     	let form;
     	let div7;
     	let div6;
@@ -11416,16 +11471,21 @@ var app = (function () {
     	let t22;
     	let input1;
     	let t23;
+    	let div14;
+    	let div13;
+    	let label2;
+    	let br;
+    	let t25;
+    	let button2;
+    	let t27;
+    	let div12;
     	let div11;
     	let div10;
-    	let label2;
-    	let t25;
-    	let select;
-    	let t26;
-    	let div13;
-    	let button2;
     	let t28;
+    	let div16;
     	let button3;
+    	let t30;
+    	let button4;
     	let mounted;
     	let dispose;
     	let each_value_1 = /*networkGroupObjects*/ ctx[0];
@@ -11436,7 +11496,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*networkObjects*/ ctx[3];
+    	let each_value = /*networkObjects*/ ctx[4];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -11483,18 +11543,18 @@ var app = (function () {
     			}
 
     			t13 = space();
-    			div16 = element("div");
-    			div15 = element("div");
-    			div14 = element("div");
+    			div19 = element("div");
+    			div18 = element("div");
+    			div17 = element("div");
     			div5 = element("div");
     			h5 = element("h5");
-    			h5.textContent = "Add Host-Group-Object";
+    			h5.textContent = "Add Network-Group-Object";
     			t15 = space();
     			button1 = element("button");
     			span1 = element("span");
     			span1.textContent = "×";
     			t17 = space();
-    			div12 = element("div");
+    			div15 = element("div");
     			form = element("form");
     			div7 = element("div");
     			div6 = element("div");
@@ -11510,31 +11570,37 @@ var app = (function () {
     			t22 = space();
     			input1 = element("input");
     			t23 = space();
-    			div11 = element("div");
-    			div10 = element("div");
+    			div14 = element("div");
+    			div13 = element("div");
     			label2 = element("label");
     			label2.textContent = "Members";
+    			br = element("br");
     			t25 = space();
-    			select = element("select");
+    			button2 = element("button");
+    			button2.textContent = "+ Select Members";
+    			t27 = space();
+    			div12 = element("div");
+    			div11 = element("div");
+    			div10 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t26 = space();
-    			div13 = element("div");
-    			button2 = element("button");
-    			button2.textContent = "Close";
     			t28 = space();
+    			div16 = element("div");
     			button3 = element("button");
-    			button3.textContent = "Add";
+    			button3.textContent = "Close";
+    			t30 = space();
+    			button4 = element("button");
+    			button4.textContent = "Add";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$4, 116, 6, 2505);
+    			add_location(h3, file$4, 119, 6, 2575);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$4, 115, 4, 2480);
+    			add_location(div0, file$4, 118, 4, 2550);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$4, 118, 4, 2602);
+    			add_location(div1, file$4, 121, 4, 2672);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -11542,107 +11608,126 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$4, 120, 6, 2684);
+    			add_location(button0, file$4, 123, 6, 2754);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$4, 119, 4, 2627);
+    			add_location(div2, file$4, 122, 4, 2697);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$4, 114, 2, 2457);
+    			add_location(div3, file$4, 117, 2, 2527);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$4, 113, 0, 2424);
+    			add_location(div4, file$4, 116, 0, 2494);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$4, 134, 61, 3159);
-    			add_location(span0, file$4, 134, 27, 3125);
+    			add_location(i, file$4, 137, 61, 3229);
+    			add_location(span0, file$4, 137, 27, 3195);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$4, 134, 6, 3104);
+    			add_location(th0, file$4, 137, 6, 3174);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$4, 136, 6, 3275);
+    			add_location(th1, file$4, 139, 6, 3345);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$4, 137, 6, 3311);
+    			add_location(th2, file$4, 140, 6, 3381);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$4, 138, 6, 3352);
+    			add_location(th3, file$4, 141, 6, 3422);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$4, 139, 6, 3382);
-    			add_location(tr, file$4, 132, 4, 3028);
-    			add_location(thead, file$4, 131, 2, 3015);
-    			add_location(tbody, file$4, 142, 2, 3430);
+    			add_location(th4, file$4, 142, 6, 3452);
+    			add_location(tr, file$4, 135, 4, 3098);
+    			add_location(thead, file$4, 134, 2, 3085);
+    			add_location(tbody, file$4, 145, 2, 3500);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allHostObjects");
-    			add_location(table, file$4, 130, 0, 2944);
+    			add_location(table, file$4, 133, 0, 3014);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "crateHostObject");
-    			add_location(h5, file$4, 164, 8, 4274);
+    			add_location(h5, file$4, 167, 8, 4344);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$4, 166, 10, 4443);
+    			add_location(span1, file$4, 169, 10, 4516);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$4, 165, 8, 4355);
+    			add_location(button1, file$4, 168, 8, 4428);
     			attr_dev(div5, "class", "modal-header");
-    			add_location(div5, file$4, 163, 6, 4238);
+    			add_location(div5, file$4, 166, 6, 4308);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$4, 173, 14, 4657);
+    			add_location(label0, file$4, 176, 14, 4730);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
-    			attr_dev(input0, "placeholder", "HG_<ZONE>_<HOST-ART>");
-    			add_location(input0, file$4, 174, 14, 4722);
+    			attr_dev(input0, "placeholder", "NG_<ZONE>_<NETZWERK-ART>");
+    			add_location(input0, file$4, 177, 14, 4795);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$4, 172, 12, 4624);
+    			add_location(div6, file$4, 175, 12, 4697);
     			attr_dev(div7, "class", "row mb-3");
-    			add_location(div7, file$4, 171, 10, 4588);
+    			add_location(div7, file$4, 174, 10, 4661);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "description");
-    			add_location(label1, file$4, 185, 14, 5065);
+    			add_location(label1, file$4, 188, 14, 5142);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "description");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$4, 186, 14, 5144);
+    			add_location(input1, file$4, 189, 14, 5221);
     			attr_dev(div8, "class", "col");
-    			add_location(div8, file$4, 184, 12, 5032);
+    			add_location(div8, file$4, 187, 12, 5109);
     			attr_dev(div9, "class", "row mb-3");
-    			add_location(div9, file$4, 183, 10, 4996);
+    			add_location(div9, file$4, 186, 10, 5073);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "membersId");
-    			add_location(label2, file$4, 198, 14, 5480);
-    			attr_dev(select, "id", "membersId");
-    			attr_dev(select, "type", "text");
-    			attr_dev(select, "class", "form-control");
-    			if (/*networkGroupObject*/ ctx[2].membersId === void 0) add_render_callback(() => /*select_change_handler*/ ctx[8].call(select));
-    			add_location(select, file$4, 199, 12, 5551);
-    			attr_dev(div10, "class", "col");
-    			add_location(div10, file$4, 196, 12, 5430);
-    			attr_dev(div11, "class", "row mb-3");
-    			add_location(div11, file$4, 195, 12, 5394);
-    			attr_dev(form, "class", "mb-5");
-    			add_location(form, file$4, 170, 8, 4557);
-    			attr_dev(div12, "class", "modal-body");
-    			add_location(div12, file$4, 169, 6, 4523);
+    			add_location(label2, file$4, 199, 14, 5526);
+    			add_location(br, file$4, 199, 71, 5583);
     			attr_dev(button2, "type", "button");
-    			attr_dev(button2, "class", "btn btn-secondary");
-    			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$4, 213, 8, 5972);
+    			attr_dev(button2, "class", "btn");
+    			set_style(button2, "background-color", "none");
+    			set_style(button2, "color", "#000");
+    			set_style(button2, "border-color", "#D3D3D3");
+    			set_style(button2, "width", "466px");
+    			set_style(button2, "text-align", "left");
+    			attr_dev(button2, "data-toggle", "collapse");
+    			attr_dev(button2, "data-target", "#collapseExample");
+    			attr_dev(button2, "aria-expanded", "false");
+    			attr_dev(button2, "aria-controls", "collapseExample");
+    			add_location(button2, file$4, 200, 14, 5603);
+    			attr_dev(div10, "class", "list-group");
+    			set_style(div10, "width", "466px");
+    			set_style(div10, "margin-left", "-16px");
+    			set_style(div10, "margin-top", "-17px");
+    			add_location(div10, file$4, 205, 16, 6037);
+    			attr_dev(div11, "class", "card card-body");
+    			set_style(div11, "border", "0");
+    			add_location(div11, file$4, 204, 14, 5972);
+    			attr_dev(div12, "class", "collapse");
+    			attr_dev(div12, "id", "collapseExample");
+    			add_location(div12, file$4, 203, 12, 5913);
+    			attr_dev(div13, "class", "col");
+    			add_location(div13, file$4, 198, 12, 5493);
+    			attr_dev(div14, "class", "row mb-3");
+    			add_location(div14, file$4, 197, 10, 5457);
+    			attr_dev(form, "class", "mb-5");
+    			add_location(form, file$4, 173, 8, 4630);
+    			attr_dev(div15, "class", "modal-body");
+    			add_location(div15, file$4, 172, 6, 4596);
     			attr_dev(button3, "type", "button");
-    			attr_dev(button3, "class", "btn");
-    			set_style(button3, "background-color", "#008000");
-    			set_style(button3, "color", "#fff");
-    			add_location(button3, file$4, 214, 8, 6065);
-    			attr_dev(div13, "class", "modal-footer");
-    			add_location(div13, file$4, 212, 6, 5936);
-    			attr_dev(div14, "class", "modal-content");
-    			add_location(div14, file$4, 162, 4, 4203);
-    			attr_dev(div15, "class", "modal-dialog modal-dialog-centered");
-    			attr_dev(div15, "role", "document");
-    			add_location(div15, file$4, 161, 2, 4133);
-    			attr_dev(div16, "class", "modal fade");
-    			attr_dev(div16, "id", "crateHO");
-    			attr_dev(div16, "tabindex", "-1");
-    			attr_dev(div16, "role", "dialog");
-    			attr_dev(div16, "aria-labelledby", "formCreateHostObject");
-    			attr_dev(div16, "aria-hidden", "true");
-    			add_location(div16, file$4, 160, 0, 4006);
+    			attr_dev(button3, "class", "btn btn-secondary");
+    			attr_dev(button3, "data-dismiss", "modal");
+    			add_location(button3, file$4, 223, 8, 6852);
+    			attr_dev(button4, "type", "button");
+    			attr_dev(button4, "class", "btn");
+    			set_style(button4, "background-color", "#008000");
+    			set_style(button4, "color", "#fff");
+    			add_location(button4, file$4, 224, 8, 6945);
+    			attr_dev(div16, "class", "modal-footer");
+    			add_location(div16, file$4, 222, 6, 6816);
+    			attr_dev(div17, "class", "modal-content");
+    			add_location(div17, file$4, 165, 4, 4273);
+    			attr_dev(div18, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div18, "role", "document");
+    			add_location(div18, file$4, 164, 2, 4203);
+    			attr_dev(div19, "class", "modal fade");
+    			attr_dev(div19, "id", "crateHO");
+    			attr_dev(div19, "tabindex", "-1");
+    			attr_dev(div19, "role", "dialog");
+    			attr_dev(div19, "aria-labelledby", "formCreateHostObject");
+    			attr_dev(div19, "aria-hidden", "true");
+    			add_location(div19, file$4, 163, 0, 4076);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11681,17 +11766,17 @@ var app = (function () {
     			}
 
     			insert_dev(target, t13, anchor);
-    			insert_dev(target, div16, anchor);
-    			append_dev(div16, div15);
-    			append_dev(div15, div14);
-    			append_dev(div14, div5);
+    			insert_dev(target, div19, anchor);
+    			append_dev(div19, div18);
+    			append_dev(div18, div17);
+    			append_dev(div17, div5);
     			append_dev(div5, h5);
     			append_dev(div5, t15);
     			append_dev(div5, button1);
     			append_dev(button1, span1);
-    			append_dev(div14, t17);
-    			append_dev(div14, div12);
-    			append_dev(div12, form);
+    			append_dev(div17, t17);
+    			append_dev(div17, div15);
+    			append_dev(div15, form);
     			append_dev(form, div7);
     			append_dev(div7, div6);
     			append_dev(div6, label0);
@@ -11706,22 +11791,26 @@ var app = (function () {
     			append_dev(div8, input1);
     			set_input_value(input1, /*networkGroupObject*/ ctx[2].description);
     			append_dev(form, t23);
-    			append_dev(form, div11);
+    			append_dev(form, div14);
+    			append_dev(div14, div13);
+    			append_dev(div13, label2);
+    			append_dev(div13, br);
+    			append_dev(div13, t25);
+    			append_dev(div13, button2);
+    			append_dev(div13, t27);
+    			append_dev(div13, div12);
+    			append_dev(div12, div11);
     			append_dev(div11, div10);
-    			append_dev(div10, label2);
-    			append_dev(div10, t25);
-    			append_dev(div10, select);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(select, null);
+    				each_blocks[i].m(div10, null);
     			}
 
-    			select_option(select, /*networkGroupObject*/ ctx[2].membersId);
-    			append_dev(div14, t26);
-    			append_dev(div14, div13);
-    			append_dev(div13, button2);
-    			append_dev(div13, t28);
-    			append_dev(div13, button3);
+    			append_dev(div17, t28);
+    			append_dev(div17, div16);
+    			append_dev(div16, button3);
+    			append_dev(div16, t30);
+    			append_dev(div16, button4);
 
     			if (!mounted) {
     				dispose = [
@@ -11735,10 +11824,9 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[6]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[7]),
-    					listen_dev(select, "change", /*select_change_handler*/ ctx[8]),
-    					listen_dev(button3, "click", /*createNetworkGroupObject*/ ctx[4], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[7]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[8]),
+    					listen_dev(button4, "click", /*createNetworkGroupObject*/ ctx[5], false, false, false)
     				];
 
     				mounted = true;
@@ -11771,16 +11859,16 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*networkGroupObject, networkObjects*/ 12 && input0.value !== /*networkGroupObject*/ ctx[2].name) {
+    			if (dirty & /*networkGroupObject*/ 4 && input0.value !== /*networkGroupObject*/ ctx[2].name) {
     				set_input_value(input0, /*networkGroupObject*/ ctx[2].name);
     			}
 
-    			if (dirty & /*networkGroupObject, networkObjects*/ 12 && input1.value !== /*networkGroupObject*/ ctx[2].description) {
+    			if (dirty & /*networkGroupObject*/ 4 && input1.value !== /*networkGroupObject*/ ctx[2].description) {
     				set_input_value(input1, /*networkGroupObject*/ ctx[2].description);
     			}
 
-    			if (dirty & /*networkObjects*/ 8) {
-    				each_value = /*networkObjects*/ ctx[3];
+    			if (dirty & /*networkObjects, selection*/ 24) {
+    				each_value = /*networkObjects*/ ctx[4];
     				validate_each_argument(each_value);
     				let i;
 
@@ -11792,7 +11880,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$3(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(select, null);
+    						each_blocks[i].m(div10, null);
     					}
     				}
 
@@ -11801,10 +11889,6 @@ var app = (function () {
     				}
 
     				each_blocks.length = each_value.length;
-    			}
-
-    			if (dirty & /*networkGroupObject, networkObjects*/ 12) {
-    				select_option(select, /*networkGroupObject*/ ctx[2].membersId);
     			}
     		},
     		i: noop$1,
@@ -11815,7 +11899,7 @@ var app = (function () {
     			if (detaching) detach_dev(table);
     			destroy_each(each_blocks_1, detaching);
     			if (detaching) detach_dev(t13);
-    			if (detaching) detach_dev(div16);
+    			if (detaching) detach_dev(div19);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
     			run_all(dispose);
@@ -11847,6 +11931,8 @@ var app = (function () {
     		membersId: null
     	};
 
+    	let selection = [];
+
     	function addMembersId() {
     		networkGroupObject.membersId.push;
     	}
@@ -11870,6 +11956,8 @@ var app = (function () {
 
     	//-----------------------------
     	function createNetworkGroupObject() {
+    		$$invalidate(2, networkGroupObject.membersId = selection, networkGroupObject);
+
     		var config = {
     			method: "post",
     			url: api_root$3 + "/network-group-object",
@@ -11897,7 +11985,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(3, networkObjects = response.data);
+    			$$invalidate(4, networkObjects = response.data);
     		}).catch(function (error) {
     			alert("Could not get Network Objects");
     			console.log(error);
@@ -11915,22 +12003,21 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$3.warn(`<Network_Group_Objects> was created with unknown prop '${key}'`);
     	});
 
+    	const $$binding_groups = [[]];
+
     	function input0_input_handler() {
     		networkGroupObject.name = this.value;
     		$$invalidate(2, networkGroupObject);
-    		$$invalidate(3, networkObjects);
     	}
 
     	function input1_input_handler() {
     		networkGroupObject.description = this.value;
     		$$invalidate(2, networkGroupObject);
-    		$$invalidate(3, networkObjects);
     	}
 
-    	function select_change_handler() {
-    		networkGroupObject.membersId = select_value(this);
-    		$$invalidate(2, networkGroupObject);
-    		$$invalidate(3, networkObjects);
+    	function input_change_handler() {
+    		selection = get_binding_group_value($$binding_groups[0], this.__value, this.checked);
+    		$$invalidate(3, selection);
     	}
 
     	$$self.$capture_state = () => ({
@@ -11938,6 +12025,7 @@ var app = (function () {
     		api_root: api_root$3,
     		networkGroupObjects,
     		networkGroupObject,
+    		selection,
     		addMembersId,
     		getNetworkGroupObjects,
     		createNetworkGroupObject,
@@ -11950,8 +12038,9 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('networkGroupObjects' in $$props) $$invalidate(0, networkGroupObjects = $$props.networkGroupObjects);
     		if ('networkGroupObject' in $$props) $$invalidate(2, networkGroupObject = $$props.networkGroupObject);
-    		if ('networkObjects' in $$props) $$invalidate(3, networkObjects = $$props.networkObjects);
-    		if ('sortBy' in $$props) $$invalidate(5, sortBy = $$props.sortBy);
+    		if ('selection' in $$props) $$invalidate(3, selection = $$props.selection);
+    		if ('networkObjects' in $$props) $$invalidate(4, networkObjects = $$props.networkObjects);
+    		if ('sortBy' in $$props) $$invalidate(6, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -11960,13 +12049,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*sortBy, networkGroupObjects*/ 33) {
+    		if ($$self.$$.dirty & /*sortBy, networkGroupObjects*/ 65) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(5, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(6, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(5, sortBy.col = column, sortBy);
-    					$$invalidate(5, sortBy.ascending = true, sortBy);
+    					$$invalidate(6, sortBy.col = column, sortBy);
+    					$$invalidate(6, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -11985,12 +12074,14 @@ var app = (function () {
     		networkGroupObjects,
     		sort,
     		networkGroupObject,
+    		selection,
     		networkObjects,
     		createNetworkGroupObject,
     		sortBy,
     		input0_input_handler,
     		input1_input_handler,
-    		select_change_handler
+    		input_change_handler,
+    		$$binding_groups
     	];
     }
 
@@ -12216,7 +12307,7 @@ var app = (function () {
     	return block;
     }
 
-    // (240:18) {#each hostObjects as h}
+    // (219:18) {#each hostObjects as h}
     function create_each_block$2(ctx) {
     	let label1;
     	let div;
@@ -12251,14 +12342,14 @@ var app = (function () {
     			input.__value = input_value_value = /*h*/ ctx[13].id;
     			input.value = input.__value;
     			/*$$binding_groups*/ ctx[10][0].push(input);
-    			add_location(input, file$3, 242, 24, 7084);
+    			add_location(input, file$3, 221, 24, 6325);
     			attr_dev(label0, "class", "form-check-label");
     			attr_dev(label0, "for", "flexSwitchCheckDefault");
-    			add_location(label0, file$3, 244, 24, 7263);
+    			add_location(label0, file$3, 223, 24, 6504);
     			attr_dev(div, "class", "form-check form-switch");
-    			add_location(div, file$3, 241, 22, 7022);
+    			add_location(div, file$3, 220, 22, 6263);
     			attr_dev(label1, "class", "list-group-item");
-    			add_location(label1, file$3, 240, 20, 6967);
+    			add_location(label1, file$3, 219, 20, 6208);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label1, anchor);
@@ -12302,7 +12393,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(240:18) {#each hostObjects as h}",
+    		source: "(219:18) {#each hostObjects as h}",
     		ctx
     	});
 
@@ -12562,8 +12653,8 @@ var app = (function () {
     			add_location(div9, file$3, 198, 10, 5096);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "membersId");
-    			add_location(label2, file$3, 232, 14, 6305);
-    			add_location(br, file$3, 232, 71, 6362);
+    			add_location(label2, file$3, 211, 14, 5546);
+    			add_location(br, file$3, 211, 71, 5603);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn");
     			set_style(button2, "background-color", "none");
@@ -12575,22 +12666,22 @@ var app = (function () {
     			attr_dev(button2, "data-target", "#collapseExample");
     			attr_dev(button2, "aria-expanded", "false");
     			attr_dev(button2, "aria-controls", "collapseExample");
-    			add_location(button2, file$3, 233, 14, 6382);
+    			add_location(button2, file$3, 212, 14, 5623);
     			attr_dev(div10, "class", "list-group");
     			set_style(div10, "width", "466px");
     			set_style(div10, "margin-left", "-16px");
     			set_style(div10, "margin-top", "-17px");
-    			add_location(div10, file$3, 238, 16, 6816);
+    			add_location(div10, file$3, 217, 16, 6057);
     			attr_dev(div11, "class", "card card-body");
     			set_style(div11, "border", "0");
-    			add_location(div11, file$3, 237, 14, 6751);
+    			add_location(div11, file$3, 216, 14, 5992);
     			attr_dev(div12, "class", "collapse");
     			attr_dev(div12, "id", "collapseExample");
-    			add_location(div12, file$3, 236, 12, 6692);
+    			add_location(div12, file$3, 215, 12, 5933);
     			attr_dev(div13, "class", "col");
-    			add_location(div13, file$3, 231, 12, 6272);
+    			add_location(div13, file$3, 210, 12, 5513);
     			attr_dev(div14, "class", "row mb-3");
-    			add_location(div14, file$3, 230, 10, 6236);
+    			add_location(div14, file$3, 209, 10, 5477);
     			attr_dev(form, "class", "mb-5");
     			add_location(form, file$3, 185, 8, 4660);
     			attr_dev(div15, "class", "modal-body");
@@ -12598,14 +12689,14 @@ var app = (function () {
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$3, 256, 8, 7618);
+    			add_location(button3, file$3, 235, 8, 6859);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn");
     			set_style(button4, "background-color", "#008000");
     			set_style(button4, "color", "#fff");
-    			add_location(button4, file$3, 259, 8, 7733);
+    			add_location(button4, file$3, 238, 8, 6974);
     			attr_dev(div16, "class", "modal-footer");
-    			add_location(div16, file$3, 255, 6, 7582);
+    			add_location(div16, file$3, 234, 6, 6823);
     			attr_dev(div17, "class", "modal-content");
     			add_location(div17, file$3, 172, 4, 4252);
     			attr_dev(div18, "class", "modal-dialog modal-dialog-centered");

@@ -207,27 +207,6 @@
               />
             </div>
           </div>
-          <!----------------------
-          <div class="row mb-3">
-            <div class="col">
-              <label class="form-label" for="membersId">Members</label>
-              <div class="list-group">
-                {#each hostObjects as h}
-                  <label class="list-group-item">
-                    <input
-                      class="form-check-input me-1"
-                      type="checkbox"
-                      value={h.id}
-                      bind:group={selection}
-                      on
-                    />
-                    {h.name} || {h.ip}
-                  </label>
-                {/each}
-              </div>
-            </div>
-          </div>
-          ---------------------------------->
           <div class="row mb-3">
             <div class="col">
               <label class="form-label" for="membersId">Members</label><br>
