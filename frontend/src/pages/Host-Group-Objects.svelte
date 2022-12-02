@@ -144,12 +144,12 @@
 
   // search
 </script>
-
+<div style="margin-left: -52px; margin-right: -52px;">
 <div class="container-fluid">
   <div class="row">
     <div class="col">
       <h3 style="margin-top: 15px; font-weight: bold;">
-        All Host Group Objects
+       Host Group Objects
       </h3>
     </div>
     <div class="col" />
@@ -210,6 +210,7 @@
     {/each}
   </tbody>
 </table>
+</div>
 
 <div
   class="modal fade"

@@ -123,7 +123,7 @@
 
 
 </script>
-
+<div style="margin-left: -52px; margin-right: -52px;">
 <div class="container-fluid">
   <div class="row">
     <div class="col">
@@ -190,7 +190,7 @@
     {/each}
   </tbody>
 </table>
-
+</div>
 <div class="modal fade" id="crateHO" tabindex="-1" role="dialog" aria-labelledby="formCreateHostObject" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">

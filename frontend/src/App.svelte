@@ -7,11 +7,11 @@
 <div class="container-fluid" style="background-color: #ececee;">
 <div style="padding-top: 15px; padding-bottom: 15px;">
 <div class="row">
-    <div class="col"><img
+    <div class="col"><a href="#/home"><img
 		src="https://www.buelach.ch/fileadmin/cd/Images/logo_stadtbuelach.png"
 		alt="Stadt Bülach Logo"
-		style="height: 50px; width: 231px;"
-	  /></div>
+		style="height: 50px; width: 231px;" 
+	  /></a></div>
     <div class="col"><h1 style="font-weight: bold;"><center> Firewall Documentation </center></h1></div>
 	<div class="col"></div> 
 </div>

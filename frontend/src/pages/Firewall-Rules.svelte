@@ -310,7 +310,7 @@
 
   // search
 </script>
-
+<div style="margin-left: -52px; margin-right: -52px;">
 <div class="container-fluid">
   <div class="row">
     <div class="col">
@@ -618,7 +618,7 @@
     {/each}
   </tbody>
 </table>
-
+</div>
 <div
   class="modal fade"
   id="createFWR"

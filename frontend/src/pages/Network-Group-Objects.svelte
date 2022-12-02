@@ -150,11 +150,11 @@ let networkObjects = [];
 // search
 
 </script>
-
+<div style="margin-left: -52px; margin-right: -52px;">
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h3 style="margin-top: 15px; font-weight: bold;">All Network Group Objects</h3>
+      <h3 style="margin-top: 15px; font-weight: bold;">Network Group Objects</h3>
     </div>
     <div class="col" />
     <div class="col" style="text-align-last: right;">
@@ -206,7 +206,7 @@ let networkObjects = [];
       {/each}
   </tbody>
 </table>
-
+</div>
 <div class="modal fade" id="crateHO" tabindex="-1" role="dialog" aria-labelledby="formCreateHostObject" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
