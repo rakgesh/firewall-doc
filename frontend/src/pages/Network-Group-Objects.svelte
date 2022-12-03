@@ -23,6 +23,11 @@
 
   let selection = [];
 
+  let ngoDelete = {
+    id: null,
+    name: null,
+  }
+
 
   function getNetworkGroupObjects() {
     var config = {
@@ -123,6 +128,28 @@ let networkObjects = [];
       });
   }
 
+  function getNgoToDelete(ngoD) {
+    ngoDelete.id = ngoD.ngoId;
+    ngoDelete.name = ngoD.ngoName;
+  }
+
+  function deleteNgo(id) {
+    var config = {
+      method: "delete",
+      url: api_root + "/network-group-object/" + id,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getNetworkGroupObjects();
+      })
+      .catch(function (error) {
+        alert("Could not delete Network Group Object");
+        console.log(error);
+      });
+  }
+
+
   let sortBy = {col: "name", ascending: true};
 	
 	$: sort = (column) => {
@@ -201,7 +228,13 @@ let networkObjects = [];
             aria-hidden="true"
           /></button
         ></td>
-          <td><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></td>
+          <td><button
+            style="border: none; background: none;"
+            data-toggle="modal"
+            data-target="#deleteNGO"
+            on:click={() => getNgoToDelete(n1)}
+            >
+            <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
       {/each}
   </tbody>
@@ -398,3 +431,42 @@ let networkObjects = [];
   </div>
 </div>
 
+<div
+  class="modal fade"
+  id="deleteNGO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formDeleteNGO"
+  aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="deleteNGO">Delete Network-Group-Object</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Are you sure, that you want to delete this network group object <strong>"{ngoDelete.name}"</strong>?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        >Close</button
+      >
+      <button
+        type="button"
+        class="btn"
+        data-dismiss="modal"
+        style="background-color: #c73834; color: #fff"
+        on:click={deleteNgo(ngoDelete.id)}>Delete</button
+      >
+    </div>
+  </div>
+</div>
+</div>

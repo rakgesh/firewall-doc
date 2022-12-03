@@ -20,6 +20,11 @@
 
   let selection = [];
 
+  let hgoDelete = {
+    id: null,
+    name: null,
+  }
+
   function getHostGroupObjects() {
     var config = {
       method: "get",
@@ -119,6 +124,27 @@
       });
   }
 
+  function getHgoToDelete(hgoD) {
+    hgoDelete.id = hgoD.hgoId;
+    hgoDelete.name = hgoD.hgoName;
+  }
+
+  function deleteHgo(id) {
+    var config = {
+      method: "delete",
+      url: api_root + "/host-group-object/" + id,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getHostGroupObjects();
+      })
+      .catch(function (error) {
+        alert("Could not delete Host Group Object");
+        console.log(error);
+      });
+  }
+
   let sortBy = { col: "name", ascending: true };
 
   $: sort = (column) => {
@@ -205,7 +231,13 @@
             /></button
           ></td
         >
-        <td><i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#deleteHGO"
+          on:click={() => getHgoToDelete(h1)}
+          >
+          <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
     {/each}
   </tbody>
@@ -441,4 +473,45 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div
+  class="modal fade"
+  id="deleteHGO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formDeleteHGO"
+  aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="deleteHGO">Delete Host-Group-Object</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Are you sure, that you want to delete this host group object <strong>"{hgoDelete.name}"</strong>?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        >Close</button
+      >
+      <button
+        type="button"
+        class="btn"
+        data-dismiss="modal"
+        style="background-color: #c73834; color: #fff"
+        on:click={deleteHgo(hgoDelete.id)}>Delete</button
+      >
+    </div>
+  </div>
+</div>
 </div>
