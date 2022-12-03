@@ -70,7 +70,6 @@
 
     axios(config)
       .then(function (response) {
-        alert("Network Object created");
         getNetworkObjects();
       })
       .catch(function (error) {
@@ -227,13 +226,16 @@
               /></button
             ></td
           >
-          <td><button
-            style="border: none; background: none;"
-            data-toggle="modal"
-            data-target="#deleteNO"
-            on:click={() => getNoToDelete(networkObject)}
+          <td
+            ><button
+              style="border: none; background: none;"
+              data-toggle="modal"
+              data-target="#deleteNO"
+              on:click={() => getNoToDelete(networkObject)}
             >
-            <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+              <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+            ></td
+          >
         </tr>
       {/each}
     </tbody>
@@ -316,6 +318,7 @@
         <button
           type="button"
           class="btn"
+          data-dismiss="modal"
           style="background-color: #008000; color: #fff"
           on:click={createNetworkObject}>Add</button
         >
@@ -421,7 +424,6 @@
   </div>
 </div>
 
-
 <div
   class="modal fade"
   id="deleteNO"
@@ -430,34 +432,36 @@
   aria-labelledby="formDeleteNO"
   aria-hidden="true"
 >
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="deleteNO">Delete Network-Object</h5>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      Are you sure, that you want to delete this network object <strong>"{noDelete.name}"</strong>?
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal"
-        >Close</button
-      >
-      <button
-        type="button"
-        class="btn"
-        data-dismiss="modal"
-        style="background-color: #c73834; color: #fff"
-        on:click={deleteNo(noDelete.id)}>Delete</button
-      >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteNO">Delete Network-Object</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure, that you want to delete this network object <strong
+          >"{noDelete.name}"</strong
+        >?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          data-dismiss="modal"
+          style="background-color: #c73834; color: #fff"
+          on:click={deleteNo(noDelete.id)}>Delete</button
+        >
+      </div>
     </div>
   </div>
-</div>
 </div>
