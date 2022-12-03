@@ -207,6 +207,7 @@
         <th scope="col" />
       </tr>
     </thead>
+    {#if visibleData.length}
     <tbody>
       {#each visibleData as networkObject}
         <tr>
@@ -239,6 +240,9 @@
         </tr>
       {/each}
     </tbody>
+    {:else}
+    <div>No data available</div>
+  {/if}
   </table>
 </div>
 <div
