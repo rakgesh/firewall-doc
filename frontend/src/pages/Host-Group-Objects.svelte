@@ -59,7 +59,6 @@
 
     axios(config)
       .then(function (response) {
-        alert("Host Group Object created");
         getHostGroupObjects();
       })
       .catch(function (error) {
@@ -343,6 +342,7 @@
         <button
           type="button"
           class="btn"
+          data-dismiss="modal"
           style="background-color: #008000; color: #fff"
           on:click={createHostGroupObject}>Add</button
         >

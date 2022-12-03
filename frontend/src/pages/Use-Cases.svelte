@@ -58,7 +58,6 @@
 
     axios(config)
       .then(function (response) {
-        alert("Use Case created");
         getUseCases();
       })
       .catch(function (error) {
@@ -91,7 +90,6 @@
 
     axios(config)
       .then(function (response) {
-        alert("Use Case edited");
         getUseCases();
       })
       .catch(function (error) {
@@ -113,7 +111,6 @@
 
     axios(config)
       .then(function (response) {
-        alert("Use Case deleted");
         getUseCases();
       })
       .catch(function (error) {
@@ -281,6 +278,7 @@
         <button
           type="button"
           class="btn"
+          data-dismiss="modal"
           style="background-color: #008000; color: #fff"
           on:click={createUseCase}>Add</button
         >
@@ -368,6 +366,7 @@
         <button
           type="button"
           class="btn"
+          data-dismiss="modal"
           style="background-color: #008000; color: #fff"
           on:click={editUseCase}>Edit</button
         >

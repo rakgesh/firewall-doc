@@ -54,7 +54,6 @@
 
     axios(config)
       .then(function (response) {
-        alert("Host Object created");
         getHostObjects();
       })
       .catch(function (error) {
@@ -247,7 +246,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn" style="background-color: #008000; color: #fff" on:click={createHostObject}>Add</button>
+        <button type="button" class="btn" data-dismiss="modal" style="background-color: #008000; color: #fff" on:click={createHostObject}>Add</button>
       </div>
     </div>
   </div>
