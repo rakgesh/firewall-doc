@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -62,6 +63,13 @@ public class FirewallRuleController {
         fwDAO.setFirewallStatus(FirewallStatus.EDITED);
         FirewallRule fw = firewallRuleRepository.save(fwDAO);
         return new ResponseEntity<>(fw, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<FirewallRule> getFirewallRuleToDeleteById(@PathVariable String id) {
+        FirewallRule fw = firewallRuleRepository.findById(id).get();
+        firewallRuleRepository.delete(fw);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     
 }

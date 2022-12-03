@@ -20,6 +20,11 @@
 
   let portBeforeEdit = [];
 
+  let sgoDelete = {
+    id: null,
+    name: null,
+  }
+
   function getServiceGroupObjects() {
     var config = {
       method: "get",
@@ -92,6 +97,27 @@
       });
   }
 
+  function getSgoToDelete(sgoD) {
+    sgoDelete.id = sgoD.id;
+    sgoDelete.name = sgoD.name;
+  }
+
+  function deleteSgo(id) {
+    var config = {
+      method: "delete",
+      url: api_root + "/service-group-object/" + id,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getServiceGroupObjects();
+      })
+      .catch(function (error) {
+        alert("Could not delete Service Group Object");
+        console.log(error);
+      });
+  }
+
   let sortBy = { col: "name", ascending: true };
 
   $: sort = (column) => {
@@ -115,6 +141,7 @@
     serviceGroupObjects = serviceGroupObjects.sort(sort);
   };
 </script>
+
 <div style="margin-left: -52px; margin-right: -52px;">
 <div class="container-fluid">
   <div class="row">
@@ -173,7 +200,13 @@
             /></button
           ></td
         >
-        <td><i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+        <td><button
+          style="border: none; background: none;"
+          data-toggle="modal"
+          data-target="#deleteSGO"
+          on:click={() => getSgoToDelete(serviceGroupObject)}
+          >
+          <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
       </tr>
     {/each}
   </tbody>
@@ -338,4 +371,45 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div
+  class="modal fade"
+  id="deleteSGO"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formDeleteSGO"
+  aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="deleteSGO">Delete Service-Group-Object</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Are you sure, that you want to delete this service group object <strong>"{sgoDelete.name}"</strong>?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        >Close</button
+      >
+      <button
+        type="button"
+        class="btn"
+        data-dismiss="modal"
+        style="background-color: #c73834; color: #fff"
+        on:click={deleteSgo(sgoDelete.id)}>Delete</button
+      >
+    </div>
+  </div>
+</div>
 </div>

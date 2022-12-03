@@ -1754,19 +1754,13 @@ var app = (function () {
     function create_fragment$9(ctx) {
     	let div;
     	let h1;
-    	let t1;
-    	let h4;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			h1 = element("h1");
-    			h1.textContent = "Das isch blöd platziert";
-    			t1 = space();
-    			h4 = element("h4");
-    			h4.textContent = "Host Object kann man testen";
+    			h1.textContent = "Das isch jetzt guet platziert";
     			add_location(h1, file$9, 1, 0, 56);
-    			add_location(h4, file$9, 2, 0, 90);
     			set_style(div, "margin-left", "-52px");
     			set_style(div, "margin-right", "-52px");
     			add_location(div, file$9, 0, 0, 0);
@@ -1777,8 +1771,6 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, h1);
-    			append_dev(div, t1);
-    			append_dev(div, h4);
     		},
     		p: noop$1,
     		i: noop$1,
@@ -4780,195 +4772,195 @@ var app = (function () {
 
     function get_each_context$7(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[42] = list[i];
+    	child_ctx[46] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[45] = list[i];
+    	child_ctx[49] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[48] = list[i];
+    	child_ctx[52] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[51] = list[i];
+    	child_ctx[55] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[54] = list[i];
+    	child_ctx[58] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[57] = list[i];
+    	child_ctx[61] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_6(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[48] = list[i];
+    	child_ctx[52] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_7(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[51] = list[i];
+    	child_ctx[55] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_8(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[54] = list[i];
+    	child_ctx[58] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_9(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[57] = list[i];
+    	child_ctx[61] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_10(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[68] = list[i];
+    	child_ctx[72] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_11(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[71] = list[i];
+    	child_ctx[75] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_12(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[42] = list[i];
+    	child_ctx[46] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_13(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[45] = list[i];
+    	child_ctx[49] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_14(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[48] = list[i];
+    	child_ctx[52] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_15(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[51] = list[i];
+    	child_ctx[55] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_16(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[54] = list[i];
+    	child_ctx[58] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_17(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[57] = list[i];
+    	child_ctx[61] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_18(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[48] = list[i];
+    	child_ctx[52] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_19(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[51] = list[i];
+    	child_ctx[55] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_20(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[54] = list[i];
+    	child_ctx[58] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_21(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[57] = list[i];
+    	child_ctx[61] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_22(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[68] = list[i];
+    	child_ctx[72] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_23(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[71] = list[i];
+    	child_ctx[75] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_24(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[98] = list[i];
+    	child_ctx[102] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_25(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[101] = list[i];
+    	child_ctx[105] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_26(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[104] = list[i];
+    	child_ctx[108] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_27(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[104] = list[i];
+    	child_ctx[108] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_28(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[104] = list[i];
+    	child_ctx[108] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_29(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[104] = list[i];
+    	child_ctx[108] = list[i];
     	return child_ctx;
     }
 
-    // (390:10) {#if fwr.sho}
+    // (445:12) {#if fwr.sho}
     function create_if_block_7(ctx) {
     	let li0;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].sho.name + "";
+    	let t0_value = /*fwr*/ ctx[102].sho.name + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[98].sho.ip + "";
+    	let t2_value = /*fwr*/ ctx[102].sho.ip + "";
     	let t2;
     	let div_id_value;
 
@@ -4985,18 +4977,18 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].sho.id + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].sho.id + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "source");
-    			add_location(button, file$8, 391, 14, 9674);
+    			add_location(button, file$8, 446, 16, 11335);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 390, 12, 9630);
+    			add_location(li0, file$8, 445, 14, 11289);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 403, 14, 10134);
+    			add_location(li1, file$8, 458, 16, 11819);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[98].sho.id + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 402, 12, 10062);
+    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[102].sho.id + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 457, 14, 11745);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5008,15 +5000,15 @@ var app = (function () {
     			append_dev(li1, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].sho.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].sho.name + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].sho.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].sho.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[98].sho.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[102].sho.ip + "")) set_data_dev(t2, t2_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[98].sho.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[102].sho.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5031,24 +5023,24 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(390:10) {#if fwr.sho}",
+    		source: "(445:12) {#if fwr.sho}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (410:10) {#if fwr.shgoWithHo}
+    // (465:12) {#if fwr.shgoWithHo}
     function create_if_block_6(ctx) {
     	let li;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].shgoWithHo.hgoName + "";
+    	let t0_value = /*fwr*/ ctx[102].shgoWithHo.hgoName + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let div_id_value;
-    	let each_value_29 = /*fwr*/ ctx[98].shgoWithHo.members;
+    	let each_value_29 = /*fwr*/ ctx[102].shgoWithHo.members;
     	validate_each_argument(each_value_29);
     	let each_blocks = [];
 
@@ -5072,15 +5064,15 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].shgoWithHo.hgoId + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].shgoWithHo.hgoId + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "source");
-    			add_location(button, file$8, 411, 14, 10370);
+    			add_location(button, file$8, 466, 16, 12069);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 410, 12, 10326);
+    			add_location(li, file$8, 465, 14, 12023);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[98].shgoWithHo.hgoId + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 422, 12, 10778);
+    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[102].shgoWithHo.hgoId + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 477, 14, 12499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5094,14 +5086,14 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].shgoWithHo.hgoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].shgoWithHo.hgoName + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].shgoWithHo.hgoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].shgoWithHo.hgoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_29 = /*fwr*/ ctx[98].shgoWithHo.members;
+    				each_value_29 = /*fwr*/ ctx[102].shgoWithHo.members;
     				validate_each_argument(each_value_29);
     				let i;
 
@@ -5124,7 +5116,7 @@ var app = (function () {
     				each_blocks.length = each_value_29.length;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[98].shgoWithHo.hgoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[102].shgoWithHo.hgoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5140,21 +5132,21 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(410:10) {#if fwr.shgoWithHo}",
+    		source: "(465:12) {#if fwr.shgoWithHo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (424:14) {#each fwr.shgoWithHo.members as m}
+    // (479:16) {#each fwr.shgoWithHo.members as m}
     function create_each_block_29(ctx) {
     	let li0;
-    	let t0_value = /*m*/ ctx[104].name + "";
+    	let t0_value = /*m*/ ctx[108].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*m*/ ctx[104].ip + "";
+    	let t2_value = /*m*/ ctx[108].ip + "";
     	let t2;
     	let t3;
 
@@ -5168,10 +5160,10 @@ var app = (function () {
     			t3 = space();
     			attr_dev(li0, "class", "list-group-item");
     			set_style(li0, "font-style", "italic");
-    			add_location(li0, file$8, 424, 16, 10913);
+    			add_location(li0, file$8, 479, 18, 12638);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 427, 16, 11038);
+    			add_location(li1, file$8, 482, 18, 12769);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5182,8 +5174,8 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[104].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[104].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[108].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[108].ip + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -5196,26 +5188,26 @@ var app = (function () {
     		block,
     		id: create_each_block_29.name,
     		type: "each",
-    		source: "(424:14) {#each fwr.shgoWithHo.members as m}",
+    		source: "(479:16) {#each fwr.shgoWithHo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (435:10) {#if fwr.sno}
+    // (490:12) {#if fwr.sno}
     function create_if_block_5(ctx) {
     	let li0;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].sno.name + "";
+    	let t0_value = /*fwr*/ ctx[102].sno.name + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[98].sno.ip + "";
+    	let t2_value = /*fwr*/ ctx[102].sno.ip + "";
     	let t2;
-    	let t3_value = /*fwr*/ ctx[98].sno.subnet + "";
+    	let t3_value = /*fwr*/ ctx[102].sno.subnet + "";
     	let t3;
     	let div_id_value;
 
@@ -5233,18 +5225,18 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].sno.id + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].sno.id + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "source");
-    			add_location(button, file$8, 436, 14, 11288);
+    			add_location(button, file$8, 491, 16, 13035);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 435, 12, 11244);
+    			add_location(li0, file$8, 490, 14, 12989);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 448, 14, 11748);
+    			add_location(li1, file$8, 503, 16, 13519);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[98].sno.id + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 447, 12, 11676);
+    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[102].sno.id + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 502, 14, 13445);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5257,16 +5249,16 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].sno.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].sno.name + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].sno.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].sno.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[98].sno.ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[98].sno.subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[102].sno.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[102].sno.subnet + "")) set_data_dev(t3, t3_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[98].sno.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[102].sno.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5281,24 +5273,24 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(435:10) {#if fwr.sno}",
+    		source: "(490:12) {#if fwr.sno}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (455:10) {#if fwr.sngoWithNo}
+    // (510:12) {#if fwr.sngoWithNo}
     function create_if_block_4(ctx) {
     	let li;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].sngoWithNo.ngoName + "";
+    	let t0_value = /*fwr*/ ctx[102].sngoWithNo.ngoName + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let div_id_value;
-    	let each_value_28 = /*fwr*/ ctx[98].sngoWithNo.members;
+    	let each_value_28 = /*fwr*/ ctx[102].sngoWithNo.members;
     	validate_each_argument(each_value_28);
     	let each_blocks = [];
 
@@ -5322,15 +5314,15 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].sngoWithNo.ngoId + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].sngoWithNo.ngoId + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "source");
-    			add_location(button, file$8, 456, 14, 12000);
+    			add_location(button, file$8, 511, 16, 13785);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 455, 12, 11956);
+    			add_location(li, file$8, 510, 14, 13739);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[98].sngoWithNo.ngoId + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 467, 12, 12408);
+    			attr_dev(div, "id", div_id_value = "source" + /*fwr*/ ctx[102].sngoWithNo.ngoId + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 522, 14, 14215);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5344,14 +5336,14 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].sngoWithNo.ngoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].sngoWithNo.ngoName + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[98].sngoWithNo.ngoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#source" + /*fwr*/ ctx[102].sngoWithNo.ngoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_28 = /*fwr*/ ctx[98].sngoWithNo.members;
+    				each_value_28 = /*fwr*/ ctx[102].sngoWithNo.members;
     				validate_each_argument(each_value_28);
     				let i;
 
@@ -5374,7 +5366,7 @@ var app = (function () {
     				each_blocks.length = each_value_28.length;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[98].sngoWithNo.ngoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "source" + /*fwr*/ ctx[102].sngoWithNo.ngoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5390,23 +5382,23 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(455:10) {#if fwr.sngoWithNo}",
+    		source: "(510:12) {#if fwr.sngoWithNo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (469:14) {#each fwr.sngoWithNo.members as m}
+    // (524:16) {#each fwr.sngoWithNo.members as m}
     function create_each_block_28(ctx) {
     	let li0;
-    	let t0_value = /*m*/ ctx[104].name + "";
+    	let t0_value = /*m*/ ctx[108].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*m*/ ctx[104].ip + "";
+    	let t2_value = /*m*/ ctx[108].ip + "";
     	let t2;
-    	let t3_value = /*m*/ ctx[104].subnet + "";
+    	let t3_value = /*m*/ ctx[108].subnet + "";
     	let t3;
     	let t4;
 
@@ -5421,10 +5413,10 @@ var app = (function () {
     			t4 = space();
     			attr_dev(li0, "class", "list-group-item");
     			set_style(li0, "font-style", "italic");
-    			add_location(li0, file$8, 469, 16, 12543);
+    			add_location(li0, file$8, 524, 18, 14354);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 472, 16, 12668);
+    			add_location(li1, file$8, 527, 18, 14485);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5436,9 +5428,9 @@ var app = (function () {
     			append_dev(li1, t4);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[104].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[104].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*m*/ ctx[104].subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[108].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[108].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*m*/ ctx[108].subnet + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -5451,24 +5443,24 @@ var app = (function () {
     		block,
     		id: create_each_block_28.name,
     		type: "each",
-    		source: "(469:14) {#each fwr.sngoWithNo.members as m}",
+    		source: "(524:16) {#each fwr.sngoWithNo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (483:10) {#if fwr.dho}
+    // (538:12) {#if fwr.dho}
     function create_if_block_3(ctx) {
     	let li0;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].dho.name + "";
+    	let t0_value = /*fwr*/ ctx[102].dho.name + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[98].dho.ip + "";
+    	let t2_value = /*fwr*/ ctx[102].dho.ip + "";
     	let t2;
     	let div_id_value;
 
@@ -5485,18 +5477,18 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dho.id + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dho.id + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "destination");
-    			add_location(button, file$8, 484, 14, 13045);
+    			add_location(button, file$8, 539, 16, 14884);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 483, 12, 13001);
+    			add_location(li0, file$8, 538, 14, 14838);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 496, 14, 13520);
+    			add_location(li1, file$8, 551, 16, 15383);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[98].dho.id + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 495, 12, 13443);
+    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[102].dho.id + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 550, 14, 15304);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5508,15 +5500,15 @@ var app = (function () {
     			append_dev(li1, t2);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].dho.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].dho.name + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dho.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dho.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[98].dho.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[102].dho.ip + "")) set_data_dev(t2, t2_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[98].dho.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[102].dho.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5531,24 +5523,24 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(483:10) {#if fwr.dho}",
+    		source: "(538:12) {#if fwr.dho}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (503:10) {#if fwr.dhgoWithHo}
+    // (558:12) {#if fwr.dhgoWithHo}
     function create_if_block_2(ctx) {
     	let li;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].dhgoWithHo.hgoName + "";
+    	let t0_value = /*fwr*/ ctx[102].dhgoWithHo.hgoName + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let div_id_value;
-    	let each_value_27 = /*fwr*/ ctx[98].dhgoWithHo.members;
+    	let each_value_27 = /*fwr*/ ctx[102].dhgoWithHo.members;
     	validate_each_argument(each_value_27);
     	let each_blocks = [];
 
@@ -5572,15 +5564,15 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dhgoWithHo.hgoId + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dhgoWithHo.hgoId + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "destination");
-    			add_location(button, file$8, 504, 14, 13756);
+    			add_location(button, file$8, 559, 16, 15633);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 503, 12, 13712);
+    			add_location(li, file$8, 558, 14, 15587);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[98].dhgoWithHo.hgoId + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 515, 12, 14174);
+    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[102].dhgoWithHo.hgoId + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 570, 14, 16073);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5594,14 +5586,14 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].dhgoWithHo.hgoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].dhgoWithHo.hgoName + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dhgoWithHo.hgoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dhgoWithHo.hgoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_27 = /*fwr*/ ctx[98].dhgoWithHo.members;
+    				each_value_27 = /*fwr*/ ctx[102].dhgoWithHo.members;
     				validate_each_argument(each_value_27);
     				let i;
 
@@ -5624,7 +5616,7 @@ var app = (function () {
     				each_blocks.length = each_value_27.length;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[98].dhgoWithHo.hgoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[102].dhgoWithHo.hgoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5640,21 +5632,21 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(503:10) {#if fwr.dhgoWithHo}",
+    		source: "(558:12) {#if fwr.dhgoWithHo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (517:14) {#each fwr.dhgoWithHo.members as m}
+    // (575:16) {#each fwr.dhgoWithHo.members as m}
     function create_each_block_27(ctx) {
     	let li0;
-    	let t0_value = /*m*/ ctx[104].name + "";
+    	let t0_value = /*m*/ ctx[108].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*m*/ ctx[104].ip + "";
+    	let t2_value = /*m*/ ctx[108].ip + "";
     	let t2;
     	let t3;
 
@@ -5668,10 +5660,10 @@ var app = (function () {
     			t3 = space();
     			attr_dev(li0, "class", "list-group-item");
     			set_style(li0, "font-style", "italic");
-    			add_location(li0, file$8, 517, 16, 14314);
+    			add_location(li0, file$8, 575, 18, 16267);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 520, 16, 14439);
+    			add_location(li1, file$8, 578, 18, 16398);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5682,8 +5674,8 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[104].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[104].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[108].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[108].ip + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -5696,26 +5688,26 @@ var app = (function () {
     		block,
     		id: create_each_block_27.name,
     		type: "each",
-    		source: "(517:14) {#each fwr.dhgoWithHo.members as m}",
+    		source: "(575:16) {#each fwr.dhgoWithHo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (528:10) {#if fwr.dno}
+    // (586:12) {#if fwr.dno}
     function create_if_block_1(ctx) {
     	let li0;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].dno.name + "";
+    	let t0_value = /*fwr*/ ctx[102].dno.name + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let li1;
-    	let t2_value = /*fwr*/ ctx[98].dno.ip + "";
+    	let t2_value = /*fwr*/ ctx[102].dno.ip + "";
     	let t2;
-    	let t3_value = /*fwr*/ ctx[98].dno.subnet + "";
+    	let t3_value = /*fwr*/ ctx[102].dno.subnet + "";
     	let t3;
     	let div_id_value;
 
@@ -5733,18 +5725,18 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dno.id + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dno.id + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "destination");
-    			add_location(button, file$8, 529, 14, 14689);
+    			add_location(button, file$8, 587, 16, 16664);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$8, 528, 12, 14645);
+    			add_location(li0, file$8, 586, 14, 16618);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 541, 14, 15164);
+    			add_location(li1, file$8, 599, 16, 17163);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[98].dno.id + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 540, 12, 15087);
+    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[102].dno.id + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 598, 14, 17084);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5757,16 +5749,16 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].dno.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].dno.name + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dno.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dno.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[98].dno.ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[98].dno.subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[102].dno.ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*fwr*/ ctx[102].dno.subnet + "")) set_data_dev(t3, t3_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[98].dno.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[102].dno.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5781,24 +5773,24 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(528:10) {#if fwr.dno}",
+    		source: "(586:12) {#if fwr.dno}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (548:10) {#if fwr.dngoWithNo}
+    // (606:12) {#if fwr.dngoWithNo}
     function create_if_block$1(ctx) {
     	let li;
     	let button;
-    	let t0_value = /*fwr*/ ctx[98].dngoWithNo.ngoName + "";
+    	let t0_value = /*fwr*/ ctx[102].dngoWithNo.ngoName + "";
     	let t0;
     	let button_data_bs_target_value;
     	let t1;
     	let div;
     	let div_id_value;
-    	let each_value_26 = /*fwr*/ ctx[98].dngoWithNo.members;
+    	let each_value_26 = /*fwr*/ ctx[102].dngoWithNo.members;
     	validate_each_argument(each_value_26);
     	let each_blocks = [];
 
@@ -5822,15 +5814,15 @@ var app = (function () {
     			set_style(button, "background", "none");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
-    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dngoWithNo.ngoId + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button, "data-bs-target", button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dngoWithNo.ngoId + /*fwr*/ ctx[102].fwId);
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-controls", "destination");
-    			add_location(button, file$8, 549, 14, 15416);
+    			add_location(button, file$8, 607, 16, 17429);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 548, 12, 15372);
+    			add_location(li, file$8, 606, 14, 17383);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[98].dngoWithNo.ngoId + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 560, 12, 15834);
+    			attr_dev(div, "id", div_id_value = "destination" + /*fwr*/ ctx[102].dngoWithNo.ngoId + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 618, 14, 17869);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5844,14 +5836,14 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].dngoWithNo.ngoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].dngoWithNo.ngoName + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[98].dngoWithNo.ngoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button_data_bs_target_value !== (button_data_bs_target_value = "#destination" + /*fwr*/ ctx[102].dngoWithNo.ngoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button, "data-bs-target", button_data_bs_target_value);
     			}
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_26 = /*fwr*/ ctx[98].dngoWithNo.members;
+    				each_value_26 = /*fwr*/ ctx[102].dngoWithNo.members;
     				validate_each_argument(each_value_26);
     				let i;
 
@@ -5874,7 +5866,7 @@ var app = (function () {
     				each_blocks.length = each_value_26.length;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[98].dngoWithNo.ngoId + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "destination" + /*fwr*/ ctx[102].dngoWithNo.ngoId + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
     		},
@@ -5890,23 +5882,23 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(548:10) {#if fwr.dngoWithNo}",
+    		source: "(606:12) {#if fwr.dngoWithNo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (562:14) {#each fwr.dngoWithNo.members as m}
+    // (623:16) {#each fwr.dngoWithNo.members as m}
     function create_each_block_26(ctx) {
     	let li0;
-    	let t0_value = /*m*/ ctx[104].name + "";
+    	let t0_value = /*m*/ ctx[108].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*m*/ ctx[104].ip + "";
+    	let t2_value = /*m*/ ctx[108].ip + "";
     	let t2;
-    	let t3_value = /*m*/ ctx[104].subnet + "";
+    	let t3_value = /*m*/ ctx[108].subnet + "";
     	let t3;
     	let t4;
 
@@ -5921,10 +5913,10 @@ var app = (function () {
     			t4 = space();
     			attr_dev(li0, "class", "list-group-item");
     			set_style(li0, "font-style", "italic");
-    			add_location(li0, file$8, 562, 16, 15974);
+    			add_location(li0, file$8, 623, 18, 18063);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$8, 565, 16, 16099);
+    			add_location(li1, file$8, 626, 18, 18194);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -5936,9 +5928,9 @@ var app = (function () {
     			append_dev(li1, t4);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[104].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[104].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*m*/ ctx[104].subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*m*/ ctx[108].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*m*/ ctx[108].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t3_value !== (t3_value = /*m*/ ctx[108].subnet + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -5951,17 +5943,17 @@ var app = (function () {
     		block,
     		id: create_each_block_26.name,
     		type: "each",
-    		source: "(562:14) {#each fwr.dngoWithNo.members as m}",
+    		source: "(623:16) {#each fwr.dngoWithNo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (589:12) {#each fwr.sgo.port as port}
+    // (650:14) {#each fwr.sgo.port as port}
     function create_each_block_25(ctx) {
     	let li;
-    	let t0_value = /*port*/ ctx[101] + "";
+    	let t0_value = /*port*/ ctx[105] + "";
     	let t0;
     	let t1;
 
@@ -5972,7 +5964,7 @@ var app = (function () {
     			t1 = space();
     			attr_dev(li, "class", "list-group-item");
     			set_style(li, "font-style", "italic");
-    			add_location(li, file$8, 589, 14, 16933);
+    			add_location(li, file$8, 650, 16, 19074);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5980,7 +5972,7 @@ var app = (function () {
     			append_dev(li, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*port*/ ctx[101] + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*port*/ ctx[105] + "")) set_data_dev(t0, t0_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -5991,22 +5983,22 @@ var app = (function () {
     		block,
     		id: create_each_block_25.name,
     		type: "each",
-    		source: "(589:12) {#each fwr.sgo.port as port}",
+    		source: "(650:14) {#each fwr.sgo.port as port}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (383:4) {#each firewallRules as fwr}
+    // (438:6) {#each firewallRules as fwr}
     function create_each_block_24(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*fwr*/ ctx[98].fwType.name + "";
+    	let t0_value = /*fwr*/ ctx[102].fwType.name + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*fwr*/ ctx[98].context.name + "";
+    	let t2_value = /*fwr*/ ctx[102].context.name + "";
     	let t2;
     	let t3;
     	let td2;
@@ -6022,7 +6014,7 @@ var app = (function () {
     	let td4;
     	let li;
     	let button0;
-    	let t12_value = /*fwr*/ ctx[98].sgo.name + "";
+    	let t12_value = /*fwr*/ ctx[102].sgo.name + "";
     	let t12;
     	let button0_data_bs_target_value;
     	let t13;
@@ -6031,11 +6023,11 @@ var app = (function () {
     	let t14;
     	let td5;
     	let button1;
-    	let t15_value = /*fwr*/ ctx[98].uc.name + "";
+    	let t15_value = /*fwr*/ ctx[102].uc.name + "";
     	let t15;
     	let t16;
     	let td6;
-    	let t17_value = /*fwr*/ ctx[98].firewallStatus + "";
+    	let t17_value = /*fwr*/ ctx[102].firewallStatus + "";
     	let t17;
     	let t18;
     	let td7;
@@ -6046,19 +6038,20 @@ var app = (function () {
     	let i1;
     	let t20;
     	let td9;
+    	let button3;
     	let i2;
     	let t21;
     	let mounted;
     	let dispose;
-    	let if_block0 = /*fwr*/ ctx[98].sho && create_if_block_7(ctx);
-    	let if_block1 = /*fwr*/ ctx[98].shgoWithHo && create_if_block_6(ctx);
-    	let if_block2 = /*fwr*/ ctx[98].sno && create_if_block_5(ctx);
-    	let if_block3 = /*fwr*/ ctx[98].sngoWithNo && create_if_block_4(ctx);
-    	let if_block4 = /*fwr*/ ctx[98].dho && create_if_block_3(ctx);
-    	let if_block5 = /*fwr*/ ctx[98].dhgoWithHo && create_if_block_2(ctx);
-    	let if_block6 = /*fwr*/ ctx[98].dno && create_if_block_1(ctx);
-    	let if_block7 = /*fwr*/ ctx[98].dngoWithNo && create_if_block$1(ctx);
-    	let each_value_25 = /*fwr*/ ctx[98].sgo.port;
+    	let if_block0 = /*fwr*/ ctx[102].sho && create_if_block_7(ctx);
+    	let if_block1 = /*fwr*/ ctx[102].shgoWithHo && create_if_block_6(ctx);
+    	let if_block2 = /*fwr*/ ctx[102].sno && create_if_block_5(ctx);
+    	let if_block3 = /*fwr*/ ctx[102].sngoWithNo && create_if_block_4(ctx);
+    	let if_block4 = /*fwr*/ ctx[102].dho && create_if_block_3(ctx);
+    	let if_block5 = /*fwr*/ ctx[102].dhgoWithHo && create_if_block_2(ctx);
+    	let if_block6 = /*fwr*/ ctx[102].dno && create_if_block_1(ctx);
+    	let if_block7 = /*fwr*/ ctx[102].dngoWithNo && create_if_block$1(ctx);
+    	let each_value_25 = /*fwr*/ ctx[102].sgo.port;
     	validate_each_argument(each_value_25);
     	let each_blocks = [];
 
@@ -6067,11 +6060,15 @@ var app = (function () {
     	}
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[18](/*fwr*/ ctx[98]);
+    		return /*click_handler*/ ctx[21](/*fwr*/ ctx[102]);
     	}
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[19](/*fwr*/ ctx[98]);
+    		return /*click_handler_1*/ ctx[22](/*fwr*/ ctx[102]);
+    	}
+
+    	function click_handler_2() {
+    		return /*click_handler_2*/ ctx[23](/*fwr*/ ctx[102]);
     	}
 
     	const block = {
@@ -6128,51 +6125,57 @@ var app = (function () {
     			i1 = element("i");
     			t20 = space();
     			td9 = element("td");
+    			button3 = element("button");
     			i2 = element("i");
     			t21 = space();
-    			add_location(td0, file$8, 384, 8, 9510);
-    			add_location(td1, file$8, 386, 8, 9548);
-    			add_location(td2, file$8, 388, 8, 9587);
-    			add_location(td3, file$8, 481, 8, 12958);
+    			add_location(td0, file$8, 439, 10, 11161);
+    			add_location(td1, file$8, 441, 10, 11201);
+    			add_location(td2, file$8, 443, 10, 11242);
+    			add_location(td3, file$8, 536, 10, 14791);
     			set_style(button0, "border", "none");
     			set_style(button0, "background", "none");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
-    			attr_dev(button0, "data-bs-target", button0_data_bs_target_value = "#port" + /*fwr*/ ctx[98].sgo.id + /*fwr*/ ctx[98].fwId);
+    			attr_dev(button0, "data-bs-target", button0_data_bs_target_value = "#port" + /*fwr*/ ctx[102].sgo.id + /*fwr*/ ctx[102].fwId);
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-controls", "collapseExample");
-    			add_location(button0, file$8, 576, 12, 16448);
+    			add_location(button0, file$8, 637, 14, 18563);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$8, 575, 10, 16406);
+    			add_location(li, file$8, 636, 12, 18519);
     			attr_dev(div, "class", "collapse");
-    			attr_dev(div, "id", div_id_value = "port" + /*fwr*/ ctx[98].sgo.id + /*fwr*/ ctx[98].fwId);
-    			add_location(div, file$8, 587, 10, 16821);
-    			add_location(td4, file$8, 574, 8, 16390);
+    			attr_dev(div, "id", div_id_value = "port" + /*fwr*/ ctx[102].sgo.id + /*fwr*/ ctx[102].fwId);
+    			add_location(div, file$8, 648, 12, 18958);
+    			add_location(td4, file$8, 635, 10, 18501);
     			set_style(button1, "border", "none");
     			set_style(button1, "background", "none");
     			attr_dev(button1, "data-toggle", "modal");
     			attr_dev(button1, "data-target", "#getUC");
-    			add_location(button1, file$8, 596, 10, 17114);
-    			add_location(td5, file$8, 595, 8, 17098);
-    			add_location(td6, file$8, 603, 8, 17350);
+    			add_location(button1, file$8, 657, 12, 19269);
+    			add_location(td5, file$8, 656, 10, 19251);
+    			add_location(td6, file$8, 664, 10, 19519);
     			attr_dev(i0, "class", "fa fa-check-square-o fa-lg");
     			attr_dev(i0, "title", "change status");
-    			add_location(i0, file$8, 604, 12, 17393);
-    			add_location(td7, file$8, 604, 8, 17389);
+    			add_location(i0, file$8, 665, 14, 19564);
+    			add_location(td7, file$8, 665, 10, 19560);
     			attr_dev(i1, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$8, 610, 11, 17656);
+    			add_location(i1, file$8, 673, 15, 19873);
     			set_style(button2, "border", "none");
     			set_style(button2, "background", "none");
     			attr_dev(button2, "data-toggle", "modal");
     			attr_dev(button2, "data-target", "#editFW");
-    			add_location(button2, file$8, 605, 12, 17476);
-    			add_location(td8, file$8, 605, 8, 17472);
+    			add_location(button2, file$8, 668, 13, 19673);
+    			add_location(td8, file$8, 667, 10, 19655);
     			attr_dev(i2, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i2, "aria-hidden", "true");
-    			add_location(i2, file$8, 615, 12, 17791);
-    			add_location(td9, file$8, 615, 8, 17787);
-    			add_location(tr, file$8, 383, 6, 9496);
+    			add_location(i2, file$8, 686, 14, 20272);
+    			set_style(button3, "border", "none");
+    			set_style(button3, "background", "none");
+    			attr_dev(button3, "data-toggle", "modal");
+    			attr_dev(button3, "data-target", "#deleteFWR");
+    			add_location(button3, file$8, 680, 13, 20052);
+    			add_location(td9, file$8, 679, 10, 20034);
+    			add_location(tr, file$8, 438, 8, 11145);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -6227,13 +6230,15 @@ var app = (function () {
     			append_dev(button2, i1);
     			append_dev(tr, t20);
     			append_dev(tr, td9);
-    			append_dev(td9, i2);
+    			append_dev(td9, button3);
+    			append_dev(button3, i2);
     			append_dev(tr, t21);
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(button1, "click", click_handler, false, false, false),
-    					listen_dev(button2, "click", click_handler_1, false, false, false)
+    					listen_dev(button2, "click", click_handler_1, false, false, false),
+    					listen_dev(button3, "click", click_handler_2, false, false, false)
     				];
 
     				mounted = true;
@@ -6241,10 +6246,10 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[98].fwType.name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[98].context.name + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t0_value !== (t0_value = /*fwr*/ ctx[102].fwType.name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t2_value !== (t2_value = /*fwr*/ ctx[102].context.name + "")) set_data_dev(t2, t2_value);
 
-    			if (/*fwr*/ ctx[98].sho) {
+    			if (/*fwr*/ ctx[102].sho) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
@@ -6257,7 +6262,7 @@ var app = (function () {
     				if_block0 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].shgoWithHo) {
+    			if (/*fwr*/ ctx[102].shgoWithHo) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
@@ -6270,7 +6275,7 @@ var app = (function () {
     				if_block1 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].sno) {
+    			if (/*fwr*/ ctx[102].sno) {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
@@ -6283,7 +6288,7 @@ var app = (function () {
     				if_block2 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].sngoWithNo) {
+    			if (/*fwr*/ ctx[102].sngoWithNo) {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
     				} else {
@@ -6296,7 +6301,7 @@ var app = (function () {
     				if_block3 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].dho) {
+    			if (/*fwr*/ ctx[102].dho) {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
@@ -6309,7 +6314,7 @@ var app = (function () {
     				if_block4 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].dhgoWithHo) {
+    			if (/*fwr*/ ctx[102].dhgoWithHo) {
     				if (if_block5) {
     					if_block5.p(ctx, dirty);
     				} else {
@@ -6322,7 +6327,7 @@ var app = (function () {
     				if_block5 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].dno) {
+    			if (/*fwr*/ ctx[102].dno) {
     				if (if_block6) {
     					if_block6.p(ctx, dirty);
     				} else {
@@ -6335,7 +6340,7 @@ var app = (function () {
     				if_block6 = null;
     			}
 
-    			if (/*fwr*/ ctx[98].dngoWithNo) {
+    			if (/*fwr*/ ctx[102].dngoWithNo) {
     				if (if_block7) {
     					if_block7.p(ctx, dirty);
     				} else {
@@ -6348,14 +6353,14 @@ var app = (function () {
     				if_block7 = null;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t12_value !== (t12_value = /*fwr*/ ctx[98].sgo.name + "")) set_data_dev(t12, t12_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t12_value !== (t12_value = /*fwr*/ ctx[102].sgo.name + "")) set_data_dev(t12, t12_value);
 
-    			if (dirty[0] & /*firewallRules*/ 1 && button0_data_bs_target_value !== (button0_data_bs_target_value = "#port" + /*fwr*/ ctx[98].sgo.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && button0_data_bs_target_value !== (button0_data_bs_target_value = "#port" + /*fwr*/ ctx[102].sgo.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(button0, "data-bs-target", button0_data_bs_target_value);
     			}
 
     			if (dirty[0] & /*firewallRules*/ 1) {
-    				each_value_25 = /*fwr*/ ctx[98].sgo.port;
+    				each_value_25 = /*fwr*/ ctx[102].sgo.port;
     				validate_each_argument(each_value_25);
     				let i;
 
@@ -6378,12 +6383,12 @@ var app = (function () {
     				each_blocks.length = each_value_25.length;
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "port" + /*fwr*/ ctx[98].sgo.id + /*fwr*/ ctx[98].fwId)) {
+    			if (dirty[0] & /*firewallRules*/ 1 && div_id_value !== (div_id_value = "port" + /*fwr*/ ctx[102].sgo.id + /*fwr*/ ctx[102].fwId)) {
     				attr_dev(div, "id", div_id_value);
     			}
 
-    			if (dirty[0] & /*firewallRules*/ 1 && t15_value !== (t15_value = /*fwr*/ ctx[98].uc.name + "")) set_data_dev(t15, t15_value);
-    			if (dirty[0] & /*firewallRules*/ 1 && t17_value !== (t17_value = /*fwr*/ ctx[98].firewallStatus + "")) set_data_dev(t17, t17_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t15_value !== (t15_value = /*fwr*/ ctx[102].uc.name + "")) set_data_dev(t15, t15_value);
+    			if (dirty[0] & /*firewallRules*/ 1 && t17_value !== (t17_value = /*fwr*/ ctx[102].firewallStatus + "")) set_data_dev(t17, t17_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -6405,17 +6410,17 @@ var app = (function () {
     		block,
     		id: create_each_block_24.name,
     		type: "each",
-    		source: "(383:4) {#each firewallRules as fwr}",
+    		source: "(438:6) {#each firewallRules as fwr}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (655:16) {#each fwTypes as fwT}
+    // (728:16) {#each fwTypes as fwT}
     function create_each_block_23(ctx) {
     	let option;
-    	let t_value = /*fwT*/ ctx[71].name + "";
+    	let t_value = /*fwT*/ ctx[75].name + "";
     	let t;
     	let option_value_value;
 
@@ -6423,18 +6428,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*fwT*/ ctx[71].id;
+    			option.__value = option_value_value = /*fwT*/ ctx[75].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 655, 18, 18956);
+    			add_location(option, file$8, 728, 18, 21474);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*fwTypes*/ 8 && t_value !== (t_value = /*fwT*/ ctx[71].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*fwTypes*/ 8 && t_value !== (t_value = /*fwT*/ ctx[75].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*fwTypes*/ 8 && option_value_value !== (option_value_value = /*fwT*/ ctx[71].id)) {
+    			if (dirty[0] & /*fwTypes*/ 8 && option_value_value !== (option_value_value = /*fwT*/ ctx[75].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6448,17 +6453,17 @@ var app = (function () {
     		block,
     		id: create_each_block_23.name,
     		type: "each",
-    		source: "(655:16) {#each fwTypes as fwT}",
+    		source: "(728:16) {#each fwTypes as fwT}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (670:16) {#each contexts as c}
+    // (743:16) {#each contexts as c}
     function create_each_block_22(ctx) {
     	let option;
-    	let t_value = /*c*/ ctx[68].name + "";
+    	let t_value = /*c*/ ctx[72].name + "";
     	let t;
     	let option_value_value;
 
@@ -6466,18 +6471,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*c*/ ctx[68].id;
+    			option.__value = option_value_value = /*c*/ ctx[72].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 670, 18, 19484);
+    			add_location(option, file$8, 743, 18, 22002);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*contexts*/ 16 && t_value !== (t_value = /*c*/ ctx[68].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*contexts*/ 16 && t_value !== (t_value = /*c*/ ctx[72].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*contexts*/ 16 && option_value_value !== (option_value_value = /*c*/ ctx[68].id)) {
+    			if (dirty[0] & /*contexts*/ 16 && option_value_value !== (option_value_value = /*c*/ ctx[72].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6491,17 +6496,17 @@ var app = (function () {
     		block,
     		id: create_each_block_22.name,
     		type: "each",
-    		source: "(670:16) {#each contexts as c}",
+    		source: "(743:16) {#each contexts as c}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (686:18) {#each hostOs as ho}
+    // (759:18) {#each hostOs as ho}
     function create_each_block_21(ctx) {
     	let option;
-    	let t_value = /*ho*/ ctx[57].name + "";
+    	let t_value = /*ho*/ ctx[61].name + "";
     	let t;
     	let option_value_value;
 
@@ -6509,18 +6514,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ho*/ ctx[57].id;
+    			option.__value = option_value_value = /*ho*/ ctx[61].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 686, 20, 20056);
+    			add_location(option, file$8, 759, 20, 22574);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[57].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[61].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[57].id)) {
+    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[61].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6534,17 +6539,17 @@ var app = (function () {
     		block,
     		id: create_each_block_21.name,
     		type: "each",
-    		source: "(686:18) {#each hostOs as ho}",
+    		source: "(759:18) {#each hostOs as ho}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (691:18) {#each hostGs as hg}
+    // (764:18) {#each hostGs as hg}
     function create_each_block_20(ctx) {
     	let option;
-    	let t_value = /*hg*/ ctx[54].hgoName + "";
+    	let t_value = /*hg*/ ctx[58].hgoName + "";
     	let t;
     	let option_value_value;
 
@@ -6552,18 +6557,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*hg*/ ctx[54].hgoId;
+    			option.__value = option_value_value = /*hg*/ ctx[58].hgoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 691, 20, 20269);
+    			add_location(option, file$8, 764, 20, 22787);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[54].hgoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[58].hgoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[54].hgoId)) {
+    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[58].hgoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6577,17 +6582,17 @@ var app = (function () {
     		block,
     		id: create_each_block_20.name,
     		type: "each",
-    		source: "(691:18) {#each hostGs as hg}",
+    		source: "(764:18) {#each hostGs as hg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (696:18) {#each networkOs as no}
+    // (769:18) {#each networkOs as no}
     function create_each_block_19(ctx) {
     	let option;
-    	let t_value = /*no*/ ctx[51].name + "";
+    	let t_value = /*no*/ ctx[55].name + "";
     	let t;
     	let option_value_value;
 
@@ -6595,18 +6600,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*no*/ ctx[51].id;
+    			option.__value = option_value_value = /*no*/ ctx[55].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 696, 20, 20488);
+    			add_location(option, file$8, 769, 20, 23006);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[51].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[55].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[51].id)) {
+    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[55].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6620,17 +6625,17 @@ var app = (function () {
     		block,
     		id: create_each_block_19.name,
     		type: "each",
-    		source: "(696:18) {#each networkOs as no}",
+    		source: "(769:18) {#each networkOs as no}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (701:18) {#each networkGs as ng}
+    // (774:18) {#each networkGs as ng}
     function create_each_block_18(ctx) {
     	let option;
-    	let t_value = /*ng*/ ctx[48].ngoName + "";
+    	let t_value = /*ng*/ ctx[52].ngoName + "";
     	let t;
     	let option_value_value;
 
@@ -6638,18 +6643,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ng*/ ctx[48].ngoId;
+    			option.__value = option_value_value = /*ng*/ ctx[52].ngoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 701, 20, 20707);
+    			add_location(option, file$8, 774, 20, 23225);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[48].ngoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[52].ngoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[48].ngoId)) {
+    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[52].ngoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6663,17 +6668,17 @@ var app = (function () {
     		block,
     		id: create_each_block_18.name,
     		type: "each",
-    		source: "(701:18) {#each networkGs as ng}",
+    		source: "(774:18) {#each networkGs as ng}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (718:18) {#each hostOs as ho}
+    // (791:18) {#each hostOs as ho}
     function create_each_block_17(ctx) {
     	let option;
-    	let t_value = /*ho*/ ctx[57].name + "";
+    	let t_value = /*ho*/ ctx[61].name + "";
     	let t;
     	let option_value_value;
 
@@ -6681,18 +6686,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ho*/ ctx[57].id;
+    			option.__value = option_value_value = /*ho*/ ctx[61].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 718, 20, 21338);
+    			add_location(option, file$8, 791, 20, 23856);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[57].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[61].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[57].id)) {
+    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[61].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6706,17 +6711,17 @@ var app = (function () {
     		block,
     		id: create_each_block_17.name,
     		type: "each",
-    		source: "(718:18) {#each hostOs as ho}",
+    		source: "(791:18) {#each hostOs as ho}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (723:18) {#each hostGs as hg}
+    // (796:18) {#each hostGs as hg}
     function create_each_block_16(ctx) {
     	let option;
-    	let t_value = /*hg*/ ctx[54].hgoName + "";
+    	let t_value = /*hg*/ ctx[58].hgoName + "";
     	let t;
     	let option_value_value;
 
@@ -6724,18 +6729,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*hg*/ ctx[54].hgoId;
+    			option.__value = option_value_value = /*hg*/ ctx[58].hgoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 723, 20, 21551);
+    			add_location(option, file$8, 796, 20, 24069);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[54].hgoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[58].hgoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[54].hgoId)) {
+    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[58].hgoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6749,17 +6754,17 @@ var app = (function () {
     		block,
     		id: create_each_block_16.name,
     		type: "each",
-    		source: "(723:18) {#each hostGs as hg}",
+    		source: "(796:18) {#each hostGs as hg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (728:18) {#each networkOs as no}
+    // (801:18) {#each networkOs as no}
     function create_each_block_15(ctx) {
     	let option;
-    	let t_value = /*no*/ ctx[51].name + "";
+    	let t_value = /*no*/ ctx[55].name + "";
     	let t;
     	let option_value_value;
 
@@ -6767,18 +6772,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*no*/ ctx[51].id;
+    			option.__value = option_value_value = /*no*/ ctx[55].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 728, 20, 21770);
+    			add_location(option, file$8, 801, 20, 24288);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[51].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[55].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[51].id)) {
+    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[55].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6792,17 +6797,17 @@ var app = (function () {
     		block,
     		id: create_each_block_15.name,
     		type: "each",
-    		source: "(728:18) {#each networkOs as no}",
+    		source: "(801:18) {#each networkOs as no}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (733:18) {#each networkGs as ng}
+    // (806:18) {#each networkGs as ng}
     function create_each_block_14(ctx) {
     	let option;
-    	let t_value = /*ng*/ ctx[48].ngoName + "";
+    	let t_value = /*ng*/ ctx[52].ngoName + "";
     	let t;
     	let option_value_value;
 
@@ -6810,18 +6815,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ng*/ ctx[48].ngoId;
+    			option.__value = option_value_value = /*ng*/ ctx[52].ngoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 733, 20, 21989);
+    			add_location(option, file$8, 806, 20, 24507);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[48].ngoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[52].ngoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[48].ngoId)) {
+    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[52].ngoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6835,17 +6840,17 @@ var app = (function () {
     		block,
     		id: create_each_block_14.name,
     		type: "each",
-    		source: "(733:18) {#each networkGs as ng}",
+    		source: "(806:18) {#each networkGs as ng}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (749:16) {#each serviceGs as sgo}
+    // (822:16) {#each serviceGs as sgo}
     function create_each_block_13(ctx) {
     	let option;
-    	let t_value = /*sgo*/ ctx[45].name + "";
+    	let t_value = /*sgo*/ ctx[49].name + "";
     	let t;
     	let option_value_value;
 
@@ -6853,18 +6858,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*sgo*/ ctx[45].id;
+    			option.__value = option_value_value = /*sgo*/ ctx[49].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 749, 18, 22571);
+    			add_location(option, file$8, 822, 18, 25089);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*serviceGs*/ 512 && t_value !== (t_value = /*sgo*/ ctx[45].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*serviceGs*/ 512 && t_value !== (t_value = /*sgo*/ ctx[49].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*serviceGs*/ 512 && option_value_value !== (option_value_value = /*sgo*/ ctx[45].id)) {
+    			if (dirty[0] & /*serviceGs*/ 512 && option_value_value !== (option_value_value = /*sgo*/ ctx[49].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6878,17 +6883,17 @@ var app = (function () {
     		block,
     		id: create_each_block_13.name,
     		type: "each",
-    		source: "(749:16) {#each serviceGs as sgo}",
+    		source: "(822:16) {#each serviceGs as sgo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (764:16) {#each usecases as u}
+    // (837:16) {#each usecases as u}
     function create_each_block_12(ctx) {
     	let option;
-    	let t_value = /*u*/ ctx[42].name + "";
+    	let t_value = /*u*/ ctx[46].name + "";
     	let t;
     	let option_value_value;
 
@@ -6896,18 +6901,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*u*/ ctx[42].id;
+    			option.__value = option_value_value = /*u*/ ctx[46].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 764, 18, 23090);
+    			add_location(option, file$8, 837, 18, 25608);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*usecases*/ 1024 && t_value !== (t_value = /*u*/ ctx[42].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*usecases*/ 1024 && t_value !== (t_value = /*u*/ ctx[46].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*usecases*/ 1024 && option_value_value !== (option_value_value = /*u*/ ctx[42].id)) {
+    			if (dirty[0] & /*usecases*/ 1024 && option_value_value !== (option_value_value = /*u*/ ctx[46].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6921,17 +6926,17 @@ var app = (function () {
     		block,
     		id: create_each_block_12.name,
     		type: "each",
-    		source: "(764:16) {#each usecases as u}",
+    		source: "(837:16) {#each usecases as u}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (833:16) {#each fwTypes as fwT}
+    // (905:16) {#each fwTypes as fwT}
     function create_each_block_11(ctx) {
     	let option;
-    	let t_value = /*fwT*/ ctx[71].name + "";
+    	let t_value = /*fwT*/ ctx[75].name + "";
     	let t;
     	let option_value_value;
 
@@ -6939,18 +6944,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*fwT*/ ctx[71].id;
+    			option.__value = option_value_value = /*fwT*/ ctx[75].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 833, 18, 25048);
+    			add_location(option, file$8, 905, 18, 27573);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*fwTypes*/ 8 && t_value !== (t_value = /*fwT*/ ctx[71].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*fwTypes*/ 8 && t_value !== (t_value = /*fwT*/ ctx[75].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*fwTypes*/ 8 && option_value_value !== (option_value_value = /*fwT*/ ctx[71].id)) {
+    			if (dirty[0] & /*fwTypes*/ 8 && option_value_value !== (option_value_value = /*fwT*/ ctx[75].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -6964,17 +6969,17 @@ var app = (function () {
     		block,
     		id: create_each_block_11.name,
     		type: "each",
-    		source: "(833:16) {#each fwTypes as fwT}",
+    		source: "(905:16) {#each fwTypes as fwT}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (848:16) {#each contexts as c}
+    // (920:16) {#each contexts as c}
     function create_each_block_10(ctx) {
     	let option;
-    	let t_value = /*c*/ ctx[68].name + "";
+    	let t_value = /*c*/ ctx[72].name + "";
     	let t;
     	let option_value_value;
 
@@ -6982,18 +6987,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*c*/ ctx[68].id;
+    			option.__value = option_value_value = /*c*/ ctx[72].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 848, 18, 25570);
+    			add_location(option, file$8, 920, 18, 28095);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*contexts*/ 16 && t_value !== (t_value = /*c*/ ctx[68].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*contexts*/ 16 && t_value !== (t_value = /*c*/ ctx[72].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*contexts*/ 16 && option_value_value !== (option_value_value = /*c*/ ctx[68].id)) {
+    			if (dirty[0] & /*contexts*/ 16 && option_value_value !== (option_value_value = /*c*/ ctx[72].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7007,17 +7012,17 @@ var app = (function () {
     		block,
     		id: create_each_block_10.name,
     		type: "each",
-    		source: "(848:16) {#each contexts as c}",
+    		source: "(920:16) {#each contexts as c}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (864:18) {#each hostOs as ho}
+    // (936:18) {#each hostOs as ho}
     function create_each_block_9(ctx) {
     	let option;
-    	let t_value = /*ho*/ ctx[57].name + "";
+    	let t_value = /*ho*/ ctx[61].name + "";
     	let t;
     	let option_value_value;
 
@@ -7025,18 +7030,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ho*/ ctx[57].id;
+    			option.__value = option_value_value = /*ho*/ ctx[61].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 864, 20, 26136);
+    			add_location(option, file$8, 936, 20, 28661);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[57].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[61].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[57].id)) {
+    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[61].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7050,17 +7055,17 @@ var app = (function () {
     		block,
     		id: create_each_block_9.name,
     		type: "each",
-    		source: "(864:18) {#each hostOs as ho}",
+    		source: "(936:18) {#each hostOs as ho}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (869:18) {#each hostGs as hg}
+    // (941:18) {#each hostGs as hg}
     function create_each_block_8(ctx) {
     	let option;
-    	let t_value = /*hg*/ ctx[54].hgoName + "";
+    	let t_value = /*hg*/ ctx[58].hgoName + "";
     	let t;
     	let option_value_value;
 
@@ -7068,18 +7073,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*hg*/ ctx[54].hgoId;
+    			option.__value = option_value_value = /*hg*/ ctx[58].hgoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 869, 20, 26349);
+    			add_location(option, file$8, 941, 20, 28874);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[54].hgoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[58].hgoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[54].hgoId)) {
+    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[58].hgoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7093,17 +7098,17 @@ var app = (function () {
     		block,
     		id: create_each_block_8.name,
     		type: "each",
-    		source: "(869:18) {#each hostGs as hg}",
+    		source: "(941:18) {#each hostGs as hg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (874:18) {#each networkOs as no}
+    // (946:18) {#each networkOs as no}
     function create_each_block_7(ctx) {
     	let option;
-    	let t_value = /*no*/ ctx[51].name + "";
+    	let t_value = /*no*/ ctx[55].name + "";
     	let t;
     	let option_value_value;
 
@@ -7111,18 +7116,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*no*/ ctx[51].id;
+    			option.__value = option_value_value = /*no*/ ctx[55].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 874, 20, 26568);
+    			add_location(option, file$8, 946, 20, 29093);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[51].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[55].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[51].id)) {
+    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[55].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7136,17 +7141,17 @@ var app = (function () {
     		block,
     		id: create_each_block_7.name,
     		type: "each",
-    		source: "(874:18) {#each networkOs as no}",
+    		source: "(946:18) {#each networkOs as no}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (879:18) {#each networkGs as ng}
+    // (951:18) {#each networkGs as ng}
     function create_each_block_6(ctx) {
     	let option;
-    	let t_value = /*ng*/ ctx[48].ngoName + "";
+    	let t_value = /*ng*/ ctx[52].ngoName + "";
     	let t;
     	let option_value_value;
 
@@ -7154,18 +7159,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ng*/ ctx[48].ngoId;
+    			option.__value = option_value_value = /*ng*/ ctx[52].ngoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 879, 20, 26787);
+    			add_location(option, file$8, 951, 20, 29312);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[48].ngoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[52].ngoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[48].ngoId)) {
+    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[52].ngoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7179,17 +7184,17 @@ var app = (function () {
     		block,
     		id: create_each_block_6.name,
     		type: "each",
-    		source: "(879:18) {#each networkGs as ng}",
+    		source: "(951:18) {#each networkGs as ng}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (896:18) {#each hostOs as ho}
+    // (968:18) {#each hostOs as ho}
     function create_each_block_5(ctx) {
     	let option;
-    	let t_value = /*ho*/ ctx[57].name + "";
+    	let t_value = /*ho*/ ctx[61].name + "";
     	let t;
     	let option_value_value;
 
@@ -7197,18 +7202,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ho*/ ctx[57].id;
+    			option.__value = option_value_value = /*ho*/ ctx[61].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 896, 20, 27412);
+    			add_location(option, file$8, 968, 20, 29937);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[57].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostOs*/ 32 && t_value !== (t_value = /*ho*/ ctx[61].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[57].id)) {
+    			if (dirty[0] & /*hostOs*/ 32 && option_value_value !== (option_value_value = /*ho*/ ctx[61].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7222,17 +7227,17 @@ var app = (function () {
     		block,
     		id: create_each_block_5.name,
     		type: "each",
-    		source: "(896:18) {#each hostOs as ho}",
+    		source: "(968:18) {#each hostOs as ho}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (901:18) {#each hostGs as hg}
+    // (973:18) {#each hostGs as hg}
     function create_each_block_4(ctx) {
     	let option;
-    	let t_value = /*hg*/ ctx[54].hgoName + "";
+    	let t_value = /*hg*/ ctx[58].hgoName + "";
     	let t;
     	let option_value_value;
 
@@ -7240,18 +7245,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*hg*/ ctx[54].hgoId;
+    			option.__value = option_value_value = /*hg*/ ctx[58].hgoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 901, 20, 27625);
+    			add_location(option, file$8, 973, 20, 30150);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[54].hgoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*hostGs*/ 64 && t_value !== (t_value = /*hg*/ ctx[58].hgoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[54].hgoId)) {
+    			if (dirty[0] & /*hostGs*/ 64 && option_value_value !== (option_value_value = /*hg*/ ctx[58].hgoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7265,17 +7270,17 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(901:18) {#each hostGs as hg}",
+    		source: "(973:18) {#each hostGs as hg}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (906:18) {#each networkOs as no}
+    // (978:18) {#each networkOs as no}
     function create_each_block_3$2(ctx) {
     	let option;
-    	let t_value = /*no*/ ctx[51].name + "";
+    	let t_value = /*no*/ ctx[55].name + "";
     	let t;
     	let option_value_value;
 
@@ -7283,18 +7288,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*no*/ ctx[51].id;
+    			option.__value = option_value_value = /*no*/ ctx[55].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 906, 20, 27844);
+    			add_location(option, file$8, 978, 20, 30369);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[51].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkOs*/ 128 && t_value !== (t_value = /*no*/ ctx[55].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[51].id)) {
+    			if (dirty[0] & /*networkOs*/ 128 && option_value_value !== (option_value_value = /*no*/ ctx[55].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7308,17 +7313,17 @@ var app = (function () {
     		block,
     		id: create_each_block_3$2.name,
     		type: "each",
-    		source: "(906:18) {#each networkOs as no}",
+    		source: "(978:18) {#each networkOs as no}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (911:18) {#each networkGs as ng}
+    // (983:18) {#each networkGs as ng}
     function create_each_block_2$2(ctx) {
     	let option;
-    	let t_value = /*ng*/ ctx[48].ngoName + "";
+    	let t_value = /*ng*/ ctx[52].ngoName + "";
     	let t;
     	let option_value_value;
 
@@ -7326,18 +7331,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*ng*/ ctx[48].ngoId;
+    			option.__value = option_value_value = /*ng*/ ctx[52].ngoId;
     			option.value = option.__value;
-    			add_location(option, file$8, 911, 20, 28063);
+    			add_location(option, file$8, 983, 20, 30588);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[48].ngoName + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*networkGs*/ 256 && t_value !== (t_value = /*ng*/ ctx[52].ngoName + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[48].ngoId)) {
+    			if (dirty[0] & /*networkGs*/ 256 && option_value_value !== (option_value_value = /*ng*/ ctx[52].ngoId)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7351,17 +7356,17 @@ var app = (function () {
     		block,
     		id: create_each_block_2$2.name,
     		type: "each",
-    		source: "(911:18) {#each networkGs as ng}",
+    		source: "(983:18) {#each networkGs as ng}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (927:16) {#each serviceGs as sgo}
+    // (999:16) {#each serviceGs as sgo}
     function create_each_block_1$4(ctx) {
     	let option;
-    	let t_value = /*sgo*/ ctx[45].name + "";
+    	let t_value = /*sgo*/ ctx[49].name + "";
     	let t;
     	let option_value_value;
 
@@ -7369,18 +7374,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*sgo*/ ctx[45].id;
+    			option.__value = option_value_value = /*sgo*/ ctx[49].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 927, 18, 28639);
+    			add_location(option, file$8, 999, 18, 31164);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*serviceGs*/ 512 && t_value !== (t_value = /*sgo*/ ctx[45].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*serviceGs*/ 512 && t_value !== (t_value = /*sgo*/ ctx[49].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*serviceGs*/ 512 && option_value_value !== (option_value_value = /*sgo*/ ctx[45].id)) {
+    			if (dirty[0] & /*serviceGs*/ 512 && option_value_value !== (option_value_value = /*sgo*/ ctx[49].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7394,17 +7399,17 @@ var app = (function () {
     		block,
     		id: create_each_block_1$4.name,
     		type: "each",
-    		source: "(927:16) {#each serviceGs as sgo}",
+    		source: "(999:16) {#each serviceGs as sgo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (942:16) {#each usecases as u}
+    // (1014:16) {#each usecases as u}
     function create_each_block$7(ctx) {
     	let option;
-    	let t_value = /*u*/ ctx[42].name + "";
+    	let t_value = /*u*/ ctx[46].name + "";
     	let t;
     	let option_value_value;
 
@@ -7412,18 +7417,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*u*/ ctx[42].id;
+    			option.__value = option_value_value = /*u*/ ctx[46].id;
     			option.value = option.__value;
-    			add_location(option, file$8, 942, 18, 29152);
+    			add_location(option, file$8, 1014, 18, 31677);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*usecases*/ 1024 && t_value !== (t_value = /*u*/ ctx[42].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*usecases*/ 1024 && t_value !== (t_value = /*u*/ ctx[46].name + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*usecases*/ 1024 && option_value_value !== (option_value_value = /*u*/ ctx[42].id)) {
+    			if (dirty[0] & /*usecases*/ 1024 && option_value_value !== (option_value_value = /*u*/ ctx[46].id)) {
     				prop_dev(option, "__value", option_value_value);
     				option.value = option.__value;
     			}
@@ -7437,7 +7442,7 @@ var app = (function () {
     		block,
     		id: create_each_block$7.name,
     		type: "each",
-    		source: "(942:16) {#each usecases as u}",
+    		source: "(1014:16) {#each usecases as u}",
     		ctx
     	});
 
@@ -7682,6 +7687,86 @@ var app = (function () {
     	let t99;
     	let div46;
     	let button8;
+    	let t101;
+    	let div55;
+    	let div54;
+    	let div53;
+    	let div50;
+    	let h53;
+    	let t103;
+    	let button9;
+    	let span10;
+    	let t105;
+    	let div51;
+    	let t106;
+    	let br6;
+    	let t107;
+    	let br7;
+    	let t108;
+    	let h63;
+    	let strong3;
+    	let t110;
+    	let t111_value = /*fwrDelete*/ ctx[13].fwTypeName + "";
+    	let t111;
+    	let t112;
+    	let br8;
+    	let t113;
+    	let br9;
+    	let t114;
+    	let h64;
+    	let strong4;
+    	let t116;
+    	let t117_value = /*fwrDelete*/ ctx[13].contextName + "";
+    	let t117;
+    	let t118;
+    	let br10;
+    	let t119;
+    	let br11;
+    	let t120;
+    	let h65;
+    	let strong5;
+    	let t122;
+    	let t123_value = /*fwrDelete*/ ctx[13].sourceName + "";
+    	let t123;
+    	let t124;
+    	let br12;
+    	let t125;
+    	let br13;
+    	let t126;
+    	let h66;
+    	let strong6;
+    	let t128;
+    	let t129_value = /*fwrDelete*/ ctx[13].destionationName + "";
+    	let t129;
+    	let t130;
+    	let br14;
+    	let t131;
+    	let br15;
+    	let t132;
+    	let h67;
+    	let strong7;
+    	let t134;
+    	let t135_value = /*fwrDelete*/ ctx[13].serviceGroupObjectName + "";
+    	let t135;
+    	let t136;
+    	let br16;
+    	let t137;
+    	let br17;
+    	let t138;
+    	let h68;
+    	let strong8;
+    	let t140;
+    	let t141_value = /*fwrDelete*/ ctx[13].useCaseName + "";
+    	let t141;
+    	let t142;
+    	let br18;
+    	let t143;
+    	let br19;
+    	let t144;
+    	let div52;
+    	let button10;
+    	let t146;
+    	let button11;
     	let mounted;
     	let dispose;
     	let each_value_24 = /*firewallRules*/ ctx[0];
@@ -8274,13 +8359,97 @@ var app = (function () {
     			div46 = element("div");
     			button8 = element("button");
     			button8.textContent = "Close";
+    			t101 = space();
+    			div55 = element("div");
+    			div54 = element("div");
+    			div53 = element("div");
+    			div50 = element("div");
+    			h53 = element("h5");
+    			h53.textContent = "Delete Firewall-Rule";
+    			t103 = space();
+    			button9 = element("button");
+    			span10 = element("span");
+    			span10.textContent = "×";
+    			t105 = space();
+    			div51 = element("div");
+    			t106 = text("Are you sure, that you want to delete the following Firewall Rule?\r\n        ");
+    			br6 = element("br");
+    			t107 = space();
+    			br7 = element("br");
+    			t108 = space();
+    			h63 = element("h6");
+    			strong3 = element("strong");
+    			strong3.textContent = "FW type:";
+    			t110 = space();
+    			t111 = text(t111_value);
+    			t112 = space();
+    			br8 = element("br");
+    			t113 = space();
+    			br9 = element("br");
+    			t114 = space();
+    			h64 = element("h6");
+    			strong4 = element("strong");
+    			strong4.textContent = "Context:";
+    			t116 = space();
+    			t117 = text(t117_value);
+    			t118 = space();
+    			br10 = element("br");
+    			t119 = space();
+    			br11 = element("br");
+    			t120 = space();
+    			h65 = element("h6");
+    			strong5 = element("strong");
+    			strong5.textContent = "Source:";
+    			t122 = space();
+    			t123 = text(t123_value);
+    			t124 = space();
+    			br12 = element("br");
+    			t125 = space();
+    			br13 = element("br");
+    			t126 = space();
+    			h66 = element("h6");
+    			strong6 = element("strong");
+    			strong6.textContent = "Destination:";
+    			t128 = space();
+    			t129 = text(t129_value);
+    			t130 = space();
+    			br14 = element("br");
+    			t131 = space();
+    			br15 = element("br");
+    			t132 = space();
+    			h67 = element("h6");
+    			strong7 = element("strong");
+    			strong7.textContent = "Service Group Object:";
+    			t134 = space();
+    			t135 = text(t135_value);
+    			t136 = space();
+    			br16 = element("br");
+    			t137 = space();
+    			br17 = element("br");
+    			t138 = space();
+    			h68 = element("h6");
+    			strong8 = element("strong");
+    			strong8.textContent = "Use Case:";
+    			t140 = space();
+    			t141 = text(t141_value);
+    			t142 = space();
+    			br18 = element("br");
+    			t143 = space();
+    			br19 = element("br");
+    			t144 = space();
+    			div52 = element("div");
+    			button10 = element("button");
+    			button10.textContent = "Close";
+    			t146 = space();
+    			button11 = element("button");
+    			button11.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$8, 316, 6, 7336);
+    			add_location(h3, file$8, 371, 8, 8851);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$8, 315, 4, 7311);
+    			add_location(div0, file$8, 370, 6, 8824);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$8, 318, 4, 7422);
+    			add_location(div1, file$8, 373, 6, 8941);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -8288,412 +8457,476 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$8, 320, 6, 7504);
+    			add_location(button0, file$8, 375, 8, 9027);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$8, 319, 4, 7447);
+    			add_location(div2, file$8, 374, 6, 8968);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$8, 314, 2, 7288);
+    			add_location(div3, file$8, 369, 4, 8799);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$8, 313, 0, 7255);
+    			add_location(div4, file$8, 368, 2, 8764);
     			attr_dev(i0, "class", "fa fa-fw fa-sort");
-    			add_location(i0, file$8, 337, 10, 8007);
-    			add_location(span0, file$8, 336, 17, 7963);
+    			add_location(i0, file$8, 392, 12, 9564);
+    			add_location(span0, file$8, 391, 19, 9518);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$8, 335, 6, 7929);
+    			add_location(th0, file$8, 390, 8, 9482);
     			attr_dev(i1, "class", "fa fa-fw fa-sort");
-    			add_location(i1, file$8, 343, 10, 8218);
-    			add_location(span1, file$8, 342, 17, 8173);
+    			add_location(i1, file$8, 398, 12, 9787);
+    			add_location(span1, file$8, 397, 19, 9740);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$8, 341, 6, 8139);
+    			add_location(th1, file$8, 396, 8, 9704);
     			attr_dev(i2, "class", "fa fa-fw fa-sort");
-    			add_location(i2, file$8, 349, 10, 8427);
-    			add_location(span2, file$8, 348, 16, 8383);
+    			add_location(i2, file$8, 404, 12, 10008);
+    			add_location(span2, file$8, 403, 18, 9962);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$8, 347, 6, 8350);
+    			add_location(th2, file$8, 402, 8, 9927);
     			attr_dev(i3, "class", "fa fa-fw fa-sort");
-    			add_location(i3, file$8, 355, 10, 8646);
-    			add_location(span3, file$8, 354, 21, 8597);
+    			add_location(i3, file$8, 410, 12, 10239);
+    			add_location(span3, file$8, 409, 23, 10188);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$8, 353, 6, 8559);
+    			add_location(th3, file$8, 408, 8, 10148);
     			attr_dev(i4, "class", "fa fa-fw fa-sort");
-    			add_location(i4, file$8, 361, 10, 8853);
-    			add_location(span4, file$8, 360, 15, 8810);
+    			add_location(i4, file$8, 416, 12, 10458);
+    			add_location(span4, file$8, 415, 17, 10413);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$8, 359, 6, 8778);
+    			add_location(th4, file$8, 414, 8, 10379);
     			attr_dev(i5, "class", "fa fa-fw fa-sort");
-    			add_location(i5, file$8, 367, 10, 9065);
-    			add_location(span5, file$8, 366, 18, 9020);
+    			add_location(i5, file$8, 422, 12, 10682);
+    			add_location(span5, file$8, 421, 20, 10635);
     			attr_dev(th5, "scope", "col");
-    			add_location(th5, file$8, 365, 6, 8985);
+    			add_location(th5, file$8, 420, 8, 10598);
     			attr_dev(i6, "class", "fa fa-fw fa-sort");
-    			add_location(i6, file$8, 373, 10, 9282);
-    			add_location(span6, file$8, 372, 16, 9230);
+    			add_location(i6, file$8, 428, 12, 10911);
+    			add_location(span6, file$8, 427, 18, 10857);
     			attr_dev(th6, "scope", "col");
-    			add_location(th6, file$8, 371, 6, 9197);
+    			add_location(th6, file$8, 426, 8, 10822);
     			attr_dev(th7, "scope", "col");
-    			add_location(th7, file$8, 376, 6, 9350);
+    			add_location(th7, file$8, 431, 8, 10985);
     			attr_dev(th8, "scope", "col");
-    			add_location(th8, file$8, 377, 6, 9376);
+    			add_location(th8, file$8, 432, 8, 11013);
     			attr_dev(th9, "scope", "col");
-    			add_location(th9, file$8, 378, 6, 9402);
-    			add_location(tr, file$8, 333, 4, 7853);
-    			add_location(thead, file$8, 332, 2, 7840);
-    			add_location(tbody, file$8, 381, 2, 9447);
+    			add_location(th9, file$8, 433, 8, 11041);
+    			add_location(tr, file$8, 388, 6, 9402);
+    			add_location(thead, file$8, 387, 4, 9387);
+    			add_location(tbody, file$8, 436, 4, 11092);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allFirwallRules");
-    			add_location(table, file$8, 331, 0, 7768);
+    			add_location(table, file$8, 386, 2, 9313);
     			set_style(div5, "margin-left", "-52px");
     			set_style(div5, "margin-right", "-52px");
-    			add_location(div5, file$8, 312, 0, 7199);
+    			add_location(div5, file$8, 367, 0, 8706);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "createFirewallRule");
-    			add_location(h50, file$8, 632, 8, 18198);
+    			add_location(h50, file$8, 705, 8, 20722);
     			attr_dev(span7, "aria-hidden", "true");
-    			add_location(span7, file$8, 639, 10, 18419);
+    			add_location(span7, file$8, 712, 10, 20943);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$8, 633, 8, 18277);
+    			add_location(button1, file$8, 706, 8, 20801);
     			attr_dev(div6, "class", "modal-header");
-    			add_location(div6, file$8, 631, 6, 18162);
+    			add_location(div6, file$8, 704, 6, 20686);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "fwType");
-    			add_location(label0, file$8, 647, 14, 18641);
+    			add_location(label0, file$8, 720, 14, 21159);
     			option0.hidden = true;
     			option0.__value = "";
     			option0.value = option0.__value;
-    			add_location(option0, file$8, 653, 16, 18879);
+    			add_location(option0, file$8, 726, 16, 21397);
     			attr_dev(select0, "class", "form-select");
     			attr_dev(select0, "aria-label", "fwType");
-    			if (/*firewallRule*/ ctx[2].fwTypeId === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[20].call(select0));
-    			add_location(select0, file$8, 648, 14, 18711);
+    			if (/*firewallRule*/ ctx[2].fwTypeId === void 0) add_render_callback(() => /*select0_change_handler*/ ctx[24].call(select0));
+    			add_location(select0, file$8, 721, 14, 21229);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$8, 646, 12, 18608);
+    			add_location(div7, file$8, 719, 12, 21126);
     			attr_dev(div8, "class", "row mb-3");
-    			add_location(div8, file$8, 645, 10, 18572);
+    			add_location(div8, file$8, 718, 10, 21090);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "context");
-    			add_location(label1, file$8, 662, 14, 19167);
+    			add_location(label1, file$8, 735, 14, 21685);
     			option1.hidden = true;
     			option1.__value = "";
     			option1.value = option1.__value;
-    			add_location(option1, file$8, 668, 16, 19408);
+    			add_location(option1, file$8, 741, 16, 21926);
     			attr_dev(select1, "class", "form-select");
     			attr_dev(select1, "aria-label", "context");
-    			if (/*firewallRule*/ ctx[2].contextId === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[21].call(select1));
-    			add_location(select1, file$8, 663, 14, 19238);
+    			if (/*firewallRule*/ ctx[2].contextId === void 0) add_render_callback(() => /*select1_change_handler*/ ctx[25].call(select1));
+    			add_location(select1, file$8, 736, 14, 21756);
     			attr_dev(div9, "class", "col");
-    			add_location(div9, file$8, 661, 12, 19134);
+    			add_location(div9, file$8, 734, 12, 21652);
     			attr_dev(div10, "class", "row mb-3");
-    			add_location(div10, file$8, 660, 10, 19098);
+    			add_location(div10, file$8, 733, 10, 21616);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "source");
-    			add_location(label2, file$8, 677, 14, 19691);
+    			add_location(label2, file$8, 750, 14, 22209);
     			option2.hidden = true;
     			option2.__value = "";
     			option2.value = option2.__value;
-    			add_location(option2, file$8, 683, 16, 19928);
+    			add_location(option2, file$8, 756, 16, 22446);
     			attr_dev(optgroup0, "label", "Host Objects");
-    			add_location(optgroup0, file$8, 684, 16, 19963);
+    			add_location(optgroup0, file$8, 757, 16, 22481);
     			attr_dev(optgroup1, "label", "Host Group Objects");
-    			add_location(optgroup1, file$8, 689, 16, 20170);
+    			add_location(optgroup1, file$8, 762, 16, 22688);
     			attr_dev(optgroup2, "label", "Network Objects");
-    			add_location(optgroup2, file$8, 694, 16, 20389);
+    			add_location(optgroup2, file$8, 767, 16, 22907);
     			attr_dev(optgroup3, "label", "Network Group Objects");
-    			add_location(optgroup3, file$8, 699, 16, 20602);
+    			add_location(optgroup3, file$8, 772, 16, 23120);
     			attr_dev(select2, "class", "form-select");
     			attr_dev(select2, "aria-label", "source");
-    			if (/*firewallRule*/ ctx[2].sourceId === void 0) add_render_callback(() => /*select2_change_handler*/ ctx[22].call(select2));
-    			add_location(select2, file$8, 678, 14, 19760);
+    			if (/*firewallRule*/ ctx[2].sourceId === void 0) add_render_callback(() => /*select2_change_handler*/ ctx[26].call(select2));
+    			add_location(select2, file$8, 751, 14, 22278);
     			attr_dev(div11, "class", "col");
-    			add_location(div11, file$8, 676, 12, 19658);
+    			add_location(div11, file$8, 749, 12, 22176);
     			attr_dev(div12, "class", "row mb-3");
-    			add_location(div12, file$8, 675, 10, 19622);
+    			add_location(div12, file$8, 748, 10, 22140);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "destination");
-    			add_location(label3, file$8, 709, 14, 20953);
+    			add_location(label3, file$8, 782, 14, 23471);
     			option3.hidden = true;
     			option3.__value = "";
     			option3.value = option3.__value;
-    			add_location(option3, file$8, 715, 16, 21210);
+    			add_location(option3, file$8, 788, 16, 23728);
     			attr_dev(optgroup4, "label", "Host Objects");
-    			add_location(optgroup4, file$8, 716, 16, 21245);
+    			add_location(optgroup4, file$8, 789, 16, 23763);
     			attr_dev(optgroup5, "label", "Host Group Objects");
-    			add_location(optgroup5, file$8, 721, 16, 21452);
+    			add_location(optgroup5, file$8, 794, 16, 23970);
     			attr_dev(optgroup6, "label", "Network Objects");
-    			add_location(optgroup6, file$8, 726, 16, 21671);
+    			add_location(optgroup6, file$8, 799, 16, 24189);
     			attr_dev(optgroup7, "label", "Network Group Objects");
-    			add_location(optgroup7, file$8, 731, 16, 21884);
+    			add_location(optgroup7, file$8, 804, 16, 24402);
     			attr_dev(select3, "class", "form-select");
     			attr_dev(select3, "aria-label", "destination");
-    			if (/*firewallRule*/ ctx[2].destinationId === void 0) add_render_callback(() => /*select3_change_handler*/ ctx[23].call(select3));
-    			add_location(select3, file$8, 710, 14, 21032);
+    			if (/*firewallRule*/ ctx[2].destinationId === void 0) add_render_callback(() => /*select3_change_handler*/ ctx[27].call(select3));
+    			add_location(select3, file$8, 783, 14, 23550);
     			attr_dev(div13, "class", "col");
-    			add_location(div13, file$8, 708, 12, 20920);
+    			add_location(div13, file$8, 781, 12, 23438);
     			attr_dev(div14, "class", "row mb-3");
-    			add_location(div14, file$8, 707, 10, 20884);
+    			add_location(div14, file$8, 780, 10, 23402);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "sgo");
-    			add_location(label4, file$8, 741, 14, 22235);
+    			add_location(label4, file$8, 814, 14, 24753);
     			option4.hidden = true;
     			option4.__value = "";
     			option4.value = option4.__value;
-    			add_location(option4, file$8, 747, 16, 22492);
+    			add_location(option4, file$8, 820, 16, 25010);
     			attr_dev(select4, "class", "form-select");
     			attr_dev(select4, "aria-label", "sgo");
-    			if (/*firewallRule*/ ctx[2].serviceGroupObjectId === void 0) add_render_callback(() => /*select4_change_handler*/ ctx[24].call(select4));
-    			add_location(select4, file$8, 742, 14, 22315);
+    			if (/*firewallRule*/ ctx[2].serviceGroupObjectId === void 0) add_render_callback(() => /*select4_change_handler*/ ctx[28].call(select4));
+    			add_location(select4, file$8, 815, 14, 24833);
     			attr_dev(div15, "class", "col");
-    			add_location(div15, file$8, 740, 12, 22202);
+    			add_location(div15, file$8, 813, 12, 24720);
     			attr_dev(div16, "class", "row mb-3");
-    			add_location(div16, file$8, 739, 10, 22166);
+    			add_location(div16, file$8, 812, 10, 24684);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "uc");
-    			add_location(label5, file$8, 756, 14, 22782);
+    			add_location(label5, file$8, 829, 14, 25300);
     			option5.hidden = true;
     			option5.__value = "";
     			option5.value = option5.__value;
-    			add_location(option5, file$8, 762, 16, 23014);
+    			add_location(option5, file$8, 835, 16, 25532);
     			attr_dev(select5, "class", "form-select");
     			attr_dev(select5, "aria-label", "uc");
-    			if (/*firewallRule*/ ctx[2].useCaseId === void 0) add_render_callback(() => /*select5_change_handler*/ ctx[25].call(select5));
-    			add_location(select5, file$8, 757, 14, 22849);
+    			if (/*firewallRule*/ ctx[2].useCaseId === void 0) add_render_callback(() => /*select5_change_handler*/ ctx[29].call(select5));
+    			add_location(select5, file$8, 830, 14, 25367);
     			attr_dev(div17, "class", "col");
-    			add_location(div17, file$8, 755, 12, 22749);
+    			add_location(div17, file$8, 828, 12, 25267);
     			attr_dev(div18, "class", "row mb-3");
-    			add_location(div18, file$8, 754, 10, 22713);
+    			add_location(div18, file$8, 827, 10, 25231);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$8, 644, 8, 18541);
+    			add_location(form0, file$8, 717, 8, 21059);
     			attr_dev(div19, "class", "modal-body");
-    			add_location(div19, file$8, 643, 6, 18507);
+    			add_location(div19, file$8, 716, 6, 21025);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$8, 772, 8, 23291);
+    			add_location(button2, file$8, 845, 8, 25809);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$8, 775, 8, 23406);
+    			add_location(button3, file$8, 848, 8, 25924);
     			attr_dev(div20, "class", "modal-footer");
-    			add_location(div20, file$8, 771, 6, 23255);
+    			add_location(div20, file$8, 844, 6, 25773);
     			attr_dev(div21, "class", "modal-content");
-    			add_location(div21, file$8, 630, 4, 18127);
+    			add_location(div21, file$8, 703, 4, 20651);
     			attr_dev(div22, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div22, "role", "document");
-    			add_location(div22, file$8, 629, 2, 18057);
+    			add_location(div22, file$8, 702, 2, 20581);
     			attr_dev(div23, "class", "modal fade");
     			attr_dev(div23, "id", "createFWR");
     			attr_dev(div23, "tabindex", "-1");
     			attr_dev(div23, "role", "dialog");
     			attr_dev(div23, "aria-labelledby", "formCreateFirewallRule");
     			attr_dev(div23, "aria-hidden", "true");
-    			add_location(div23, file$8, 621, 0, 17906);
+    			add_location(div23, file$8, 694, 0, 20430);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editFirewallRule");
-    			add_location(h51, file$8, 799, 8, 23943);
+    			add_location(h51, file$8, 871, 8, 26468);
     			attr_dev(span8, "aria-hidden", "true");
-    			add_location(span8, file$8, 806, 10, 24163);
+    			add_location(span8, file$8, 878, 10, 26688);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "close");
     			attr_dev(button4, "data-dismiss", "modal");
     			attr_dev(button4, "aria-label", "Close");
-    			add_location(button4, file$8, 800, 8, 24021);
+    			add_location(button4, file$8, 872, 8, 26546);
     			attr_dev(div24, "class", "modal-header");
-    			add_location(div24, file$8, 798, 6, 23907);
+    			add_location(div24, file$8, 870, 6, 26432);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "id");
-    			add_location(label6, file$8, 813, 14, 24377);
+    			add_location(label6, file$8, 885, 14, 26902);
     			attr_dev(input, "class", "form-control");
     			attr_dev(input, "id", "id");
     			attr_dev(input, "type", "text");
     			input.disabled = true;
-    			add_location(input, file$8, 814, 14, 24438);
+    			add_location(input, file$8, 886, 14, 26963);
     			attr_dev(div25, "class", "col");
-    			add_location(div25, file$8, 812, 12, 24344);
+    			add_location(div25, file$8, 884, 12, 26869);
     			attr_dev(div26, "class", "row mb-3");
-    			add_location(div26, file$8, 811, 10, 24308);
+    			add_location(div26, file$8, 883, 10, 26833);
     			attr_dev(label7, "class", "form-label");
     			attr_dev(label7, "for", "fwType");
-    			add_location(label7, file$8, 825, 14, 24739);
+    			add_location(label7, file$8, 897, 14, 27264);
     			option6.hidden = true;
     			option6.__value = "";
     			option6.value = option6.__value;
-    			add_location(option6, file$8, 831, 16, 24971);
+    			add_location(option6, file$8, 903, 16, 27496);
     			attr_dev(select6, "class", "form-select");
     			attr_dev(select6, "aria-label", "fwType");
-    			if (/*fwEdit*/ ctx[12].fwTypeId === void 0) add_render_callback(() => /*select6_change_handler*/ ctx[27].call(select6));
-    			add_location(select6, file$8, 826, 14, 24809);
+    			if (/*fwEdit*/ ctx[12].fwTypeId === void 0) add_render_callback(() => /*select6_change_handler*/ ctx[31].call(select6));
+    			add_location(select6, file$8, 898, 14, 27334);
     			attr_dev(div27, "class", "col");
-    			add_location(div27, file$8, 824, 12, 24706);
+    			add_location(div27, file$8, 896, 12, 27231);
     			attr_dev(div28, "class", "row mb-3");
-    			add_location(div28, file$8, 823, 10, 24670);
+    			add_location(div28, file$8, 895, 10, 27195);
     			attr_dev(label8, "class", "form-label");
     			attr_dev(label8, "for", "context");
-    			add_location(label8, file$8, 840, 14, 25259);
+    			add_location(label8, file$8, 912, 14, 27784);
     			option7.hidden = true;
     			option7.__value = "";
     			option7.value = option7.__value;
-    			add_location(option7, file$8, 846, 16, 25494);
+    			add_location(option7, file$8, 918, 16, 28019);
     			attr_dev(select7, "class", "form-select");
     			attr_dev(select7, "aria-label", "context");
-    			if (/*fwEdit*/ ctx[12].contextId === void 0) add_render_callback(() => /*select7_change_handler*/ ctx[28].call(select7));
-    			add_location(select7, file$8, 841, 14, 25330);
+    			if (/*fwEdit*/ ctx[12].contextId === void 0) add_render_callback(() => /*select7_change_handler*/ ctx[32].call(select7));
+    			add_location(select7, file$8, 913, 14, 27855);
     			attr_dev(div29, "class", "col");
-    			add_location(div29, file$8, 839, 12, 25226);
+    			add_location(div29, file$8, 911, 12, 27751);
     			attr_dev(div30, "class", "row mb-3");
-    			add_location(div30, file$8, 838, 10, 25190);
+    			add_location(div30, file$8, 910, 10, 27715);
     			attr_dev(label9, "class", "form-label");
     			attr_dev(label9, "for", "source");
-    			add_location(label9, file$8, 855, 14, 25777);
+    			add_location(label9, file$8, 927, 14, 28302);
     			option8.hidden = true;
     			option8.__value = "";
     			option8.value = option8.__value;
-    			add_location(option8, file$8, 861, 16, 26008);
+    			add_location(option8, file$8, 933, 16, 28533);
     			attr_dev(optgroup8, "label", "Host Objects");
-    			add_location(optgroup8, file$8, 862, 16, 26043);
+    			add_location(optgroup8, file$8, 934, 16, 28568);
     			attr_dev(optgroup9, "label", "Host Group Objects");
-    			add_location(optgroup9, file$8, 867, 16, 26250);
+    			add_location(optgroup9, file$8, 939, 16, 28775);
     			attr_dev(optgroup10, "label", "Network Objects");
-    			add_location(optgroup10, file$8, 872, 16, 26469);
+    			add_location(optgroup10, file$8, 944, 16, 28994);
     			attr_dev(optgroup11, "label", "Network Group Objects");
-    			add_location(optgroup11, file$8, 877, 16, 26682);
+    			add_location(optgroup11, file$8, 949, 16, 29207);
     			attr_dev(select8, "class", "form-select");
     			attr_dev(select8, "aria-label", "source");
-    			if (/*fwEdit*/ ctx[12].sourceId === void 0) add_render_callback(() => /*select8_change_handler*/ ctx[29].call(select8));
-    			add_location(select8, file$8, 856, 14, 25846);
+    			if (/*fwEdit*/ ctx[12].sourceId === void 0) add_render_callback(() => /*select8_change_handler*/ ctx[33].call(select8));
+    			add_location(select8, file$8, 928, 14, 28371);
     			attr_dev(div31, "class", "col");
-    			add_location(div31, file$8, 854, 12, 25744);
+    			add_location(div31, file$8, 926, 12, 28269);
     			attr_dev(div32, "class", "row mb-3");
-    			add_location(div32, file$8, 853, 10, 25708);
+    			add_location(div32, file$8, 925, 10, 28233);
     			attr_dev(label10, "class", "form-label");
     			attr_dev(label10, "for", "destination");
-    			add_location(label10, file$8, 887, 14, 27033);
+    			add_location(label10, file$8, 959, 14, 29558);
     			option9.hidden = true;
     			option9.__value = "";
     			option9.value = option9.__value;
-    			add_location(option9, file$8, 893, 16, 27284);
+    			add_location(option9, file$8, 965, 16, 29809);
     			attr_dev(optgroup12, "label", "Host Objects");
-    			add_location(optgroup12, file$8, 894, 16, 27319);
+    			add_location(optgroup12, file$8, 966, 16, 29844);
     			attr_dev(optgroup13, "label", "Host Group Objects");
-    			add_location(optgroup13, file$8, 899, 16, 27526);
+    			add_location(optgroup13, file$8, 971, 16, 30051);
     			attr_dev(optgroup14, "label", "Network Objects");
-    			add_location(optgroup14, file$8, 904, 16, 27745);
+    			add_location(optgroup14, file$8, 976, 16, 30270);
     			attr_dev(optgroup15, "label", "Network Group Objects");
-    			add_location(optgroup15, file$8, 909, 16, 27958);
+    			add_location(optgroup15, file$8, 981, 16, 30483);
     			attr_dev(select9, "class", "form-select");
     			attr_dev(select9, "aria-label", "destination");
-    			if (/*fwEdit*/ ctx[12].destinationId === void 0) add_render_callback(() => /*select9_change_handler*/ ctx[30].call(select9));
-    			add_location(select9, file$8, 888, 14, 27112);
+    			if (/*fwEdit*/ ctx[12].destinationId === void 0) add_render_callback(() => /*select9_change_handler*/ ctx[34].call(select9));
+    			add_location(select9, file$8, 960, 14, 29637);
     			attr_dev(div33, "class", "col");
-    			add_location(div33, file$8, 886, 12, 27000);
+    			add_location(div33, file$8, 958, 12, 29525);
     			attr_dev(div34, "class", "row mb-3");
-    			add_location(div34, file$8, 885, 10, 26964);
+    			add_location(div34, file$8, 957, 10, 29489);
     			attr_dev(label11, "class", "form-label");
     			attr_dev(label11, "for", "sgo");
-    			add_location(label11, file$8, 919, 14, 28309);
+    			add_location(label11, file$8, 991, 14, 30834);
     			option10.hidden = true;
     			option10.__value = "";
     			option10.value = option10.__value;
-    			add_location(option10, file$8, 925, 16, 28560);
+    			add_location(option10, file$8, 997, 16, 31085);
     			attr_dev(select10, "class", "form-select");
     			attr_dev(select10, "aria-label", "sgo");
-    			if (/*fwEdit*/ ctx[12].serviceGroupObjectId === void 0) add_render_callback(() => /*select10_change_handler*/ ctx[31].call(select10));
-    			add_location(select10, file$8, 920, 14, 28389);
+    			if (/*fwEdit*/ ctx[12].serviceGroupObjectId === void 0) add_render_callback(() => /*select10_change_handler*/ ctx[35].call(select10));
+    			add_location(select10, file$8, 992, 14, 30914);
     			attr_dev(div35, "class", "col");
-    			add_location(div35, file$8, 918, 12, 28276);
+    			add_location(div35, file$8, 990, 12, 30801);
     			attr_dev(div36, "class", "row mb-3");
-    			add_location(div36, file$8, 917, 10, 28240);
+    			add_location(div36, file$8, 989, 10, 30765);
     			attr_dev(label12, "class", "form-label");
     			attr_dev(label12, "for", "uc");
-    			add_location(label12, file$8, 934, 14, 28850);
+    			add_location(label12, file$8, 1006, 14, 31375);
     			option11.hidden = true;
     			option11.__value = "";
     			option11.value = option11.__value;
-    			add_location(option11, file$8, 940, 16, 29076);
+    			add_location(option11, file$8, 1012, 16, 31601);
     			attr_dev(select11, "class", "form-select");
     			attr_dev(select11, "aria-label", "uc");
-    			if (/*fwEdit*/ ctx[12].useCaseId === void 0) add_render_callback(() => /*select11_change_handler*/ ctx[32].call(select11));
-    			add_location(select11, file$8, 935, 14, 28917);
+    			if (/*fwEdit*/ ctx[12].useCaseId === void 0) add_render_callback(() => /*select11_change_handler*/ ctx[36].call(select11));
+    			add_location(select11, file$8, 1007, 14, 31442);
     			attr_dev(div37, "class", "col");
-    			add_location(div37, file$8, 933, 12, 28817);
+    			add_location(div37, file$8, 1005, 12, 31342);
     			attr_dev(div38, "class", "row mb-3");
-    			add_location(div38, file$8, 932, 10, 28781);
+    			add_location(div38, file$8, 1004, 10, 31306);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$8, 810, 8, 24277);
+    			add_location(form1, file$8, 882, 8, 26802);
     			attr_dev(div39, "class", "modal-body");
-    			add_location(div39, file$8, 809, 6, 24243);
+    			add_location(div39, file$8, 881, 6, 26768);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary");
     			attr_dev(button5, "data-dismiss", "modal");
-    			add_location(button5, file$8, 950, 8, 29353);
+    			add_location(button5, file$8, 1022, 8, 31878);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "#008000");
     			set_style(button6, "color", "#fff");
     			attr_dev(button6, "data-dismiss", "modal");
-    			add_location(button6, file$8, 953, 8, 29468);
+    			add_location(button6, file$8, 1025, 8, 31993);
     			attr_dev(div40, "class", "modal-footer");
-    			add_location(div40, file$8, 949, 6, 29317);
+    			add_location(div40, file$8, 1021, 6, 31842);
     			attr_dev(div41, "class", "modal-content");
-    			add_location(div41, file$8, 797, 4, 23872);
+    			add_location(div41, file$8, 869, 4, 26397);
     			attr_dev(div42, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div42, "role", "document");
-    			add_location(div42, file$8, 796, 2, 23802);
+    			add_location(div42, file$8, 868, 2, 26327);
     			attr_dev(div43, "class", "modal fade");
     			attr_dev(div43, "id", "editFW");
     			attr_dev(div43, "tabindex", "-1");
     			attr_dev(div43, "role", "dialog");
     			attr_dev(div43, "aria-labelledby", "formEditFirewallRule");
     			attr_dev(div43, "aria-hidden", "true");
-    			add_location(div43, file$8, 788, 0, 23656);
+    			add_location(div43, file$8, 860, 0, 26181);
     			attr_dev(h52, "class", "modal-title");
     			attr_dev(h52, "id", "deleteUseCase");
-    			add_location(h52, file$8, 977, 8, 30005);
+    			add_location(h52, file$8, 1050, 8, 32541);
     			attr_dev(span9, "aria-hidden", "true");
-    			add_location(span9, file$8, 984, 10, 30218);
+    			add_location(span9, file$8, 1057, 10, 32754);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "close");
     			attr_dev(button7, "data-dismiss", "modal");
     			attr_dev(button7, "aria-label", "Close");
-    			add_location(button7, file$8, 978, 8, 30076);
+    			add_location(button7, file$8, 1051, 8, 32612);
     			attr_dev(div44, "class", "modal-header");
-    			add_location(div44, file$8, 976, 6, 29969);
-    			add_location(strong0, file$8, 988, 12, 30336);
-    			add_location(h60, file$8, 988, 8, 30332);
-    			add_location(br0, file$8, 990, 8, 30397);
-    			add_location(br1, file$8, 991, 8, 30413);
-    			add_location(strong1, file$8, 992, 12, 30433);
-    			add_location(h61, file$8, 992, 8, 30429);
-    			add_location(br2, file$8, 994, 8, 30508);
-    			add_location(br3, file$8, 995, 8, 30524);
-    			add_location(strong2, file$8, 996, 12, 30544);
-    			add_location(h62, file$8, 996, 8, 30540);
-    			add_location(br4, file$8, 998, 8, 30605);
-    			add_location(br5, file$8, 999, 8, 30621);
+    			add_location(div44, file$8, 1049, 6, 32505);
+    			add_location(strong0, file$8, 1061, 12, 32872);
+    			add_location(h60, file$8, 1061, 8, 32868);
+    			add_location(br0, file$8, 1063, 8, 32933);
+    			add_location(br1, file$8, 1064, 8, 32949);
+    			add_location(strong1, file$8, 1065, 12, 32969);
+    			add_location(h61, file$8, 1065, 8, 32965);
+    			add_location(br2, file$8, 1067, 8, 33044);
+    			add_location(br3, file$8, 1068, 8, 33060);
+    			add_location(strong2, file$8, 1069, 12, 33080);
+    			add_location(h62, file$8, 1069, 8, 33076);
+    			add_location(br4, file$8, 1071, 8, 33141);
+    			add_location(br5, file$8, 1072, 8, 33157);
     			attr_dev(div45, "class", "modal-body");
-    			add_location(div45, file$8, 987, 6, 30298);
+    			add_location(div45, file$8, 1060, 6, 32834);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn btn-secondary");
     			attr_dev(button8, "data-dismiss", "modal");
-    			add_location(button8, file$8, 1002, 8, 30685);
+    			add_location(button8, file$8, 1075, 8, 33221);
     			attr_dev(div46, "class", "modal-footer");
-    			add_location(div46, file$8, 1001, 6, 30649);
+    			add_location(div46, file$8, 1074, 6, 33185);
     			attr_dev(div47, "class", "modal-content");
-    			add_location(div47, file$8, 975, 4, 29934);
+    			add_location(div47, file$8, 1048, 4, 32470);
     			attr_dev(div48, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div48, "role", "document");
-    			add_location(div48, file$8, 974, 2, 29864);
+    			add_location(div48, file$8, 1047, 2, 32400);
     			attr_dev(div49, "class", "modal fade");
     			attr_dev(div49, "id", "getUC");
     			attr_dev(div49, "tabindex", "-1");
     			attr_dev(div49, "role", "dialog");
     			attr_dev(div49, "aria-labelledby", "formGetUseCase");
     			attr_dev(div49, "aria-hidden", "true");
-    			add_location(div49, file$8, 966, 0, 29725);
+    			add_location(div49, file$8, 1039, 0, 32261);
+    			attr_dev(h53, "class", "modal-title");
+    			attr_dev(h53, "id", "deleteFWR");
+    			add_location(h53, file$8, 1094, 8, 33657);
+    			attr_dev(span10, "aria-hidden", "true");
+    			add_location(span10, file$8, 1101, 10, 33873);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "close");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			attr_dev(button9, "aria-label", "Close");
+    			add_location(button9, file$8, 1095, 8, 33731);
+    			attr_dev(div50, "class", "modal-header");
+    			add_location(div50, file$8, 1093, 6, 33621);
+    			add_location(br6, file$8, 1106, 8, 34063);
+    			add_location(br7, file$8, 1107, 8, 34079);
+    			add_location(strong3, file$8, 1108, 12, 34099);
+    			add_location(h63, file$8, 1108, 8, 34095);
+    			add_location(br8, file$8, 1110, 8, 34171);
+    			add_location(br9, file$8, 1111, 8, 34187);
+    			add_location(strong4, file$8, 1112, 12, 34207);
+    			add_location(h64, file$8, 1112, 8, 34203);
+    			add_location(br10, file$8, 1114, 8, 34280);
+    			add_location(br11, file$8, 1115, 8, 34296);
+    			add_location(strong5, file$8, 1116, 12, 34316);
+    			add_location(h65, file$8, 1116, 8, 34312);
+    			add_location(br12, file$8, 1118, 8, 34387);
+    			add_location(br13, file$8, 1119, 8, 34403);
+    			add_location(strong6, file$8, 1120, 12, 34423);
+    			add_location(h66, file$8, 1120, 8, 34419);
+    			add_location(br14, file$8, 1122, 8, 34505);
+    			add_location(br15, file$8, 1123, 8, 34521);
+    			add_location(strong7, file$8, 1124, 12, 34541);
+    			add_location(h67, file$8, 1124, 8, 34537);
+    			add_location(br16, file$8, 1126, 8, 34638);
+    			add_location(br17, file$8, 1127, 8, 34654);
+    			add_location(strong8, file$8, 1128, 12, 34674);
+    			add_location(h68, file$8, 1128, 8, 34670);
+    			add_location(br18, file$8, 1130, 8, 34748);
+    			add_location(br19, file$8, 1131, 8, 34764);
+    			attr_dev(div51, "class", "modal-body");
+    			add_location(div51, file$8, 1104, 6, 33953);
+    			attr_dev(button10, "type", "button");
+    			attr_dev(button10, "class", "btn btn-secondary");
+    			attr_dev(button10, "data-dismiss", "modal");
+    			add_location(button10, file$8, 1134, 8, 34828);
+    			attr_dev(button11, "type", "button");
+    			attr_dev(button11, "class", "btn");
+    			attr_dev(button11, "data-dismiss", "modal");
+    			set_style(button11, "background-color", "#c73834");
+    			set_style(button11, "color", "#fff");
+    			add_location(button11, file$8, 1137, 8, 34943);
+    			attr_dev(div52, "class", "modal-footer");
+    			add_location(div52, file$8, 1133, 6, 34792);
+    			attr_dev(div53, "class", "modal-content");
+    			add_location(div53, file$8, 1092, 4, 33586);
+    			attr_dev(div54, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div54, "role", "document");
+    			add_location(div54, file$8, 1091, 2, 33516);
+    			attr_dev(div55, "class", "modal fade");
+    			attr_dev(div55, "id", "deleteFWR");
+    			attr_dev(div55, "tabindex", "-1");
+    			attr_dev(div55, "role", "dialog");
+    			attr_dev(div55, "aria-labelledby", "formDeleteFWR");
+    			attr_dev(div55, "aria-hidden", "true");
+    			add_location(div55, file$8, 1083, 0, 33374);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9071,6 +9304,80 @@ var app = (function () {
     			append_dev(div47, t99);
     			append_dev(div47, div46);
     			append_dev(div46, button8);
+    			insert_dev(target, t101, anchor);
+    			insert_dev(target, div55, anchor);
+    			append_dev(div55, div54);
+    			append_dev(div54, div53);
+    			append_dev(div53, div50);
+    			append_dev(div50, h53);
+    			append_dev(div50, t103);
+    			append_dev(div50, button9);
+    			append_dev(button9, span10);
+    			append_dev(div53, t105);
+    			append_dev(div53, div51);
+    			append_dev(div51, t106);
+    			append_dev(div51, br6);
+    			append_dev(div51, t107);
+    			append_dev(div51, br7);
+    			append_dev(div51, t108);
+    			append_dev(div51, h63);
+    			append_dev(h63, strong3);
+    			append_dev(div51, t110);
+    			append_dev(div51, t111);
+    			append_dev(div51, t112);
+    			append_dev(div51, br8);
+    			append_dev(div51, t113);
+    			append_dev(div51, br9);
+    			append_dev(div51, t114);
+    			append_dev(div51, h64);
+    			append_dev(h64, strong4);
+    			append_dev(div51, t116);
+    			append_dev(div51, t117);
+    			append_dev(div51, t118);
+    			append_dev(div51, br10);
+    			append_dev(div51, t119);
+    			append_dev(div51, br11);
+    			append_dev(div51, t120);
+    			append_dev(div51, h65);
+    			append_dev(h65, strong5);
+    			append_dev(div51, t122);
+    			append_dev(div51, t123);
+    			append_dev(div51, t124);
+    			append_dev(div51, br12);
+    			append_dev(div51, t125);
+    			append_dev(div51, br13);
+    			append_dev(div51, t126);
+    			append_dev(div51, h66);
+    			append_dev(h66, strong6);
+    			append_dev(div51, t128);
+    			append_dev(div51, t129);
+    			append_dev(div51, t130);
+    			append_dev(div51, br14);
+    			append_dev(div51, t131);
+    			append_dev(div51, br15);
+    			append_dev(div51, t132);
+    			append_dev(div51, h67);
+    			append_dev(h67, strong7);
+    			append_dev(div51, t134);
+    			append_dev(div51, t135);
+    			append_dev(div51, t136);
+    			append_dev(div51, br16);
+    			append_dev(div51, t137);
+    			append_dev(div51, br17);
+    			append_dev(div51, t138);
+    			append_dev(div51, h68);
+    			append_dev(h68, strong8);
+    			append_dev(div51, t140);
+    			append_dev(div51, t141);
+    			append_dev(div51, t142);
+    			append_dev(div51, br18);
+    			append_dev(div51, t143);
+    			append_dev(div51, br19);
+    			append_dev(div53, t144);
+    			append_dev(div53, div52);
+    			append_dev(div52, button10);
+    			append_dev(div52, t146);
+    			append_dev(div52, button11);
 
     			if (!mounted) {
     				dispose = [
@@ -9144,21 +9451,31 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[20]),
-    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[21]),
-    					listen_dev(select2, "change", /*select2_change_handler*/ ctx[22]),
-    					listen_dev(select3, "change", /*select3_change_handler*/ ctx[23]),
-    					listen_dev(select4, "change", /*select4_change_handler*/ ctx[24]),
-    					listen_dev(select5, "change", /*select5_change_handler*/ ctx[25]),
-    					listen_dev(button3, "click", /*createFirewallRule*/ ctx[14], false, false, false),
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[26]),
-    					listen_dev(select6, "change", /*select6_change_handler*/ ctx[27]),
-    					listen_dev(select7, "change", /*select7_change_handler*/ ctx[28]),
-    					listen_dev(select8, "change", /*select8_change_handler*/ ctx[29]),
-    					listen_dev(select9, "change", /*select9_change_handler*/ ctx[30]),
-    					listen_dev(select10, "change", /*select10_change_handler*/ ctx[31]),
-    					listen_dev(select11, "change", /*select11_change_handler*/ ctx[32]),
-    					listen_dev(button6, "click", /*editFw*/ ctx[16], false, false, false)
+    					listen_dev(select0, "change", /*select0_change_handler*/ ctx[24]),
+    					listen_dev(select1, "change", /*select1_change_handler*/ ctx[25]),
+    					listen_dev(select2, "change", /*select2_change_handler*/ ctx[26]),
+    					listen_dev(select3, "change", /*select3_change_handler*/ ctx[27]),
+    					listen_dev(select4, "change", /*select4_change_handler*/ ctx[28]),
+    					listen_dev(select5, "change", /*select5_change_handler*/ ctx[29]),
+    					listen_dev(button3, "click", /*createFirewallRule*/ ctx[15], false, false, false),
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[30]),
+    					listen_dev(select6, "change", /*select6_change_handler*/ ctx[31]),
+    					listen_dev(select7, "change", /*select7_change_handler*/ ctx[32]),
+    					listen_dev(select8, "change", /*select8_change_handler*/ ctx[33]),
+    					listen_dev(select9, "change", /*select9_change_handler*/ ctx[34]),
+    					listen_dev(select10, "change", /*select10_change_handler*/ ctx[35]),
+    					listen_dev(select11, "change", /*select11_change_handler*/ ctx[36]),
+    					listen_dev(button6, "click", /*editFw*/ ctx[17], false, false, false),
+    					listen_dev(
+    						button11,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteFwr*/ ctx[19](/*fwrDelete*/ ctx[13].id))) /*deleteFwr*/ ctx[19](/*fwrDelete*/ ctx[13].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -9167,7 +9484,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*getFwToEdit, firewallRules, getusecase*/ 40961) {
+    			if (dirty[0] & /*getFwrToDelete, firewallRules, getFwToEdit, getusecase*/ 344065) {
     				each_value_24 = /*firewallRules*/ ctx[0];
     				validate_each_argument(each_value_24);
     				let i;
@@ -9822,6 +10139,12 @@ var app = (function () {
     			if (dirty[0] & /*usecase*/ 2048 && t84_value !== (t84_value = /*usecase*/ ctx[11].name + "")) set_data_dev(t84, t84_value);
     			if (dirty[0] & /*usecase*/ 2048 && t90_value !== (t90_value = /*usecase*/ ctx[11].description + "")) set_data_dev(t90, t90_value);
     			if (dirty[0] & /*usecase*/ 2048 && t96_value !== (t96_value = /*usecase*/ ctx[11].tags + "")) set_data_dev(t96, t96_value);
+    			if (dirty[0] & /*fwrDelete*/ 8192 && t111_value !== (t111_value = /*fwrDelete*/ ctx[13].fwTypeName + "")) set_data_dev(t111, t111_value);
+    			if (dirty[0] & /*fwrDelete*/ 8192 && t117_value !== (t117_value = /*fwrDelete*/ ctx[13].contextName + "")) set_data_dev(t117, t117_value);
+    			if (dirty[0] & /*fwrDelete*/ 8192 && t123_value !== (t123_value = /*fwrDelete*/ ctx[13].sourceName + "")) set_data_dev(t123, t123_value);
+    			if (dirty[0] & /*fwrDelete*/ 8192 && t129_value !== (t129_value = /*fwrDelete*/ ctx[13].destionationName + "")) set_data_dev(t129, t129_value);
+    			if (dirty[0] & /*fwrDelete*/ 8192 && t135_value !== (t135_value = /*fwrDelete*/ ctx[13].serviceGroupObjectName + "")) set_data_dev(t135, t135_value);
+    			if (dirty[0] & /*fwrDelete*/ 8192 && t141_value !== (t141_value = /*fwrDelete*/ ctx[13].useCaseName + "")) set_data_dev(t141, t141_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -9858,6 +10181,8 @@ var app = (function () {
     			destroy_each(each_blocks, detaching);
     			if (detaching) detach_dev(t77);
     			if (detaching) detach_dev(div49);
+    			if (detaching) detach_dev(t101);
+    			if (detaching) detach_dev(div55);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -9914,6 +10239,16 @@ var app = (function () {
     		destinationId: null,
     		serviceGroupObjectId: null,
     		useCaseId: null
+    	};
+
+    	let fwrDelete = {
+    		id: null,
+    		fwTypeName: null,
+    		contextName: null,
+    		sourceName: null,
+    		destionationName: null,
+    		serviceGroupObjectName: null,
+    		useCaseName: null
     	};
 
     	function getusecase(uc) {
@@ -10146,6 +10481,49 @@ var app = (function () {
     		});
     	}
 
+    	function getFwrToDelete(fwrD) {
+    		$$invalidate(13, fwrDelete.id = fwrD.fwId, fwrDelete);
+    		$$invalidate(13, fwrDelete.fwTypeName = fwrD.fwType.name, fwrDelete);
+    		$$invalidate(13, fwrDelete.contextName = fwrD.context.name, fwrDelete);
+
+    		if (fwrD.sngoWithNo) {
+    			$$invalidate(13, fwrDelete.sourceName = fwrD.sngoWithNo.ngoName, fwrDelete);
+    		} else if (fwrD.sno) {
+    			$$invalidate(13, fwrDelete.sourceName = fwrD.sno.name, fwrDelete);
+    		} else if (fwrD.shgoWithHo) {
+    			$$invalidate(13, fwrDelete.sourceName = fwrD.shgoWithHo.hgoName, fwrDelete);
+    		} else if (fwrD.sho) {
+    			$$invalidate(13, fwrDelete.sourceName = fwrD.sho.name, fwrDelete);
+    		}
+
+    		if (fwrD.dngoWithNo) {
+    			$$invalidate(13, fwrDelete.destionationName = fwrD.dngoWithNo.ngoName, fwrDelete);
+    		} else if (fwrD.dno) {
+    			$$invalidate(13, fwrDelete.destionationName = fwrD.dno.name, fwrDelete);
+    		} else if (fwrD.dhgoWithHo) {
+    			$$invalidate(13, fwrDelete.destionationName = fwrD.dhgoWithHo.hgoName, fwrDelete);
+    		} else if (fwrD.dho) {
+    			$$invalidate(13, fwrDelete.destionationName = fwrD.dho.name, fwrDelete);
+    		}
+
+    		$$invalidate(13, fwrDelete.serviceGroupObjectName = fwrD.sgo.name, fwrDelete);
+    		$$invalidate(13, fwrDelete.useCaseName = fwrD.uc.name, fwrDelete);
+    	}
+
+    	function deleteFwr(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$7 + "/firewall-rule/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getFirewallRules();
+    		}).catch(function (error) {
+    			alert("Could not delete Firewall Rule");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "fwType", ascending: true };
     	const writable_props = [];
 
@@ -10155,6 +10533,7 @@ var app = (function () {
 
     	const click_handler = fwr => getusecase(fwr.uc);
     	const click_handler_1 = fwr => getFwToEdit(fwr);
+    	const click_handler_2 = fwr => getFwrToDelete(fwr);
 
     	function select0_change_handler() {
     		firewallRule.fwTypeId = select_value(this);
@@ -10249,6 +10628,7 @@ var app = (function () {
     		usecases,
     		usecase,
     		fwEdit,
+    		fwrDelete,
     		getusecase,
     		getFirewallRules,
     		createFirewallRule,
@@ -10262,6 +10642,8 @@ var app = (function () {
     		getUseCases,
     		getFwToEdit,
     		editFw,
+    		getFwrToDelete,
+    		deleteFwr,
     		sortBy,
     		sort
     	});
@@ -10279,7 +10661,8 @@ var app = (function () {
     		if ('usecases' in $$props) $$invalidate(10, usecases = $$props.usecases);
     		if ('usecase' in $$props) $$invalidate(11, usecase = $$props.usecase);
     		if ('fwEdit' in $$props) $$invalidate(12, fwEdit = $$props.fwEdit);
-    		if ('sortBy' in $$props) $$invalidate(17, sortBy = $$props.sortBy);
+    		if ('fwrDelete' in $$props) $$invalidate(13, fwrDelete = $$props.fwrDelete);
+    		if ('sortBy' in $$props) $$invalidate(20, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -10288,13 +10671,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*sortBy, firewallRules*/ 131073) {
+    		if ($$self.$$.dirty[0] & /*sortBy, firewallRules*/ 1048577) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(17, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(20, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(17, sortBy.col = column, sortBy);
-    					$$invalidate(17, sortBy.ascending = true, sortBy);
+    					$$invalidate(20, sortBy.col = column, sortBy);
+    					$$invalidate(20, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -10323,13 +10706,17 @@ var app = (function () {
     		usecases,
     		usecase,
     		fwEdit,
+    		fwrDelete,
     		getusecase,
     		createFirewallRule,
     		getFwToEdit,
     		editFw,
+    		getFwrToDelete,
+    		deleteFwr,
     		sortBy,
     		click_handler,
     		click_handler_1,
+    		click_handler_2,
     		select0_change_handler,
     		select1_change_handler,
     		select2_change_handler,
@@ -10371,7 +10758,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (195:4) {:else}
+    // (232:4) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -10379,7 +10766,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			div.textContent = "No data available";
-    			add_location(div, file$7, 195, 6, 4783);
+    			add_location(div, file$7, 232, 6, 5662);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -10394,14 +10781,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(195:4) {:else}",
+    		source: "(232:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (172:4) {#if visibleData.length}
+    // (202:4) {#if visibleData.length}
     function create_if_block(ctx) {
     	let tbody;
     	let each_value = /*visibleData*/ ctx[0];
@@ -10420,7 +10807,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(tbody, file$7, 173, 4, 4132);
+    			add_location(tbody, file$7, 202, 6, 4671);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tbody, anchor);
@@ -10430,7 +10817,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*getCToEdit, visibleData*/ 65) {
+    			if (dirty & /*getCToDelete, visibleData, getCToEdit*/ 321) {
     				each_value = /*visibleData*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -10464,14 +10851,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(172:4) {#if visibleData.length}",
+    		source: "(202:4) {#if visibleData.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (175:6) {#each visibleData as context}
+    // (204:8) {#each visibleData as context}
     function create_each_block$6(ctx) {
     	let tr;
     	let td0;
@@ -10491,17 +10878,22 @@ var app = (function () {
     	let t6;
     	let t7;
     	let td4;
-    	let button;
+    	let button0;
     	let i0;
     	let t8;
     	let td5;
+    	let button1;
     	let i1;
     	let t9;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[11](/*context*/ ctx[4]);
+    		return /*click_handler*/ ctx[13](/*context*/ ctx[4]);
+    	}
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[14](/*context*/ ctx[4]);
     	}
 
     	const block = {
@@ -10520,30 +10912,36 @@ var app = (function () {
     			t6 = text(t6_value);
     			t7 = space();
     			td4 = element("td");
-    			button = element("button");
+    			button0 = element("button");
     			i0 = element("i");
     			t8 = space();
     			td5 = element("td");
+    			button1 = element("button");
     			i1 = element("i");
     			t9 = space();
-    			add_location(td0, file$7, 176, 8, 4199);
-    			add_location(td1, file$7, 177, 8, 4232);
-    			add_location(td2, file$7, 178, 8, 4263);
-    			add_location(td3, file$7, 179, 8, 4298);
+    			add_location(td0, file$7, 205, 12, 4748);
+    			add_location(td1, file$7, 206, 12, 4785);
+    			add_location(td2, file$7, 207, 12, 4820);
+    			add_location(td3, file$7, 208, 12, 4859);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$7, 185, 11, 4524);
-    			set_style(button, "border", "none");
-    			set_style(button, "background", "none");
-    			attr_dev(button, "data-toggle", "modal");
-    			attr_dev(button, "data-target", "#editC");
-    			add_location(button, file$7, 180, 12, 4342);
-    			add_location(td4, file$7, 180, 8, 4338);
+    			add_location(i0, file$7, 215, 17, 5135);
+    			set_style(button0, "border", "none");
+    			set_style(button0, "background", "none");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#editC");
+    			add_location(button0, file$7, 210, 15, 4923);
+    			add_location(td4, file$7, 209, 12, 4903);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$7, 190, 14, 4661);
-    			add_location(td5, file$7, 190, 10, 4657);
-    			add_location(tr, file$7, 175, 6, 4185);
+    			add_location(i1, file$7, 227, 14, 5534);
+    			set_style(button1, "border", "none");
+    			set_style(button1, "background", "none");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#deleteC");
+    			add_location(button1, file$7, 221, 16, 5312);
+    			add_location(td5, file$7, 221, 12, 5308);
+    			add_location(tr, file$7, 204, 10, 4730);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10560,15 +10958,20 @@ var app = (function () {
     			append_dev(td3, t6);
     			append_dev(tr, t7);
     			append_dev(tr, td4);
-    			append_dev(td4, button);
-    			append_dev(button, i0);
+    			append_dev(td4, button0);
+    			append_dev(button0, i0);
     			append_dev(tr, t8);
     			append_dev(tr, td5);
-    			append_dev(td5, i1);
+    			append_dev(td5, button1);
+    			append_dev(button1, i1);
     			append_dev(tr, t9);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler, false, false, false),
+    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
@@ -10582,7 +10985,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -10590,7 +10993,7 @@ var app = (function () {
     		block,
     		id: create_each_block$6.name,
     		type: "each",
-    		source: "(175:6) {#each visibleData as context}",
+    		source: "(204:8) {#each visibleData as context}",
     		ctx
     	});
 
@@ -10723,6 +11126,29 @@ var app = (function () {
     	let button5;
     	let t60;
     	let button6;
+    	let t62;
+    	let div46;
+    	let div45;
+    	let div44;
+    	let div41;
+    	let h52;
+    	let t64;
+    	let button7;
+    	let span3;
+    	let t66;
+    	let div42;
+    	let t67;
+    	let strong;
+    	let t68;
+    	let t69_value = /*cEdit*/ ctx[3].name + "";
+    	let t69;
+    	let t70;
+    	let t71;
+    	let t72;
+    	let div43;
+    	let button8;
+    	let t74;
+    	let button9;
     	let mounted;
     	let dispose;
 
@@ -10884,13 +11310,39 @@ var app = (function () {
     			t60 = space();
     			button6 = element("button");
     			button6.textContent = "Edit";
+    			t62 = space();
+    			div46 = element("div");
+    			div45 = element("div");
+    			div44 = element("div");
+    			div41 = element("div");
+    			h52 = element("h5");
+    			h52.textContent = "Delete Context";
+    			t64 = space();
+    			button7 = element("button");
+    			span3 = element("span");
+    			span3.textContent = "×";
+    			t66 = space();
+    			div42 = element("div");
+    			t67 = text("Are you sure, that you want to delete this context ");
+    			strong = element("strong");
+    			t68 = text("\"");
+    			t69 = text(t69_value);
+    			t70 = text("\"");
+    			t71 = text("?");
+    			t72 = space();
+    			div43 = element("div");
+    			button8 = element("button");
+    			button8.textContent = "Close";
+    			t74 = space();
+    			button9 = element("button");
+    			button9.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$7, 130, 8, 2864);
+    			add_location(h3, file$7, 155, 8, 3307);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$7, 129, 6, 2837);
+    			add_location(div0, file$7, 154, 6, 3280);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$7, 132, 6, 2948);
+    			add_location(div1, file$7, 157, 6, 3391);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -10898,233 +11350,272 @@ var app = (function () {
     			set_style(button0, "margin-top", "19px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$7, 134, 8, 3034);
+    			add_location(button0, file$7, 159, 8, 3477);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$7, 133, 6, 2975);
+    			add_location(div2, file$7, 158, 6, 3418);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$7, 128, 4, 2812);
+    			add_location(div3, file$7, 153, 4, 3255);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "search");
     			attr_dev(input0, "type", "text");
     			set_style(input0, "margin-bottom", "10px");
     			attr_dev(input0, "placeholder", "search...");
-    			add_location(input0, file$7, 145, 4, 3347);
+    			add_location(input0, file$7, 171, 8, 3805);
     			attr_dev(div4, "class", "col");
-    			add_location(div4, file$7, 144, 6, 3324);
+    			add_location(div4, file$7, 170, 6, 3778);
     			attr_dev(div5, "class", "col");
-    			add_location(div5, file$7, 154, 2, 3539);
+    			add_location(div5, file$7, 180, 6, 4033);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$7, 155, 2, 3561);
+    			add_location(div6, file$7, 181, 6, 4060);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$7, 156, 2, 3583);
+    			add_location(div7, file$7, 182, 6, 4087);
     			attr_dev(div8, "class", "row g-3");
-    			add_location(div8, file$7, 143, 4, 3295);
+    			add_location(div8, file$7, 169, 4, 3749);
     			attr_dev(div9, "class", "container-fluid");
-    			add_location(div9, file$7, 127, 0, 2777);
+    			add_location(div9, file$7, 152, 2, 3220);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$7, 163, 60, 3842);
-    			add_location(span0, file$7, 163, 29, 3811);
+    			add_location(i, file$7, 191, 12, 4374);
+    			add_location(span0, file$7, 190, 16, 4330);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$7, 163, 8, 3790);
+    			add_location(th0, file$7, 189, 8, 4297);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$7, 164, 8, 3896);
+    			add_location(th1, file$7, 194, 8, 4448);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$7, 165, 8, 3929);
+    			add_location(th2, file$7, 195, 8, 4481);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$7, 166, 8, 3966);
+    			add_location(th3, file$7, 196, 8, 4518);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$7, 167, 8, 4008);
+    			add_location(th4, file$7, 197, 8, 4560);
     			attr_dev(th5, "scope", "col");
-    			add_location(th5, file$7, 168, 8, 4040);
-    			add_location(tr, file$7, 161, 6, 3710);
-    			add_location(thead, file$7, 160, 4, 3695);
+    			add_location(th5, file$7, 198, 8, 4588);
+    			add_location(tr, file$7, 187, 6, 4217);
+    			add_location(thead, file$7, 186, 4, 4202);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allContexts");
-    			add_location(table, file$7, 159, 2, 3625);
+    			add_location(table, file$7, 185, 2, 4132);
     			set_style(div10, "margin-left", "-52px");
     			set_style(div10, "margin-right", "-52px");
-    			add_location(div10, file$7, 126, 0, 2721);
+    			add_location(div10, file$7, 151, 0, 3162);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "crateContext");
-    			add_location(h50, file$7, 204, 10, 5123);
+    			add_location(h50, file$7, 248, 8, 6010);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$7, 206, 12, 5283);
+    			add_location(span1, file$7, 255, 10, 6220);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$7, 205, 10, 5193);
+    			add_location(button1, file$7, 249, 8, 6078);
     			attr_dev(div11, "class", "modal-header");
-    			add_location(div11, file$7, 203, 8, 5085);
+    			add_location(div11, file$7, 247, 6, 5974);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$7, 213, 16, 5511);
+    			add_location(label0, file$7, 262, 14, 6434);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "name");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$7, 214, 16, 5578);
+    			add_location(input1, file$7, 263, 14, 6499);
     			attr_dev(div12, "class", "col");
-    			add_location(div12, file$7, 212, 14, 5476);
+    			add_location(div12, file$7, 261, 12, 6401);
     			attr_dev(div13, "class", "row mb-3");
-    			add_location(div13, file$7, 211, 12, 5438);
+    			add_location(div13, file$7, 260, 10, 6365);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$7, 224, 18, 5886);
+    			add_location(label1, file$7, 273, 14, 6779);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "description");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$7, 225, 18, 5951);
+    			add_location(input2, file$7, 274, 14, 6840);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$7, 223, 16, 5849);
+    			add_location(div14, file$7, 272, 12, 6746);
     			attr_dev(div15, "class", "row mb-3");
-    			add_location(div15, file$7, 222, 14, 5809);
+    			add_location(div15, file$7, 271, 10, 6710);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "subnet");
-    			add_location(label2, file$7, 235, 18, 6272);
+    			add_location(label2, file$7, 284, 14, 7125);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "description");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$7, 236, 18, 6345);
+    			add_location(input3, file$7, 285, 14, 7194);
     			attr_dev(div16, "class", "col");
-    			add_location(div16, file$7, 234, 16, 6235);
+    			add_location(div16, file$7, 283, 12, 7092);
     			attr_dev(div17, "class", "row mb-3");
-    			add_location(div17, file$7, 233, 14, 6195);
+    			add_location(div17, file$7, 282, 10, 7056);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "description");
-    			add_location(label3, file$7, 246, 16, 6678);
+    			add_location(label3, file$7, 295, 14, 7483);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "description");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$7, 247, 16, 6759);
+    			add_location(input4, file$7, 296, 14, 7562);
     			attr_dev(div18, "class", "col");
-    			add_location(div18, file$7, 245, 14, 6643);
+    			add_location(div18, file$7, 294, 12, 7450);
     			attr_dev(div19, "class", "row mb-3");
-    			add_location(div19, file$7, 244, 16, 6605);
+    			add_location(div19, file$7, 293, 10, 7414);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$7, 210, 10, 5405);
+    			add_location(form0, file$7, 259, 8, 6334);
     			attr_dev(div20, "class", "modal-body");
-    			add_location(div20, file$7, 209, 8, 5369);
+    			add_location(div20, file$7, 258, 6, 6300);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$7, 258, 10, 7061);
+    			add_location(button2, file$7, 307, 8, 7850);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$7, 259, 10, 7156);
+    			add_location(button3, file$7, 310, 8, 7965);
     			attr_dev(div21, "class", "modal-footer");
-    			add_location(div21, file$7, 257, 8, 7023);
+    			add_location(div21, file$7, 306, 6, 7814);
     			attr_dev(div22, "class", "modal-content");
-    			add_location(div22, file$7, 202, 6, 5048);
+    			add_location(div22, file$7, 246, 4, 5939);
     			attr_dev(div23, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div23, "role", "document");
-    			add_location(div23, file$7, 201, 4, 4976);
+    			add_location(div23, file$7, 245, 2, 5869);
     			attr_dev(div24, "class", "modal fade");
     			attr_dev(div24, "id", "createC");
     			attr_dev(div24, "tabindex", "-1");
     			attr_dev(div24, "role", "dialog");
     			attr_dev(div24, "aria-labelledby", "formCreateContext");
     			attr_dev(div24, "aria-hidden", "true");
-    			add_location(div24, file$7, 200, 2, 4850);
+    			add_location(div24, file$7, 237, 0, 5725);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editContext");
-    			add_location(h51, file$7, 276, 6, 7626);
+    			add_location(h51, file$7, 333, 8, 8498);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$7, 283, 8, 7829);
+    			add_location(span2, file$7, 340, 10, 8715);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "close");
     			attr_dev(button4, "data-dismiss", "modal");
     			attr_dev(button4, "aria-label", "Close");
-    			add_location(button4, file$7, 277, 6, 7699);
+    			add_location(button4, file$7, 334, 8, 8573);
     			attr_dev(div25, "class", "modal-header");
-    			add_location(div25, file$7, 275, 4, 7592);
+    			add_location(div25, file$7, 332, 6, 8462);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "id");
-    			add_location(label4, file$7, 290, 12, 8029);
+    			add_location(label4, file$7, 347, 14, 8929);
     			attr_dev(input5, "class", "form-control");
     			attr_dev(input5, "id", "id");
     			attr_dev(input5, "type", "text");
     			input5.disabled = true;
-    			add_location(input5, file$7, 291, 12, 8088);
+    			add_location(input5, file$7, 348, 14, 8990);
     			attr_dev(div26, "class", "col");
-    			add_location(div26, file$7, 289, 10, 7998);
+    			add_location(div26, file$7, 346, 12, 8896);
     			attr_dev(div27, "class", "row mb-3");
-    			add_location(div27, file$7, 288, 8, 7964);
+    			add_location(div27, file$7, 345, 10, 8860);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "name");
-    			add_location(label5, file$7, 302, 12, 8366);
+    			add_location(label5, file$7, 359, 14, 9290);
     			attr_dev(input6, "class", "form-control");
     			attr_dev(input6, "id", "name");
     			attr_dev(input6, "type", "text");
-    			add_location(input6, file$7, 303, 12, 8429);
+    			add_location(input6, file$7, 360, 14, 9355);
     			attr_dev(div28, "class", "col");
-    			add_location(div28, file$7, 301, 10, 8335);
+    			add_location(div28, file$7, 358, 12, 9257);
     			attr_dev(div29, "class", "row mb-3");
-    			add_location(div29, file$7, 300, 8, 8301);
+    			add_location(div29, file$7, 357, 10, 9221);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "ip");
-    			add_location(label6, file$7, 313, 12, 8687);
+    			add_location(label6, file$7, 370, 14, 9633);
     			attr_dev(input7, "class", "form-control");
     			attr_dev(input7, "id", "ip");
     			attr_dev(input7, "type", "text");
-    			add_location(input7, file$7, 316, 12, 8776);
+    			add_location(input7, file$7, 371, 14, 9695);
     			attr_dev(div30, "class", "col");
-    			add_location(div30, file$7, 312, 10, 8656);
+    			add_location(div30, file$7, 369, 12, 9600);
     			attr_dev(div31, "class", "row mb-3");
-    			add_location(div31, file$7, 311, 8, 8622);
+    			add_location(div31, file$7, 368, 10, 9564);
     			attr_dev(label7, "class", "form-label");
     			attr_dev(label7, "for", "subnet");
-    			add_location(label7, file$7, 326, 12, 9030);
+    			add_location(label7, file$7, 381, 14, 9969);
     			attr_dev(input8, "class", "form-control");
     			attr_dev(input8, "id", "ip");
     			attr_dev(input8, "type", "text");
-    			add_location(input8, file$7, 329, 12, 9127);
+    			add_location(input8, file$7, 382, 14, 10039);
     			attr_dev(div32, "class", "col");
-    			add_location(div32, file$7, 325, 10, 8999);
+    			add_location(div32, file$7, 380, 12, 9936);
     			attr_dev(div33, "class", "row mb-3");
-    			add_location(div33, file$7, 324, 8, 8965);
+    			add_location(div33, file$7, 379, 10, 9900);
     			attr_dev(label8, "class", "form-label");
     			attr_dev(label8, "for", "description");
-    			add_location(label8, file$7, 339, 12, 9385);
+    			add_location(label8, file$7, 392, 14, 10317);
     			attr_dev(input9, "class", "form-control");
     			attr_dev(input9, "id", "description");
     			attr_dev(input9, "type", "text");
-    			add_location(input9, file$7, 340, 12, 9462);
+    			add_location(input9, file$7, 393, 14, 10396);
     			attr_dev(div34, "class", "col");
-    			add_location(div34, file$7, 338, 10, 9354);
+    			add_location(div34, file$7, 391, 12, 10284);
     			attr_dev(div35, "class", "row mb-3");
-    			add_location(div35, file$7, 337, 8, 9320);
+    			add_location(div35, file$7, 390, 10, 10248);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$7, 287, 6, 7935);
+    			add_location(form1, file$7, 344, 8, 8829);
     			attr_dev(div36, "class", "modal-body");
-    			add_location(div36, file$7, 286, 4, 7903);
+    			add_location(div36, file$7, 343, 6, 8795);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary");
     			attr_dev(button5, "data-dismiss", "modal");
-    			add_location(button5, file$7, 351, 6, 9726);
+    			add_location(button5, file$7, 404, 8, 10682);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "#008000");
     			set_style(button6, "color", "#fff");
     			attr_dev(button6, "data-dismiss", "modal");
-    			add_location(button6, file$7, 354, 6, 9835);
+    			add_location(button6, file$7, 407, 8, 10797);
     			attr_dev(div37, "class", "modal-footer");
-    			add_location(div37, file$7, 350, 4, 9692);
+    			add_location(div37, file$7, 403, 6, 10646);
     			attr_dev(div38, "class", "modal-content");
-    			add_location(div38, file$7, 274, 2, 7559);
+    			add_location(div38, file$7, 331, 4, 8427);
     			attr_dev(div39, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div39, "role", "document");
-    			add_location(div39, file$7, 273, 0, 7491);
+    			add_location(div39, file$7, 330, 2, 8357);
     			attr_dev(div40, "class", "modal fade");
     			attr_dev(div40, "id", "editC");
     			attr_dev(div40, "tabindex", "-1");
     			attr_dev(div40, "role", "dialog");
     			attr_dev(div40, "aria-labelledby", "formEditContext");
     			attr_dev(div40, "aria-hidden", "true");
-    			add_location(div40, file$7, 265, 2, 7353);
+    			add_location(div40, file$7, 322, 0, 8217);
+    			attr_dev(h52, "class", "modal-title");
+    			attr_dev(h52, "id", "deleteC");
+    			add_location(h52, file$7, 431, 6, 11314);
+    			attr_dev(span3, "aria-hidden", "true");
+    			add_location(span3, file$7, 438, 8, 11508);
+    			attr_dev(button7, "type", "button");
+    			attr_dev(button7, "class", "close");
+    			attr_dev(button7, "data-dismiss", "modal");
+    			attr_dev(button7, "aria-label", "Close");
+    			add_location(button7, file$7, 432, 6, 11378);
+    			attr_dev(div41, "class", "modal-header");
+    			add_location(div41, file$7, 430, 4, 11280);
+    			add_location(strong, file$7, 442, 57, 11665);
+    			attr_dev(div42, "class", "modal-body");
+    			add_location(div42, file$7, 441, 4, 11582);
+    			attr_dev(button8, "type", "button");
+    			attr_dev(button8, "class", "btn btn-secondary");
+    			attr_dev(button8, "data-dismiss", "modal");
+    			add_location(button8, file$7, 445, 6, 11749);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "btn");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			set_style(button9, "background-color", "#c73834");
+    			set_style(button9, "color", "#fff");
+    			add_location(button9, file$7, 448, 6, 11858);
+    			attr_dev(div43, "class", "modal-footer");
+    			add_location(div43, file$7, 444, 4, 11715);
+    			attr_dev(div44, "class", "modal-content");
+    			add_location(div44, file$7, 429, 2, 11247);
+    			attr_dev(div45, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div45, "role", "document");
+    			add_location(div45, file$7, 428, 0, 11179);
+    			attr_dev(div46, "class", "modal fade");
+    			attr_dev(div46, "id", "deleteC");
+    			attr_dev(div46, "tabindex", "-1");
+    			attr_dev(div46, "role", "dialog");
+    			attr_dev(div46, "aria-labelledby", "formDeletC");
+    			attr_dev(div46, "aria-hidden", "true");
+    			add_location(div46, file$7, 420, 0, 11044);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11266,10 +11757,32 @@ var app = (function () {
     			append_dev(div37, button5);
     			append_dev(div37, t60);
     			append_dev(div37, button6);
+    			insert_dev(target, t62, anchor);
+    			insert_dev(target, div46, anchor);
+    			append_dev(div46, div45);
+    			append_dev(div45, div44);
+    			append_dev(div44, div41);
+    			append_dev(div41, h52);
+    			append_dev(div41, t64);
+    			append_dev(div41, button7);
+    			append_dev(button7, span3);
+    			append_dev(div44, t66);
+    			append_dev(div44, div42);
+    			append_dev(div42, t67);
+    			append_dev(div42, strong);
+    			append_dev(strong, t68);
+    			append_dev(strong, t69);
+    			append_dev(strong, t70);
+    			append_dev(div42, t71);
+    			append_dev(div44, t72);
+    			append_dev(div44, div43);
+    			append_dev(div43, button8);
+    			append_dev(div43, t74);
+    			append_dev(div43, button9);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[12]),
     					listen_dev(
     						span0,
     						"click",
@@ -11280,17 +11793,27 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[12]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[13]),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[14]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[15]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[15]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[16]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[17]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[18]),
     					listen_dev(button3, "click", /*createContext*/ ctx[5], false, false, false),
-    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[16]),
-    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[17]),
-    					listen_dev(input7, "input", /*input7_input_handler*/ ctx[18]),
-    					listen_dev(input8, "input", /*input8_input_handler*/ ctx[19]),
-    					listen_dev(input9, "input", /*input9_input_handler*/ ctx[20]),
-    					listen_dev(button6, "click", /*editC*/ ctx[7], false, false, false)
+    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[19]),
+    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[20]),
+    					listen_dev(input7, "input", /*input7_input_handler*/ ctx[21]),
+    					listen_dev(input8, "input", /*input8_input_handler*/ ctx[22]),
+    					listen_dev(input9, "input", /*input9_input_handler*/ ctx[23]),
+    					listen_dev(button6, "click", /*editC*/ ctx[7], false, false, false),
+    					listen_dev(
+    						button9,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteC*/ ctx[9](/*cEdit*/ ctx[3].id))) /*deleteC*/ ctx[9](/*cEdit*/ ctx[3].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -11350,6 +11873,8 @@ var app = (function () {
     			if (dirty & /*cEdit*/ 8 && input9.value !== /*cEdit*/ ctx[3].description) {
     				set_input_value(input9, /*cEdit*/ ctx[3].description);
     			}
+
+    			if (dirty & /*cEdit*/ 8 && t69_value !== (t69_value = /*cEdit*/ ctx[3].name + "")) set_data_dev(t69, t69_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -11360,6 +11885,8 @@ var app = (function () {
     			if (detaching) detach_dev(div24);
     			if (detaching) detach_dev(t39);
     			if (detaching) detach_dev(div40);
+    			if (detaching) detach_dev(t62);
+    			if (detaching) detach_dev(div46);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -11402,6 +11929,8 @@ var app = (function () {
     		description: null
     	};
 
+    	let cDelete = { id: null, name: null };
+
     	function getContexts() {
     		var config = {
     			method: "get",
@@ -11410,7 +11939,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(8, contexts = response.data);
+    			$$invalidate(10, contexts = response.data);
     		}).catch(function (error) {
     			alert("Could not get Contexts");
     			console.log(error);
@@ -11459,6 +11988,25 @@ var app = (function () {
     		});
     	}
 
+    	function getCToDelete(cD) {
+    		cDelete.id = cD.id;
+    		cDelete.name = cD.name;
+    	}
+
+    	function deleteC(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$6 + "/context/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getContexts();
+    		}).catch(function (error) {
+    			alert("Could not delete Context");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -11472,6 +12020,7 @@ var app = (function () {
     	}
 
     	const click_handler = context => getCToEdit(context);
+    	const click_handler_1 = context => getCToDelete(context);
 
     	function input1_input_handler() {
     		context.name = this.value;
@@ -11526,21 +12075,25 @@ var app = (function () {
     		visibleData,
     		searchText,
     		cEdit,
+    		cDelete,
     		getContexts,
     		createContext,
     		getCToEdit,
     		editC,
+    		getCToDelete,
+    		deleteC,
     		sortBy,
     		sort
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('contexts' in $$props) $$invalidate(8, contexts = $$props.contexts);
+    		if ('contexts' in $$props) $$invalidate(10, contexts = $$props.contexts);
     		if ('context' in $$props) $$invalidate(4, context = $$props.context);
     		if ('visibleData' in $$props) $$invalidate(0, visibleData = $$props.visibleData);
     		if ('searchText' in $$props) $$invalidate(1, searchText = $$props.searchText);
     		if ('cEdit' in $$props) $$invalidate(3, cEdit = $$props.cEdit);
-    		if ('sortBy' in $$props) $$invalidate(9, sortBy = $$props.sortBy);
+    		if ('cDelete' in $$props) cDelete = $$props.cDelete;
+    		if ('sortBy' in $$props) $$invalidate(11, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(2, sort = $$props.sort);
     	};
 
@@ -11549,7 +12102,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*searchText, contexts*/ 258) {
+    		if ($$self.$$.dirty & /*searchText, contexts*/ 1026) {
     			{
     				$$invalidate(0, visibleData = searchText
     				? contexts.filter(e => {
@@ -11559,13 +12112,13 @@ var app = (function () {
     			}
     		}
 
-    		if ($$self.$$.dirty & /*sortBy, visibleData*/ 513) {
+    		if ($$self.$$.dirty & /*sortBy, visibleData*/ 2049) {
     			$$invalidate(2, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(9, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(11, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(9, sortBy.col = column, sortBy);
-    					$$invalidate(9, sortBy.ascending = true, sortBy);
+    					$$invalidate(11, sortBy.col = column, sortBy);
+    					$$invalidate(11, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -11589,10 +12142,13 @@ var app = (function () {
     		createContext,
     		getCToEdit,
     		editC,
+    		getCToDelete,
+    		deleteC,
     		contexts,
     		sortBy,
     		input0_input_handler,
     		click_handler,
+    		click_handler_1,
     		input1_input_handler,
     		input2_input_handler,
     		input3_input_handler,
@@ -11626,37 +12182,42 @@ var app = (function () {
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
+    	child_ctx[4] = list[i];
     	return child_ctx;
     }
 
-    // (147:4) {#each hostObjects as hostObject}
+    // (173:4) {#each hostObjects as hostObject}
     function create_each_block$5(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*hostObject*/ ctx[3].name + "";
+    	let t0_value = /*hostObject*/ ctx[4].name + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*hostObject*/ ctx[3].ip + "";
+    	let t2_value = /*hostObject*/ ctx[4].ip + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*hostObject*/ ctx[3].description + "";
+    	let t4_value = /*hostObject*/ ctx[4].description + "";
     	let t4;
     	let t5;
     	let td3;
-    	let button;
+    	let button0;
     	let i0;
     	let t6;
     	let td4;
+    	let button1;
     	let i1;
     	let t7;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[8](/*hostObject*/ ctx[3]);
+    		return /*click_handler*/ ctx[11](/*hostObject*/ ctx[4]);
+    	}
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[12](/*hostObject*/ ctx[4]);
     	}
 
     	const block = {
@@ -11672,29 +12233,35 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			td3 = element("td");
-    			button = element("button");
+    			button0 = element("button");
     			i0 = element("i");
     			t6 = space();
     			td4 = element("td");
+    			button1 = element("button");
     			i1 = element("i");
     			t7 = space();
-    			add_location(td0, file$6, 148, 8, 3551);
-    			add_location(td1, file$6, 149, 8, 3587);
-    			add_location(td2, file$6, 150, 8, 3621);
+    			add_location(td0, file$6, 174, 8, 4054);
+    			add_location(td1, file$6, 175, 8, 4090);
+    			add_location(td2, file$6, 176, 8, 4124);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$6, 156, 11, 3855);
-    			set_style(button, "border", "none");
-    			set_style(button, "background", "none");
-    			attr_dev(button, "data-toggle", "modal");
-    			attr_dev(button, "data-target", "#editHO");
-    			add_location(button, file$6, 151, 12, 3668);
-    			add_location(td3, file$6, 151, 8, 3664);
+    			add_location(i0, file$6, 182, 11, 4358);
+    			set_style(button0, "border", "none");
+    			set_style(button0, "background", "none");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#editHO");
+    			add_location(button0, file$6, 177, 12, 4171);
+    			add_location(td3, file$6, 177, 8, 4167);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$6, 161, 14, 3992);
-    			add_location(td4, file$6, 161, 10, 3988);
-    			add_location(tr, file$6, 147, 6, 3537);
+    			add_location(i1, file$6, 193, 12, 4710);
+    			set_style(button1, "border", "none");
+    			set_style(button1, "background", "none");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#deleteHO");
+    			add_location(button1, file$6, 187, 14, 4495);
+    			add_location(td4, file$6, 187, 10, 4491);
+    			add_location(tr, file$6, 173, 6, 4040);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11708,28 +12275,33 @@ var app = (function () {
     			append_dev(td2, t4);
     			append_dev(tr, t5);
     			append_dev(tr, td3);
-    			append_dev(td3, button);
-    			append_dev(button, i0);
+    			append_dev(td3, button0);
+    			append_dev(button0, i0);
     			append_dev(tr, t6);
     			append_dev(tr, td4);
-    			append_dev(td4, i1);
+    			append_dev(td4, button1);
+    			append_dev(button1, i1);
     			append_dev(tr, t7);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler, false, false, false),
+    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*hostObjects*/ 1 && t0_value !== (t0_value = /*hostObject*/ ctx[3].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*hostObjects*/ 1 && t2_value !== (t2_value = /*hostObject*/ ctx[3].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*hostObjects*/ 1 && t4_value !== (t4_value = /*hostObject*/ ctx[3].description + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*hostObjects*/ 1 && t0_value !== (t0_value = /*hostObject*/ ctx[4].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*hostObjects*/ 1 && t2_value !== (t2_value = /*hostObject*/ ctx[4].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*hostObjects*/ 1 && t4_value !== (t4_value = /*hostObject*/ ctx[4].description + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -11737,7 +12309,7 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(147:4) {#each hostObjects as hostObject}",
+    		source: "(173:4) {#each hostObjects as hostObject}",
     		ctx
     	});
 
@@ -11851,6 +12423,29 @@ var app = (function () {
     	let button5;
     	let t48;
     	let button6;
+    	let t50;
+    	let div37;
+    	let div36;
+    	let div35;
+    	let div32;
+    	let h52;
+    	let t52;
+    	let button7;
+    	let span3;
+    	let t54;
+    	let div33;
+    	let t55;
+    	let strong;
+    	let t56;
+    	let t57_value = /*hoDelete*/ ctx[3].name + "";
+    	let t57;
+    	let t58;
+    	let t59;
+    	let t60;
+    	let div34;
+    	let button8;
+    	let t62;
+    	let button9;
     	let mounted;
     	let dispose;
     	let each_value = /*hostObjects*/ ctx[0];
@@ -11991,13 +12586,39 @@ var app = (function () {
     			t48 = space();
     			button6 = element("button");
     			button6.textContent = "Edit";
+    			t50 = space();
+    			div37 = element("div");
+    			div36 = element("div");
+    			div35 = element("div");
+    			div32 = element("div");
+    			h52 = element("h5");
+    			h52.textContent = "Delete Host-Object";
+    			t52 = space();
+    			button7 = element("button");
+    			span3 = element("span");
+    			span3.textContent = "×";
+    			t54 = space();
+    			div33 = element("div");
+    			t55 = text("Are you sure, that you want to delete this host object ");
+    			strong = element("strong");
+    			t56 = text("\"");
+    			t57 = text(t57_value);
+    			t58 = text("\"");
+    			t59 = text("?");
+    			t60 = space();
+    			div34 = element("div");
+    			button8 = element("button");
+    			button8.textContent = "Close";
+    			t62 = space();
+    			button9 = element("button");
+    			button9.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$6, 120, 6, 2531);
+    			add_location(h3, file$6, 146, 6, 3034);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$6, 119, 4, 2506);
+    			add_location(div0, file$6, 145, 4, 3009);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$6, 122, 4, 2615);
+    			add_location(div1, file$6, 148, 4, 3118);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -12005,198 +12626,237 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$6, 124, 6, 2697);
+    			add_location(button0, file$6, 150, 6, 3200);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$6, 123, 4, 2640);
+    			add_location(div2, file$6, 149, 4, 3143);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$6, 118, 2, 2483);
+    			add_location(div3, file$6, 144, 2, 2986);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$6, 117, 0, 2450);
+    			add_location(div4, file$6, 143, 0, 2953);
     			attr_dev(i0, "class", "fa fa-fw fa-sort");
-    			add_location(i0, file$6, 138, 59, 3161);
-    			add_location(span0, file$6, 138, 28, 3130);
+    			add_location(i0, file$6, 164, 59, 3664);
+    			add_location(span0, file$6, 164, 28, 3633);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$6, 138, 6, 3108);
+    			add_location(th0, file$6, 164, 6, 3611);
     			attr_dev(i1, "class", "fa fa-fw fa-sort");
-    			add_location(i1, file$6, 139, 48, 3255);
+    			add_location(i1, file$6, 165, 48, 3758);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$6, 139, 6, 3213);
+    			add_location(th1, file$6, 165, 6, 3716);
     			attr_dev(i2, "class", "fa fa-fw fa-sort");
-    			add_location(i2, file$6, 140, 66, 3360);
+    			add_location(i2, file$6, 166, 66, 3863);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$6, 140, 6, 3300);
+    			add_location(th2, file$6, 166, 6, 3803);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$6, 141, 6, 3405);
+    			add_location(th3, file$6, 167, 6, 3908);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$6, 142, 6, 3435);
-    			add_location(tr, file$6, 136, 4, 3032);
-    			add_location(thead, file$6, 135, 2, 3019);
-    			add_location(tbody, file$6, 145, 2, 3483);
+    			add_location(th4, file$6, 168, 6, 3938);
+    			add_location(tr, file$6, 162, 4, 3535);
+    			add_location(thead, file$6, 161, 2, 3522);
+    			add_location(tbody, file$6, 171, 2, 3986);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allHostObjects");
-    			add_location(table, file$6, 134, 0, 2948);
+    			add_location(table, file$6, 160, 0, 3451);
     			set_style(div5, "margin-left", "-52px");
     			set_style(div5, "margin-right", "-52px");
-    			add_location(div5, file$6, 116, 0, 2394);
+    			add_location(div5, file$6, 142, 0, 2897);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "crateHostObject");
-    			add_location(h50, file$6, 172, 8, 4379);
+    			add_location(h50, file$6, 204, 8, 5095);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$6, 174, 10, 4542);
+    			add_location(span1, file$6, 206, 10, 5258);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$6, 173, 8, 4454);
+    			add_location(button1, file$6, 205, 8, 5170);
     			attr_dev(div6, "class", "modal-header");
-    			add_location(div6, file$6, 171, 6, 4343);
+    			add_location(div6, file$6, 203, 6, 5059);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$6, 181, 14, 4756);
+    			add_location(label0, file$6, 213, 14, 5472);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "H_<ZONE>_<HOST-NAME>");
-    			add_location(input0, file$6, 182, 14, 4821);
+    			add_location(input0, file$6, 214, 14, 5537);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$6, 180, 12, 4723);
+    			add_location(div7, file$6, 212, 12, 5439);
     			attr_dev(div8, "class", "row mb-3");
-    			add_location(div8, file$6, 179, 10, 4687);
+    			add_location(div8, file$6, 211, 10, 5403);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$6, 193, 14, 5156);
+    			add_location(label1, file$6, 225, 14, 5872);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "ip");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$6, 194, 14, 5217);
+    			add_location(input1, file$6, 226, 14, 5933);
     			attr_dev(div9, "class", "col");
-    			add_location(div9, file$6, 192, 12, 5123);
+    			add_location(div9, file$6, 224, 12, 5839);
     			attr_dev(div10, "class", "row mb-3");
-    			add_location(div10, file$6, 191, 10, 5087);
+    			add_location(div10, file$6, 223, 10, 5803);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "description");
-    			add_location(label2, file$6, 204, 14, 5496);
+    			add_location(label2, file$6, 236, 14, 6212);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "description");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$6, 205, 14, 5575);
+    			add_location(input2, file$6, 237, 14, 6291);
     			attr_dev(div11, "class", "col");
-    			add_location(div11, file$6, 203, 12, 5463);
+    			add_location(div11, file$6, 235, 12, 6179);
     			attr_dev(div12, "class", "row mb-3");
-    			add_location(div12, file$6, 202, 10, 5427);
+    			add_location(div12, file$6, 234, 10, 6143);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$6, 178, 8, 4656);
+    			add_location(form0, file$6, 210, 8, 5372);
     			attr_dev(div13, "class", "modal-body");
-    			add_location(div13, file$6, 177, 6, 4622);
+    			add_location(div13, file$6, 209, 6, 5338);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$6, 216, 8, 5866);
+    			add_location(button2, file$6, 248, 8, 6582);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
-    			add_location(button3, file$6, 217, 8, 5959);
+    			add_location(button3, file$6, 249, 8, 6675);
     			attr_dev(div14, "class", "modal-footer");
-    			add_location(div14, file$6, 215, 6, 5830);
+    			add_location(div14, file$6, 247, 6, 6546);
     			attr_dev(div15, "class", "modal-content");
-    			add_location(div15, file$6, 170, 4, 4308);
+    			add_location(div15, file$6, 202, 4, 5024);
     			attr_dev(div16, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div16, "role", "document");
-    			add_location(div16, file$6, 169, 2, 4238);
+    			add_location(div16, file$6, 201, 2, 4954);
     			attr_dev(div17, "class", "modal fade");
     			attr_dev(div17, "id", "crateHO");
     			attr_dev(div17, "tabindex", "-1");
     			attr_dev(div17, "role", "dialog");
     			attr_dev(div17, "aria-labelledby", "formCreateHostObject");
     			attr_dev(div17, "aria-hidden", "true");
-    			add_location(div17, file$6, 168, 0, 4111);
+    			add_location(div17, file$6, 200, 0, 4827);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editHostObject");
-    			add_location(h51, file$6, 234, 8, 6413);
+    			add_location(h51, file$6, 266, 8, 7129);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$6, 241, 10, 6630);
+    			add_location(span2, file$6, 273, 10, 7346);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "close");
     			attr_dev(button4, "data-dismiss", "modal");
     			attr_dev(button4, "aria-label", "Close");
-    			add_location(button4, file$6, 235, 8, 6488);
+    			add_location(button4, file$6, 267, 8, 7204);
     			attr_dev(div18, "class", "modal-header");
-    			add_location(div18, file$6, 233, 6, 6377);
+    			add_location(div18, file$6, 265, 6, 7093);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "id");
-    			add_location(label3, file$6, 248, 14, 6844);
+    			add_location(label3, file$6, 280, 14, 7560);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "id");
     			attr_dev(input3, "type", "text");
     			input3.disabled = true;
-    			add_location(input3, file$6, 249, 14, 6905);
+    			add_location(input3, file$6, 281, 14, 7621);
     			attr_dev(div19, "class", "col");
-    			add_location(div19, file$6, 247, 12, 6811);
+    			add_location(div19, file$6, 279, 12, 7527);
     			attr_dev(div20, "class", "row mb-3");
-    			add_location(div20, file$6, 246, 10, 6775);
+    			add_location(div20, file$6, 278, 10, 7491);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "name");
-    			add_location(label4, file$6, 260, 14, 7206);
+    			add_location(label4, file$6, 292, 14, 7922);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "name");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$6, 261, 14, 7271);
+    			add_location(input4, file$6, 293, 14, 7987);
     			attr_dev(div21, "class", "col");
-    			add_location(div21, file$6, 259, 12, 7173);
+    			add_location(div21, file$6, 291, 12, 7889);
     			attr_dev(div22, "class", "row mb-3");
-    			add_location(div22, file$6, 258, 10, 7137);
+    			add_location(div22, file$6, 290, 10, 7853);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "ip");
-    			add_location(label5, file$6, 271, 14, 7550);
+    			add_location(label5, file$6, 303, 14, 8266);
     			attr_dev(input5, "class", "form-control");
     			attr_dev(input5, "id", "ip");
     			attr_dev(input5, "type", "text");
-    			add_location(input5, file$6, 274, 14, 7645);
+    			add_location(input5, file$6, 306, 14, 8361);
     			attr_dev(div23, "class", "col");
-    			add_location(div23, file$6, 270, 12, 7517);
+    			add_location(div23, file$6, 302, 12, 8233);
     			attr_dev(div24, "class", "row mb-3");
-    			add_location(div24, file$6, 269, 10, 7481);
+    			add_location(div24, file$6, 301, 10, 8197);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "description");
-    			add_location(label6, file$6, 284, 14, 7920);
+    			add_location(label6, file$6, 316, 14, 8636);
     			attr_dev(input6, "class", "form-control");
     			attr_dev(input6, "id", "description");
     			attr_dev(input6, "type", "text");
-    			add_location(input6, file$6, 285, 14, 7999);
+    			add_location(input6, file$6, 317, 14, 8715);
     			attr_dev(div25, "class", "col");
-    			add_location(div25, file$6, 283, 12, 7887);
+    			add_location(div25, file$6, 315, 12, 8603);
     			attr_dev(div26, "class", "row mb-3");
-    			add_location(div26, file$6, 282, 10, 7851);
+    			add_location(div26, file$6, 314, 10, 8567);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$6, 245, 8, 6744);
+    			add_location(form1, file$6, 277, 8, 7460);
     			attr_dev(div27, "class", "modal-body");
-    			add_location(div27, file$6, 244, 6, 6710);
+    			add_location(div27, file$6, 276, 6, 7426);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary");
     			attr_dev(button5, "data-dismiss", "modal");
-    			add_location(button5, file$6, 296, 8, 8286);
+    			add_location(button5, file$6, 328, 8, 9002);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "#008000");
     			set_style(button6, "color", "#fff");
     			attr_dev(button6, "data-dismiss", "modal");
-    			add_location(button6, file$6, 299, 8, 8401);
+    			add_location(button6, file$6, 331, 8, 9117);
     			attr_dev(div28, "class", "modal-footer");
-    			add_location(div28, file$6, 295, 6, 8250);
+    			add_location(div28, file$6, 327, 6, 8966);
     			attr_dev(div29, "class", "modal-content");
-    			add_location(div29, file$6, 232, 4, 6342);
+    			add_location(div29, file$6, 264, 4, 7058);
     			attr_dev(div30, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div30, "role", "document");
-    			add_location(div30, file$6, 231, 2, 6272);
+    			add_location(div30, file$6, 263, 2, 6988);
     			attr_dev(div31, "class", "modal fade");
     			attr_dev(div31, "id", "editHO");
     			attr_dev(div31, "tabindex", "-1");
     			attr_dev(div31, "role", "dialog");
     			attr_dev(div31, "aria-labelledby", "formEditHostObject");
     			attr_dev(div31, "aria-hidden", "true");
-    			add_location(div31, file$6, 223, 0, 6128);
+    			add_location(div31, file$6, 255, 0, 6844);
+    			attr_dev(h52, "class", "modal-title");
+    			attr_dev(h52, "id", "deleteHO");
+    			add_location(h52, file$6, 354, 6, 9627);
+    			attr_dev(span3, "aria-hidden", "true");
+    			add_location(span3, file$6, 361, 8, 9826);
+    			attr_dev(button7, "type", "button");
+    			attr_dev(button7, "class", "close");
+    			attr_dev(button7, "data-dismiss", "modal");
+    			attr_dev(button7, "aria-label", "Close");
+    			add_location(button7, file$6, 355, 6, 9696);
+    			attr_dev(div32, "class", "modal-header");
+    			add_location(div32, file$6, 353, 4, 9593);
+    			add_location(strong, file$6, 365, 61, 9987);
+    			attr_dev(div33, "class", "modal-body");
+    			add_location(div33, file$6, 364, 4, 9900);
+    			attr_dev(button8, "type", "button");
+    			attr_dev(button8, "class", "btn btn-secondary");
+    			attr_dev(button8, "data-dismiss", "modal");
+    			add_location(button8, file$6, 368, 6, 10074);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "btn");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			set_style(button9, "background-color", "#c73834");
+    			set_style(button9, "color", "#fff");
+    			add_location(button9, file$6, 371, 6, 10183);
+    			attr_dev(div34, "class", "modal-footer");
+    			add_location(div34, file$6, 367, 4, 10040);
+    			attr_dev(div35, "class", "modal-content");
+    			add_location(div35, file$6, 352, 2, 9560);
+    			attr_dev(div36, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div36, "role", "document");
+    			add_location(div36, file$6, 351, 0, 9492);
+    			attr_dev(div37, "class", "modal fade");
+    			attr_dev(div37, "id", "deleteHO");
+    			attr_dev(div37, "tabindex", "-1");
+    			attr_dev(div37, "role", "dialog");
+    			attr_dev(div37, "aria-labelledby", "formDeleteHO");
+    			attr_dev(div37, "aria-hidden", "true");
+    			add_location(div37, file$6, 343, 0, 9354);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12256,21 +12916,21 @@ var app = (function () {
     			append_dev(div7, label0);
     			append_dev(div7, t19);
     			append_dev(div7, input0);
-    			set_input_value(input0, /*hostObject*/ ctx[3].name);
+    			set_input_value(input0, /*hostObject*/ ctx[4].name);
     			append_dev(form0, t20);
     			append_dev(form0, div10);
     			append_dev(div10, div9);
     			append_dev(div9, label1);
     			append_dev(div9, t22);
     			append_dev(div9, input1);
-    			set_input_value(input1, /*hostObject*/ ctx[3].ip);
+    			set_input_value(input1, /*hostObject*/ ctx[4].ip);
     			append_dev(form0, t23);
     			append_dev(form0, div12);
     			append_dev(div12, div11);
     			append_dev(div11, label2);
     			append_dev(div11, t25);
     			append_dev(div11, input2);
-    			set_input_value(input2, /*hostObject*/ ctx[3].description);
+    			set_input_value(input2, /*hostObject*/ ctx[4].description);
     			append_dev(div15, t26);
     			append_dev(div15, div14);
     			append_dev(div14, button2);
@@ -12320,6 +12980,28 @@ var app = (function () {
     			append_dev(div28, button5);
     			append_dev(div28, t48);
     			append_dev(div28, button6);
+    			insert_dev(target, t50, anchor);
+    			insert_dev(target, div37, anchor);
+    			append_dev(div37, div36);
+    			append_dev(div36, div35);
+    			append_dev(div35, div32);
+    			append_dev(div32, h52);
+    			append_dev(div32, t52);
+    			append_dev(div32, button7);
+    			append_dev(button7, span3);
+    			append_dev(div35, t54);
+    			append_dev(div35, div33);
+    			append_dev(div33, t55);
+    			append_dev(div33, strong);
+    			append_dev(strong, t56);
+    			append_dev(strong, t57);
+    			append_dev(strong, t58);
+    			append_dev(div33, t59);
+    			append_dev(div35, t60);
+    			append_dev(div35, div34);
+    			append_dev(div34, button8);
+    			append_dev(div34, t62);
+    			append_dev(div34, button9);
 
     			if (!mounted) {
     				dispose = [
@@ -12353,15 +13035,25 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[11]),
-    					listen_dev(button3, "click", /*createHostObject*/ ctx[4], false, false, false),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[12]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[13]),
-    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[14]),
-    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[15]),
-    					listen_dev(button6, "click", /*editHo*/ ctx[6], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[13]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[14]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[15]),
+    					listen_dev(button3, "click", /*createHostObject*/ ctx[5], false, false, false),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[16]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[17]),
+    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[18]),
+    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[19]),
+    					listen_dev(button6, "click", /*editHo*/ ctx[7], false, false, false),
+    					listen_dev(
+    						button9,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteHo*/ ctx[9](/*hoDelete*/ ctx[3].id))) /*deleteHo*/ ctx[9](/*hoDelete*/ ctx[3].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -12370,7 +13062,7 @@ var app = (function () {
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
 
-    			if (dirty & /*getHoToEdit, hostObjects*/ 33) {
+    			if (dirty & /*getHoToDelete, hostObjects, getHoToEdit*/ 321) {
     				each_value = /*hostObjects*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -12394,16 +13086,16 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty & /*hostObject*/ 8 && input0.value !== /*hostObject*/ ctx[3].name) {
-    				set_input_value(input0, /*hostObject*/ ctx[3].name);
+    			if (dirty & /*hostObject*/ 16 && input0.value !== /*hostObject*/ ctx[4].name) {
+    				set_input_value(input0, /*hostObject*/ ctx[4].name);
     			}
 
-    			if (dirty & /*hostObject*/ 8 && input1.value !== /*hostObject*/ ctx[3].ip) {
-    				set_input_value(input1, /*hostObject*/ ctx[3].ip);
+    			if (dirty & /*hostObject*/ 16 && input1.value !== /*hostObject*/ ctx[4].ip) {
+    				set_input_value(input1, /*hostObject*/ ctx[4].ip);
     			}
 
-    			if (dirty & /*hostObject*/ 8 && input2.value !== /*hostObject*/ ctx[3].description) {
-    				set_input_value(input2, /*hostObject*/ ctx[3].description);
+    			if (dirty & /*hostObject*/ 16 && input2.value !== /*hostObject*/ ctx[4].description) {
+    				set_input_value(input2, /*hostObject*/ ctx[4].description);
     			}
 
     			if (dirty & /*hoEdit*/ 4 && input3.value !== /*hoEdit*/ ctx[2].id) {
@@ -12421,6 +13113,8 @@ var app = (function () {
     			if (dirty & /*hoEdit*/ 4 && input6.value !== /*hoEdit*/ ctx[2].description) {
     				set_input_value(input6, /*hoEdit*/ ctx[2].description);
     			}
+
+    			if (dirty & /*hoDelete*/ 8 && t57_value !== (t57_value = /*hoDelete*/ ctx[3].name + "")) set_data_dev(t57, t57_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -12431,6 +13125,8 @@ var app = (function () {
     			if (detaching) detach_dev(div17);
     			if (detaching) detach_dev(t30);
     			if (detaching) detach_dev(div31);
+    			if (detaching) detach_dev(t50);
+    			if (detaching) detach_dev(div37);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -12462,6 +13158,8 @@ var app = (function () {
     		ip: null,
     		description: null
     	};
+
+    	let hoDelete = { id: null, name: null };
 
     	function getHostObjects() {
     		var config = {
@@ -12520,6 +13218,25 @@ var app = (function () {
     		});
     	}
 
+    	function getHoToDelete(hoD) {
+    		$$invalidate(3, hoDelete.id = hoD.id, hoDelete);
+    		$$invalidate(3, hoDelete.name = hoD.name, hoDelete);
+    	}
+
+    	function deleteHo(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$5 + "/host-object/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getHostObjects();
+    		}).catch(function (error) {
+    			alert("Could not delete Host Object");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -12528,20 +13245,21 @@ var app = (function () {
     	});
 
     	const click_handler = hostObject => getHoToEdit(hostObject);
+    	const click_handler_1 = hostObject => getHoToDelete(hostObject);
 
     	function input0_input_handler() {
     		hostObject.name = this.value;
-    		$$invalidate(3, hostObject);
+    		$$invalidate(4, hostObject);
     	}
 
     	function input1_input_handler() {
     		hostObject.ip = this.value;
-    		$$invalidate(3, hostObject);
+    		$$invalidate(4, hostObject);
     	}
 
     	function input2_input_handler() {
     		hostObject.description = this.value;
-    		$$invalidate(3, hostObject);
+    		$$invalidate(4, hostObject);
     	}
 
     	function input3_input_handler() {
@@ -12570,19 +13288,23 @@ var app = (function () {
     		hostObjects,
     		hostObject,
     		hoEdit,
+    		hoDelete,
     		getHostObjects,
     		createHostObject,
     		getHoToEdit,
     		editHo,
+    		getHoToDelete,
+    		deleteHo,
     		sortBy,
     		sort
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('hostObjects' in $$props) $$invalidate(0, hostObjects = $$props.hostObjects);
-    		if ('hostObject' in $$props) $$invalidate(3, hostObject = $$props.hostObject);
+    		if ('hostObject' in $$props) $$invalidate(4, hostObject = $$props.hostObject);
     		if ('hoEdit' in $$props) $$invalidate(2, hoEdit = $$props.hoEdit);
-    		if ('sortBy' in $$props) $$invalidate(7, sortBy = $$props.sortBy);
+    		if ('hoDelete' in $$props) $$invalidate(3, hoDelete = $$props.hoDelete);
+    		if ('sortBy' in $$props) $$invalidate(10, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -12591,13 +13313,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*sortBy, hostObjects*/ 129) {
+    		if ($$self.$$.dirty & /*sortBy, hostObjects*/ 1025) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(7, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(10, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(7, sortBy.col = column, sortBy);
-    					$$invalidate(7, sortBy.ascending = true, sortBy);
+    					$$invalidate(10, sortBy.col = column, sortBy);
+    					$$invalidate(10, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -12616,12 +13338,16 @@ var app = (function () {
     		hostObjects,
     		sort,
     		hoEdit,
+    		hoDelete,
     		hostObject,
     		createHostObject,
     		getHoToEdit,
     		editHo,
+    		getHoToDelete,
+    		deleteHo,
     		sortBy,
     		click_handler,
+    		click_handler_1,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
@@ -12653,41 +13379,46 @@ var app = (function () {
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
+    	child_ctx[5] = list[i];
     	return child_ctx;
     }
 
-    // (172:4) {#each visibleData as networkObject}
+    // (212:6) {#each visibleData as networkObject}
     function create_each_block$4(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*networkObject*/ ctx[4].name + "";
+    	let t0_value = /*networkObject*/ ctx[5].name + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*networkObject*/ ctx[4].ip + "";
+    	let t2_value = /*networkObject*/ ctx[5].ip + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*networkObject*/ ctx[4].subnet + "";
+    	let t4_value = /*networkObject*/ ctx[5].subnet + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*networkObject*/ ctx[4].description + "";
+    	let t6_value = /*networkObject*/ ctx[5].description + "";
     	let t6;
     	let t7;
     	let td4;
-    	let button;
+    	let button0;
     	let i0;
     	let t8;
     	let td5;
+    	let button1;
     	let i1;
     	let t9;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[11](/*networkObject*/ ctx[4]);
+    		return /*click_handler*/ ctx[14](/*networkObject*/ ctx[5]);
+    	}
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[15](/*networkObject*/ ctx[5]);
     	}
 
     	const block = {
@@ -12706,30 +13437,36 @@ var app = (function () {
     			t6 = text(t6_value);
     			t7 = space();
     			td4 = element("td");
-    			button = element("button");
+    			button0 = element("button");
     			i0 = element("i");
     			t8 = space();
     			td5 = element("td");
+    			button1 = element("button");
     			i1 = element("i");
     			t9 = space();
-    			add_location(td0, file$5, 173, 8, 4427);
-    			add_location(td1, file$5, 174, 8, 4466);
-    			add_location(td2, file$5, 175, 8, 4503);
-    			add_location(td3, file$5, 176, 8, 4544);
+    			add_location(td0, file$5, 213, 10, 5297);
+    			add_location(td1, file$5, 214, 10, 5338);
+    			add_location(td2, file$5, 215, 10, 5377);
+    			add_location(td3, file$5, 216, 10, 5420);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$5, 182, 11, 4784);
-    			set_style(button, "border", "none");
-    			set_style(button, "background", "none");
-    			attr_dev(button, "data-toggle", "modal");
-    			attr_dev(button, "data-target", "#editNO");
-    			add_location(button, file$5, 177, 12, 4594);
-    			add_location(td4, file$5, 177, 8, 4590);
+    			add_location(i0, file$5, 223, 15, 5696);
+    			set_style(button0, "border", "none");
+    			set_style(button0, "background", "none");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#editNO");
+    			add_location(button0, file$5, 218, 13, 5486);
+    			add_location(td4, file$5, 217, 10, 5468);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$5, 187, 14, 4921);
-    			add_location(td5, file$5, 187, 10, 4917);
-    			add_location(tr, file$5, 172, 6, 4413);
+    			add_location(i1, file$5, 235, 12, 6079);
+    			set_style(button1, "border", "none");
+    			set_style(button1, "background", "none");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#deleteNO");
+    			add_location(button1, file$5, 229, 14, 5861);
+    			add_location(td5, file$5, 229, 10, 5857);
+    			add_location(tr, file$5, 212, 8, 5281);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12746,29 +13483,34 @@ var app = (function () {
     			append_dev(td3, t6);
     			append_dev(tr, t7);
     			append_dev(tr, td4);
-    			append_dev(td4, button);
-    			append_dev(button, i0);
+    			append_dev(td4, button0);
+    			append_dev(button0, i0);
     			append_dev(tr, t8);
     			append_dev(tr, td5);
-    			append_dev(td5, i1);
+    			append_dev(td5, button1);
+    			append_dev(button1, i1);
     			append_dev(tr, t9);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler, false, false, false),
+    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*visibleData*/ 1 && t0_value !== (t0_value = /*networkObject*/ ctx[4].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*visibleData*/ 1 && t2_value !== (t2_value = /*networkObject*/ ctx[4].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*visibleData*/ 1 && t4_value !== (t4_value = /*networkObject*/ ctx[4].subnet + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*visibleData*/ 1 && t6_value !== (t6_value = /*networkObject*/ ctx[4].description + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*visibleData*/ 1 && t0_value !== (t0_value = /*networkObject*/ ctx[5].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*visibleData*/ 1 && t2_value !== (t2_value = /*networkObject*/ ctx[5].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*visibleData*/ 1 && t4_value !== (t4_value = /*networkObject*/ ctx[5].subnet + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*visibleData*/ 1 && t6_value !== (t6_value = /*networkObject*/ ctx[5].description + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -12776,7 +13518,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(172:4) {#each visibleData as networkObject}",
+    		source: "(212:6) {#each visibleData as networkObject}",
     		ctx
     	});
 
@@ -12916,6 +13658,29 @@ var app = (function () {
     	let button5;
     	let t60;
     	let button6;
+    	let t62;
+    	let div46;
+    	let div45;
+    	let div44;
+    	let div41;
+    	let h52;
+    	let t64;
+    	let button7;
+    	let span3;
+    	let t66;
+    	let div42;
+    	let t67;
+    	let strong;
+    	let t68;
+    	let t69_value = /*noDelete*/ ctx[4].name + "";
+    	let t69;
+    	let t70;
+    	let t71;
+    	let t72;
+    	let div43;
+    	let button8;
+    	let t74;
+    	let button9;
     	let mounted;
     	let dispose;
     	let each_value = /*visibleData*/ ctx[0];
@@ -12955,20 +13720,20 @@ var app = (function () {
     			thead = element("thead");
     			tr = element("tr");
     			th0 = element("th");
-    			t9 = text("Name  ");
+    			t9 = text("Name ");
     			span0 = element("span");
     			i0 = element("i");
     			t10 = space();
     			th1 = element("th");
-    			t11 = text("IP  ");
+    			t11 = text("IP ");
     			i1 = element("i");
     			t12 = space();
     			th2 = element("th");
-    			t13 = text("Subnet  ");
+    			t13 = text("Subnet ");
     			i2 = element("i");
     			t14 = space();
     			th3 = element("th");
-    			t15 = text("Description  ");
+    			t15 = text("Description ");
     			i3 = element("i");
     			t16 = space();
     			th4 = element("th");
@@ -13084,13 +13849,39 @@ var app = (function () {
     			t60 = space();
     			button6 = element("button");
     			button6.textContent = "Edit";
+    			t62 = space();
+    			div46 = element("div");
+    			div45 = element("div");
+    			div44 = element("div");
+    			div41 = element("div");
+    			h52 = element("h5");
+    			h52.textContent = "Delete Network-Object";
+    			t64 = space();
+    			button7 = element("button");
+    			span3 = element("span");
+    			span3.textContent = "×";
+    			t66 = space();
+    			div42 = element("div");
+    			t67 = text("Are you sure, that you want to delete this network object ");
+    			strong = element("strong");
+    			t68 = text("\"");
+    			t69 = text(t69_value);
+    			t70 = text("\"");
+    			t71 = text("?");
+    			t72 = space();
+    			div43 = element("div");
+    			button8 = element("button");
+    			button8.textContent = "Close";
+    			t74 = space();
+    			button9 = element("button");
+    			button9.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$5, 129, 6, 3009);
+    			add_location(h3, file$5, 158, 8, 3635);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$5, 128, 4, 2984);
+    			add_location(div0, file$5, 157, 6, 3608);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$5, 131, 4, 3096);
+    			add_location(div1, file$5, 160, 6, 3726);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -13098,240 +13889,279 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$5, 133, 6, 3178);
+    			add_location(button0, file$5, 162, 8, 3812);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$5, 132, 4, 3121);
+    			add_location(div2, file$5, 161, 6, 3753);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$5, 127, 2, 2961);
+    			add_location(div3, file$5, 156, 4, 3583);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "search");
     			attr_dev(input0, "type", "text");
     			set_style(input0, "margin-bottom", "10px");
     			attr_dev(input0, "placeholder", "search...");
-    			add_location(input0, file$5, 144, 2, 3474);
+    			add_location(input0, file$5, 174, 8, 4145);
     			attr_dev(div4, "class", "col");
-    			add_location(div4, file$5, 143, 4, 3453);
+    			add_location(div4, file$5, 173, 6, 4118);
     			attr_dev(div5, "class", "col");
-    			add_location(div5, file$5, 153, 0, 3648);
+    			add_location(div5, file$5, 183, 6, 4373);
     			attr_dev(div6, "class", "col");
-    			add_location(div6, file$5, 154, 0, 3668);
+    			add_location(div6, file$5, 184, 6, 4400);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$5, 155, 0, 3688);
+    			add_location(div7, file$5, 185, 6, 4427);
     			attr_dev(div8, "class", "row g-3");
-    			add_location(div8, file$5, 142, 2, 3426);
+    			add_location(div8, file$5, 172, 4, 4089);
     			attr_dev(div9, "class", "container-fluid");
-    			add_location(div9, file$5, 126, 0, 2928);
+    			add_location(div9, file$5, 155, 2, 3548);
     			attr_dev(i0, "class", "fa fa-fw fa-sort");
-    			add_location(i0, file$5, 162, 59, 3939);
-    			add_location(span0, file$5, 162, 28, 3908);
+    			add_location(i0, file$5, 194, 12, 4717);
+    			add_location(span0, file$5, 193, 16, 4673);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$5, 162, 6, 3886);
+    			add_location(th0, file$5, 192, 8, 4640);
     			attr_dev(i1, "class", "fa fa-fw fa-sort");
-    			add_location(i1, file$5, 163, 48, 4033);
+    			add_location(i1, file$5, 198, 14, 4844);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$5, 163, 6, 3991);
+    			add_location(th1, file$5, 197, 8, 4791);
     			attr_dev(i2, "class", "fa fa-fw fa-sort");
-    			add_location(i2, file$5, 164, 56, 4128);
+    			add_location(i2, file$5, 201, 18, 4960);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$5, 164, 6, 4078);
+    			add_location(th2, file$5, 200, 8, 4899);
     			attr_dev(i3, "class", "fa fa-fw fa-sort");
-    			add_location(i3, file$5, 165, 66, 4233);
+    			add_location(i3, file$5, 204, 23, 5086);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$5, 165, 6, 4173);
+    			add_location(th3, file$5, 203, 8, 5015);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$5, 166, 6, 4278);
+    			add_location(th4, file$5, 206, 8, 5141);
     			attr_dev(th5, "scope", "col");
-    			add_location(th5, file$5, 167, 6, 4308);
-    			add_location(tr, file$5, 160, 4, 3810);
-    			add_location(thead, file$5, 159, 2, 3797);
-    			add_location(tbody, file$5, 170, 2, 4356);
+    			add_location(th5, file$5, 207, 8, 5169);
+    			add_location(tr, file$5, 190, 6, 4560);
+    			add_location(thead, file$5, 189, 4, 4545);
+    			add_location(tbody, file$5, 210, 4, 5220);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allHostObjects");
-    			add_location(table, file$5, 158, 0, 3726);
+    			add_location(table, file$5, 188, 2, 4472);
     			set_style(div10, "margin-left", "-52px");
     			set_style(div10, "margin-right", "-52px");
-    			add_location(div10, file$5, 125, 0, 2872);
+    			add_location(div10, file$5, 154, 0, 3490);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "crateHostObject");
-    			add_location(h50, file$5, 197, 8, 5306);
+    			add_location(h50, file$5, 252, 8, 6490);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$5, 199, 10, 5472);
+    			add_location(span1, file$5, 259, 10, 6710);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$5, 198, 8, 5384);
+    			add_location(button1, file$5, 253, 8, 6568);
     			attr_dev(div11, "class", "modal-header");
-    			add_location(div11, file$5, 196, 6, 5270);
+    			add_location(div11, file$5, 251, 6, 6454);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$5, 206, 14, 5686);
+    			add_location(label0, file$5, 266, 14, 6924);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "name");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "placeholder", "N_<ZONE>_<NETZWERK-NAME>");
-    			add_location(input1, file$5, 207, 14, 5751);
+    			add_location(input1, file$5, 267, 14, 6989);
     			attr_dev(div12, "class", "col");
-    			add_location(div12, file$5, 205, 12, 5653);
+    			add_location(div12, file$5, 265, 12, 6891);
     			attr_dev(div13, "class", "row mb-3");
-    			add_location(div13, file$5, 204, 10, 5617);
+    			add_location(div13, file$5, 264, 10, 6855);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$5, 218, 14, 6093);
+    			add_location(label1, file$5, 278, 14, 7331);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "ip");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$5, 219, 14, 6154);
+    			add_location(input2, file$5, 279, 14, 7392);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$5, 217, 12, 6060);
+    			add_location(div14, file$5, 277, 12, 7298);
     			attr_dev(div15, "class", "row mb-3");
-    			add_location(div15, file$5, 216, 10, 6024);
+    			add_location(div15, file$5, 276, 10, 7262);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "subnet");
-    			add_location(label2, file$5, 229, 16, 6442);
+    			add_location(label2, file$5, 289, 14, 7674);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "subnet");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$5, 230, 16, 6513);
+    			add_location(input3, file$5, 290, 14, 7743);
     			attr_dev(div16, "class", "col");
-    			add_location(div16, file$5, 228, 14, 6407);
+    			add_location(div16, file$5, 288, 12, 7641);
     			attr_dev(div17, "class", "row mb-3");
-    			add_location(div17, file$5, 227, 12, 6369);
+    			add_location(div17, file$5, 287, 10, 7605);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "description");
-    			add_location(label3, file$5, 240, 14, 6821);
+    			add_location(label3, file$5, 300, 14, 8033);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "description");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$5, 241, 14, 6900);
+    			add_location(input4, file$5, 301, 14, 8112);
     			attr_dev(div18, "class", "col");
-    			add_location(div18, file$5, 239, 12, 6788);
+    			add_location(div18, file$5, 299, 12, 8000);
     			attr_dev(div19, "class", "row mb-3");
-    			add_location(div19, file$5, 238, 14, 6752);
+    			add_location(div19, file$5, 298, 10, 7964);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$5, 203, 8, 5586);
+    			add_location(form0, file$5, 263, 8, 6824);
     			attr_dev(div20, "class", "modal-body");
-    			add_location(div20, file$5, 202, 6, 5552);
+    			add_location(div20, file$5, 262, 6, 6790);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$5, 252, 8, 7194);
+    			add_location(button2, file$5, 312, 8, 8406);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
-    			add_location(button3, file$5, 253, 8, 7287);
+    			add_location(button3, file$5, 315, 8, 8521);
     			attr_dev(div21, "class", "modal-footer");
-    			add_location(div21, file$5, 251, 6, 7158);
+    			add_location(div21, file$5, 311, 6, 8370);
     			attr_dev(div22, "class", "modal-content");
-    			add_location(div22, file$5, 195, 4, 5235);
+    			add_location(div22, file$5, 250, 4, 6419);
     			attr_dev(div23, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div23, "role", "document");
-    			add_location(div23, file$5, 194, 2, 5165);
+    			add_location(div23, file$5, 249, 2, 6349);
     			attr_dev(div24, "class", "modal fade");
     			attr_dev(div24, "id", "crateHO");
     			attr_dev(div24, "tabindex", "-1");
     			attr_dev(div24, "role", "dialog");
     			attr_dev(div24, "aria-labelledby", "formCreateHostObject");
     			attr_dev(div24, "aria-hidden", "true");
-    			add_location(div24, file$5, 193, 0, 5038);
+    			add_location(div24, file$5, 241, 0, 6202);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editNetworkObject");
-    			add_location(h51, file$5, 270, 6, 7739);
+    			add_location(h51, file$5, 337, 8, 9035);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$5, 277, 8, 7948);
+    			add_location(span2, file$5, 344, 10, 9258);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "close");
     			attr_dev(button4, "data-dismiss", "modal");
     			attr_dev(button4, "aria-label", "Close");
-    			add_location(button4, file$5, 271, 6, 7818);
+    			add_location(button4, file$5, 338, 8, 9116);
     			attr_dev(div25, "class", "modal-header");
-    			add_location(div25, file$5, 269, 4, 7705);
+    			add_location(div25, file$5, 336, 6, 8999);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "id");
-    			add_location(label4, file$5, 284, 12, 8148);
+    			add_location(label4, file$5, 351, 14, 9472);
     			attr_dev(input5, "class", "form-control");
     			attr_dev(input5, "id", "id");
     			attr_dev(input5, "type", "text");
     			input5.disabled = true;
-    			add_location(input5, file$5, 285, 12, 8207);
+    			add_location(input5, file$5, 352, 14, 9533);
     			attr_dev(div26, "class", "col");
-    			add_location(div26, file$5, 283, 10, 8117);
+    			add_location(div26, file$5, 350, 12, 9439);
     			attr_dev(div27, "class", "row mb-3");
-    			add_location(div27, file$5, 282, 8, 8083);
+    			add_location(div27, file$5, 349, 10, 9403);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "name");
-    			add_location(label5, file$5, 296, 12, 8486);
+    			add_location(label5, file$5, 363, 14, 9834);
     			attr_dev(input6, "class", "form-control");
     			attr_dev(input6, "id", "name");
     			attr_dev(input6, "type", "text");
-    			add_location(input6, file$5, 297, 12, 8549);
+    			add_location(input6, file$5, 364, 14, 9899);
     			attr_dev(div28, "class", "col");
-    			add_location(div28, file$5, 295, 10, 8455);
+    			add_location(div28, file$5, 362, 12, 9801);
     			attr_dev(div29, "class", "row mb-3");
-    			add_location(div29, file$5, 294, 8, 8421);
+    			add_location(div29, file$5, 361, 10, 9765);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "ip");
-    			add_location(label6, file$5, 307, 12, 8808);
+    			add_location(label6, file$5, 374, 14, 10178);
     			attr_dev(input7, "class", "form-control");
     			attr_dev(input7, "id", "ip");
     			attr_dev(input7, "type", "text");
-    			add_location(input7, file$5, 310, 12, 8897);
+    			add_location(input7, file$5, 375, 14, 10240);
     			attr_dev(div30, "class", "col");
-    			add_location(div30, file$5, 306, 10, 8777);
+    			add_location(div30, file$5, 373, 12, 10145);
     			attr_dev(div31, "class", "row mb-3");
-    			add_location(div31, file$5, 305, 8, 8743);
+    			add_location(div31, file$5, 372, 10, 10109);
     			attr_dev(label7, "class", "form-label");
     			attr_dev(label7, "for", "subnet");
-    			add_location(label7, file$5, 320, 12, 9152);
+    			add_location(label7, file$5, 385, 14, 10515);
     			attr_dev(input8, "class", "form-control");
     			attr_dev(input8, "id", "ip");
     			attr_dev(input8, "type", "text");
-    			add_location(input8, file$5, 323, 12, 9249);
+    			add_location(input8, file$5, 386, 14, 10585);
     			attr_dev(div32, "class", "col");
-    			add_location(div32, file$5, 319, 10, 9121);
+    			add_location(div32, file$5, 384, 12, 10482);
     			attr_dev(div33, "class", "row mb-3");
-    			add_location(div33, file$5, 318, 8, 9087);
+    			add_location(div33, file$5, 383, 10, 10446);
     			attr_dev(label8, "class", "form-label");
     			attr_dev(label8, "for", "description");
-    			add_location(label8, file$5, 333, 12, 9508);
+    			add_location(label8, file$5, 396, 14, 10864);
     			attr_dev(input9, "class", "form-control");
     			attr_dev(input9, "id", "description");
     			attr_dev(input9, "type", "text");
-    			add_location(input9, file$5, 334, 12, 9585);
+    			add_location(input9, file$5, 397, 14, 10943);
     			attr_dev(div34, "class", "col");
-    			add_location(div34, file$5, 332, 10, 9477);
+    			add_location(div34, file$5, 395, 12, 10831);
     			attr_dev(div35, "class", "row mb-3");
-    			add_location(div35, file$5, 331, 8, 9443);
+    			add_location(div35, file$5, 394, 10, 10795);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$5, 281, 6, 8054);
+    			add_location(form1, file$5, 348, 8, 9372);
     			attr_dev(div36, "class", "modal-body");
-    			add_location(div36, file$5, 280, 4, 8022);
+    			add_location(div36, file$5, 347, 6, 9338);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary");
     			attr_dev(button5, "data-dismiss", "modal");
-    			add_location(button5, file$5, 345, 6, 9850);
+    			add_location(button5, file$5, 408, 8, 11230);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "#008000");
     			set_style(button6, "color", "#fff");
     			attr_dev(button6, "data-dismiss", "modal");
-    			add_location(button6, file$5, 348, 6, 9959);
+    			add_location(button6, file$5, 411, 8, 11345);
     			attr_dev(div37, "class", "modal-footer");
-    			add_location(div37, file$5, 344, 4, 9816);
+    			add_location(div37, file$5, 407, 6, 11194);
     			attr_dev(div38, "class", "modal-content");
-    			add_location(div38, file$5, 268, 2, 7672);
+    			add_location(div38, file$5, 335, 4, 8964);
     			attr_dev(div39, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div39, "role", "document");
-    			add_location(div39, file$5, 267, 0, 7604);
+    			add_location(div39, file$5, 334, 2, 8894);
     			attr_dev(div40, "class", "modal fade");
     			attr_dev(div40, "id", "editNO");
     			attr_dev(div40, "tabindex", "-1");
     			attr_dev(div40, "role", "dialog");
     			attr_dev(div40, "aria-labelledby", "formEditNetworkObject");
     			attr_dev(div40, "aria-hidden", "true");
-    			add_location(div40, file$5, 259, 0, 7459);
+    			add_location(div40, file$5, 326, 0, 8747);
+    			attr_dev(h52, "class", "modal-title");
+    			attr_dev(h52, "id", "deleteNO");
+    			add_location(h52, file$5, 435, 6, 11866);
+    			attr_dev(span3, "aria-hidden", "true");
+    			add_location(span3, file$5, 442, 8, 12068);
+    			attr_dev(button7, "type", "button");
+    			attr_dev(button7, "class", "close");
+    			attr_dev(button7, "data-dismiss", "modal");
+    			attr_dev(button7, "aria-label", "Close");
+    			add_location(button7, file$5, 436, 6, 11938);
+    			attr_dev(div41, "class", "modal-header");
+    			add_location(div41, file$5, 434, 4, 11832);
+    			add_location(strong, file$5, 446, 64, 12232);
+    			attr_dev(div42, "class", "modal-body");
+    			add_location(div42, file$5, 445, 4, 12142);
+    			attr_dev(button8, "type", "button");
+    			attr_dev(button8, "class", "btn btn-secondary");
+    			attr_dev(button8, "data-dismiss", "modal");
+    			add_location(button8, file$5, 449, 6, 12319);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "btn");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			set_style(button9, "background-color", "#c73834");
+    			set_style(button9, "color", "#fff");
+    			add_location(button9, file$5, 452, 6, 12428);
+    			attr_dev(div43, "class", "modal-footer");
+    			add_location(div43, file$5, 448, 4, 12285);
+    			attr_dev(div44, "class", "modal-content");
+    			add_location(div44, file$5, 433, 2, 11799);
+    			attr_dev(div45, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div45, "role", "document");
+    			add_location(div45, file$5, 432, 0, 11731);
+    			attr_dev(div46, "class", "modal fade");
+    			attr_dev(div46, "id", "deleteNO");
+    			attr_dev(div46, "tabindex", "-1");
+    			attr_dev(div46, "role", "dialog");
+    			attr_dev(div46, "aria-labelledby", "formDeleteNO");
+    			attr_dev(div46, "aria-hidden", "true");
+    			add_location(div46, file$5, 424, 0, 11593);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13406,28 +14236,28 @@ var app = (function () {
     			append_dev(div12, label0);
     			append_dev(div12, t25);
     			append_dev(div12, input1);
-    			set_input_value(input1, /*networkObject*/ ctx[4].name);
+    			set_input_value(input1, /*networkObject*/ ctx[5].name);
     			append_dev(form0, t26);
     			append_dev(form0, div15);
     			append_dev(div15, div14);
     			append_dev(div14, label1);
     			append_dev(div14, t28);
     			append_dev(div14, input2);
-    			set_input_value(input2, /*networkObject*/ ctx[4].ip);
+    			set_input_value(input2, /*networkObject*/ ctx[5].ip);
     			append_dev(form0, t29);
     			append_dev(form0, div17);
     			append_dev(div17, div16);
     			append_dev(div16, label2);
     			append_dev(div16, t31);
     			append_dev(div16, input3);
-    			set_input_value(input3, /*networkObject*/ ctx[4].subnet);
+    			set_input_value(input3, /*networkObject*/ ctx[5].subnet);
     			append_dev(form0, t32);
     			append_dev(form0, div19);
     			append_dev(div19, div18);
     			append_dev(div18, label3);
     			append_dev(div18, t34);
     			append_dev(div18, input4);
-    			set_input_value(input4, /*networkObject*/ ctx[4].description);
+    			set_input_value(input4, /*networkObject*/ ctx[5].description);
     			append_dev(div22, t35);
     			append_dev(div22, div21);
     			append_dev(div21, button2);
@@ -13484,10 +14314,32 @@ var app = (function () {
     			append_dev(div37, button5);
     			append_dev(div37, t60);
     			append_dev(div37, button6);
+    			insert_dev(target, t62, anchor);
+    			insert_dev(target, div46, anchor);
+    			append_dev(div46, div45);
+    			append_dev(div45, div44);
+    			append_dev(div44, div41);
+    			append_dev(div41, h52);
+    			append_dev(div41, t64);
+    			append_dev(div41, button7);
+    			append_dev(button7, span3);
+    			append_dev(div44, t66);
+    			append_dev(div44, div42);
+    			append_dev(div42, t67);
+    			append_dev(div42, strong);
+    			append_dev(strong, t68);
+    			append_dev(strong, t69);
+    			append_dev(strong, t70);
+    			append_dev(div42, t71);
+    			append_dev(div44, t72);
+    			append_dev(div44, div43);
+    			append_dev(div43, button8);
+    			append_dev(div43, t74);
+    			append_dev(div43, button9);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[13]),
     					listen_dev(
     						span0,
     						"click",
@@ -13528,17 +14380,27 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[12]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[13]),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[14]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[15]),
-    					listen_dev(button3, "click", /*createNetworkObject*/ ctx[5], false, false, false),
-    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[16]),
-    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[17]),
-    					listen_dev(input7, "input", /*input7_input_handler*/ ctx[18]),
-    					listen_dev(input8, "input", /*input8_input_handler*/ ctx[19]),
-    					listen_dev(input9, "input", /*input9_input_handler*/ ctx[20]),
-    					listen_dev(button6, "click", /*editNo*/ ctx[7], false, false, false)
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[16]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[17]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[18]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[19]),
+    					listen_dev(button3, "click", /*createNetworkObject*/ ctx[6], false, false, false),
+    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[20]),
+    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[21]),
+    					listen_dev(input7, "input", /*input7_input_handler*/ ctx[22]),
+    					listen_dev(input8, "input", /*input8_input_handler*/ ctx[23]),
+    					listen_dev(input9, "input", /*input9_input_handler*/ ctx[24]),
+    					listen_dev(button6, "click", /*editNo*/ ctx[8], false, false, false),
+    					listen_dev(
+    						button9,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteNo*/ ctx[10](/*noDelete*/ ctx[4].id))) /*deleteNo*/ ctx[10](/*noDelete*/ ctx[4].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -13551,7 +14413,7 @@ var app = (function () {
     				set_input_value(input0, /*searchText*/ ctx[1]);
     			}
 
-    			if (dirty & /*getNoToEdit, visibleData*/ 65) {
+    			if (dirty & /*getNoToDelete, visibleData, getNoToEdit*/ 641) {
     				each_value = /*visibleData*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -13575,20 +14437,20 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty & /*networkObject*/ 16 && input1.value !== /*networkObject*/ ctx[4].name) {
-    				set_input_value(input1, /*networkObject*/ ctx[4].name);
+    			if (dirty & /*networkObject*/ 32 && input1.value !== /*networkObject*/ ctx[5].name) {
+    				set_input_value(input1, /*networkObject*/ ctx[5].name);
     			}
 
-    			if (dirty & /*networkObject*/ 16 && input2.value !== /*networkObject*/ ctx[4].ip) {
-    				set_input_value(input2, /*networkObject*/ ctx[4].ip);
+    			if (dirty & /*networkObject*/ 32 && input2.value !== /*networkObject*/ ctx[5].ip) {
+    				set_input_value(input2, /*networkObject*/ ctx[5].ip);
     			}
 
-    			if (dirty & /*networkObject*/ 16 && input3.value !== /*networkObject*/ ctx[4].subnet) {
-    				set_input_value(input3, /*networkObject*/ ctx[4].subnet);
+    			if (dirty & /*networkObject*/ 32 && input3.value !== /*networkObject*/ ctx[5].subnet) {
+    				set_input_value(input3, /*networkObject*/ ctx[5].subnet);
     			}
 
-    			if (dirty & /*networkObject*/ 16 && input4.value !== /*networkObject*/ ctx[4].description) {
-    				set_input_value(input4, /*networkObject*/ ctx[4].description);
+    			if (dirty & /*networkObject*/ 32 && input4.value !== /*networkObject*/ ctx[5].description) {
+    				set_input_value(input4, /*networkObject*/ ctx[5].description);
     			}
 
     			if (dirty & /*noEdit*/ 8 && input5.value !== /*noEdit*/ ctx[3].id) {
@@ -13610,6 +14472,8 @@ var app = (function () {
     			if (dirty & /*noEdit*/ 8 && input9.value !== /*noEdit*/ ctx[3].description) {
     				set_input_value(input9, /*noEdit*/ ctx[3].description);
     			}
+
+    			if (dirty & /*noDelete*/ 16 && t69_value !== (t69_value = /*noDelete*/ ctx[4].name + "")) set_data_dev(t69, t69_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -13620,6 +14484,8 @@ var app = (function () {
     			if (detaching) detach_dev(div24);
     			if (detaching) detach_dev(t39);
     			if (detaching) detach_dev(div40);
+    			if (detaching) detach_dev(t62);
+    			if (detaching) detach_dev(div46);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -13662,6 +14528,8 @@ var app = (function () {
     		description: null
     	};
 
+    	let noDelete = { id: null, name: null };
+
     	function getNetworkObjects() {
     		var config = {
     			method: "get",
@@ -13670,7 +14538,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(8, networkObjects = response.data);
+    			$$invalidate(11, networkObjects = response.data);
     		}).catch(function (error) {
     			alert("Could not get Network Objects");
     			console.log(error);
@@ -13720,6 +14588,25 @@ var app = (function () {
     		});
     	}
 
+    	function getNoToDelete(noD) {
+    		$$invalidate(4, noDelete.id = noD.id, noDelete);
+    		$$invalidate(4, noDelete.name = noD.name, noDelete);
+    	}
+
+    	function deleteNo(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$4 + "/network-object/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getNetworkObjects();
+    		}).catch(function (error) {
+    			alert("Could not delete Network Object");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -13733,25 +14620,26 @@ var app = (function () {
     	}
 
     	const click_handler = networkObject => getNoToEdit(networkObject);
+    	const click_handler_1 = networkObject => getNoToDelete(networkObject);
 
     	function input1_input_handler() {
     		networkObject.name = this.value;
-    		$$invalidate(4, networkObject);
+    		$$invalidate(5, networkObject);
     	}
 
     	function input2_input_handler() {
     		networkObject.ip = this.value;
-    		$$invalidate(4, networkObject);
+    		$$invalidate(5, networkObject);
     	}
 
     	function input3_input_handler() {
     		networkObject.subnet = this.value;
-    		$$invalidate(4, networkObject);
+    		$$invalidate(5, networkObject);
     	}
 
     	function input4_input_handler() {
     		networkObject.description = this.value;
-    		$$invalidate(4, networkObject);
+    		$$invalidate(5, networkObject);
     	}
 
     	function input5_input_handler() {
@@ -13788,21 +14676,25 @@ var app = (function () {
     		visibleData,
     		searchText,
     		noEdit,
+    		noDelete,
     		getNetworkObjects,
     		createNetworkObject,
     		getNoToEdit,
     		editNo,
+    		getNoToDelete,
+    		deleteNo,
     		sortBy,
     		sort
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('networkObjects' in $$props) $$invalidate(8, networkObjects = $$props.networkObjects);
-    		if ('networkObject' in $$props) $$invalidate(4, networkObject = $$props.networkObject);
+    		if ('networkObjects' in $$props) $$invalidate(11, networkObjects = $$props.networkObjects);
+    		if ('networkObject' in $$props) $$invalidate(5, networkObject = $$props.networkObject);
     		if ('visibleData' in $$props) $$invalidate(0, visibleData = $$props.visibleData);
     		if ('searchText' in $$props) $$invalidate(1, searchText = $$props.searchText);
     		if ('noEdit' in $$props) $$invalidate(3, noEdit = $$props.noEdit);
-    		if ('sortBy' in $$props) $$invalidate(9, sortBy = $$props.sortBy);
+    		if ('noDelete' in $$props) $$invalidate(4, noDelete = $$props.noDelete);
+    		if ('sortBy' in $$props) $$invalidate(12, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(2, sort = $$props.sort);
     	};
 
@@ -13811,7 +14703,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*searchText, networkObjects*/ 258) {
+    		if ($$self.$$.dirty & /*searchText, networkObjects*/ 2050) {
     			{
     				$$invalidate(0, visibleData = searchText
     				? networkObjects.filter(e => {
@@ -13821,13 +14713,13 @@ var app = (function () {
     			}
     		}
 
-    		if ($$self.$$.dirty & /*sortBy, visibleData*/ 513) {
+    		if ($$self.$$.dirty & /*sortBy, visibleData*/ 4097) {
     			$$invalidate(2, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(9, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(12, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(9, sortBy.col = column, sortBy);
-    					$$invalidate(9, sortBy.ascending = true, sortBy);
+    					$$invalidate(12, sortBy.col = column, sortBy);
+    					$$invalidate(12, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -13847,14 +14739,18 @@ var app = (function () {
     		searchText,
     		sort,
     		noEdit,
+    		noDelete,
     		networkObject,
     		createNetworkObject,
     		getNoToEdit,
     		editNo,
+    		getNoToDelete,
+    		deleteNo,
     		networkObjects,
     		sortBy,
     		input0_input_handler,
     		click_handler,
+    		click_handler_1,
     		input1_input_handler,
     		input2_input_handler,
     		input3_input_handler,
@@ -13888,38 +14784,38 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[21] = list[i];
+    	child_ctx[25] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[21] = list[i];
+    	child_ctx[25] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[26] = list[i];
+    	child_ctx[30] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[29] = list[i];
+    	child_ctx[33] = list[i];
     	return child_ctx;
     }
 
-    // (188:8) {#each n1.members as member}
+    // (215:8) {#each n1.members as member}
     function create_each_block_3$1(ctx) {
     	let li0;
-    	let t0_value = /*member*/ ctx[29].name + "";
+    	let t0_value = /*member*/ ctx[33].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*member*/ ctx[29].ip + "";
+    	let t2_value = /*member*/ ctx[33].ip + "";
     	let t2;
-    	let t3_value = /*member*/ ctx[29].subnet + "";
+    	let t3_value = /*member*/ ctx[33].subnet + "";
     	let t3;
 
     	const block = {
@@ -13931,10 +14827,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text(t3_value);
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$4, 188, 8, 4529);
+    			add_location(li0, file$4, 215, 8, 5074);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$4, 189, 8, 4585);
+    			add_location(li1, file$4, 216, 8, 5130);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -13945,9 +14841,9 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*member*/ ctx[29].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*networkGroupObjects*/ 1 && t2_value !== (t2_value = /*member*/ ctx[29].ip + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*member*/ ctx[29].subnet + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*member*/ ctx[33].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*networkGroupObjects*/ 1 && t2_value !== (t2_value = /*member*/ ctx[33].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*member*/ ctx[33].subnet + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -13960,36 +14856,37 @@ var app = (function () {
     		block,
     		id: create_each_block_3$1.name,
     		type: "each",
-    		source: "(188:8) {#each n1.members as member}",
+    		source: "(215:8) {#each n1.members as member}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (184:4) {#each networkGroupObjects as n1}
+    // (211:4) {#each networkGroupObjects as n1}
     function create_each_block_2$1(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*n1*/ ctx[26].ngoName + "";
+    	let t0_value = /*n1*/ ctx[30].ngoName + "";
     	let t0;
     	let t1;
     	let td1;
     	let t2;
     	let td2;
-    	let t3_value = /*n1*/ ctx[26].ngoDescription + "";
+    	let t3_value = /*n1*/ ctx[30].ngoDescription + "";
     	let t3;
     	let t4;
     	let td3;
-    	let button;
+    	let button0;
     	let i0;
     	let t5;
     	let td4;
+    	let button1;
     	let i1;
     	let t6;
     	let mounted;
     	let dispose;
-    	let each_value_3 = /*n1*/ ctx[26].members;
+    	let each_value_3 = /*n1*/ ctx[30].members;
     	validate_each_argument(each_value_3);
     	let each_blocks = [];
 
@@ -13998,7 +14895,11 @@ var app = (function () {
     	}
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[10](/*n1*/ ctx[26]);
+    		return /*click_handler*/ ctx[13](/*n1*/ ctx[30]);
+    	}
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[14](/*n1*/ ctx[30]);
     	}
 
     	const block = {
@@ -14018,29 +14919,35 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			td3 = element("td");
-    			button = element("button");
+    			button0 = element("button");
     			i0 = element("i");
     			t5 = space();
     			td4 = element("td");
+    			button1 = element("button");
     			i1 = element("i");
     			t6 = space();
-    			add_location(td0, file$4, 185, 8, 4446);
-    			add_location(td1, file$4, 186, 8, 4477);
-    			add_location(td2, file$4, 192, 8, 4716);
+    			add_location(td0, file$4, 212, 8, 4991);
+    			add_location(td1, file$4, 213, 8, 5022);
+    			add_location(td2, file$4, 219, 8, 5261);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$4, 198, 11, 4939);
-    			set_style(button, "border", "none");
-    			set_style(button, "background", "none");
-    			attr_dev(button, "data-toggle", "modal");
-    			attr_dev(button, "data-target", "#editNGO");
-    			add_location(button, file$4, 193, 12, 4758);
-    			add_location(td3, file$4, 193, 8, 4754);
+    			add_location(i0, file$4, 225, 11, 5484);
+    			set_style(button0, "border", "none");
+    			set_style(button0, "background", "none");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#editNGO");
+    			add_location(button0, file$4, 220, 12, 5303);
+    			add_location(td3, file$4, 220, 8, 5299);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$4, 203, 14, 5076);
-    			add_location(td4, file$4, 203, 10, 5072);
-    			add_location(tr, file$4, 184, 6, 4432);
+    			add_location(i1, file$4, 236, 12, 5830);
+    			set_style(button1, "border", "none");
+    			set_style(button1, "background", "none");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#deleteNGO");
+    			add_location(button1, file$4, 230, 14, 5621);
+    			add_location(td4, file$4, 230, 10, 5617);
+    			add_location(tr, file$4, 211, 6, 4977);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -14058,24 +14965,29 @@ var app = (function () {
     			append_dev(td2, t3);
     			append_dev(tr, t4);
     			append_dev(tr, td3);
-    			append_dev(td3, button);
-    			append_dev(button, i0);
+    			append_dev(td3, button0);
+    			append_dev(button0, i0);
     			append_dev(tr, t5);
     			append_dev(tr, td4);
-    			append_dev(td4, i1);
+    			append_dev(td4, button1);
+    			append_dev(button1, i1);
     			append_dev(tr, t6);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler, false, false, false),
+    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*n1*/ ctx[26].ngoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*networkGroupObjects*/ 1 && t0_value !== (t0_value = /*n1*/ ctx[30].ngoName + "")) set_data_dev(t0, t0_value);
 
     			if (dirty[0] & /*networkGroupObjects*/ 1) {
-    				each_value_3 = /*n1*/ ctx[26].members;
+    				each_value_3 = /*n1*/ ctx[30].members;
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -14098,13 +15010,13 @@ var app = (function () {
     				each_blocks.length = each_value_3.length;
     			}
 
-    			if (dirty[0] & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*n1*/ ctx[26].ngoDescription + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*networkGroupObjects*/ 1 && t3_value !== (t3_value = /*n1*/ ctx[30].ngoDescription + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -14112,14 +15024,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(184:4) {#each networkGroupObjects as n1}",
+    		source: "(211:4) {#each networkGroupObjects as n1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (253:18) {#each networkObjects as n}
+    // (286:18) {#each networkObjects as n}
     function create_each_block_1$3(ctx) {
     	let label1;
     	let div;
@@ -14127,12 +15039,12 @@ var app = (function () {
     	let input_value_value;
     	let t0;
     	let label0;
-    	let t1_value = /*n*/ ctx[21].name + "";
+    	let t1_value = /*n*/ ctx[25].name + "";
     	let t1;
     	let t2;
-    	let t3_value = /*n*/ ctx[21].ip + "";
+    	let t3_value = /*n*/ ctx[25].ip + "";
     	let t3;
-    	let t4_value = /*n*/ ctx[21].subnet + "";
+    	let t4_value = /*n*/ ctx[25].subnet + "";
     	let t4;
     	let t5;
     	let mounted;
@@ -14154,17 +15066,17 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "role", "switch");
     			attr_dev(input, "id", "flexSwitchCheckDefault");
-    			input.__value = input_value_value = /*n*/ ctx[21].id;
+    			input.__value = input_value_value = /*n*/ ctx[25].id;
     			input.value = input.__value;
-    			/*$$binding_groups*/ ctx[14][0].push(input);
-    			add_location(input, file$4, 255, 24, 7427);
+    			/*$$binding_groups*/ ctx[18][0].push(input);
+    			add_location(input, file$4, 288, 24, 8179);
     			attr_dev(label0, "class", "form-check-label");
     			attr_dev(label0, "for", "flexSwitchCheckDefault");
-    			add_location(label0, file$4, 257, 24, 7606);
+    			add_location(label0, file$4, 290, 24, 8358);
     			attr_dev(div, "class", "form-check form-switch");
-    			add_location(div, file$4, 254, 22, 7365);
+    			add_location(div, file$4, 287, 22, 8117);
     			attr_dev(label1, "class", "list-group-item");
-    			add_location(label1, file$4, 253, 20, 7310);
+    			add_location(label1, file$4, 286, 20, 8062);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label1, anchor);
@@ -14180,12 +15092,12 @@ var app = (function () {
     			append_dev(label1, t5);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[13]);
+    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[17]);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkObjects*/ 32 && input_value_value !== (input_value_value = /*n*/ ctx[21].id)) {
+    			if (dirty[0] & /*networkObjects*/ 64 && input_value_value !== (input_value_value = /*n*/ ctx[25].id)) {
     				prop_dev(input, "__value", input_value_value);
     				input.value = input.__value;
     			}
@@ -14194,13 +15106,13 @@ var app = (function () {
     				input.checked = ~/*selection*/ ctx[4].indexOf(input.__value);
     			}
 
-    			if (dirty[0] & /*networkObjects*/ 32 && t1_value !== (t1_value = /*n*/ ctx[21].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*networkObjects*/ 32 && t3_value !== (t3_value = /*n*/ ctx[21].ip + "")) set_data_dev(t3, t3_value);
-    			if (dirty[0] & /*networkObjects*/ 32 && t4_value !== (t4_value = /*n*/ ctx[21].subnet + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*networkObjects*/ 64 && t1_value !== (t1_value = /*n*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*networkObjects*/ 64 && t3_value !== (t3_value = /*n*/ ctx[25].ip + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*networkObjects*/ 64 && t4_value !== (t4_value = /*n*/ ctx[25].subnet + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label1);
-    			/*$$binding_groups*/ ctx[14][0].splice(/*$$binding_groups*/ ctx[14][0].indexOf(input), 1);
+    			/*$$binding_groups*/ ctx[18][0].splice(/*$$binding_groups*/ ctx[18][0].indexOf(input), 1);
     			mounted = false;
     			dispose();
     		}
@@ -14210,14 +15122,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$3.name,
     		type: "each",
-    		source: "(253:18) {#each networkObjects as n}",
+    		source: "(286:18) {#each networkObjects as n}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (357:24) {#each networkObjects as n}
+    // (390:24) {#each networkObjects as n}
     function create_each_block$3(ctx) {
     	let label1;
     	let div;
@@ -14225,12 +15137,12 @@ var app = (function () {
     	let input_value_value;
     	let t0;
     	let label0;
-    	let t1_value = /*n*/ ctx[21].name + "";
+    	let t1_value = /*n*/ ctx[25].name + "";
     	let t1;
     	let t2;
-    	let t3_value = /*n*/ ctx[21].ip + "";
+    	let t3_value = /*n*/ ctx[25].ip + "";
     	let t3;
-    	let t4_value = /*n*/ ctx[21].subnet + "";
+    	let t4_value = /*n*/ ctx[25].subnet + "";
     	let t4;
     	let t5;
     	let mounted;
@@ -14252,17 +15164,17 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "role", "switch");
     			attr_dev(input, "id", "flexSwitchCheckDefault");
-    			input.__value = input_value_value = /*n*/ ctx[21].id;
+    			input.__value = input_value_value = /*n*/ ctx[25].id;
     			input.value = input.__value;
-    			/*$$binding_groups*/ ctx[14][0].push(input);
-    			add_location(input, file$4, 359, 30, 11132);
+    			/*$$binding_groups*/ ctx[18][0].push(input);
+    			add_location(input, file$4, 392, 30, 11884);
     			attr_dev(label0, "class", "form-check-label");
     			attr_dev(label0, "for", "flexSwitchCheckDefault");
-    			add_location(label0, file$4, 367, 30, 11521);
+    			add_location(label0, file$4, 400, 30, 12273);
     			attr_dev(div, "class", "form-check form-switch");
-    			add_location(div, file$4, 358, 28, 11064);
+    			add_location(div, file$4, 391, 28, 11816);
     			attr_dev(label1, "class", "list-group-item");
-    			add_location(label1, file$4, 357, 26, 11003);
+    			add_location(label1, file$4, 390, 26, 11755);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label1, anchor);
@@ -14278,12 +15190,12 @@ var app = (function () {
     			append_dev(label1, t5);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "change", /*input_change_handler_1*/ ctx[18]);
+    				dispose = listen_dev(input, "change", /*input_change_handler_1*/ ctx[22]);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*networkObjects*/ 32 && input_value_value !== (input_value_value = /*n*/ ctx[21].id)) {
+    			if (dirty[0] & /*networkObjects*/ 64 && input_value_value !== (input_value_value = /*n*/ ctx[25].id)) {
     				prop_dev(input, "__value", input_value_value);
     				input.value = input.__value;
     			}
@@ -14292,13 +15204,13 @@ var app = (function () {
     				input.checked = ~/*selection*/ ctx[4].indexOf(input.__value);
     			}
 
-    			if (dirty[0] & /*networkObjects*/ 32 && t1_value !== (t1_value = /*n*/ ctx[21].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*networkObjects*/ 32 && t3_value !== (t3_value = /*n*/ ctx[21].ip + "")) set_data_dev(t3, t3_value);
-    			if (dirty[0] & /*networkObjects*/ 32 && t4_value !== (t4_value = /*n*/ ctx[21].subnet + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*networkObjects*/ 64 && t1_value !== (t1_value = /*n*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*networkObjects*/ 64 && t3_value !== (t3_value = /*n*/ ctx[25].ip + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*networkObjects*/ 64 && t4_value !== (t4_value = /*n*/ ctx[25].subnet + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label1);
-    			/*$$binding_groups*/ ctx[14][0].splice(/*$$binding_groups*/ ctx[14][0].indexOf(input), 1);
+    			/*$$binding_groups*/ ctx[18][0].splice(/*$$binding_groups*/ ctx[18][0].indexOf(input), 1);
     			mounted = false;
     			dispose();
     		}
@@ -14308,7 +15220,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(357:24) {#each networkObjects as n}",
+    		source: "(390:24) {#each networkObjects as n}",
     		ctx
     	});
 
@@ -14428,6 +15340,29 @@ var app = (function () {
     	let button7;
     	let t52;
     	let button8;
+    	let t54;
+    	let div43;
+    	let div42;
+    	let div41;
+    	let div38;
+    	let h52;
+    	let t56;
+    	let button9;
+    	let span3;
+    	let t58;
+    	let div39;
+    	let t59;
+    	let strong;
+    	let t60;
+    	let t61_value = /*ngoDelete*/ ctx[5].name + "";
+    	let t61;
+    	let t62;
+    	let t63;
+    	let t64;
+    	let div40;
+    	let button10;
+    	let t66;
+    	let button11;
     	let mounted;
     	let dispose;
     	let each_value_2 = /*networkGroupObjects*/ ctx[0];
@@ -14438,7 +15373,7 @@ var app = (function () {
     		each_blocks_2[i] = create_each_block_2$1(get_each_context_2$1(ctx, each_value_2, i));
     	}
 
-    	let each_value_1 = /*networkObjects*/ ctx[5];
+    	let each_value_1 = /*networkObjects*/ ctx[6];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -14446,7 +15381,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*networkObjects*/ ctx[5];
+    	let each_value = /*networkObjects*/ ctx[6];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -14604,13 +15539,39 @@ var app = (function () {
     			t52 = space();
     			button8 = element("button");
     			button8.textContent = "Edit";
+    			t54 = space();
+    			div43 = element("div");
+    			div42 = element("div");
+    			div41 = element("div");
+    			div38 = element("div");
+    			h52 = element("h5");
+    			h52.textContent = "Delete Network-Group-Object";
+    			t56 = space();
+    			button9 = element("button");
+    			span3 = element("span");
+    			span3.textContent = "×";
+    			t58 = space();
+    			div39 = element("div");
+    			t59 = text("Are you sure, that you want to delete this network group object ");
+    			strong = element("strong");
+    			t60 = text("\"");
+    			t61 = text(t61_value);
+    			t62 = text("\"");
+    			t63 = text("?");
+    			t64 = space();
+    			div40 = element("div");
+    			button10 = element("button");
+    			button10.textContent = "Close";
+    			t66 = space();
+    			button11 = element("button");
+    			button11.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$4, 156, 6, 3457);
+    			add_location(h3, file$4, 183, 6, 4002);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$4, 155, 4, 3432);
+    			add_location(div0, file$4, 182, 4, 3977);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$4, 158, 4, 3550);
+    			add_location(div1, file$4, 185, 4, 4095);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -14618,75 +15579,75 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$4, 160, 6, 3632);
+    			add_location(button0, file$4, 187, 6, 4177);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$4, 159, 4, 3575);
+    			add_location(div2, file$4, 186, 4, 4120);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$4, 154, 2, 3409);
+    			add_location(div3, file$4, 181, 2, 3954);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$4, 153, 0, 3376);
+    			add_location(div4, file$4, 180, 0, 3921);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$4, 174, 61, 4107);
-    			add_location(span0, file$4, 174, 27, 4073);
+    			add_location(i, file$4, 201, 61, 4652);
+    			add_location(span0, file$4, 201, 27, 4618);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$4, 174, 6, 4052);
+    			add_location(th0, file$4, 201, 6, 4597);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$4, 176, 6, 4223);
+    			add_location(th1, file$4, 203, 6, 4768);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$4, 177, 6, 4259);
+    			add_location(th2, file$4, 204, 6, 4804);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$4, 178, 6, 4300);
+    			add_location(th3, file$4, 205, 6, 4845);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$4, 179, 6, 4330);
-    			add_location(tr, file$4, 172, 4, 3976);
-    			add_location(thead, file$4, 171, 2, 3963);
-    			add_location(tbody, file$4, 182, 2, 4378);
+    			add_location(th4, file$4, 206, 6, 4875);
+    			add_location(tr, file$4, 199, 4, 4521);
+    			add_location(thead, file$4, 198, 2, 4508);
+    			add_location(tbody, file$4, 209, 2, 4923);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allHostObjects");
-    			add_location(table, file$4, 170, 0, 3892);
+    			add_location(table, file$4, 197, 0, 4437);
     			set_style(div5, "margin-left", "-52px");
     			set_style(div5, "margin-right", "-52px");
-    			add_location(div5, file$4, 152, 0, 3320);
+    			add_location(div5, file$4, 179, 0, 3865);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "crateHostObject");
-    			add_location(h50, file$4, 213, 8, 5463);
+    			add_location(h50, file$4, 246, 8, 6215);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$4, 215, 10, 5635);
+    			add_location(span1, file$4, 248, 10, 6387);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$4, 214, 8, 5547);
+    			add_location(button1, file$4, 247, 8, 6299);
     			attr_dev(div6, "class", "modal-header");
-    			add_location(div6, file$4, 212, 6, 5427);
+    			add_location(div6, file$4, 245, 6, 6179);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$4, 222, 14, 5849);
+    			add_location(label0, file$4, 255, 14, 6601);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "NG_<ZONE>_<NETZWERK-ART>");
-    			add_location(input0, file$4, 223, 14, 5914);
+    			add_location(input0, file$4, 256, 14, 6666);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$4, 221, 12, 5816);
+    			add_location(div7, file$4, 254, 12, 6568);
     			attr_dev(div8, "class", "row mb-3");
-    			add_location(div8, file$4, 220, 10, 5780);
+    			add_location(div8, file$4, 253, 10, 6532);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "description");
-    			add_location(label1, file$4, 234, 14, 6261);
+    			add_location(label1, file$4, 267, 14, 7013);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "description");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$4, 235, 14, 6340);
+    			add_location(input1, file$4, 268, 14, 7092);
     			attr_dev(div9, "class", "col");
-    			add_location(div9, file$4, 233, 12, 6228);
+    			add_location(div9, file$4, 266, 12, 6980);
     			attr_dev(div10, "class", "row mb-3");
-    			add_location(div10, file$4, 232, 10, 6192);
+    			add_location(div10, file$4, 265, 10, 6944);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "membersId");
-    			add_location(label2, file$4, 245, 14, 6645);
-    			add_location(br0, file$4, 245, 71, 6702);
+    			add_location(label2, file$4, 278, 14, 7397);
+    			add_location(br0, file$4, 278, 71, 7454);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn");
     			set_style(button2, "background-color", "none");
@@ -14698,95 +15659,95 @@ var app = (function () {
     			attr_dev(button2, "data-target", "#collapseExample");
     			attr_dev(button2, "aria-expanded", "false");
     			attr_dev(button2, "aria-controls", "collapseExample");
-    			add_location(button2, file$4, 246, 14, 6722);
+    			add_location(button2, file$4, 279, 14, 7474);
     			attr_dev(div11, "class", "list-group");
     			set_style(div11, "width", "466px");
     			set_style(div11, "margin-left", "-16px");
     			set_style(div11, "margin-top", "-17px");
-    			add_location(div11, file$4, 251, 16, 7156);
+    			add_location(div11, file$4, 284, 16, 7908);
     			attr_dev(div12, "class", "card card-body");
     			set_style(div12, "border", "0");
-    			add_location(div12, file$4, 250, 14, 7091);
+    			add_location(div12, file$4, 283, 14, 7843);
     			attr_dev(div13, "class", "collapse");
     			attr_dev(div13, "id", "collapseExample");
-    			add_location(div13, file$4, 249, 12, 7032);
+    			add_location(div13, file$4, 282, 12, 7784);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$4, 244, 12, 6612);
+    			add_location(div14, file$4, 277, 12, 7364);
     			attr_dev(div15, "class", "row mb-3");
-    			add_location(div15, file$4, 243, 10, 6576);
+    			add_location(div15, file$4, 276, 10, 7328);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$4, 219, 8, 5749);
+    			add_location(form0, file$4, 252, 8, 6501);
     			attr_dev(div16, "class", "modal-body");
-    			add_location(div16, file$4, 218, 6, 5715);
+    			add_location(div16, file$4, 251, 6, 6467);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$4, 269, 8, 7971);
+    			add_location(button3, file$4, 302, 8, 8723);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn");
     			set_style(button4, "background-color", "#008000");
     			set_style(button4, "color", "#fff");
-    			add_location(button4, file$4, 270, 8, 8064);
+    			add_location(button4, file$4, 303, 8, 8816);
     			attr_dev(div17, "class", "modal-footer");
-    			add_location(div17, file$4, 268, 6, 7935);
+    			add_location(div17, file$4, 301, 6, 8687);
     			attr_dev(div18, "class", "modal-content");
-    			add_location(div18, file$4, 211, 4, 5392);
+    			add_location(div18, file$4, 244, 4, 6144);
     			attr_dev(div19, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div19, "role", "document");
-    			add_location(div19, file$4, 210, 2, 5322);
+    			add_location(div19, file$4, 243, 2, 6074);
     			attr_dev(div20, "class", "modal fade");
     			attr_dev(div20, "id", "crateHO");
     			attr_dev(div20, "tabindex", "-1");
     			attr_dev(div20, "role", "dialog");
     			attr_dev(div20, "aria-labelledby", "formCreateHostObject");
     			attr_dev(div20, "aria-hidden", "true");
-    			add_location(div20, file$4, 209, 0, 5195);
+    			add_location(div20, file$4, 242, 0, 5947);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editNetworkGroupObject");
-    			add_location(h51, file$4, 287, 8, 8535);
+    			add_location(h51, file$4, 320, 8, 9287);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$4, 296, 10, 8791);
+    			add_location(span2, file$4, 329, 10, 9543);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "close");
     			attr_dev(button5, "data-dismiss", "modal");
     			attr_dev(button5, "aria-label", "Close");
-    			add_location(button5, file$4, 290, 8, 8649);
+    			add_location(button5, file$4, 323, 8, 9401);
     			attr_dev(div21, "class", "modal-header");
-    			add_location(div21, file$4, 286, 6, 8499);
+    			add_location(div21, file$4, 319, 6, 9251);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "id");
-    			add_location(label3, file$4, 303, 14, 9005);
+    			add_location(label3, file$4, 336, 14, 9757);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "id");
     			attr_dev(input2, "type", "text");
     			input2.disabled = true;
-    			add_location(input2, file$4, 304, 14, 9066);
+    			add_location(input2, file$4, 337, 14, 9818);
     			attr_dev(div22, "class", "col");
-    			add_location(div22, file$4, 302, 12, 8972);
+    			add_location(div22, file$4, 335, 12, 9724);
     			attr_dev(div23, "class", "row mb-3");
-    			add_location(div23, file$4, 301, 10, 8936);
+    			add_location(div23, file$4, 334, 10, 9688);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "name");
-    			add_location(label4, file$4, 315, 14, 9368);
+    			add_location(label4, file$4, 348, 14, 10120);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "name");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$4, 316, 14, 9433);
+    			add_location(input3, file$4, 349, 14, 10185);
     			attr_dev(div24, "class", "col");
-    			add_location(div24, file$4, 314, 12, 9335);
+    			add_location(div24, file$4, 347, 12, 10087);
     			attr_dev(div25, "class", "row mb-3");
-    			add_location(div25, file$4, 313, 10, 9299);
+    			add_location(div25, file$4, 346, 10, 10051);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "description");
-    			add_location(label5, file$4, 327, 14, 9715);
+    			add_location(label5, file$4, 360, 14, 10467);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "description");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$4, 328, 14, 9794);
+    			add_location(input4, file$4, 361, 14, 10546);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "membersId");
-    			add_location(label6, file$4, 337, 18, 10064);
-    			add_location(br1, file$4, 337, 75, 10121);
+    			add_location(label6, file$4, 370, 18, 10816);
+    			add_location(br1, file$4, 370, 75, 10873);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "none");
@@ -14798,54 +15759,93 @@ var app = (function () {
     			attr_dev(button6, "data-target", "#edit");
     			attr_dev(button6, "aria-expanded", "false");
     			attr_dev(button6, "aria-controls", "edit");
-    			add_location(button6, file$4, 339, 18, 10166);
+    			add_location(button6, file$4, 372, 18, 10918);
     			attr_dev(div26, "class", "list-group");
     			set_style(div26, "width", "466px");
     			set_style(div26, "margin-left", "-16px");
     			set_style(div26, "margin-top", "-17px");
-    			add_location(div26, file$4, 352, 22, 10763);
+    			add_location(div26, file$4, 385, 22, 11515);
     			attr_dev(div27, "class", "card card-body");
     			set_style(div27, "border", "0");
-    			add_location(div27, file$4, 351, 20, 10692);
+    			add_location(div27, file$4, 384, 20, 11444);
     			attr_dev(div28, "class", "collapse");
     			attr_dev(div28, "id", "edit");
-    			add_location(div28, file$4, 350, 18, 10638);
+    			add_location(div28, file$4, 383, 18, 11390);
     			attr_dev(div29, "class", "col");
-    			add_location(div29, file$4, 336, 16, 10027);
+    			add_location(div29, file$4, 369, 16, 10779);
     			attr_dev(div30, "class", "row mb-3");
-    			add_location(div30, file$4, 335, 14, 9987);
+    			add_location(div30, file$4, 368, 14, 10739);
     			attr_dev(div31, "class", "col");
-    			add_location(div31, file$4, 326, 12, 9682);
+    			add_location(div31, file$4, 359, 12, 10434);
     			attr_dev(div32, "class", "row mb-3");
-    			add_location(div32, file$4, 325, 10, 9646);
+    			add_location(div32, file$4, 358, 10, 10398);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$4, 300, 8, 8905);
+    			add_location(form1, file$4, 333, 8, 9657);
     			attr_dev(div33, "class", "modal-body");
-    			add_location(div33, file$4, 299, 6, 8871);
+    			add_location(div33, file$4, 332, 6, 9623);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "btn btn-secondary");
     			attr_dev(button7, "data-dismiss", "modal");
-    			add_location(button7, file$4, 385, 8, 12098);
+    			add_location(button7, file$4, 418, 8, 12850);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn");
     			set_style(button8, "background-color", "#008000");
     			set_style(button8, "color", "#fff");
     			attr_dev(button8, "data-dismiss", "modal");
-    			add_location(button8, file$4, 388, 8, 12213);
+    			add_location(button8, file$4, 421, 8, 12965);
     			attr_dev(div34, "class", "modal-footer");
-    			add_location(div34, file$4, 384, 6, 12062);
+    			add_location(div34, file$4, 417, 6, 12814);
     			attr_dev(div35, "class", "modal-content");
-    			add_location(div35, file$4, 285, 4, 8464);
+    			add_location(div35, file$4, 318, 4, 9216);
     			attr_dev(div36, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div36, "role", "document");
-    			add_location(div36, file$4, 284, 2, 8394);
+    			add_location(div36, file$4, 317, 2, 9146);
     			attr_dev(div37, "class", "modal fade");
     			attr_dev(div37, "id", "editNGO");
     			attr_dev(div37, "tabindex", "-1");
     			attr_dev(div37, "role", "dialog");
     			attr_dev(div37, "aria-labelledby", "formEditNetworkGroupObject");
     			attr_dev(div37, "aria-hidden", "true");
-    			add_location(div37, file$4, 276, 0, 8241);
+    			add_location(div37, file$4, 309, 0, 8993);
+    			attr_dev(h52, "class", "modal-title");
+    			attr_dev(h52, "id", "deleteNGO");
+    			add_location(h52, file$4, 444, 6, 13487);
+    			attr_dev(span3, "aria-hidden", "true");
+    			add_location(span3, file$4, 451, 8, 13696);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "close");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			attr_dev(button9, "aria-label", "Close");
+    			add_location(button9, file$4, 445, 6, 13566);
+    			attr_dev(div38, "class", "modal-header");
+    			add_location(div38, file$4, 443, 4, 13453);
+    			add_location(strong, file$4, 455, 70, 13866);
+    			attr_dev(div39, "class", "modal-body");
+    			add_location(div39, file$4, 454, 4, 13770);
+    			attr_dev(button10, "type", "button");
+    			attr_dev(button10, "class", "btn btn-secondary");
+    			attr_dev(button10, "data-dismiss", "modal");
+    			add_location(button10, file$4, 458, 6, 13954);
+    			attr_dev(button11, "type", "button");
+    			attr_dev(button11, "class", "btn");
+    			attr_dev(button11, "data-dismiss", "modal");
+    			set_style(button11, "background-color", "#c73834");
+    			set_style(button11, "color", "#fff");
+    			add_location(button11, file$4, 461, 6, 14063);
+    			attr_dev(div40, "class", "modal-footer");
+    			add_location(div40, file$4, 457, 4, 13920);
+    			attr_dev(div41, "class", "modal-content");
+    			add_location(div41, file$4, 442, 2, 13420);
+    			attr_dev(div42, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div42, "role", "document");
+    			add_location(div42, file$4, 441, 0, 13352);
+    			attr_dev(div43, "class", "modal fade");
+    			attr_dev(div43, "id", "deleteNGO");
+    			attr_dev(div43, "tabindex", "-1");
+    			attr_dev(div43, "role", "dialog");
+    			attr_dev(div43, "aria-labelledby", "formDeleteNGO");
+    			attr_dev(div43, "aria-hidden", "true");
+    			add_location(div43, file$4, 433, 0, 13212);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14983,6 +15983,28 @@ var app = (function () {
     			append_dev(div34, button7);
     			append_dev(div34, t52);
     			append_dev(div34, button8);
+    			insert_dev(target, t54, anchor);
+    			insert_dev(target, div43, anchor);
+    			append_dev(div43, div42);
+    			append_dev(div42, div41);
+    			append_dev(div41, div38);
+    			append_dev(div38, h52);
+    			append_dev(div38, t56);
+    			append_dev(div38, button9);
+    			append_dev(button9, span3);
+    			append_dev(div41, t58);
+    			append_dev(div41, div39);
+    			append_dev(div39, t59);
+    			append_dev(div39, strong);
+    			append_dev(strong, t60);
+    			append_dev(strong, t61);
+    			append_dev(strong, t62);
+    			append_dev(div39, t63);
+    			append_dev(div41, t64);
+    			append_dev(div41, div40);
+    			append_dev(div40, button10);
+    			append_dev(div40, t66);
+    			append_dev(div40, button11);
 
     			if (!mounted) {
     				dispose = [
@@ -14996,13 +16018,23 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[11]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[12]),
-    					listen_dev(button4, "click", /*createNetworkGroupObject*/ ctx[6], false, false, false),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[15]),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[16]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[17]),
-    					listen_dev(button8, "click", /*editNgo*/ ctx[8], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[15]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[16]),
+    					listen_dev(button4, "click", /*createNetworkGroupObject*/ ctx[7], false, false, false),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[19]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[20]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[21]),
+    					listen_dev(button8, "click", /*editNgo*/ ctx[9], false, false, false),
+    					listen_dev(
+    						button11,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteNgo*/ ctx[11](/*ngoDelete*/ ctx[5].id))) /*deleteNgo*/ ctx[11](/*ngoDelete*/ ctx[5].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -15011,7 +16043,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*getNgoToEdit, networkGroupObjects*/ 129) {
+    			if (dirty[0] & /*getNgoToDelete, networkGroupObjects, getNgoToEdit*/ 1281) {
     				each_value_2 = /*networkGroupObjects*/ ctx[0];
     				validate_each_argument(each_value_2);
     				let i;
@@ -15043,8 +16075,8 @@ var app = (function () {
     				set_input_value(input1, /*networkGroupObject*/ ctx[2].description);
     			}
 
-    			if (dirty[0] & /*networkObjects, selection*/ 48) {
-    				each_value_1 = /*networkObjects*/ ctx[5];
+    			if (dirty[0] & /*networkObjects, selection*/ 80) {
+    				each_value_1 = /*networkObjects*/ ctx[6];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -15079,8 +16111,8 @@ var app = (function () {
     				set_input_value(input4, /*ngoEdit*/ ctx[3].description);
     			}
 
-    			if (dirty[0] & /*networkObjects, selection*/ 48) {
-    				each_value = /*networkObjects*/ ctx[5];
+    			if (dirty[0] & /*networkObjects, selection*/ 80) {
+    				each_value = /*networkObjects*/ ctx[6];
     				validate_each_argument(each_value);
     				let i;
 
@@ -15102,6 +16134,8 @@ var app = (function () {
 
     				each_blocks.length = each_value.length;
     			}
+
+    			if (dirty[0] & /*ngoDelete*/ 32 && t61_value !== (t61_value = /*ngoDelete*/ ctx[5].name + "")) set_data_dev(t61, t61_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -15114,6 +16148,8 @@ var app = (function () {
     			if (detaching) detach_dev(t32);
     			if (detaching) detach_dev(div37);
     			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t54);
+    			if (detaching) detach_dev(div43);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -15152,6 +16188,7 @@ var app = (function () {
     	};
 
     	let selection = [];
+    	let ngoDelete = { id: null, name: null };
 
     	function getNetworkGroupObjects() {
     		var config = {
@@ -15205,7 +16242,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(5, networkObjects = response.data);
+    			$$invalidate(6, networkObjects = response.data);
     		}).catch(function (error) {
     			alert("Could not get Network Objects");
     			console.log(error);
@@ -15241,6 +16278,25 @@ var app = (function () {
     		});
     	}
 
+    	function getNgoToDelete(ngoD) {
+    		$$invalidate(5, ngoDelete.id = ngoD.ngoId, ngoDelete);
+    		$$invalidate(5, ngoDelete.name = ngoD.ngoName, ngoDelete);
+    	}
+
+    	function deleteNgo(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$3 + "/network-group-object/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getNetworkGroupObjects();
+    		}).catch(function (error) {
+    			alert("Could not delete Network Group Object");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -15250,6 +16306,7 @@ var app = (function () {
 
     	const $$binding_groups = [[]];
     	const click_handler = n1 => getNgoToEdit(n1);
+    	const click_handler_1 = n1 => getNgoToDelete(n1);
 
     	function input0_input_handler() {
     		networkGroupObject.name = this.value;
@@ -15293,12 +16350,15 @@ var app = (function () {
     		networkGroupObject,
     		ngoEdit,
     		selection,
+    		ngoDelete,
     		getNetworkGroupObjects,
     		createNetworkGroupObject,
     		networkObjects,
     		getNetworkObjects,
     		getNgoToEdit,
     		editNgo,
+    		getNgoToDelete,
+    		deleteNgo,
     		sortBy,
     		sort
     	});
@@ -15308,8 +16368,9 @@ var app = (function () {
     		if ('networkGroupObject' in $$props) $$invalidate(2, networkGroupObject = $$props.networkGroupObject);
     		if ('ngoEdit' in $$props) $$invalidate(3, ngoEdit = $$props.ngoEdit);
     		if ('selection' in $$props) $$invalidate(4, selection = $$props.selection);
-    		if ('networkObjects' in $$props) $$invalidate(5, networkObjects = $$props.networkObjects);
-    		if ('sortBy' in $$props) $$invalidate(9, sortBy = $$props.sortBy);
+    		if ('ngoDelete' in $$props) $$invalidate(5, ngoDelete = $$props.ngoDelete);
+    		if ('networkObjects' in $$props) $$invalidate(6, networkObjects = $$props.networkObjects);
+    		if ('sortBy' in $$props) $$invalidate(12, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -15318,13 +16379,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*sortBy, networkGroupObjects*/ 513) {
+    		if ($$self.$$.dirty[0] & /*sortBy, networkGroupObjects*/ 4097) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(9, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(12, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(9, sortBy.col = column, sortBy);
-    					$$invalidate(9, sortBy.ascending = true, sortBy);
+    					$$invalidate(12, sortBy.col = column, sortBy);
+    					$$invalidate(12, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -15345,12 +16406,16 @@ var app = (function () {
     		networkGroupObject,
     		ngoEdit,
     		selection,
+    		ngoDelete,
     		networkObjects,
     		createNetworkGroupObject,
     		getNgoToEdit,
     		editNgo,
+    		getNgoToDelete,
+    		deleteNgo,
     		sortBy,
     		click_handler,
+    		click_handler_1,
     		input0_input_handler,
     		input1_input_handler,
     		input_change_handler,
@@ -15383,36 +16448,36 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[21] = list[i];
+    	child_ctx[25] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[21] = list[i];
+    	child_ctx[25] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[26] = list[i];
+    	child_ctx[30] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[29] = list[i];
+    	child_ctx[33] = list[i];
     	return child_ctx;
     }
 
-    // (188:10) {#each h1.members as member}
+    // (214:10) {#each h1.members as member}
     function create_each_block_3(ctx) {
     	let li0;
-    	let t0_value = /*member*/ ctx[29].name + "";
+    	let t0_value = /*member*/ ctx[33].name + "";
     	let t0;
     	let t1;
     	let li1;
-    	let t2_value = /*member*/ ctx[29].ip + "";
+    	let t2_value = /*member*/ ctx[33].ip + "";
     	let t2;
     	let t3;
 
@@ -15425,10 +16490,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(li0, "class", "list-group-item");
-    			add_location(li0, file$3, 188, 12, 4554);
+    			add_location(li0, file$3, 214, 12, 5088);
     			attr_dev(li1, "class", "list-group-item");
     			set_style(li1, "font-style", "italic");
-    			add_location(li1, file$3, 189, 12, 4614);
+    			add_location(li1, file$3, 215, 12, 5148);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -15439,8 +16504,8 @@ var app = (function () {
     			append_dev(li1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostGroupObjects*/ 1 && t0_value !== (t0_value = /*member*/ ctx[29].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*hostGroupObjects*/ 1 && t2_value !== (t2_value = /*member*/ ctx[29].ip + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*hostGroupObjects*/ 1 && t0_value !== (t0_value = /*member*/ ctx[33].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*hostGroupObjects*/ 1 && t2_value !== (t2_value = /*member*/ ctx[33].ip + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li0);
@@ -15453,36 +16518,37 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(188:10) {#each h1.members as member}",
+    		source: "(214:10) {#each h1.members as member}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (185:4) {#each hostGroupObjects as h1}
+    // (211:4) {#each hostGroupObjects as h1}
     function create_each_block_2(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*h1*/ ctx[26].hgoName + "";
+    	let t0_value = /*h1*/ ctx[30].hgoName + "";
     	let t0;
     	let t1;
     	let td1;
     	let t2;
     	let td2;
-    	let t3_value = /*h1*/ ctx[26].hgoDescription + "";
+    	let t3_value = /*h1*/ ctx[30].hgoDescription + "";
     	let t3;
     	let t4;
     	let td3;
-    	let button;
+    	let button0;
     	let i0;
     	let t5;
     	let td4;
+    	let button1;
     	let i1;
     	let t6;
     	let mounted;
     	let dispose;
-    	let each_value_3 = /*h1*/ ctx[26].members;
+    	let each_value_3 = /*h1*/ ctx[30].members;
     	validate_each_argument(each_value_3);
     	let each_blocks = [];
 
@@ -15491,7 +16557,11 @@ var app = (function () {
     	}
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[10](/*h1*/ ctx[26]);
+    		return /*click_handler*/ ctx[13](/*h1*/ ctx[30]);
+    	}
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[14](/*h1*/ ctx[30]);
     	}
 
     	const block = {
@@ -15511,29 +16581,35 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			td3 = element("td");
-    			button = element("button");
+    			button0 = element("button");
     			i0 = element("i");
     			t5 = space();
     			td4 = element("td");
+    			button1 = element("button");
     			i1 = element("i");
     			t6 = space();
-    			add_location(td0, file$3, 186, 8, 4474);
-    			add_location(td1, file$3, 186, 30, 4496);
-    			add_location(td2, file$3, 194, 8, 4760);
+    			add_location(td0, file$3, 212, 8, 5008);
+    			add_location(td1, file$3, 212, 30, 5030);
+    			add_location(td2, file$3, 220, 8, 5294);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$3, 201, 13, 5005);
-    			set_style(button, "border", "none");
-    			set_style(button, "background", "none");
-    			attr_dev(button, "data-toggle", "modal");
-    			attr_dev(button, "data-target", "#editHGO");
-    			add_location(button, file$3, 196, 11, 4814);
-    			add_location(td3, file$3, 195, 8, 4798);
+    			add_location(i0, file$3, 227, 13, 5539);
+    			set_style(button0, "border", "none");
+    			set_style(button0, "background", "none");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#editHGO");
+    			add_location(button0, file$3, 222, 11, 5348);
+    			add_location(td3, file$3, 221, 8, 5332);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$3, 207, 12, 5158);
-    			add_location(td4, file$3, 207, 8, 5154);
-    			add_location(tr, file$3, 185, 6, 4460);
+    			add_location(i1, file$3, 239, 10, 5889);
+    			set_style(button1, "border", "none");
+    			set_style(button1, "background", "none");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#deleteHGO");
+    			add_location(button1, file$3, 233, 12, 5692);
+    			add_location(td4, file$3, 233, 8, 5688);
+    			add_location(tr, file$3, 211, 6, 4994);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -15551,24 +16627,29 @@ var app = (function () {
     			append_dev(td2, t3);
     			append_dev(tr, t4);
     			append_dev(tr, td3);
-    			append_dev(td3, button);
-    			append_dev(button, i0);
+    			append_dev(td3, button0);
+    			append_dev(button0, i0);
     			append_dev(tr, t5);
     			append_dev(tr, td4);
-    			append_dev(td4, i1);
+    			append_dev(td4, button1);
+    			append_dev(button1, i1);
     			append_dev(tr, t6);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler, false, false, false),
+    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*hostGroupObjects*/ 1 && t0_value !== (t0_value = /*h1*/ ctx[26].hgoName + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*hostGroupObjects*/ 1 && t0_value !== (t0_value = /*h1*/ ctx[30].hgoName + "")) set_data_dev(t0, t0_value);
 
     			if (dirty[0] & /*hostGroupObjects*/ 1) {
-    				each_value_3 = /*h1*/ ctx[26].members;
+    				each_value_3 = /*h1*/ ctx[30].members;
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -15591,13 +16672,13 @@ var app = (function () {
     				each_blocks.length = each_value_3.length;
     			}
 
-    			if (dirty[0] & /*hostGroupObjects*/ 1 && t3_value !== (t3_value = /*h1*/ ctx[26].hgoDescription + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*hostGroupObjects*/ 1 && t3_value !== (t3_value = /*h1*/ ctx[30].hgoDescription + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -15605,14 +16686,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(185:4) {#each hostGroupObjects as h1}",
+    		source: "(211:4) {#each hostGroupObjects as h1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (281:20) {#each hostObjects as h}
+    // (313:20) {#each hostObjects as h}
     function create_each_block_1$2(ctx) {
     	let label1;
     	let div;
@@ -15620,10 +16701,10 @@ var app = (function () {
     	let input_value_value;
     	let t0;
     	let label0;
-    	let t1_value = /*h*/ ctx[21].name + "";
+    	let t1_value = /*h*/ ctx[25].name + "";
     	let t1;
     	let t2;
-    	let t3_value = /*h*/ ctx[21].ip + "";
+    	let t3_value = /*h*/ ctx[25].ip + "";
     	let t3;
     	let t4;
     	let mounted;
@@ -15644,17 +16725,17 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "role", "switch");
     			attr_dev(input, "id", "flexSwitchCheckDefault");
-    			input.__value = input_value_value = /*h*/ ctx[21].id;
+    			input.__value = input_value_value = /*h*/ ctx[25].id;
     			input.value = input.__value;
-    			/*$$binding_groups*/ ctx[14][0].push(input);
-    			add_location(input, file$3, 283, 26, 7783);
+    			/*$$binding_groups*/ ctx[18][0].push(input);
+    			add_location(input, file$3, 315, 26, 8514);
     			attr_dev(label0, "class", "form-check-label");
     			attr_dev(label0, "for", "flexSwitchCheckDefault");
-    			add_location(label0, file$3, 291, 26, 8140);
+    			add_location(label0, file$3, 323, 26, 8871);
     			attr_dev(div, "class", "form-check form-switch");
-    			add_location(div, file$3, 282, 24, 7719);
+    			add_location(div, file$3, 314, 24, 8450);
     			attr_dev(label1, "class", "list-group-item");
-    			add_location(label1, file$3, 281, 22, 7662);
+    			add_location(label1, file$3, 313, 22, 8393);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label1, anchor);
@@ -15669,12 +16750,12 @@ var app = (function () {
     			append_dev(label1, t4);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[13]);
+    				dispose = listen_dev(input, "change", /*input_change_handler*/ ctx[17]);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostObjects*/ 32 && input_value_value !== (input_value_value = /*h*/ ctx[21].id)) {
+    			if (dirty[0] & /*hostObjects*/ 64 && input_value_value !== (input_value_value = /*h*/ ctx[25].id)) {
     				prop_dev(input, "__value", input_value_value);
     				input.value = input.__value;
     			}
@@ -15683,12 +16764,12 @@ var app = (function () {
     				input.checked = ~/*selection*/ ctx[4].indexOf(input.__value);
     			}
 
-    			if (dirty[0] & /*hostObjects*/ 32 && t1_value !== (t1_value = /*h*/ ctx[21].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*hostObjects*/ 32 && t3_value !== (t3_value = /*h*/ ctx[21].ip + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*hostObjects*/ 64 && t1_value !== (t1_value = /*h*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*hostObjects*/ 64 && t3_value !== (t3_value = /*h*/ ctx[25].ip + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label1);
-    			/*$$binding_groups*/ ctx[14][0].splice(/*$$binding_groups*/ ctx[14][0].indexOf(input), 1);
+    			/*$$binding_groups*/ ctx[18][0].splice(/*$$binding_groups*/ ctx[18][0].indexOf(input), 1);
     			mounted = false;
     			dispose();
     		}
@@ -15698,14 +16779,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$2.name,
     		type: "each",
-    		source: "(281:20) {#each hostObjects as h}",
+    		source: "(313:20) {#each hostObjects as h}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (402:24) {#each hostObjects as h}
+    // (434:24) {#each hostObjects as h}
     function create_each_block$2(ctx) {
     	let label1;
     	let div;
@@ -15713,10 +16794,10 @@ var app = (function () {
     	let input_value_value;
     	let t0;
     	let label0;
-    	let t1_value = /*h*/ ctx[21].name + "";
+    	let t1_value = /*h*/ ctx[25].name + "";
     	let t1;
     	let t2;
-    	let t3_value = /*h*/ ctx[21].ip + "";
+    	let t3_value = /*h*/ ctx[25].ip + "";
     	let t3;
     	let t4;
     	let mounted;
@@ -15737,17 +16818,17 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			attr_dev(input, "role", "switch");
     			attr_dev(input, "id", "flexSwitchCheckDefault");
-    			input.__value = input_value_value = /*h*/ ctx[21].id;
+    			input.__value = input_value_value = /*h*/ ctx[25].id;
     			input.value = input.__value;
-    			/*$$binding_groups*/ ctx[14][0].push(input);
-    			add_location(input, file$3, 404, 30, 11843);
+    			/*$$binding_groups*/ ctx[18][0].push(input);
+    			add_location(input, file$3, 436, 30, 12574);
     			attr_dev(label0, "class", "form-check-label");
     			attr_dev(label0, "for", "flexSwitchCheckDefault");
-    			add_location(label0, file$3, 412, 30, 12232);
+    			add_location(label0, file$3, 444, 30, 12963);
     			attr_dev(div, "class", "form-check form-switch");
-    			add_location(div, file$3, 403, 28, 11775);
+    			add_location(div, file$3, 435, 28, 12506);
     			attr_dev(label1, "class", "list-group-item");
-    			add_location(label1, file$3, 402, 26, 11714);
+    			add_location(label1, file$3, 434, 26, 12445);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, label1, anchor);
@@ -15762,12 +16843,12 @@ var app = (function () {
     			append_dev(label1, t4);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "change", /*input_change_handler_1*/ ctx[18]);
+    				dispose = listen_dev(input, "change", /*input_change_handler_1*/ ctx[22]);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*hostObjects*/ 32 && input_value_value !== (input_value_value = /*h*/ ctx[21].id)) {
+    			if (dirty[0] & /*hostObjects*/ 64 && input_value_value !== (input_value_value = /*h*/ ctx[25].id)) {
     				prop_dev(input, "__value", input_value_value);
     				input.value = input.__value;
     			}
@@ -15776,12 +16857,12 @@ var app = (function () {
     				input.checked = ~/*selection*/ ctx[4].indexOf(input.__value);
     			}
 
-    			if (dirty[0] & /*hostObjects*/ 32 && t1_value !== (t1_value = /*h*/ ctx[21].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*hostObjects*/ 32 && t3_value !== (t3_value = /*h*/ ctx[21].ip + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*hostObjects*/ 64 && t1_value !== (t1_value = /*h*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*hostObjects*/ 64 && t3_value !== (t3_value = /*h*/ ctx[25].ip + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(label1);
-    			/*$$binding_groups*/ ctx[14][0].splice(/*$$binding_groups*/ ctx[14][0].indexOf(input), 1);
+    			/*$$binding_groups*/ ctx[18][0].splice(/*$$binding_groups*/ ctx[18][0].indexOf(input), 1);
     			mounted = false;
     			dispose();
     		}
@@ -15791,7 +16872,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(402:24) {#each hostObjects as h}",
+    		source: "(434:24) {#each hostObjects as h}",
     		ctx
     	});
 
@@ -15911,6 +16992,29 @@ var app = (function () {
     	let button7;
     	let t52;
     	let button8;
+    	let t54;
+    	let div43;
+    	let div42;
+    	let div41;
+    	let div38;
+    	let h52;
+    	let t56;
+    	let button9;
+    	let span3;
+    	let t58;
+    	let div39;
+    	let t59;
+    	let strong;
+    	let t60;
+    	let t61_value = /*hgoDelete*/ ctx[5].name + "";
+    	let t61;
+    	let t62;
+    	let t63;
+    	let t64;
+    	let div40;
+    	let button10;
+    	let t66;
+    	let button11;
     	let mounted;
     	let dispose;
     	let each_value_2 = /*hostGroupObjects*/ ctx[0];
@@ -15921,7 +17025,7 @@ var app = (function () {
     		each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
     	}
 
-    	let each_value_1 = /*hostObjects*/ ctx[5];
+    	let each_value_1 = /*hostObjects*/ ctx[6];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -15929,7 +17033,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*hostObjects*/ ctx[5];
+    	let each_value = /*hostObjects*/ ctx[6];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -16087,13 +17191,39 @@ var app = (function () {
     			t52 = space();
     			button8 = element("button");
     			button8.textContent = "Edit";
+    			t54 = space();
+    			div43 = element("div");
+    			div42 = element("div");
+    			div41 = element("div");
+    			div38 = element("div");
+    			h52 = element("h5");
+    			h52.textContent = "Delete Host-Group-Object";
+    			t56 = space();
+    			button9 = element("button");
+    			span3 = element("span");
+    			span3.textContent = "×";
+    			t58 = space();
+    			div39 = element("div");
+    			t59 = text("Are you sure, that you want to delete this host group object ");
+    			strong = element("strong");
+    			t60 = text("\"");
+    			t61 = text(t61_value);
+    			t62 = text("\"");
+    			t63 = text("?");
+    			t64 = space();
+    			div40 = element("div");
+    			button10 = element("button");
+    			button10.textContent = "Close";
+    			t66 = space();
+    			button11 = element("button");
+    			button11.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$3, 150, 6, 3439);
+    			add_location(h3, file$3, 176, 6, 3973);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$3, 149, 4, 3414);
+    			add_location(div0, file$3, 175, 4, 3948);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$3, 154, 4, 3546);
+    			add_location(div1, file$3, 180, 4, 4080);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -16101,75 +17231,75 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$3, 156, 6, 3628);
+    			add_location(button0, file$3, 182, 6, 4162);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$3, 155, 4, 3571);
+    			add_location(div2, file$3, 181, 4, 4105);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$3, 148, 2, 3391);
+    			add_location(div3, file$3, 174, 2, 3925);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$3, 147, 0, 3358);
+    			add_location(div4, file$3, 173, 0, 3892);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$3, 173, 10, 4130);
-    			add_location(span0, file$3, 172, 14, 4085);
+    			add_location(i, file$3, 199, 10, 4664);
+    			add_location(span0, file$3, 198, 14, 4619);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$3, 171, 6, 4054);
+    			add_location(th0, file$3, 197, 6, 4588);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$3, 177, 6, 4262);
+    			add_location(th1, file$3, 203, 6, 4796);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$3, 178, 6, 4298);
+    			add_location(th2, file$3, 204, 6, 4832);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$3, 179, 6, 4338);
+    			add_location(th3, file$3, 205, 6, 4872);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$3, 180, 6, 4364);
-    			add_location(tr, file$3, 169, 4, 3978);
-    			add_location(thead, file$3, 168, 2, 3965);
-    			add_location(tbody, file$3, 183, 2, 4409);
+    			add_location(th4, file$3, 206, 6, 4898);
+    			add_location(tr, file$3, 195, 4, 4512);
+    			add_location(thead, file$3, 194, 2, 4499);
+    			add_location(tbody, file$3, 209, 2, 4943);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allHostObjects");
-    			add_location(table, file$3, 167, 0, 3894);
+    			add_location(table, file$3, 193, 0, 4428);
     			set_style(div5, "margin-left", "-52px");
     			set_style(div5, "margin-right", "-52px");
-    			add_location(div5, file$3, 146, 0, 3302);
+    			add_location(div5, file$3, 172, 0, 3836);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "crateHostObject");
-    			add_location(h50, file$3, 225, 8, 5563);
+    			add_location(h50, file$3, 257, 8, 6294);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$3, 232, 10, 5786);
+    			add_location(span1, file$3, 264, 10, 6517);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$3, 226, 8, 5644);
+    			add_location(button1, file$3, 258, 8, 6375);
     			attr_dev(div6, "class", "modal-header");
-    			add_location(div6, file$3, 224, 6, 5527);
+    			add_location(div6, file$3, 256, 6, 6258);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$3, 239, 14, 6000);
+    			add_location(label0, file$3, 271, 14, 6731);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "HG_<ZONE>_<HOST-ART>");
-    			add_location(input0, file$3, 240, 14, 6065);
+    			add_location(input0, file$3, 272, 14, 6796);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$3, 238, 12, 5967);
+    			add_location(div7, file$3, 270, 12, 6698);
     			attr_dev(div8, "class", "row mb-3");
-    			add_location(div8, file$3, 237, 10, 5931);
+    			add_location(div8, file$3, 269, 10, 6662);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "description");
-    			add_location(label1, file$3, 251, 14, 6405);
+    			add_location(label1, file$3, 283, 14, 7136);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "description");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$3, 252, 14, 6484);
+    			add_location(input1, file$3, 284, 14, 7215);
     			attr_dev(div9, "class", "col");
-    			add_location(div9, file$3, 250, 12, 6372);
+    			add_location(div9, file$3, 282, 12, 7103);
     			attr_dev(div10, "class", "row mb-3");
-    			add_location(div10, file$3, 249, 10, 6336);
+    			add_location(div10, file$3, 281, 10, 7067);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "membersId");
-    			add_location(label2, file$3, 262, 14, 6786);
-    			add_location(br0, file$3, 262, 71, 6843);
+    			add_location(label2, file$3, 294, 14, 7517);
+    			add_location(br0, file$3, 294, 71, 7574);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn");
     			set_style(button2, "background-color", "none");
@@ -16181,95 +17311,95 @@ var app = (function () {
     			attr_dev(button2, "data-target", "#collapseExample");
     			attr_dev(button2, "aria-expanded", "false");
     			attr_dev(button2, "aria-controls", "collapseExample");
-    			add_location(button2, file$3, 263, 14, 6865);
+    			add_location(button2, file$3, 295, 14, 7596);
     			attr_dev(div11, "class", "list-group");
     			set_style(div11, "width", "466px");
     			set_style(div11, "margin-left", "-16px");
     			set_style(div11, "margin-top", "-17px");
-    			add_location(div11, file$3, 276, 18, 7445);
+    			add_location(div11, file$3, 308, 18, 8176);
     			attr_dev(div12, "class", "card card-body");
     			set_style(div12, "border", "0");
-    			add_location(div12, file$3, 275, 16, 7378);
+    			add_location(div12, file$3, 307, 16, 8109);
     			attr_dev(div13, "class", "collapse");
     			attr_dev(div13, "id", "collapseExample");
-    			add_location(div13, file$3, 274, 14, 7317);
+    			add_location(div13, file$3, 306, 14, 8048);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$3, 261, 12, 6753);
+    			add_location(div14, file$3, 293, 12, 7484);
     			attr_dev(div15, "class", "row mb-3");
-    			add_location(div15, file$3, 260, 10, 6717);
+    			add_location(div15, file$3, 292, 10, 7448);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$3, 236, 8, 5900);
+    			add_location(form0, file$3, 268, 8, 6631);
     			attr_dev(div16, "class", "modal-body");
-    			add_location(div16, file$3, 235, 6, 5866);
+    			add_location(div16, file$3, 267, 6, 6597);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$3, 307, 8, 8621);
+    			add_location(button3, file$3, 339, 8, 9352);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn");
     			set_style(button4, "background-color", "#008000");
     			set_style(button4, "color", "#fff");
-    			add_location(button4, file$3, 310, 8, 8736);
+    			add_location(button4, file$3, 342, 8, 9467);
     			attr_dev(div17, "class", "modal-footer");
-    			add_location(div17, file$3, 306, 6, 8585);
+    			add_location(div17, file$3, 338, 6, 9316);
     			attr_dev(div18, "class", "modal-content");
-    			add_location(div18, file$3, 223, 4, 5492);
+    			add_location(div18, file$3, 255, 4, 6223);
     			attr_dev(div19, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div19, "role", "document");
-    			add_location(div19, file$3, 222, 2, 5422);
+    			add_location(div19, file$3, 254, 2, 6153);
     			attr_dev(div20, "class", "modal fade");
     			attr_dev(div20, "id", "crateHO");
     			attr_dev(div20, "tabindex", "-1");
     			attr_dev(div20, "role", "dialog");
     			attr_dev(div20, "aria-labelledby", "formCreateHostObject");
     			attr_dev(div20, "aria-hidden", "true");
-    			add_location(div20, file$3, 214, 0, 5275);
+    			add_location(div20, file$3, 246, 0, 6006);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editHostGroupObject");
-    			add_location(h51, file$3, 332, 8, 9255);
+    			add_location(h51, file$3, 364, 8, 9986);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$3, 341, 10, 9505);
+    			add_location(span2, file$3, 373, 10, 10236);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "close");
     			attr_dev(button5, "data-dismiss", "modal");
     			attr_dev(button5, "aria-label", "Close");
-    			add_location(button5, file$3, 335, 8, 9363);
+    			add_location(button5, file$3, 367, 8, 10094);
     			attr_dev(div21, "class", "modal-header");
-    			add_location(div21, file$3, 331, 6, 9219);
+    			add_location(div21, file$3, 363, 6, 9950);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "id");
-    			add_location(label3, file$3, 348, 14, 9719);
+    			add_location(label3, file$3, 380, 14, 10450);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "id");
     			attr_dev(input2, "type", "text");
     			input2.disabled = true;
-    			add_location(input2, file$3, 349, 14, 9780);
+    			add_location(input2, file$3, 381, 14, 10511);
     			attr_dev(div22, "class", "col");
-    			add_location(div22, file$3, 347, 12, 9686);
+    			add_location(div22, file$3, 379, 12, 10417);
     			attr_dev(div23, "class", "row mb-3");
-    			add_location(div23, file$3, 346, 10, 9650);
+    			add_location(div23, file$3, 378, 10, 10381);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "name");
-    			add_location(label4, file$3, 360, 14, 10082);
+    			add_location(label4, file$3, 392, 14, 10813);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "name");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$3, 361, 14, 10147);
+    			add_location(input3, file$3, 393, 14, 10878);
     			attr_dev(div24, "class", "col");
-    			add_location(div24, file$3, 359, 12, 10049);
+    			add_location(div24, file$3, 391, 12, 10780);
     			attr_dev(div25, "class", "row mb-3");
-    			add_location(div25, file$3, 358, 10, 10013);
+    			add_location(div25, file$3, 390, 10, 10744);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "description");
-    			add_location(label5, file$3, 372, 14, 10429);
+    			add_location(label5, file$3, 404, 14, 11160);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "description");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$3, 373, 14, 10508);
+    			add_location(input4, file$3, 405, 14, 11239);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "membersId");
-    			add_location(label6, file$3, 382, 18, 10778);
-    			add_location(br1, file$3, 382, 75, 10835);
+    			add_location(label6, file$3, 414, 18, 11509);
+    			add_location(br1, file$3, 414, 75, 11566);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "none");
@@ -16281,54 +17411,93 @@ var app = (function () {
     			attr_dev(button6, "data-target", "#edit");
     			attr_dev(button6, "aria-expanded", "false");
     			attr_dev(button6, "aria-controls", "edit");
-    			add_location(button6, file$3, 384, 18, 10880);
+    			add_location(button6, file$3, 416, 18, 11611);
     			attr_dev(div26, "class", "list-group");
     			set_style(div26, "width", "466px");
     			set_style(div26, "margin-left", "-16px");
     			set_style(div26, "margin-top", "-17px");
-    			add_location(div26, file$3, 397, 22, 11477);
+    			add_location(div26, file$3, 429, 22, 12208);
     			attr_dev(div27, "class", "card card-body");
     			set_style(div27, "border", "0");
-    			add_location(div27, file$3, 396, 20, 11406);
+    			add_location(div27, file$3, 428, 20, 12137);
     			attr_dev(div28, "class", "collapse");
     			attr_dev(div28, "id", "edit");
-    			add_location(div28, file$3, 395, 18, 11352);
+    			add_location(div28, file$3, 427, 18, 12083);
     			attr_dev(div29, "class", "col");
-    			add_location(div29, file$3, 381, 16, 10741);
+    			add_location(div29, file$3, 413, 16, 11472);
     			attr_dev(div30, "class", "row mb-3");
-    			add_location(div30, file$3, 380, 14, 10701);
+    			add_location(div30, file$3, 412, 14, 11432);
     			attr_dev(div31, "class", "col");
-    			add_location(div31, file$3, 371, 12, 10396);
+    			add_location(div31, file$3, 403, 12, 11127);
     			attr_dev(div32, "class", "row mb-3");
-    			add_location(div32, file$3, 370, 10, 10360);
+    			add_location(div32, file$3, 402, 10, 11091);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$3, 345, 8, 9619);
+    			add_location(form1, file$3, 377, 8, 10350);
     			attr_dev(div33, "class", "modal-body");
-    			add_location(div33, file$3, 344, 6, 9585);
+    			add_location(div33, file$3, 376, 6, 10316);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "btn btn-secondary");
     			attr_dev(button7, "data-dismiss", "modal");
-    			add_location(button7, file$3, 430, 8, 12799);
+    			add_location(button7, file$3, 462, 8, 13530);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn");
     			set_style(button8, "background-color", "#008000");
     			set_style(button8, "color", "#fff");
     			attr_dev(button8, "data-dismiss", "modal");
-    			add_location(button8, file$3, 433, 8, 12914);
+    			add_location(button8, file$3, 465, 8, 13645);
     			attr_dev(div34, "class", "modal-footer");
-    			add_location(div34, file$3, 429, 6, 12763);
+    			add_location(div34, file$3, 461, 6, 13494);
     			attr_dev(div35, "class", "modal-content");
-    			add_location(div35, file$3, 330, 4, 9184);
+    			add_location(div35, file$3, 362, 4, 9915);
     			attr_dev(div36, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div36, "role", "document");
-    			add_location(div36, file$3, 329, 2, 9114);
+    			add_location(div36, file$3, 361, 2, 9845);
     			attr_dev(div37, "class", "modal fade");
     			attr_dev(div37, "id", "editHGO");
     			attr_dev(div37, "tabindex", "-1");
     			attr_dev(div37, "role", "dialog");
     			attr_dev(div37, "aria-labelledby", "formEditHostGroupObject");
     			attr_dev(div37, "aria-hidden", "true");
-    			add_location(div37, file$3, 321, 0, 8964);
+    			add_location(div37, file$3, 353, 0, 9695);
+    			attr_dev(h52, "class", "modal-title");
+    			attr_dev(h52, "id", "deleteHGO");
+    			add_location(h52, file$3, 489, 6, 14169);
+    			attr_dev(span3, "aria-hidden", "true");
+    			add_location(span3, file$3, 496, 8, 14375);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "close");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			attr_dev(button9, "aria-label", "Close");
+    			add_location(button9, file$3, 490, 6, 14245);
+    			attr_dev(div38, "class", "modal-header");
+    			add_location(div38, file$3, 488, 4, 14135);
+    			add_location(strong, file$3, 500, 67, 14542);
+    			attr_dev(div39, "class", "modal-body");
+    			add_location(div39, file$3, 499, 4, 14449);
+    			attr_dev(button10, "type", "button");
+    			attr_dev(button10, "class", "btn btn-secondary");
+    			attr_dev(button10, "data-dismiss", "modal");
+    			add_location(button10, file$3, 503, 6, 14630);
+    			attr_dev(button11, "type", "button");
+    			attr_dev(button11, "class", "btn");
+    			attr_dev(button11, "data-dismiss", "modal");
+    			set_style(button11, "background-color", "#c73834");
+    			set_style(button11, "color", "#fff");
+    			add_location(button11, file$3, 506, 6, 14739);
+    			attr_dev(div40, "class", "modal-footer");
+    			add_location(div40, file$3, 502, 4, 14596);
+    			attr_dev(div41, "class", "modal-content");
+    			add_location(div41, file$3, 487, 2, 14102);
+    			attr_dev(div42, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div42, "role", "document");
+    			add_location(div42, file$3, 486, 0, 14034);
+    			attr_dev(div43, "class", "modal fade");
+    			attr_dev(div43, "id", "deleteHGO");
+    			attr_dev(div43, "tabindex", "-1");
+    			attr_dev(div43, "role", "dialog");
+    			attr_dev(div43, "aria-labelledby", "formDeleteHGO");
+    			attr_dev(div43, "aria-hidden", "true");
+    			add_location(div43, file$3, 478, 0, 13894);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16466,6 +17635,28 @@ var app = (function () {
     			append_dev(div34, button7);
     			append_dev(div34, t52);
     			append_dev(div34, button8);
+    			insert_dev(target, t54, anchor);
+    			insert_dev(target, div43, anchor);
+    			append_dev(div43, div42);
+    			append_dev(div42, div41);
+    			append_dev(div41, div38);
+    			append_dev(div38, h52);
+    			append_dev(div38, t56);
+    			append_dev(div38, button9);
+    			append_dev(button9, span3);
+    			append_dev(div41, t58);
+    			append_dev(div41, div39);
+    			append_dev(div39, t59);
+    			append_dev(div39, strong);
+    			append_dev(strong, t60);
+    			append_dev(strong, t61);
+    			append_dev(strong, t62);
+    			append_dev(div39, t63);
+    			append_dev(div41, t64);
+    			append_dev(div41, div40);
+    			append_dev(div40, button10);
+    			append_dev(div40, t66);
+    			append_dev(div40, button11);
 
     			if (!mounted) {
     				dispose = [
@@ -16479,13 +17670,23 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[11]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[12]),
-    					listen_dev(button4, "click", /*createHostGroupObject*/ ctx[6], false, false, false),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[15]),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[16]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[17]),
-    					listen_dev(button8, "click", /*editHgo*/ ctx[8], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[15]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[16]),
+    					listen_dev(button4, "click", /*createHostGroupObject*/ ctx[7], false, false, false),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[19]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[20]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[21]),
+    					listen_dev(button8, "click", /*editHgo*/ ctx[9], false, false, false),
+    					listen_dev(
+    						button11,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteHgo*/ ctx[11](/*hgoDelete*/ ctx[5].id))) /*deleteHgo*/ ctx[11](/*hgoDelete*/ ctx[5].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -16494,7 +17695,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*getHgoToEdit, hostGroupObjects*/ 129) {
+    			if (dirty[0] & /*getHgoToDelete, hostGroupObjects, getHgoToEdit*/ 1281) {
     				each_value_2 = /*hostGroupObjects*/ ctx[0];
     				validate_each_argument(each_value_2);
     				let i;
@@ -16526,8 +17727,8 @@ var app = (function () {
     				set_input_value(input1, /*hostGroupObject*/ ctx[2].description);
     			}
 
-    			if (dirty[0] & /*hostObjects, selection*/ 48) {
-    				each_value_1 = /*hostObjects*/ ctx[5];
+    			if (dirty[0] & /*hostObjects, selection*/ 80) {
+    				each_value_1 = /*hostObjects*/ ctx[6];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -16562,8 +17763,8 @@ var app = (function () {
     				set_input_value(input4, /*hgoEdit*/ ctx[3].description);
     			}
 
-    			if (dirty[0] & /*hostObjects, selection*/ 48) {
-    				each_value = /*hostObjects*/ ctx[5];
+    			if (dirty[0] & /*hostObjects, selection*/ 80) {
+    				each_value = /*hostObjects*/ ctx[6];
     				validate_each_argument(each_value);
     				let i;
 
@@ -16585,6 +17786,8 @@ var app = (function () {
 
     				each_blocks.length = each_value.length;
     			}
+
+    			if (dirty[0] & /*hgoDelete*/ 32 && t61_value !== (t61_value = /*hgoDelete*/ ctx[5].name + "")) set_data_dev(t61, t61_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -16597,6 +17800,8 @@ var app = (function () {
     			if (detaching) detach_dev(t32);
     			if (detaching) detach_dev(div37);
     			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t54);
+    			if (detaching) detach_dev(div43);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -16635,6 +17840,7 @@ var app = (function () {
     	};
 
     	let selection = [];
+    	let hgoDelete = { id: null, name: null };
 
     	function getHostGroupObjects() {
     		var config = {
@@ -16688,7 +17894,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			$$invalidate(5, hostObjects = response.data);
+    			$$invalidate(6, hostObjects = response.data);
     		}).catch(function (error) {
     			alert("Could not get Host Objects");
     			console.log(error);
@@ -16725,6 +17931,25 @@ var app = (function () {
     		});
     	}
 
+    	function getHgoToDelete(hgoD) {
+    		$$invalidate(5, hgoDelete.id = hgoD.hgoId, hgoDelete);
+    		$$invalidate(5, hgoDelete.name = hgoD.hgoName, hgoDelete);
+    	}
+
+    	function deleteHgo(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$2 + "/host-group-object/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getHostGroupObjects();
+    		}).catch(function (error) {
+    			alert("Could not delete Host Group Object");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -16734,6 +17959,7 @@ var app = (function () {
 
     	const $$binding_groups = [[]];
     	const click_handler = h1 => getHgoToEdit(h1);
+    	const click_handler_1 = h1 => getHgoToDelete(h1);
 
     	function input0_input_handler() {
     		hostGroupObject.name = this.value;
@@ -16777,12 +18003,15 @@ var app = (function () {
     		hostGroupObject,
     		hgoEdit,
     		selection,
+    		hgoDelete,
     		getHostGroupObjects,
     		createHostGroupObject,
     		hostObjects,
     		getHostObjects,
     		getHgoToEdit,
     		editHgo,
+    		getHgoToDelete,
+    		deleteHgo,
     		sortBy,
     		sort
     	});
@@ -16792,8 +18021,9 @@ var app = (function () {
     		if ('hostGroupObject' in $$props) $$invalidate(2, hostGroupObject = $$props.hostGroupObject);
     		if ('hgoEdit' in $$props) $$invalidate(3, hgoEdit = $$props.hgoEdit);
     		if ('selection' in $$props) $$invalidate(4, selection = $$props.selection);
-    		if ('hostObjects' in $$props) $$invalidate(5, hostObjects = $$props.hostObjects);
-    		if ('sortBy' in $$props) $$invalidate(9, sortBy = $$props.sortBy);
+    		if ('hgoDelete' in $$props) $$invalidate(5, hgoDelete = $$props.hgoDelete);
+    		if ('hostObjects' in $$props) $$invalidate(6, hostObjects = $$props.hostObjects);
+    		if ('sortBy' in $$props) $$invalidate(12, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -16802,13 +18032,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*sortBy, hostGroupObjects*/ 513) {
+    		if ($$self.$$.dirty[0] & /*sortBy, hostGroupObjects*/ 4097) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(9, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(12, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(9, sortBy.col = column, sortBy);
-    					$$invalidate(9, sortBy.ascending = true, sortBy);
+    					$$invalidate(12, sortBy.col = column, sortBy);
+    					$$invalidate(12, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -16829,12 +18059,16 @@ var app = (function () {
     		hostGroupObject,
     		hgoEdit,
     		selection,
+    		hgoDelete,
     		hostObjects,
     		createHostGroupObject,
     		getHgoToEdit,
     		editHgo,
+    		getHgoToDelete,
+    		deleteHgo,
     		sortBy,
     		click_handler,
+    		click_handler_1,
     		input0_input_handler,
     		input1_input_handler,
     		input_change_handler,
@@ -16867,20 +18101,20 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
+    	child_ctx[4] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[20] = list[i];
+    	child_ctx[24] = list[i];
     	return child_ctx;
     }
 
-    // (159:10) {#each serviceGroupObject.port as port}
+    // (186:10) {#each serviceGroupObject.port as port}
     function create_each_block_1$1(ctx) {
     	let li;
-    	let t_value = /*port*/ ctx[20] + "";
+    	let t_value = /*port*/ ctx[24] + "";
     	let t;
 
     	const block = {
@@ -16888,14 +18122,14 @@ var app = (function () {
     			li = element("li");
     			t = text(t_value);
     			attr_dev(li, "class", "list-group-item");
-    			add_location(li, file$2, 159, 12, 4046);
+    			add_location(li, file$2, 186, 12, 4585);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*serviceGroupObjects*/ 1 && t_value !== (t_value = /*port*/ ctx[20] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*serviceGroupObjects*/ 1 && t_value !== (t_value = /*port*/ ctx[24] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
@@ -16906,36 +18140,37 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(159:10) {#each serviceGroupObject.port as port}",
+    		source: "(186:10) {#each serviceGroupObject.port as port}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:4) {#each serviceGroupObjects as serviceGroupObject}
+    // (182:4) {#each serviceGroupObjects as serviceGroupObject}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*serviceGroupObject*/ ctx[3].name + "";
+    	let t0_value = /*serviceGroupObject*/ ctx[4].name + "";
     	let t0;
     	let t1;
     	let td1;
     	let t2;
     	let td2;
-    	let t3_value = /*serviceGroupObject*/ ctx[3].description + "";
+    	let t3_value = /*serviceGroupObject*/ ctx[4].description + "";
     	let t3;
     	let t4;
     	let td3;
-    	let button;
+    	let button0;
     	let i0;
     	let t5;
     	let td4;
+    	let button1;
     	let i1;
     	let t6;
     	let mounted;
     	let dispose;
-    	let each_value_1 = /*serviceGroupObject*/ ctx[3].port;
+    	let each_value_1 = /*serviceGroupObject*/ ctx[4].port;
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -16944,7 +18179,11 @@ var app = (function () {
     	}
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[8](/*serviceGroupObject*/ ctx[3]);
+    		return /*click_handler*/ ctx[11](/*serviceGroupObject*/ ctx[4]);
+    	}
+
+    	function click_handler_1() {
+    		return /*click_handler_1*/ ctx[12](/*serviceGroupObject*/ ctx[4]);
     	}
 
     	const block = {
@@ -16964,29 +18203,35 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			td3 = element("td");
-    			button = element("button");
+    			button0 = element("button");
     			i0 = element("i");
     			t5 = space();
     			td4 = element("td");
+    			button1 = element("button");
     			i1 = element("i");
     			t6 = space();
-    			add_location(td0, file$2, 156, 8, 3933);
-    			add_location(td1, file$2, 157, 8, 3977);
-    			add_location(td2, file$2, 162, 8, 4129);
+    			add_location(td0, file$2, 183, 8, 4472);
+    			add_location(td1, file$2, 184, 8, 4516);
+    			add_location(td2, file$2, 189, 8, 4668);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$2, 169, 13, 4403);
-    			set_style(button, "border", "none");
-    			set_style(button, "background", "none");
-    			attr_dev(button, "data-toggle", "modal");
-    			attr_dev(button, "data-target", "#editSGO");
-    			add_location(button, file$2, 164, 11, 4196);
-    			add_location(td3, file$2, 163, 8, 4180);
+    			add_location(i0, file$2, 196, 13, 4942);
+    			set_style(button0, "border", "none");
+    			set_style(button0, "background", "none");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#editSGO");
+    			add_location(button0, file$2, 191, 11, 4735);
+    			add_location(td3, file$2, 190, 8, 4719);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$2, 175, 12, 4556);
-    			add_location(td4, file$2, 175, 8, 4552);
-    			add_location(tr, file$2, 155, 6, 3919);
+    			add_location(i1, file$2, 208, 10, 5308);
+    			set_style(button1, "border", "none");
+    			set_style(button1, "background", "none");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#deleteSGO");
+    			add_location(button1, file$2, 202, 12, 5095);
+    			add_location(td4, file$2, 202, 8, 5091);
+    			add_location(tr, file$2, 182, 6, 4458);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -17004,24 +18249,29 @@ var app = (function () {
     			append_dev(td2, t3);
     			append_dev(tr, t4);
     			append_dev(tr, td3);
-    			append_dev(td3, button);
-    			append_dev(button, i0);
+    			append_dev(td3, button0);
+    			append_dev(button0, i0);
     			append_dev(tr, t5);
     			append_dev(tr, td4);
-    			append_dev(td4, i1);
+    			append_dev(td4, button1);
+    			append_dev(button1, i1);
     			append_dev(tr, t6);
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", click_handler, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler, false, false, false),
+    					listen_dev(button1, "click", click_handler_1, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*serviceGroupObjects*/ 1 && t0_value !== (t0_value = /*serviceGroupObject*/ ctx[3].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*serviceGroupObjects*/ 1 && t0_value !== (t0_value = /*serviceGroupObject*/ ctx[4].name + "")) set_data_dev(t0, t0_value);
 
     			if (dirty & /*serviceGroupObjects*/ 1) {
-    				each_value_1 = /*serviceGroupObject*/ ctx[3].port;
+    				each_value_1 = /*serviceGroupObject*/ ctx[4].port;
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -17044,13 +18294,13 @@ var app = (function () {
     				each_blocks.length = each_value_1.length;
     			}
 
-    			if (dirty & /*serviceGroupObjects*/ 1 && t3_value !== (t3_value = /*serviceGroupObject*/ ctx[3].description + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*serviceGroupObjects*/ 1 && t3_value !== (t3_value = /*serviceGroupObject*/ ctx[4].description + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -17058,7 +18308,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(155:4) {#each serviceGroupObjects as serviceGroupObject}",
+    		source: "(182:4) {#each serviceGroupObjects as serviceGroupObject}",
     		ctx
     	});
 
@@ -17168,6 +18418,29 @@ var app = (function () {
     	let button5;
     	let t48;
     	let button6;
+    	let t50;
+    	let div37;
+    	let div36;
+    	let div35;
+    	let div32;
+    	let h52;
+    	let t52;
+    	let button7;
+    	let span3;
+    	let t54;
+    	let div33;
+    	let t55;
+    	let strong;
+    	let t56;
+    	let t57_value = /*sgoDelete*/ ctx[3].name + "";
+    	let t57;
+    	let t58;
+    	let t59;
+    	let t60;
+    	let div34;
+    	let button8;
+    	let t62;
+    	let button9;
     	let mounted;
     	let dispose;
     	let each_value = /*serviceGroupObjects*/ ctx[0];
@@ -17306,13 +18579,39 @@ var app = (function () {
     			t48 = space();
     			button6 = element("button");
     			button6.textContent = "Edit";
+    			t50 = space();
+    			div37 = element("div");
+    			div36 = element("div");
+    			div35 = element("div");
+    			div32 = element("div");
+    			h52 = element("h5");
+    			h52.textContent = "Delete Service-Group-Object";
+    			t52 = space();
+    			button7 = element("button");
+    			span3 = element("span");
+    			span3.textContent = "×";
+    			t54 = space();
+    			div33 = element("div");
+    			t55 = text("Are you sure, that you want to delete this service group object ");
+    			strong = element("strong");
+    			t56 = text("\"");
+    			t57 = text(t57_value);
+    			t58 = text("\"");
+    			t59 = text("?");
+    			t60 = space();
+    			div34 = element("div");
+    			button8 = element("button");
+    			button8.textContent = "Close";
+    			t62 = space();
+    			button9 = element("button");
+    			button9.textContent = "Delete";
     			set_style(h3, "margin-top", "15px");
     			set_style(h3, "font-weight", "bold");
-    			add_location(h3, file$2, 121, 6, 2945);
+    			add_location(h3, file$2, 148, 6, 3484);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$2, 120, 4, 2920);
+    			add_location(div0, file$2, 147, 4, 3459);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file$2, 125, 4, 3056);
+    			add_location(div1, file$2, 152, 4, 3595);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn");
     			attr_dev(button0, "data-toggle", "modal");
@@ -17320,194 +18619,233 @@ var app = (function () {
     			set_style(button0, "margin-top", "9px");
     			set_style(button0, "background-color", "#c73834");
     			set_style(button0, "color", "#fff");
-    			add_location(button0, file$2, 127, 6, 3138);
+    			add_location(button0, file$2, 154, 6, 3677);
     			attr_dev(div2, "class", "col");
     			set_style(div2, "text-align-last", "right");
-    			add_location(div2, file$2, 126, 4, 3081);
+    			add_location(div2, file$2, 153, 4, 3620);
     			attr_dev(div3, "class", "row");
-    			add_location(div3, file$2, 119, 2, 2897);
+    			add_location(div3, file$2, 146, 2, 3436);
     			attr_dev(div4, "class", "container-fluid");
-    			add_location(div4, file$2, 118, 0, 2864);
+    			add_location(div4, file$2, 145, 0, 3403);
     			attr_dev(i, "class", "fa fa-fw fa-sort");
-    			add_location(i, file$2, 144, 10, 3635);
-    			add_location(span0, file$2, 143, 14, 3593);
+    			add_location(i, file$2, 171, 10, 4174);
+    			add_location(span0, file$2, 170, 14, 4132);
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$2, 142, 6, 3562);
+    			add_location(th0, file$2, 169, 6, 4101);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$2, 147, 6, 3703);
+    			add_location(th1, file$2, 174, 6, 4242);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$2, 148, 6, 3737);
+    			add_location(th2, file$2, 175, 6, 4276);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$2, 149, 6, 3778);
+    			add_location(th3, file$2, 176, 6, 4317);
     			attr_dev(th4, "scope", "col");
-    			add_location(th4, file$2, 150, 6, 3804);
-    			add_location(tr, file$2, 140, 4, 3486);
-    			add_location(thead, file$2, 139, 2, 3473);
-    			add_location(tbody, file$2, 153, 2, 3849);
+    			add_location(th4, file$2, 177, 6, 4343);
+    			add_location(tr, file$2, 167, 4, 4025);
+    			add_location(thead, file$2, 166, 2, 4012);
+    			add_location(tbody, file$2, 180, 2, 4388);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allSGO");
-    			add_location(table, file$2, 138, 0, 3410);
+    			add_location(table, file$2, 165, 0, 3949);
     			set_style(div5, "margin-left", "-52px");
     			set_style(div5, "margin-right", "-52px");
-    			add_location(div5, file$2, 117, 0, 2808);
+    			add_location(div5, file$2, 144, 0, 3347);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "createSGO");
-    			add_location(h50, file$2, 193, 8, 4956);
+    			add_location(h50, file$2, 226, 8, 5708);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$2, 200, 10, 5176);
+    			add_location(span1, file$2, 233, 10, 5928);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$2, 194, 8, 5034);
+    			add_location(button1, file$2, 227, 8, 5786);
     			attr_dev(div6, "class", "modal-header");
-    			add_location(div6, file$2, 192, 6, 4920);
+    			add_location(div6, file$2, 225, 6, 5672);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$2, 207, 14, 5390);
+    			add_location(label0, file$2, 240, 14, 6142);
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "name");
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$2, 208, 14, 5455);
+    			add_location(input0, file$2, 241, 14, 6207);
     			attr_dev(div7, "class", "col");
-    			add_location(div7, file$2, 206, 12, 5357);
+    			add_location(div7, file$2, 239, 12, 6109);
     			attr_dev(div8, "class", "row mb-3");
-    			add_location(div8, file$2, 205, 10, 5321);
+    			add_location(div8, file$2, 238, 10, 6073);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "description");
-    			add_location(label1, file$2, 218, 14, 5746);
+    			add_location(label1, file$2, 251, 14, 6498);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "tag");
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$2, 219, 14, 5819);
+    			add_location(input1, file$2, 252, 14, 6571);
     			attr_dev(div9, "class", "col");
-    			add_location(div9, file$2, 217, 12, 5713);
+    			add_location(div9, file$2, 250, 12, 6465);
     			attr_dev(div10, "class", "row mb-3");
-    			add_location(div10, file$2, 216, 10, 5677);
+    			add_location(div10, file$2, 249, 10, 6429);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "description");
-    			add_location(label2, file$2, 229, 14, 6109);
+    			add_location(label2, file$2, 262, 14, 6861);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "description");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$2, 230, 14, 6188);
+    			add_location(input2, file$2, 263, 14, 6940);
     			attr_dev(div11, "class", "col");
-    			add_location(div11, file$2, 228, 12, 6076);
+    			add_location(div11, file$2, 261, 12, 6828);
     			attr_dev(div12, "class", "row mb-3");
-    			add_location(div12, file$2, 227, 10, 6040);
+    			add_location(div12, file$2, 260, 10, 6792);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$2, 204, 8, 5290);
+    			add_location(form0, file$2, 237, 8, 6042);
     			attr_dev(div13, "class", "modal-body");
-    			add_location(div13, file$2, 203, 6, 5256);
+    			add_location(div13, file$2, 236, 6, 6008);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$2, 241, 8, 6487);
+    			add_location(button2, file$2, 274, 8, 7239);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$2, 244, 8, 6602);
+    			add_location(button3, file$2, 277, 8, 7354);
     			attr_dev(div14, "class", "modal-footer");
-    			add_location(div14, file$2, 240, 6, 6451);
+    			add_location(div14, file$2, 273, 6, 7203);
     			attr_dev(div15, "class", "modal-content");
-    			add_location(div15, file$2, 191, 4, 4885);
+    			add_location(div15, file$2, 224, 4, 5637);
     			attr_dev(div16, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div16, "role", "document");
-    			add_location(div16, file$2, 190, 2, 4815);
+    			add_location(div16, file$2, 223, 2, 5567);
     			attr_dev(div17, "class", "modal fade");
     			attr_dev(div17, "id", "createSGO");
     			attr_dev(div17, "tabindex", "-1");
     			attr_dev(div17, "role", "dialog");
     			attr_dev(div17, "aria-labelledby", "formCreateSGO");
     			attr_dev(div17, "aria-hidden", "true");
-    			add_location(div17, file$2, 182, 0, 4673);
+    			add_location(div17, file$2, 215, 0, 5425);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editSGO");
-    			add_location(h51, file$2, 267, 8, 7144);
+    			add_location(h51, file$2, 300, 8, 7896);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$2, 274, 10, 7363);
+    			add_location(span2, file$2, 307, 10, 8115);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "close");
     			attr_dev(button4, "data-dismiss", "modal");
     			attr_dev(button4, "aria-label", "Close");
-    			add_location(button4, file$2, 268, 8, 7221);
+    			add_location(button4, file$2, 301, 8, 7973);
     			attr_dev(div18, "class", "modal-header");
-    			add_location(div18, file$2, 266, 6, 7108);
+    			add_location(div18, file$2, 299, 6, 7860);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "id");
-    			add_location(label3, file$2, 281, 14, 7577);
+    			add_location(label3, file$2, 314, 14, 8329);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "id");
     			attr_dev(input3, "type", "text");
     			input3.disabled = true;
-    			add_location(input3, file$2, 282, 14, 7638);
+    			add_location(input3, file$2, 315, 14, 8390);
     			attr_dev(div19, "class", "col");
-    			add_location(div19, file$2, 280, 12, 7544);
+    			add_location(div19, file$2, 313, 12, 8296);
     			attr_dev(div20, "class", "row mb-3");
-    			add_location(div20, file$2, 279, 10, 7508);
+    			add_location(div20, file$2, 312, 10, 8260);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "name");
-    			add_location(label4, file$2, 293, 14, 7940);
+    			add_location(label4, file$2, 326, 14, 8692);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "name");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$2, 294, 14, 8005);
+    			add_location(input4, file$2, 327, 14, 8757);
     			attr_dev(div21, "class", "col");
-    			add_location(div21, file$2, 292, 12, 7907);
+    			add_location(div21, file$2, 325, 12, 8659);
     			attr_dev(div22, "class", "row mb-3");
-    			add_location(div22, file$2, 291, 10, 7871);
+    			add_location(div22, file$2, 324, 10, 8623);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "port");
-    			add_location(label5, file$2, 304, 14, 8285);
+    			add_location(label5, file$2, 337, 14, 9037);
     			attr_dev(input5, "class", "form-control");
     			attr_dev(input5, "id", "tags");
     			attr_dev(input5, "type", "text");
-    			add_location(input5, file$2, 305, 14, 8352);
+    			add_location(input5, file$2, 338, 14, 9104);
     			attr_dev(div23, "class", "col");
-    			add_location(div23, file$2, 303, 12, 8252);
+    			add_location(div23, file$2, 336, 12, 9004);
     			attr_dev(div24, "class", "row mb-3");
-    			add_location(div24, file$2, 302, 10, 8216);
+    			add_location(div24, file$2, 335, 10, 8968);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "description");
-    			add_location(label6, file$2, 315, 14, 8632);
+    			add_location(label6, file$2, 348, 14, 9384);
     			attr_dev(input6, "class", "form-control");
     			attr_dev(input6, "id", "description");
     			attr_dev(input6, "type", "text");
-    			add_location(input6, file$2, 316, 14, 8711);
+    			add_location(input6, file$2, 349, 14, 9463);
     			attr_dev(div25, "class", "col");
-    			add_location(div25, file$2, 314, 12, 8599);
+    			add_location(div25, file$2, 347, 12, 9351);
     			attr_dev(div26, "class", "row mb-3");
-    			add_location(div26, file$2, 313, 10, 8563);
+    			add_location(div26, file$2, 346, 10, 9315);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$2, 278, 8, 7477);
+    			add_location(form1, file$2, 311, 8, 8229);
     			attr_dev(div27, "class", "modal-body");
-    			add_location(div27, file$2, 277, 6, 7443);
+    			add_location(div27, file$2, 310, 6, 8195);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary");
     			attr_dev(button5, "data-dismiss", "modal");
-    			add_location(button5, file$2, 327, 8, 8999);
+    			add_location(button5, file$2, 360, 8, 9751);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			attr_dev(button6, "data-dismiss", "modal");
     			set_style(button6, "background-color", "#008000");
     			set_style(button6, "color", "#fff");
-    			add_location(button6, file$2, 330, 8, 9114);
+    			add_location(button6, file$2, 363, 8, 9866);
     			attr_dev(div28, "class", "modal-footer");
-    			add_location(div28, file$2, 326, 6, 8963);
+    			add_location(div28, file$2, 359, 6, 9715);
     			attr_dev(div29, "class", "modal-content");
-    			add_location(div29, file$2, 265, 4, 7073);
+    			add_location(div29, file$2, 298, 4, 7825);
     			attr_dev(div30, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div30, "role", "document");
-    			add_location(div30, file$2, 264, 2, 7003);
+    			add_location(div30, file$2, 297, 2, 7755);
     			attr_dev(div31, "class", "modal fade");
     			attr_dev(div31, "id", "editSGO");
     			attr_dev(div31, "tabindex", "-1");
     			attr_dev(div31, "role", "dialog");
     			attr_dev(div31, "aria-labelledby", "formEditSGO");
     			attr_dev(div31, "aria-hidden", "true");
-    			add_location(div31, file$2, 256, 0, 6865);
+    			add_location(div31, file$2, 289, 0, 7617);
+    			attr_dev(h52, "class", "modal-title");
+    			attr_dev(h52, "id", "deleteSGO");
+    			add_location(h52, file$2, 387, 6, 10390);
+    			attr_dev(span3, "aria-hidden", "true");
+    			add_location(span3, file$2, 394, 8, 10599);
+    			attr_dev(button7, "type", "button");
+    			attr_dev(button7, "class", "close");
+    			attr_dev(button7, "data-dismiss", "modal");
+    			attr_dev(button7, "aria-label", "Close");
+    			add_location(button7, file$2, 388, 6, 10469);
+    			attr_dev(div32, "class", "modal-header");
+    			add_location(div32, file$2, 386, 4, 10356);
+    			add_location(strong, file$2, 398, 70, 10769);
+    			attr_dev(div33, "class", "modal-body");
+    			add_location(div33, file$2, 397, 4, 10673);
+    			attr_dev(button8, "type", "button");
+    			attr_dev(button8, "class", "btn btn-secondary");
+    			attr_dev(button8, "data-dismiss", "modal");
+    			add_location(button8, file$2, 401, 6, 10857);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "btn");
+    			attr_dev(button9, "data-dismiss", "modal");
+    			set_style(button9, "background-color", "#c73834");
+    			set_style(button9, "color", "#fff");
+    			add_location(button9, file$2, 404, 6, 10966);
+    			attr_dev(div34, "class", "modal-footer");
+    			add_location(div34, file$2, 400, 4, 10823);
+    			attr_dev(div35, "class", "modal-content");
+    			add_location(div35, file$2, 385, 2, 10323);
+    			attr_dev(div36, "class", "modal-dialog modal-dialog-centered");
+    			attr_dev(div36, "role", "document");
+    			add_location(div36, file$2, 384, 0, 10255);
+    			attr_dev(div37, "class", "modal fade");
+    			attr_dev(div37, "id", "deleteSGO");
+    			attr_dev(div37, "tabindex", "-1");
+    			attr_dev(div37, "role", "dialog");
+    			attr_dev(div37, "aria-labelledby", "formDeleteSGO");
+    			attr_dev(div37, "aria-hidden", "true");
+    			add_location(div37, file$2, 376, 0, 10115);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17563,21 +18901,21 @@ var app = (function () {
     			append_dev(div7, label0);
     			append_dev(div7, t19);
     			append_dev(div7, input0);
-    			set_input_value(input0, /*serviceGroupObject*/ ctx[3].name);
+    			set_input_value(input0, /*serviceGroupObject*/ ctx[4].name);
     			append_dev(form0, t20);
     			append_dev(form0, div10);
     			append_dev(div10, div9);
     			append_dev(div9, label1);
     			append_dev(div9, t22);
     			append_dev(div9, input1);
-    			set_input_value(input1, /*serviceGroupObject*/ ctx[3].port);
+    			set_input_value(input1, /*serviceGroupObject*/ ctx[4].port);
     			append_dev(form0, t23);
     			append_dev(form0, div12);
     			append_dev(div12, div11);
     			append_dev(div11, label2);
     			append_dev(div11, t25);
     			append_dev(div11, input2);
-    			set_input_value(input2, /*serviceGroupObject*/ ctx[3].description);
+    			set_input_value(input2, /*serviceGroupObject*/ ctx[4].description);
     			append_dev(div15, t26);
     			append_dev(div15, div14);
     			append_dev(div14, button2);
@@ -17627,6 +18965,28 @@ var app = (function () {
     			append_dev(div28, button5);
     			append_dev(div28, t48);
     			append_dev(div28, button6);
+    			insert_dev(target, t50, anchor);
+    			insert_dev(target, div37, anchor);
+    			append_dev(div37, div36);
+    			append_dev(div36, div35);
+    			append_dev(div35, div32);
+    			append_dev(div32, h52);
+    			append_dev(div32, t52);
+    			append_dev(div32, button7);
+    			append_dev(button7, span3);
+    			append_dev(div35, t54);
+    			append_dev(div35, div33);
+    			append_dev(div33, t55);
+    			append_dev(div33, strong);
+    			append_dev(strong, t56);
+    			append_dev(strong, t57);
+    			append_dev(strong, t58);
+    			append_dev(div33, t59);
+    			append_dev(div35, t60);
+    			append_dev(div35, div34);
+    			append_dev(div34, button8);
+    			append_dev(div34, t62);
+    			append_dev(div34, button9);
 
     			if (!mounted) {
     				dispose = [
@@ -17640,15 +19000,25 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[11]),
-    					listen_dev(button3, "click", /*createServiceGroupObject*/ ctx[4], false, false, false),
-    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[12]),
-    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[13]),
-    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[14]),
-    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[15]),
-    					listen_dev(button6, "click", /*editSGO*/ ctx[6], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[13]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[14]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[15]),
+    					listen_dev(button3, "click", /*createServiceGroupObject*/ ctx[5], false, false, false),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[16]),
+    					listen_dev(input4, "input", /*input4_input_handler*/ ctx[17]),
+    					listen_dev(input5, "input", /*input5_input_handler*/ ctx[18]),
+    					listen_dev(input6, "input", /*input6_input_handler*/ ctx[19]),
+    					listen_dev(button6, "click", /*editSGO*/ ctx[7], false, false, false),
+    					listen_dev(
+    						button9,
+    						"click",
+    						function () {
+    							if (is_function(/*deleteSgo*/ ctx[9](/*sgoDelete*/ ctx[3].id))) /*deleteSgo*/ ctx[9](/*sgoDelete*/ ctx[3].id).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
     				];
 
     				mounted = true;
@@ -17657,7 +19027,7 @@ var app = (function () {
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
 
-    			if (dirty & /*getSgoToEdit, serviceGroupObjects*/ 33) {
+    			if (dirty & /*getSgoToDelete, serviceGroupObjects, getSgoToEdit*/ 321) {
     				each_value = /*serviceGroupObjects*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -17681,16 +19051,16 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty & /*serviceGroupObject*/ 8 && input0.value !== /*serviceGroupObject*/ ctx[3].name) {
-    				set_input_value(input0, /*serviceGroupObject*/ ctx[3].name);
+    			if (dirty & /*serviceGroupObject*/ 16 && input0.value !== /*serviceGroupObject*/ ctx[4].name) {
+    				set_input_value(input0, /*serviceGroupObject*/ ctx[4].name);
     			}
 
-    			if (dirty & /*serviceGroupObject*/ 8 && input1.value !== /*serviceGroupObject*/ ctx[3].port) {
-    				set_input_value(input1, /*serviceGroupObject*/ ctx[3].port);
+    			if (dirty & /*serviceGroupObject*/ 16 && input1.value !== /*serviceGroupObject*/ ctx[4].port) {
+    				set_input_value(input1, /*serviceGroupObject*/ ctx[4].port);
     			}
 
-    			if (dirty & /*serviceGroupObject*/ 8 && input2.value !== /*serviceGroupObject*/ ctx[3].description) {
-    				set_input_value(input2, /*serviceGroupObject*/ ctx[3].description);
+    			if (dirty & /*serviceGroupObject*/ 16 && input2.value !== /*serviceGroupObject*/ ctx[4].description) {
+    				set_input_value(input2, /*serviceGroupObject*/ ctx[4].description);
     			}
 
     			if (dirty & /*sgoEdit*/ 4 && input3.value !== /*sgoEdit*/ ctx[2].id) {
@@ -17708,6 +19078,8 @@ var app = (function () {
     			if (dirty & /*sgoEdit*/ 4 && input6.value !== /*sgoEdit*/ ctx[2].description) {
     				set_input_value(input6, /*sgoEdit*/ ctx[2].description);
     			}
+
+    			if (dirty & /*sgoDelete*/ 8 && t57_value !== (t57_value = /*sgoDelete*/ ctx[3].name + "")) set_data_dev(t57, t57_value);
     		},
     		i: noop$1,
     		o: noop$1,
@@ -17718,6 +19090,8 @@ var app = (function () {
     			if (detaching) detach_dev(div17);
     			if (detaching) detach_dev(t30);
     			if (detaching) detach_dev(div31);
+    			if (detaching) detach_dev(t50);
+    			if (detaching) detach_dev(div37);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -17751,6 +19125,7 @@ var app = (function () {
     	};
 
     	let portBeforeEdit = [];
+    	let sgoDelete = { id: null, name: null };
 
     	function getServiceGroupObjects() {
     		var config = {
@@ -17771,7 +19146,7 @@ var app = (function () {
 
     	function createServiceGroupObject() {
     		var port = serviceGroupObject.port.split(", ");
-    		$$invalidate(3, serviceGroupObject.port = port, serviceGroupObject);
+    		$$invalidate(4, serviceGroupObject.port = port, serviceGroupObject);
 
     		var config = {
     			method: "post",
@@ -17817,6 +19192,25 @@ var app = (function () {
     		});
     	}
 
+    	function getSgoToDelete(sgoD) {
+    		$$invalidate(3, sgoDelete.id = sgoD.id, sgoDelete);
+    		$$invalidate(3, sgoDelete.name = sgoD.name, sgoDelete);
+    	}
+
+    	function deleteSgo(id) {
+    		var config = {
+    			method: "delete",
+    			url: api_root$1 + "/service-group-object/" + id
+    		};
+
+    		axios(config).then(function (response) {
+    			getServiceGroupObjects();
+    		}).catch(function (error) {
+    			alert("Could not delete Service Group Object");
+    			console.log(error);
+    		});
+    	}
+
     	let sortBy = { col: "name", ascending: true };
     	const writable_props = [];
 
@@ -17825,20 +19219,21 @@ var app = (function () {
     	});
 
     	const click_handler = serviceGroupObject => getSgoToEdit(serviceGroupObject);
+    	const click_handler_1 = serviceGroupObject => getSgoToDelete(serviceGroupObject);
 
     	function input0_input_handler() {
     		serviceGroupObject.name = this.value;
-    		$$invalidate(3, serviceGroupObject);
+    		$$invalidate(4, serviceGroupObject);
     	}
 
     	function input1_input_handler() {
     		serviceGroupObject.port = this.value;
-    		$$invalidate(3, serviceGroupObject);
+    		$$invalidate(4, serviceGroupObject);
     	}
 
     	function input2_input_handler() {
     		serviceGroupObject.description = this.value;
-    		$$invalidate(3, serviceGroupObject);
+    		$$invalidate(4, serviceGroupObject);
     	}
 
     	function input3_input_handler() {
@@ -17868,20 +19263,24 @@ var app = (function () {
     		serviceGroupObject,
     		sgoEdit,
     		portBeforeEdit,
+    		sgoDelete,
     		getServiceGroupObjects,
     		createServiceGroupObject,
     		getSgoToEdit,
     		editSGO,
+    		getSgoToDelete,
+    		deleteSgo,
     		sortBy,
     		sort
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('serviceGroupObjects' in $$props) $$invalidate(0, serviceGroupObjects = $$props.serviceGroupObjects);
-    		if ('serviceGroupObject' in $$props) $$invalidate(3, serviceGroupObject = $$props.serviceGroupObject);
+    		if ('serviceGroupObject' in $$props) $$invalidate(4, serviceGroupObject = $$props.serviceGroupObject);
     		if ('sgoEdit' in $$props) $$invalidate(2, sgoEdit = $$props.sgoEdit);
     		if ('portBeforeEdit' in $$props) portBeforeEdit = $$props.portBeforeEdit;
-    		if ('sortBy' in $$props) $$invalidate(7, sortBy = $$props.sortBy);
+    		if ('sgoDelete' in $$props) $$invalidate(3, sgoDelete = $$props.sgoDelete);
+    		if ('sortBy' in $$props) $$invalidate(10, sortBy = $$props.sortBy);
     		if ('sort' in $$props) $$invalidate(1, sort = $$props.sort);
     	};
 
@@ -17890,13 +19289,13 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*sortBy, serviceGroupObjects*/ 129) {
+    		if ($$self.$$.dirty & /*sortBy, serviceGroupObjects*/ 1025) {
     			$$invalidate(1, sort = column => {
     				if (sortBy.col == column) {
-    					$$invalidate(7, sortBy.ascending = !sortBy.ascending, sortBy);
+    					$$invalidate(10, sortBy.ascending = !sortBy.ascending, sortBy);
     				} else {
-    					$$invalidate(7, sortBy.col = column, sortBy);
-    					$$invalidate(7, sortBy.ascending = true, sortBy);
+    					$$invalidate(10, sortBy.col = column, sortBy);
+    					$$invalidate(10, sortBy.ascending = true, sortBy);
     				}
 
     				// Modifier to sorting function for ascending or descending
@@ -17915,12 +19314,16 @@ var app = (function () {
     		serviceGroupObjects,
     		sort,
     		sgoEdit,
+    		sgoDelete,
     		serviceGroupObject,
     		createServiceGroupObject,
     		getSgoToEdit,
     		editSGO,
+    		getSgoToDelete,
+    		deleteSgo,
     		sortBy,
     		click_handler,
+    		click_handler_1,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
@@ -18441,7 +19844,7 @@ var app = (function () {
     			span3.textContent = "×";
     			t54 = space();
     			div33 = element("div");
-    			t55 = text("Are you sure, that you want to delete the use case ");
+    			t55 = text("Are you sure, that you want to delete this use case ");
     			strong = element("strong");
     			t56 = text("\"");
     			t57 = text(t57_value);
@@ -18656,40 +20059,41 @@ var app = (function () {
     			add_location(div31, file$1, 291, 0, 7420);
     			attr_dev(h52, "class", "modal-title");
     			attr_dev(h52, "id", "deleteUseCase");
-    			add_location(h52, file$1, 389, 6, 10231);
+    			add_location(h52, file$1, 389, 6, 10233);
     			attr_dev(span3, "aria-hidden", "true");
-    			add_location(span3, file$1, 396, 8, 10432);
+    			add_location(span3, file$1, 396, 8, 10434);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "close");
     			attr_dev(button7, "data-dismiss", "modal");
     			attr_dev(button7, "aria-label", "Close");
-    			add_location(button7, file$1, 390, 6, 10302);
+    			add_location(button7, file$1, 390, 6, 10304);
     			attr_dev(div32, "class", "modal-header");
-    			add_location(div32, file$1, 388, 4, 10197);
-    			add_location(strong, file$1, 400, 57, 10589);
+    			add_location(div32, file$1, 388, 4, 10199);
+    			add_location(strong, file$1, 400, 58, 10592);
     			attr_dev(div33, "class", "modal-body");
-    			add_location(div33, file$1, 399, 4, 10506);
+    			add_location(div33, file$1, 399, 4, 10508);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn btn-secondary");
     			attr_dev(button8, "data-dismiss", "modal");
-    			add_location(button8, file$1, 403, 6, 10681);
+    			add_location(button8, file$1, 403, 6, 10684);
     			attr_dev(button9, "type", "button");
     			attr_dev(button9, "class", "btn");
+    			attr_dev(button9, "data-dismiss", "modal");
     			set_style(button9, "background-color", "#c73834");
     			set_style(button9, "color", "#fff");
-    			add_location(button9, file$1, 406, 6, 10790);
+    			add_location(button9, file$1, 406, 6, 10793);
     			attr_dev(div34, "class", "modal-footer");
-    			add_location(div34, file$1, 402, 4, 10647);
+    			add_location(div34, file$1, 402, 4, 10650);
     			attr_dev(div35, "class", "modal-content");
-    			add_location(div35, file$1, 387, 2, 10164);
+    			add_location(div35, file$1, 387, 2, 10166);
     			attr_dev(div36, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div36, "role", "document");
-    			add_location(div36, file$1, 386, 0, 10096);
+    			add_location(div36, file$1, 386, 0, 10098);
     			attr_dev(div37, "class", "modal fade");
     			attr_dev(div37, "id", "deleteUC");
     			attr_dev(div37, "tabindex", "-1");
     			attr_dev(div37, "role", "dialog");
-    			attr_dev(div37, "aria-labelledby", "formEditUseCase");
+    			attr_dev(div37, "aria-labelledby", "formDeleteUseCase");
     			attr_dev(div37, "aria-hidden", "true");
     			add_location(div37, file$1, 378, 0, 9955);
     		},
