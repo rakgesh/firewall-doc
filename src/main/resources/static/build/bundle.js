@@ -833,7 +833,7 @@ var app = (function () {
     const { Error: Error_1, Object: Object_1, console: console_1$8 } = globals;
 
     // (267:0) {:else}
-    function create_else_block$1(ctx) {
+    function create_else_block$2(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -915,7 +915,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$1.name,
+    		id: create_else_block$2.name,
     		type: "else",
     		source: "(267:0) {:else}",
     		ctx
@@ -925,7 +925,7 @@ var app = (function () {
     }
 
     // (260:0) {#if componentParams}
-    function create_if_block$2(ctx) {
+    function create_if_block$3(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -1010,7 +1010,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$3.name,
     		type: "if",
     		source: "(260:0) {#if componentParams}",
     		ctx
@@ -1024,7 +1024,7 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$2, create_else_block$1];
+    	const if_block_creators = [create_if_block$3, create_else_block$2];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -5781,7 +5781,7 @@ var app = (function () {
     }
 
     // (606:12) {#if fwr.dngoWithNo}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let li;
     	let button;
     	let t0_value = /*fwr*/ ctx[102].dngoWithNo.ngoName + "";
@@ -5880,7 +5880,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(606:12) {#if fwr.dngoWithNo}",
     		ctx
@@ -6050,7 +6050,7 @@ var app = (function () {
     	let if_block4 = /*fwr*/ ctx[102].dho && create_if_block_3(ctx);
     	let if_block5 = /*fwr*/ ctx[102].dhgoWithHo && create_if_block_2(ctx);
     	let if_block6 = /*fwr*/ ctx[102].dno && create_if_block_1(ctx);
-    	let if_block7 = /*fwr*/ ctx[102].dngoWithNo && create_if_block$1(ctx);
+    	let if_block7 = /*fwr*/ ctx[102].dngoWithNo && create_if_block$2(ctx);
     	let each_value_25 = /*fwr*/ ctx[102].sgo.port;
     	validate_each_argument(each_value_25);
     	let each_blocks = [];
@@ -6344,7 +6344,7 @@ var app = (function () {
     				if (if_block7) {
     					if_block7.p(ctx, dirty);
     				} else {
-    					if_block7 = create_if_block$1(ctx);
+    					if_block7 = create_if_block$2(ctx);
     					if_block7.c();
     					if_block7.m(td3, null);
     				}
@@ -10759,7 +10759,7 @@ var app = (function () {
     }
 
     // (232:4) {:else}
-    function create_else_block(ctx) {
+    function create_else_block$1(ctx) {
     	let div;
 
     	const block = {
@@ -10779,7 +10779,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block$1.name,
     		type: "else",
     		source: "(232:4) {:else}",
     		ctx
@@ -10789,7 +10789,7 @@ var app = (function () {
     }
 
     // (202:4) {#if visibleData.length}
-    function create_if_block(ctx) {
+    function create_if_block$1(ctx) {
     	let tbody;
     	let each_value = /*visibleData*/ ctx[0];
     	validate_each_argument(each_value);
@@ -10849,7 +10849,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(202:4) {#if visibleData.length}",
     		ctx
@@ -11153,8 +11153,8 @@ var app = (function () {
     	let dispose;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*visibleData*/ ctx[0].length) return create_if_block;
-    		return create_else_block;
+    		if (/*visibleData*/ ctx[0].length) return create_if_block$1;
+    		return create_else_block$1;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -13383,7 +13383,107 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (211:6) {#each visibleData as networkObject}
+    // (243:4) {:else}
+    function create_else_block(ctx) {
+    	let div;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "No data available";
+    			add_location(div, file$5, 243, 4, 6246);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    		},
+    		p: noop$1,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(243:4) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (210:4) {#if visibleData.length}
+    function create_if_block(ctx) {
+    	let tbody;
+    	let each_value = /*visibleData*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			tbody = element("tbody");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			add_location(tbody, file$5, 210, 4, 5208);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tbody, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*getNoToDelete, visibleData, getNoToEdit*/ 641) {
+    				each_value = /*visibleData*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tbody);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(210:4) {#if visibleData.length}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (212:6) {#each visibleData as networkObject}
     function create_each_block$4(ctx) {
     	let tr;
     	let td0;
@@ -13444,29 +13544,29 @@ var app = (function () {
     			button1 = element("button");
     			i1 = element("i");
     			t9 = space();
-    			add_location(td0, file$5, 212, 10, 5255);
-    			add_location(td1, file$5, 213, 10, 5296);
-    			add_location(td2, file$5, 214, 10, 5335);
-    			add_location(td3, file$5, 215, 10, 5378);
+    			add_location(td0, file$5, 213, 10, 5285);
+    			add_location(td1, file$5, 214, 10, 5326);
+    			add_location(td2, file$5, 215, 10, 5365);
+    			add_location(td3, file$5, 216, 10, 5408);
     			attr_dev(i0, "class", "fa fa-pencil-square-o fa-lg");
     			attr_dev(i0, "aria-hidden", "true");
-    			add_location(i0, file$5, 222, 15, 5654);
+    			add_location(i0, file$5, 223, 15, 5684);
     			set_style(button0, "border", "none");
     			set_style(button0, "background", "none");
     			attr_dev(button0, "data-toggle", "modal");
     			attr_dev(button0, "data-target", "#editNO");
-    			add_location(button0, file$5, 217, 13, 5444);
-    			add_location(td4, file$5, 216, 10, 5426);
+    			add_location(button0, file$5, 218, 13, 5474);
+    			add_location(td4, file$5, 217, 10, 5456);
     			attr_dev(i1, "class", "fa fa-trash-o fa-lg");
     			attr_dev(i1, "aria-hidden", "true");
-    			add_location(i1, file$5, 235, 14, 6061);
+    			add_location(i1, file$5, 236, 14, 6091);
     			set_style(button1, "border", "none");
     			set_style(button1, "background", "none");
     			attr_dev(button1, "data-toggle", "modal");
     			attr_dev(button1, "data-target", "#deleteNO");
-    			add_location(button1, file$5, 229, 13, 5833);
-    			add_location(td5, file$5, 228, 10, 5815);
-    			add_location(tr, file$5, 211, 8, 5239);
+    			add_location(button1, file$5, 230, 13, 5863);
+    			add_location(td5, file$5, 229, 10, 5845);
+    			add_location(tr, file$5, 212, 8, 5269);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -13518,7 +13618,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(211:6) {#each visibleData as networkObject}",
+    		source: "(212:6) {#each visibleData as networkObject}",
     		ctx
     	});
 
@@ -13571,7 +13671,6 @@ var app = (function () {
     	let t17;
     	let th5;
     	let t18;
-    	let tbody;
     	let t19;
     	let div24;
     	let div23;
@@ -13683,13 +13782,14 @@ var app = (function () {
     	let button9;
     	let mounted;
     	let dispose;
-    	let each_value = /*visibleData*/ ctx[0];
-    	validate_each_argument(each_value);
-    	let each_blocks = [];
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	function select_block_type(ctx, dirty) {
+    		if (/*visibleData*/ ctx[0].length) return create_if_block;
+    		return create_else_block;
     	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
@@ -13740,12 +13840,7 @@ var app = (function () {
     			t17 = space();
     			th5 = element("th");
     			t18 = space();
-    			tbody = element("tbody");
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
+    			if_block.c();
     			t19 = space();
     			div24 = element("div");
     			div23 = element("div");
@@ -13936,7 +14031,6 @@ var app = (function () {
     			add_location(th5, file$5, 206, 8, 5127);
     			add_location(tr, file$5, 189, 6, 4518);
     			add_location(thead, file$5, 188, 4, 4503);
-    			add_location(tbody, file$5, 209, 4, 5178);
     			attr_dev(table, "class", "table table-striped table-hover");
     			attr_dev(table, "id", "allHostObjects");
     			add_location(table, file$5, 187, 2, 4430);
@@ -13945,224 +14039,224 @@ var app = (function () {
     			add_location(div10, file$5, 153, 0, 3448);
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "crateHostObject");
-    			add_location(h50, file$5, 254, 8, 6507);
+    			add_location(h50, file$5, 258, 8, 6593);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$5, 261, 10, 6727);
+    			add_location(span1, file$5, 265, 10, 6813);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$5, 255, 8, 6585);
+    			add_location(button1, file$5, 259, 8, 6671);
     			attr_dev(div11, "class", "modal-header");
-    			add_location(div11, file$5, 253, 6, 6471);
+    			add_location(div11, file$5, 257, 6, 6557);
     			attr_dev(label0, "class", "form-label");
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$5, 268, 14, 6941);
+    			add_location(label0, file$5, 272, 14, 7027);
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "name");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "placeholder", "N_<ZONE>_<NETZWERK-NAME>");
-    			add_location(input1, file$5, 269, 14, 7006);
+    			add_location(input1, file$5, 273, 14, 7092);
     			attr_dev(div12, "class", "col");
-    			add_location(div12, file$5, 267, 12, 6908);
+    			add_location(div12, file$5, 271, 12, 6994);
     			attr_dev(div13, "class", "row mb-3");
-    			add_location(div13, file$5, 266, 10, 6872);
+    			add_location(div13, file$5, 270, 10, 6958);
     			attr_dev(label1, "class", "form-label");
     			attr_dev(label1, "for", "ip");
-    			add_location(label1, file$5, 280, 14, 7348);
+    			add_location(label1, file$5, 284, 14, 7434);
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "ip");
     			attr_dev(input2, "type", "text");
-    			add_location(input2, file$5, 281, 14, 7409);
+    			add_location(input2, file$5, 285, 14, 7495);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$5, 279, 12, 7315);
+    			add_location(div14, file$5, 283, 12, 7401);
     			attr_dev(div15, "class", "row mb-3");
-    			add_location(div15, file$5, 278, 10, 7279);
+    			add_location(div15, file$5, 282, 10, 7365);
     			attr_dev(label2, "class", "form-label");
     			attr_dev(label2, "for", "subnet");
-    			add_location(label2, file$5, 291, 14, 7691);
+    			add_location(label2, file$5, 295, 14, 7777);
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "subnet");
     			attr_dev(input3, "type", "text");
-    			add_location(input3, file$5, 292, 14, 7760);
+    			add_location(input3, file$5, 296, 14, 7846);
     			attr_dev(div16, "class", "col");
-    			add_location(div16, file$5, 290, 12, 7658);
+    			add_location(div16, file$5, 294, 12, 7744);
     			attr_dev(div17, "class", "row mb-3");
-    			add_location(div17, file$5, 289, 10, 7622);
+    			add_location(div17, file$5, 293, 10, 7708);
     			attr_dev(label3, "class", "form-label");
     			attr_dev(label3, "for", "description");
-    			add_location(label3, file$5, 302, 14, 8050);
+    			add_location(label3, file$5, 306, 14, 8136);
     			attr_dev(input4, "class", "form-control");
     			attr_dev(input4, "id", "description");
     			attr_dev(input4, "type", "text");
-    			add_location(input4, file$5, 303, 14, 8129);
+    			add_location(input4, file$5, 307, 14, 8215);
     			attr_dev(div18, "class", "col");
-    			add_location(div18, file$5, 301, 12, 8017);
+    			add_location(div18, file$5, 305, 12, 8103);
     			attr_dev(div19, "class", "row mb-3");
-    			add_location(div19, file$5, 300, 10, 7981);
+    			add_location(div19, file$5, 304, 10, 8067);
     			attr_dev(form0, "class", "mb-5");
-    			add_location(form0, file$5, 265, 8, 6841);
+    			add_location(form0, file$5, 269, 8, 6927);
     			attr_dev(div20, "class", "modal-body");
-    			add_location(div20, file$5, 264, 6, 6807);
+    			add_location(div20, file$5, 268, 6, 6893);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$5, 314, 8, 8423);
+    			add_location(button2, file$5, 318, 8, 8509);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn");
     			attr_dev(button3, "data-dismiss", "modal");
     			set_style(button3, "background-color", "#008000");
     			set_style(button3, "color", "#fff");
-    			add_location(button3, file$5, 317, 8, 8538);
+    			add_location(button3, file$5, 321, 8, 8624);
     			attr_dev(div21, "class", "modal-footer");
-    			add_location(div21, file$5, 313, 6, 8387);
+    			add_location(div21, file$5, 317, 6, 8473);
     			attr_dev(div22, "class", "modal-content");
-    			add_location(div22, file$5, 252, 4, 6436);
+    			add_location(div22, file$5, 256, 4, 6522);
     			attr_dev(div23, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div23, "role", "document");
-    			add_location(div23, file$5, 251, 2, 6366);
+    			add_location(div23, file$5, 255, 2, 6452);
     			attr_dev(div24, "class", "modal fade");
     			attr_dev(div24, "id", "crateHO");
     			attr_dev(div24, "tabindex", "-1");
     			attr_dev(div24, "role", "dialog");
     			attr_dev(div24, "aria-labelledby", "formCreateHostObject");
     			attr_dev(div24, "aria-hidden", "true");
-    			add_location(div24, file$5, 243, 0, 6219);
+    			add_location(div24, file$5, 247, 0, 6305);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "editNetworkObject");
-    			add_location(h51, file$5, 340, 8, 9084);
+    			add_location(h51, file$5, 344, 8, 9170);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$5, 347, 10, 9307);
+    			add_location(span2, file$5, 351, 10, 9393);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "close");
     			attr_dev(button4, "data-dismiss", "modal");
     			attr_dev(button4, "aria-label", "Close");
-    			add_location(button4, file$5, 341, 8, 9165);
+    			add_location(button4, file$5, 345, 8, 9251);
     			attr_dev(div25, "class", "modal-header");
-    			add_location(div25, file$5, 339, 6, 9048);
+    			add_location(div25, file$5, 343, 6, 9134);
     			attr_dev(label4, "class", "form-label");
     			attr_dev(label4, "for", "id");
-    			add_location(label4, file$5, 354, 14, 9521);
+    			add_location(label4, file$5, 358, 14, 9607);
     			attr_dev(input5, "class", "form-control");
     			attr_dev(input5, "id", "id");
     			attr_dev(input5, "type", "text");
     			input5.disabled = true;
-    			add_location(input5, file$5, 355, 14, 9582);
+    			add_location(input5, file$5, 359, 14, 9668);
     			attr_dev(div26, "class", "col");
-    			add_location(div26, file$5, 353, 12, 9488);
+    			add_location(div26, file$5, 357, 12, 9574);
     			attr_dev(div27, "class", "row mb-3");
-    			add_location(div27, file$5, 352, 10, 9452);
+    			add_location(div27, file$5, 356, 10, 9538);
     			attr_dev(label5, "class", "form-label");
     			attr_dev(label5, "for", "name");
-    			add_location(label5, file$5, 366, 14, 9883);
+    			add_location(label5, file$5, 370, 14, 9969);
     			attr_dev(input6, "class", "form-control");
     			attr_dev(input6, "id", "name");
     			attr_dev(input6, "type", "text");
-    			add_location(input6, file$5, 367, 14, 9948);
+    			add_location(input6, file$5, 371, 14, 10034);
     			attr_dev(div28, "class", "col");
-    			add_location(div28, file$5, 365, 12, 9850);
+    			add_location(div28, file$5, 369, 12, 9936);
     			attr_dev(div29, "class", "row mb-3");
-    			add_location(div29, file$5, 364, 10, 9814);
+    			add_location(div29, file$5, 368, 10, 9900);
     			attr_dev(label6, "class", "form-label");
     			attr_dev(label6, "for", "ip");
-    			add_location(label6, file$5, 377, 14, 10227);
+    			add_location(label6, file$5, 381, 14, 10313);
     			attr_dev(input7, "class", "form-control");
     			attr_dev(input7, "id", "ip");
     			attr_dev(input7, "type", "text");
-    			add_location(input7, file$5, 378, 14, 10289);
+    			add_location(input7, file$5, 382, 14, 10375);
     			attr_dev(div30, "class", "col");
-    			add_location(div30, file$5, 376, 12, 10194);
+    			add_location(div30, file$5, 380, 12, 10280);
     			attr_dev(div31, "class", "row mb-3");
-    			add_location(div31, file$5, 375, 10, 10158);
+    			add_location(div31, file$5, 379, 10, 10244);
     			attr_dev(label7, "class", "form-label");
     			attr_dev(label7, "for", "subnet");
-    			add_location(label7, file$5, 388, 14, 10564);
+    			add_location(label7, file$5, 392, 14, 10650);
     			attr_dev(input8, "class", "form-control");
     			attr_dev(input8, "id", "ip");
     			attr_dev(input8, "type", "text");
-    			add_location(input8, file$5, 389, 14, 10634);
+    			add_location(input8, file$5, 393, 14, 10720);
     			attr_dev(div32, "class", "col");
-    			add_location(div32, file$5, 387, 12, 10531);
+    			add_location(div32, file$5, 391, 12, 10617);
     			attr_dev(div33, "class", "row mb-3");
-    			add_location(div33, file$5, 386, 10, 10495);
+    			add_location(div33, file$5, 390, 10, 10581);
     			attr_dev(label8, "class", "form-label");
     			attr_dev(label8, "for", "description");
-    			add_location(label8, file$5, 399, 14, 10913);
+    			add_location(label8, file$5, 403, 14, 10999);
     			attr_dev(input9, "class", "form-control");
     			attr_dev(input9, "id", "description");
     			attr_dev(input9, "type", "text");
-    			add_location(input9, file$5, 400, 14, 10992);
+    			add_location(input9, file$5, 404, 14, 11078);
     			attr_dev(div34, "class", "col");
-    			add_location(div34, file$5, 398, 12, 10880);
+    			add_location(div34, file$5, 402, 12, 10966);
     			attr_dev(div35, "class", "row mb-3");
-    			add_location(div35, file$5, 397, 10, 10844);
+    			add_location(div35, file$5, 401, 10, 10930);
     			attr_dev(form1, "class", "mb-5");
-    			add_location(form1, file$5, 351, 8, 9421);
+    			add_location(form1, file$5, 355, 8, 9507);
     			attr_dev(div36, "class", "modal-body");
-    			add_location(div36, file$5, 350, 6, 9387);
+    			add_location(div36, file$5, 354, 6, 9473);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary");
     			attr_dev(button5, "data-dismiss", "modal");
-    			add_location(button5, file$5, 411, 8, 11279);
+    			add_location(button5, file$5, 415, 8, 11365);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn");
     			set_style(button6, "background-color", "#008000");
     			set_style(button6, "color", "#fff");
     			attr_dev(button6, "data-dismiss", "modal");
-    			add_location(button6, file$5, 414, 8, 11394);
+    			add_location(button6, file$5, 418, 8, 11480);
     			attr_dev(div37, "class", "modal-footer");
-    			add_location(div37, file$5, 410, 6, 11243);
+    			add_location(div37, file$5, 414, 6, 11329);
     			attr_dev(div38, "class", "modal-content");
-    			add_location(div38, file$5, 338, 4, 9013);
+    			add_location(div38, file$5, 342, 4, 9099);
     			attr_dev(div39, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div39, "role", "document");
-    			add_location(div39, file$5, 337, 2, 8943);
+    			add_location(div39, file$5, 341, 2, 9029);
     			attr_dev(div40, "class", "modal fade");
     			attr_dev(div40, "id", "editNO");
     			attr_dev(div40, "tabindex", "-1");
     			attr_dev(div40, "role", "dialog");
     			attr_dev(div40, "aria-labelledby", "formEditNetworkObject");
     			attr_dev(div40, "aria-hidden", "true");
-    			add_location(div40, file$5, 329, 0, 8796);
+    			add_location(div40, file$5, 333, 0, 8882);
     			attr_dev(h52, "class", "modal-title");
     			attr_dev(h52, "id", "deleteNO");
-    			add_location(h52, file$5, 437, 8, 11921);
+    			add_location(h52, file$5, 441, 8, 12007);
     			attr_dev(span3, "aria-hidden", "true");
-    			add_location(span3, file$5, 444, 10, 12137);
+    			add_location(span3, file$5, 448, 10, 12223);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "close");
     			attr_dev(button7, "data-dismiss", "modal");
     			attr_dev(button7, "aria-label", "Close");
-    			add_location(button7, file$5, 438, 8, 11995);
+    			add_location(button7, file$5, 442, 8, 12081);
     			attr_dev(div41, "class", "modal-header");
-    			add_location(div41, file$5, 436, 6, 11885);
-    			add_location(strong, file$5, 448, 66, 12309);
+    			add_location(div41, file$5, 440, 6, 11971);
+    			add_location(strong, file$5, 452, 66, 12395);
     			attr_dev(div42, "class", "modal-body");
-    			add_location(div42, file$5, 447, 6, 12217);
+    			add_location(div42, file$5, 451, 6, 12303);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn btn-secondary");
     			attr_dev(button8, "data-dismiss", "modal");
-    			add_location(button8, file$5, 453, 8, 12424);
+    			add_location(button8, file$5, 457, 8, 12510);
     			attr_dev(button9, "type", "button");
     			attr_dev(button9, "class", "btn");
     			attr_dev(button9, "data-dismiss", "modal");
     			set_style(button9, "background-color", "#c73834");
     			set_style(button9, "color", "#fff");
-    			add_location(button9, file$5, 456, 8, 12539);
+    			add_location(button9, file$5, 460, 8, 12625);
     			attr_dev(div43, "class", "modal-footer");
-    			add_location(div43, file$5, 452, 6, 12388);
+    			add_location(div43, file$5, 456, 6, 12474);
     			attr_dev(div44, "class", "modal-content");
-    			add_location(div44, file$5, 435, 4, 11850);
+    			add_location(div44, file$5, 439, 4, 11936);
     			attr_dev(div45, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div45, "role", "document");
-    			add_location(div45, file$5, 434, 2, 11780);
+    			add_location(div45, file$5, 438, 2, 11866);
     			attr_dev(div46, "class", "modal fade");
     			attr_dev(div46, "id", "deleteNO");
     			attr_dev(div46, "tabindex", "-1");
     			attr_dev(div46, "role", "dialog");
     			attr_dev(div46, "aria-labelledby", "formDeleteNO");
     			attr_dev(div46, "aria-hidden", "true");
-    			add_location(div46, file$5, 426, 0, 11640);
+    			add_location(div46, file$5, 430, 0, 11726);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14214,12 +14308,7 @@ var app = (function () {
     			append_dev(tr, t17);
     			append_dev(tr, th5);
     			append_dev(table, t18);
-    			append_dev(table, tbody);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(tbody, null);
-    			}
-
+    			if_block.m(table, null);
     			insert_dev(target, t19, anchor);
     			insert_dev(target, div24, anchor);
     			append_dev(div24, div23);
@@ -14414,28 +14503,16 @@ var app = (function () {
     				set_input_value(input0, /*searchText*/ ctx[1]);
     			}
 
-    			if (dirty & /*getNoToDelete, visibleData, getNoToEdit*/ 641) {
-    				each_value = /*visibleData*/ ctx[0];
-    				validate_each_argument(each_value);
-    				let i;
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
 
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$4(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block$4(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(tbody, null);
-    					}
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(table, null);
     				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value.length;
     			}
 
     			if (dirty & /*networkObject*/ 32 && input1.value !== /*networkObject*/ ctx[5].name) {
@@ -14480,7 +14557,7 @@ var app = (function () {
     		o: noop$1,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div10);
-    			destroy_each(each_blocks, detaching);
+    			if_block.d();
     			if (detaching) detach_dev(t19);
     			if (detaching) detach_dev(div24);
     			if (detaching) detach_dev(t39);
