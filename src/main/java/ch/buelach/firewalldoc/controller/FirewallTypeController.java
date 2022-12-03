@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.FirewallType;
 import ch.buelach.firewalldoc.model.FirewallTypeCreateDTO;
+import ch.buelach.firewalldoc.model.FirewallTypeEditDTO;
 import ch.buelach.firewalldoc.repository.FirewallTypeRepository;
 
 @RestController
@@ -46,6 +48,15 @@ public class FirewallTypeController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PutMapping("")
+    public ResponseEntity<FirewallType> editFirewallType(@RequestBody FirewallTypeEditDTO fwTEditDTO) {
+        FirewallType fwTDAO = firewallTypeRepository.findById(fwTEditDTO.getId()).get();
+        fwTDAO.setName(fwTEditDTO.getName());
+        fwTDAO.setDescription(fwTEditDTO.getDescription());
+        FirewallType fwT = firewallTypeRepository.save(fwTDAO);
+        return new ResponseEntity<>(fwT, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
