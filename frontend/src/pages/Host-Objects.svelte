@@ -12,6 +12,9 @@
     description: null,
   };
 
+  let visibleData;
+  let searchText;
+
   let hoEdit = {
     id: null,
     name: null,
@@ -41,6 +44,19 @@
       });
   }
   getHostObjects();
+
+  $: {
+    visibleData = searchText
+      ? hostObjects.filter((e) => {
+          return (
+            e.name.toLowerCase().match(`${searchText.toLowerCase()}.*`) ||
+            e.ip.match(`${searchText}.*`) ||
+            e.description.toLowerCase().match(`${searchText.toLowerCase()}.*`)
+          );
+        })
+      : hostObjects;
+  }
+
 
   function createHostObject() {
     var config = {
@@ -156,6 +172,21 @@
       >
     </div>
   </div>
+  <div class="row g-3">
+    <div class="col">
+      <input
+        bind:value={searchText}
+        class="form-control"
+        id="search"
+        type="text"
+        style="margin-bottom: 10px;"
+        placeholder="search..."
+      />
+    </div>
+    <div class="col" />
+    <div class="col" />
+    <div class="col" />
+  </div>
 </div>
 <table class="table table-striped table-hover" id="allHostObjects">
   <thead>
@@ -168,8 +199,9 @@
       <th scope="col"></th>
     </tr>
   </thead>
+  {#if visibleData.length}
   <tbody>
-    {#each hostObjects as hostObject}
+    {#each visibleData as hostObject}
       <tr>
         <td>{hostObject.name}</td>
         <td>{hostObject.ip}</td>
@@ -194,6 +226,9 @@
       </tr>
     {/each}
   </tbody>
+  {:else}
+  <div>No data available</div>
+{/if}
 </table>
 </div>
 
