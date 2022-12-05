@@ -14,5 +14,6 @@ public class FirewallRuleEditDTO {
     private String destinationId;
     private String serviceGroupObjectId;
     private String useCaseId;
+    private String firewallStatus;
     
 }

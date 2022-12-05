@@ -60,7 +60,9 @@ public class FirewallRuleController {
         fwDAO.setDestinationId(fwEditDTO.getDestinationId());
         fwDAO.setServiceGroupObjectId(fwEditDTO.getServiceGroupObjectId());
         fwDAO.setUseCaseId(fwEditDTO.getUseCaseId());
-        fwDAO.setFirewallStatus(FirewallStatus.EDITED);
+        if (!fwEditDTO.getFirewallStatus().equals("REQUESTED_FOR_APPROVAL")) {
+            fwDAO.setFirewallStatus(FirewallStatus.EDITED);
+        }
         FirewallRule fw = firewallRuleRepository.save(fwDAO);
         return new ResponseEntity<>(fw, HttpStatus.OK);
     }

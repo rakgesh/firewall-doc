@@ -37,6 +37,7 @@
     destinationId: null,
     serviceGroupObjectId: null,
     useCaseId: null,
+    firewallStatus: null,
   };
 
   let fwrDelete = {
@@ -273,6 +274,7 @@
 
     fwEdit.serviceGroupObjectId = fw.sgo.id;
     fwEdit.useCaseId = fw.uc.id;
+    fwEdit.firewallStatus = fw.firewallStatus;
   }
 
   function editFw() {
