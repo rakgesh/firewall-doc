@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import ch.buelach.firewalldoc.model.Context;
 import ch.buelach.firewalldoc.model.FirewallRule;
 import ch.buelach.firewalldoc.model.FirewallRuleDetail;
+import ch.buelach.firewalldoc.model.FirewallStatus;
+import ch.buelach.firewalldoc.model.FirewallStatusChangeDTO;
 import ch.buelach.firewalldoc.model.FirewallType;
 import ch.buelach.firewalldoc.model.HostObject;
 import ch.buelach.firewalldoc.model.HostObjectsToHostGroup;
@@ -147,8 +149,25 @@ public class FirewallRuleService {
             return all; 
 
         }
-  
 
-    
+        public FirewallRule changeStatus(FirewallStatusChangeDTO fwSC) {
+            FirewallRule fwDAO = firewallRuleRepository.findById(fwSC.getFwId()).get();
+            String statusToChange = fwSC.getStatus();
+            if (statusToChange.equals("APPROVED")) {
+                fwDAO.setFirewallStatus(FirewallStatus.APPROVED);
+            } else if (statusToChange.equals("ORDERED")) {
+                fwDAO.setFirewallStatus(FirewallStatus.ORDERED);
+            } else if (statusToChange.equals("ACTIVE")) {
+                fwDAO.setFirewallStatus(FirewallStatus.ACTIVE);
+            } else if (statusToChange.equals("DISABLED")) {
+                fwDAO.setFirewallStatus(FirewallStatus.DISABLED);
+            } else if (statusToChange.equals("DELETED")) {
+                fwDAO.setFirewallStatus(FirewallStatus.DELETED);
+            } else if (statusToChange.equals("REJECTED")) {
+                fwDAO.setFirewallStatus(FirewallStatus.REJECTED);
+            }
+            firewallRuleRepository.save(fwDAO);
+            return fwDAO;
+        }
 }
 

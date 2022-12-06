@@ -50,6 +50,24 @@
     useCaseName: null,
   };
 
+  
+
+  let fwStatusToChange = {
+    fwId: null,
+    status: null,
+  }
+
+  let fwrStatus = {
+    id: null,
+    fwTypeName: null,
+    contextName: null,
+    sourceName: null,
+    destionationName: null,
+    serviceGroupObjectName: null,
+    useCaseName: null,
+    status: null,
+  };
+
   function getusecase(uc) {
     usecase.name = uc.name;
     usecase.description = uc.description;
@@ -337,6 +355,57 @@
       })
       .catch(function (error) {
         alert("Could not delete Firewall Rule");
+        console.log(error);
+      });
+  }
+
+  function getFwToChangeStatus(fw) {
+    fwrStatus.id = fw.fwId;
+    fwrStatus.fwTypeName = fw.fwType.name;
+    fwrStatus.contextName = fw.context.name;
+    if (fw.sngoWithNo) {
+      fwrStatus.sourceName = fw.sngoWithNo.ngoName;
+    } else if (fw.sno) {
+      fwrStatus.sourceName = fw.sno.name;
+    } else if (fw.shgoWithHo) {
+      fwrStatus.sourceName = fw.shgoWithHo.hgoName;
+    } else if (fw.sho) {
+      fwrStatus.sourceName = fw.sho.name;
+    }
+
+    if (fw.dngoWithNo) {
+      fwrStatus.destionationName = fw.dngoWithNo.ngoName;
+    } else if (fw.dno) {
+      fwrStatus.destionationName = fw.dno.name;
+    } else if (fw.dhgoWithHo) {
+      fwrStatus.destionationName = fw.dhgoWithHo.hgoName;
+    } else if (fw.dho) {
+      fwrStatus.destionationName = fw.dho.name;
+    }
+
+    fwrStatus.serviceGroupObjectName = fw.sgo.name;
+    fwrStatus.useCaseName = fw.uc.name;
+    fwrStatus.status = fw.firewallStatus;
+  }
+
+  function changeFwStatus() {
+    fwStatusToChange.fwId = fwrStatus.id;
+    fwStatusToChange.status = fwrStatus.status;
+    var config = {
+      method: "post",
+      url: api_root + "/service/change-status",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: fwStatusToChange,
+    };
+
+    axios(config)
+      .then(function (response) {
+        getFirewallRules();
+      })
+      .catch(function (error) {
+        alert("Could not change Status of Firewall Rule");
         console.log(error);
       });
   }
@@ -665,7 +734,13 @@
             ></td
           >
           <td>{fwr.firewallStatus}</td>
-          <td><i class="fa fa-check-square-o fa-lg" title="change status" /></td
+          <td><button
+            style="border: none; background: none;"
+            data-toggle="modal"
+            data-target="#changeStatusOfFW"
+            on:click={() => getFwToChangeStatus(fwr)}
+          ><i class="fa fa-check-square-o fa-lg" title="change status" /></button
+          ></td
           >
           <td
             ><button
@@ -1143,6 +1218,174 @@
           data-dismiss="modal"
           style="background-color: #c73834; color: #fff"
           on:click={deleteFwr(fwrDelete.id)}>Delete</button
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------------------------------------------->
+
+
+<div
+  class="modal fade"
+  id="changeStatusOfFW"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="formChangeStatusOfFW"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="changeStatusOfFW">Change Status of Firewall Rule</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mb-5">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="id">Id</label>
+              <input
+                bind:value={fwrStatus.id}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="fwType">FW Type</label>
+              <input
+                bind:value={fwrStatus.fwTypeName}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="context">Context</label>
+              <input
+              bind:value={fwrStatus.contextName}
+              class="form-control"
+              id="id"
+              type="text"
+              disabled
+            />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="source">Source</label>
+              <input
+                bind:value={fwrStatus.sourceName}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="destination">Destination</label>
+              <input
+                bind:value={fwrStatus.destionationName}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="sgo">Service Group Object</label>
+              <input
+                bind:value={fwrStatus.serviceGroupObjectName}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="uc">Use Case</label>
+              <input
+                bind:value={fwrStatus.useCaseName}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label" for="uc">Status</label>
+              <select
+                class="form-select"
+                aria-label="status"
+                bind:value={fwrStatus.status}
+              >
+              <option value ="EDITED" hidden>EDITED</option>
+              {#if fwrStatus.status === "REQUESTED_FOR_APPROVAL"}
+              <option value ="REQUESTED_FOR_APPROVAL" hidden>REQUESTED_FOR_APPROVAL</option>
+              <option value="APPROVED">APPROVED</option>
+              <option value="REJECTED">REJECTED</option>
+              {:else if fwrStatus.status === "APPROVED"}
+              <option value ="APPROVED" hidden>APPROVED</option>
+              <option value="ORDERED">ORDERED</option>
+              {:else if fwrStatus.status === "ORDERED"}
+              <option value ="ORDERED" hidden>ORDERED</option>
+              <option value="ACTIVE">ACTIVE</option>
+              {:else if fwrStatus.status === "ACTIVE"}
+              <option value ="ACTIVE" hidden>ACTIVE</option>
+              <option value="DELETED">DELETED</option>
+              <option value="DISABLED">DISABLED</option>
+              {:else if fwrStatus.status === "DISABLED"}
+              <option value ="DISABLED" hidden>DISABLED</option>
+              <option value="ACTIVE">ACTIVE</option>
+              <option value="DELETED">DELETED</option>
+              {:else}
+              <option value ="REQUESTED_FOR_APPROVAL" hidden>REQUESTED_FOR_APPROVAL</option>
+              <option value="ACTIVE">ACTIVE</option>
+              <option value="APPROVED">APPROVED</option>
+              <option value="DELETED">DELETED</option>
+              <option value="DISABLED">DISABLED</option>
+              <option value ="EDITED" hidden>EDITED</option>
+              <option value="ORDERED">ORDERED</option>
+              <option value="REJECTED">REJECTED</option>
+              {/if}
+            </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          style="background-color: #008000; color: #fff"
+          on:click={changeFwStatus}
+          data-dismiss="modal">Edit</button
         >
       </div>
     </div>
