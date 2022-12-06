@@ -1,13 +1,10 @@
 package ch.buelach.firewalldoc.model;
 
 import java.util.List;
-
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 public class NetworkGroupObjectCreateDTO {
 
