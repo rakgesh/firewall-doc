@@ -20,6 +20,8 @@ import ch.buelach.firewalldoc.model.FirewallRuleCreateDTO;
 import ch.buelach.firewalldoc.model.FirewallRuleEditDTO;
 import ch.buelach.firewalldoc.model.FirewallStatus;
 import ch.buelach.firewalldoc.repository.FirewallRuleRepository;
+import ch.buelach.firewalldoc.model.FirewallRuleByTypeAggregationDTO;
+
 
 @RestController
 @RequestMapping("/api/firewall-rule")
@@ -73,5 +75,9 @@ public class FirewallRuleController {
         firewallRuleRepository.delete(fw);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-    
-}
+
+    @GetMapping("/byFwType")
+    public ResponseEntity <List<FirewallRuleByTypeAggregationDTO>> getFirewallRuleByTypeAggregation() {
+        return new ResponseEntity<>(firewallRuleRepository.getFirewallRuleByTypeAggregation(), HttpStatus.OK);
+    }
+    }
