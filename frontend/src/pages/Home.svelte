@@ -1,6 +1,6 @@
 <script>
   import axios from "axios";
-  import { each } from "svelte/internal";
+
 
   const api_root = "http://localhost:8080/api";
 
@@ -8,8 +8,7 @@
   let fwRbyTypeZone = [];
   let zonenId = "63624cb4cad6de381d422c77";
   let perimId = "638b9d67ad3a355f6044babe";
-  let zonenCount = 0;
-  let perimCount = 0;
+
 
   function getFirewallRulesByType() {
     var config = {
@@ -28,68 +27,44 @@
       });
   }
   getFirewallRulesByType();
+
+$: {
+  if (fwRulesByType.length) {
+    getPie();
+    console.log(fwRulesByType);
+  }
+}
+
+  function getPie() {
+  var width = 600, height= 500;
+  var colors = d3.scaleOrdinal(d3.schemeDark2);
+  var svg = d3.select("body").append("svg").attr("width", width).attr("height", height).style("background", "white");
+  var details = fwRulesByType;
+  var data = d3.pie().sort(null).value(function(d){return d.count;})
+  (details);
+  console.log(data);
+  var segments = d3.arc().innerRadius(0).outerRadius(200).padAngle(.05).padRadius(50);
+  var sections = svg.append("g").attr("transform", "translate(250, 250)").selectAll("path").data(data);
+  sections.enter().append("path").attr("d", segments).attr("fill", function(d){return colors(d.data.count);});
+
+  var content = d3.select("g").selectAll("text").data(data);
+  content.enter().append("text").each(function(d)
+  {
+    var center = segments.centroid(d);
+    d3.select(this).attr("x", center[0]).attr("y", center[1]).text(d.data.count);
+  })
+}
+
 </script>
 
+
+
 <div style="margin-left: -52px; margin-right: -52px;">
-  <h2 style="margin-left: 20px; margin-top: 15px;"><strong>Pie chart of firewall rules on each system</strong></h2>
-  <div id="my-pie-chart-container">
-    <div id="my-pie-chart">
-      <div id="legenda">
-        <div class="entry">
-          <div id="color-red" class="entry-color" />
-          <div class="entry-text">Cisco Zonen Firewall (4)</div>
-        </div>
-        <div class="entry">
-          <div id="color-grey" class="entry-color" />
-          <div class="entry-text">Sophos Perimeter Firewall (1)</div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+
 </div>
 
 <style>
-  #my-pie-chart-container {
-    align-items: center;
-    width: 520px;
-    height: 550px;
-    margin-top: 10px;
-  }
 
-  #my-pie-chart {
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    background: conic-gradient(#c73834 0% 80%, #969faa 80%);
-    margin-left: 7px;
-    padding-top: 100px;
-  }
-
-  #legenda {
-    padding: 5px;
-    margin-top: 420px;
-  }
-
-  .entry {
-    margin-left: 180px;
-    display: flex;
-    align-items: center;
-  }
-
-  .entry-color {
-    height: 10px;
-    width: 10px;
-  }
-
-  .entry-text {
-    margin-left: 5px;
-  }
-
-  #color-red {
-    background-color: #c73834;
-  }
-
-  #color-grey {
-    background-color: #969faa;
-  }
 </style>

@@ -4701,101 +4701,26 @@ var app = (function () {
     const file$9 = "src\\pages\\Home.svelte";
 
     function create_fragment$9(ctx) {
-    	let div9;
-    	let h2;
-    	let strong;
-    	let t1;
-    	let div8;
-    	let div7;
-    	let div6;
-    	let div2;
-    	let div0;
-    	let t2;
-    	let div1;
-    	let t4;
-    	let div5;
-    	let div3;
-    	let t5;
-    	let div4;
+    	let div;
 
     	const block = {
     		c: function create() {
-    			div9 = element("div");
-    			h2 = element("h2");
-    			strong = element("strong");
-    			strong.textContent = "Pie chart of firewall rules on each system";
-    			t1 = space();
-    			div8 = element("div");
-    			div7 = element("div");
-    			div6 = element("div");
-    			div2 = element("div");
-    			div0 = element("div");
-    			t2 = space();
-    			div1 = element("div");
-    			div1.textContent = "Cisco Zonen Firewall (4)";
-    			t4 = space();
-    			div5 = element("div");
-    			div3 = element("div");
-    			t5 = space();
-    			div4 = element("div");
-    			div4.textContent = "Sophos Perimeter Firewall (1)";
-    			add_location(strong, file$9, 33, 51, 876);
-    			set_style(h2, "margin-left", "20px");
-    			set_style(h2, "margin-top", "15px");
-    			add_location(h2, file$9, 33, 2, 827);
-    			attr_dev(div0, "id", "color-red");
-    			attr_dev(div0, "class", "entry-color svelte-1c8bnkv");
-    			add_location(div0, file$9, 38, 10, 1073);
-    			attr_dev(div1, "class", "entry-text svelte-1c8bnkv");
-    			add_location(div1, file$9, 39, 10, 1127);
-    			attr_dev(div2, "class", "entry svelte-1c8bnkv");
-    			add_location(div2, file$9, 37, 8, 1042);
-    			attr_dev(div3, "id", "color-grey");
-    			attr_dev(div3, "class", "entry-color svelte-1c8bnkv");
-    			add_location(div3, file$9, 42, 10, 1238);
-    			attr_dev(div4, "class", "entry-text svelte-1c8bnkv");
-    			add_location(div4, file$9, 43, 10, 1293);
-    			attr_dev(div5, "class", "entry svelte-1c8bnkv");
-    			add_location(div5, file$9, 41, 8, 1207);
-    			attr_dev(div6, "id", "legenda");
-    			attr_dev(div6, "class", "svelte-1c8bnkv");
-    			add_location(div6, file$9, 36, 6, 1014);
-    			attr_dev(div7, "id", "my-pie-chart");
-    			attr_dev(div7, "class", "svelte-1c8bnkv");
-    			add_location(div7, file$9, 35, 4, 983);
-    			attr_dev(div8, "id", "my-pie-chart-container");
-    			attr_dev(div8, "class", "svelte-1c8bnkv");
-    			add_location(div8, file$9, 34, 2, 944);
-    			set_style(div9, "margin-left", "-52px");
-    			set_style(div9, "margin-right", "-52px");
-    			add_location(div9, file$9, 32, 0, 769);
+    			div = element("div");
+    			set_style(div, "margin-left", "-52px");
+    			set_style(div, "margin-right", "-52px");
+    			add_location(div, file$9, 61, 0, 1706);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div9, anchor);
-    			append_dev(div9, h2);
-    			append_dev(h2, strong);
-    			append_dev(div9, t1);
-    			append_dev(div9, div8);
-    			append_dev(div8, div7);
-    			append_dev(div7, div6);
-    			append_dev(div6, div2);
-    			append_dev(div2, div0);
-    			append_dev(div2, t2);
-    			append_dev(div2, div1);
-    			append_dev(div6, t4);
-    			append_dev(div6, div5);
-    			append_dev(div5, div3);
-    			append_dev(div5, t5);
-    			append_dev(div5, div4);
+    			insert_dev(target, div, anchor);
     		},
     		p: noop$1,
     		i: noop$1,
     		o: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div9);
+    			if (detaching) detach_dev(div);
     		}
     	};
 
@@ -4819,8 +4744,6 @@ var app = (function () {
     	let fwRbyTypeZone = [];
     	let zonenId = "63624cb4cad6de381d422c77";
     	let perimId = "638b9d67ad3a355f6044babe";
-    	let zonenCount = 0;
-    	let perimCount = 0;
 
     	function getFirewallRulesByType() {
     		var config = {
@@ -4830,7 +4753,7 @@ var app = (function () {
     		};
 
     		axios(config).then(function (response) {
-    			fwRulesByType = response.data;
+    			$$invalidate(0, fwRulesByType = response.data);
     		}).catch(function (error) {
     			alert("Could not get Firewall Rules by Type");
     			console.log(error);
@@ -4838,6 +4761,33 @@ var app = (function () {
     	}
 
     	getFirewallRulesByType();
+
+    	function getPie() {
+    		var width = 600, height = 500;
+    		var colors = d3.scaleOrdinal(d3.schemeDark2);
+    		var svg = d3.select("body").append("svg").attr("width", width).attr("height", height).style("background", "white");
+    		var details = fwRulesByType;
+
+    		var data = d3.pie().sort(null).value(function (d) {
+    			return d.count;
+    		})(details);
+
+    		console.log(data);
+    		var segments = d3.arc().innerRadius(0).outerRadius(200).padAngle(.05).padRadius(50);
+    		var sections = svg.append("g").attr("transform", "translate(250, 250)").selectAll("path").data(data);
+
+    		sections.enter().append("path").attr("d", segments).attr("fill", function (d) {
+    			return colors(d.data.count);
+    		});
+
+    		var content = d3.select("g").selectAll("text").data(data);
+
+    		content.enter().append("text").each(function (d) {
+    			var center = segments.centroid(d);
+    			d3.select(this).attr("x", center[0]).attr("y", center[1]).text(d.data.count);
+    		});
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -4846,31 +4796,38 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		axios,
-    		each,
     		api_root: api_root$8,
     		fwRulesByType,
     		fwRbyTypeZone,
     		zonenId,
     		perimId,
-    		zonenCount,
-    		perimCount,
-    		getFirewallRulesByType
+    		getFirewallRulesByType,
+    		getPie
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('fwRulesByType' in $$props) fwRulesByType = $$props.fwRulesByType;
+    		if ('fwRulesByType' in $$props) $$invalidate(0, fwRulesByType = $$props.fwRulesByType);
     		if ('fwRbyTypeZone' in $$props) fwRbyTypeZone = $$props.fwRbyTypeZone;
     		if ('zonenId' in $$props) zonenId = $$props.zonenId;
     		if ('perimId' in $$props) perimId = $$props.perimId;
-    		if ('zonenCount' in $$props) zonenCount = $$props.zonenCount;
-    		if ('perimCount' in $$props) perimCount = $$props.perimCount;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [];
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*fwRulesByType*/ 1) {
+    			{
+    				if (fwRulesByType.length) {
+    					getPie();
+    					console.log(fwRulesByType);
+    				}
+    			}
+    		}
+    	};
+
+    	return [fwRulesByType];
     }
 
     class Home extends SvelteComponentDev {
