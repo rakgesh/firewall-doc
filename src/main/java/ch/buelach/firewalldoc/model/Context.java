@@ -3,27 +3,66 @@ package ch.buelach.firewalldoc.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
 @Document("context")
 public class Context {
 
     @Id
     private String id;
-    @NonNull
     private String name;
-    @NonNull
     private String ip;
-    @NonNull
     private String subnet;
-    @NonNull
     private String description;
+
+    public Context(String name, String ip, String subnet, String description) {
+        this.name = name;
+        this.ip = ip;
+        this.subnet = subnet;
+        this.description = description;
+    }
+
+    public Context() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public String getSubnet() {
+        return subnet;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public void setSubnet(String subnet) {
+        this.subnet = subnet;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    
 }

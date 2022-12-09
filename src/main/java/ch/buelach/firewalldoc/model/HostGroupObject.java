@@ -5,26 +5,55 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
 @Document("host-group-object")
 public class HostGroupObject {
 
     @Id
     private String id;
-    @NonNull
     private String name;
-    @NonNull
     private String description;
-    @NonNull
     private List<String> membersId;
+
+    public HostGroupObject() {
+    }
+
+    public HostGroupObject(String name, String description, List<String> membersId) {
+        this.name = name;
+        this.description = description;
+        this.membersId = membersId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<String> getMembersId() {
+        return membersId;
+    }
+
+    public void setMembersId(List<String> membersId) {
+        this.membersId = membersId;
+    }
 
 }

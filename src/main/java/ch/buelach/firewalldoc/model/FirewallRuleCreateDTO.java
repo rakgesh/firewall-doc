@@ -1,10 +1,5 @@
 package ch.buelach.firewalldoc.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@Getter
 public class FirewallRuleCreateDTO {
 
     private String fwTypeId;
@@ -13,5 +8,28 @@ public class FirewallRuleCreateDTO {
     private String destinationId;
     private String serviceGroupObjectId;
     private String useCaseId;
+
+    
+    public FirewallRuleCreateDTO() {
+    }
+    
+    public String getFwTypeId() {
+        return fwTypeId;
+    }
+    public String getContextId() {
+        return contextId;
+    }
+    public String getSourceId() {
+        return sourceId;
+    }
+    public String getDestinationId() {
+        return destinationId;
+    }
+    public String getServiceGroupObjectId() {
+        return serviceGroupObjectId;
+    }
+    public String getUseCaseId() {
+        return useCaseId;
+    }
 
 }

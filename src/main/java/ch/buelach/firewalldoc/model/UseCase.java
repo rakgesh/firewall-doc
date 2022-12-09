@@ -5,26 +5,54 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
 @Document("usecase")
 public class UseCase {
 
     @Id
     private String id;
-    @NonNull
     private String name;
-    @NonNull
     private String description;
-    @NonNull
     private List<String> tags;
-    
+
+    public UseCase(String name, String description, List<String> tags) {
+        this.name = name;
+        this.description = description;
+        this.tags = tags;
+    }
+
+    public UseCase() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
 }

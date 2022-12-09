@@ -5,26 +5,54 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
 @Document("service-group-object")
 public class ServiceGroupObject {
 
     @Id
     private String id;
-    @NonNull
     private String name;
-    @NonNull
     private List<String> port;
-    @NonNull
     private String description;
+
+    public ServiceGroupObject() {
+    }
+
+    public ServiceGroupObject(String name, List<String> port, String description) {
+        this.name = name;
+        this.port = port;
+        this.description = description;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<String> getPort() {
+        return port;
+    }
+
+    public void setPort(List<String> port) {
+        this.port = port;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
 }

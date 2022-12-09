@@ -82,49 +82,49 @@ public class FirewallRuleService {
 
             for (HostObject ho : allHostObjects) {
                 if (ho.getId().equals(f.getSourceId())) {
-                    one.setSHo(ho);
+                    one.setsHo(ho);
                 } 
             }
 
             for (HostObjectsToHostGroup hgo : allHostGroupObjectWithHo) {
                 if (hgo.getHgoId().equals(f.getSourceId())) {
-                    one.setSHgoWithHo(hgo);
+                    one.setsHgoWithHo(hgo);
                 }
             }
             
             for (NetworkObject no : allNetworkObject) {
                 if (no.getId().equals(f.getSourceId())) {
-                    one.setSNo(no);
+                    one.setsNo(no);
                 }
             }
 
             for (NetworkObjectsToNetworkGroup ngo : allNetworkGroupObjectsWithNo) {
                 if (ngo.getNgoId().equals(f.getSourceId())) {
-                    one.setSNgoWithNo(ngo);
+                    one.setsNgoWithNo(ngo);
                 }
             }
 
             for (HostObject ho : allHostObjects) {
                 if (ho.getId().equals(f.getDestinationId())) {
-                    one.setDHo(ho);
+                    one.setdHo(ho);
                 } 
             }
 
             for (HostObjectsToHostGroup hgo : allHostGroupObjectWithHo) {
                 if (hgo.getHgoId().equals(f.getDestinationId())) {
-                    one.setDHgoWithHo(hgo);
+                    one.setdHgoWithHo(hgo);
                 }
             }
             
             for (NetworkObject no : allNetworkObject) {
                 if (no.getId().equals(f.getDestinationId())) {
-                    one.setDNo(no);
+                    one.setdNo(no);
                 }
             }
 
             for (NetworkObjectsToNetworkGroup ngo : allNetworkGroupObjectsWithNo) {
                 if (ngo.getNgoId().equals(f.getDestinationId())) {
-                    one.setDNgoWithNo(ngo);
+                    one.setdNgoWithNo(ngo);
                 }
             }
 
