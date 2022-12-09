@@ -1,5 +1,6 @@
 package ch.buelach.firewalldoc.controller;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -78,6 +79,10 @@ public class FirewallRuleController {
 
     @GetMapping("/byFwType")
     public ResponseEntity <List<FirewallRuleByTypeAggregationDTO>> getFirewallRuleByTypeAggregation() {
-        return new ResponseEntity<>(firewallRuleRepository.getFirewallRuleByTypeAggregation(), HttpStatus.OK);
+        List<FirewallRuleByTypeAggregationDTO> fwByTypeAgg = firewallRuleRepository.getFirewallRuleByTypeAggregation();
+        List<FirewallRuleByTypeAggregationDTO> fwByT = fwByTypeAgg.stream().sorted(Comparator.comparing(FirewallRuleByTypeAggregationDTO::getId)).toList();
+        fwByT.get(0).setName("Cisco Zonen Firewall");
+        fwByT.get(1).setName("Sophos Perimeter Firewall");
+        return new ResponseEntity<>(fwByT, HttpStatus.OK);
     }
     }

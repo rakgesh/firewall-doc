@@ -11,15 +11,10 @@ import ch.buelach.firewalldoc.model.FirewallRuleByTypeAggregationDTO;
 public interface FirewallRuleRepository extends
 MongoRepository<FirewallRule, String>{
 
-    @Aggregation("{$group: {_id: '$fwTypeId',firewallRuleIds: {$push: '$_id'},count: {$count: {}}}}")
+    @Aggregation("{$group: {_id: '$fwTypeId', firewallRuleIds: {$push: '$_id'},count: {$count: {}}}}")
     List<FirewallRuleByTypeAggregationDTO> getFirewallRuleByTypeAggregation();
 
-    /* 
-    
-    ### Um Diagramm zu erstellen ###
-    @Aggregation("{$group: {_id: '$contextId',firewallRuleIds: {$push: '$_id'},count: {$count: {}}}}")
-    List<FirewallRuleByContextAggregationDTO> getFirewallRuleByContextAggregation();
-
+    /*
 
     ### Um Requested for Approval anzuzeigen ###
     @Aggregation("{$group: {_id: '$firewallStatus',firewallRuleIds: {$push: '$_id'},count: {$count: {}}}}")
