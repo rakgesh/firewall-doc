@@ -13,14 +13,4 @@ MongoRepository<FirewallRule, String>{
 
     @Aggregation("{$group: {_id: '$fwTypeId', firewallRuleIds: {$push: '$_id'},count: {$count: {}}}}")
     List<FirewallRuleByTypeAggregationDTO> getFirewallRuleByTypeAggregation();
-
-    /*
-
-    ### Um Requested for Approval anzuzeigen ###
-    @Aggregation("{$group: {_id: '$firewallStatus',firewallRuleIds: {$push: '$_id'},count: {$count: {}}}}")
-    List<FirewallRuleByFirewallStatusAggregationDTO> getFirewallRuleByFirewallStatusAggregation(); 
-    
-    
-    */
-
 }
