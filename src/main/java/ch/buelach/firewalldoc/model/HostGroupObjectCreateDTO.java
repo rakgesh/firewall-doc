@@ -8,7 +8,10 @@ public class HostGroupObjectCreateDTO {
     private String description;
     private List<String> membersId;
 
-    public HostGroupObjectCreateDTO() {
+    public HostGroupObjectCreateDTO(String name, String description, List<String> membersId) {
+        this.name = name;
+        this.description = description;
+        this.membersId = membersId;
     }
 
     public String getName() {
@@ -22,5 +25,5 @@ public class HostGroupObjectCreateDTO {
     public List<String> getMembersId() {
         return membersId;
     }
-    
+
 }

@@ -7,7 +7,13 @@ public class NetworkObjectEditDTO {
     private String subnet;
     private String description;
 
-    public NetworkObjectEditDTO() {
+
+    public NetworkObjectEditDTO(String id, String name, String ip, String subnet, String description) {
+        this.id = id;
+        this.name = name;
+        this.ip = ip;
+        this.subnet = subnet;
+        this.description = description;
     }
 
     public String getId() {

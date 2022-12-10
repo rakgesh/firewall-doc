@@ -9,7 +9,11 @@ public class NetworkGroupObjectEditDTO {
     private String description;
     private List<String> membersId;
 
-    public NetworkGroupObjectEditDTO() {
+    public NetworkGroupObjectEditDTO(String id, String name, String description, List<String> membersId) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.membersId = membersId;
     }
 
     public String getId() {
@@ -27,5 +31,5 @@ public class NetworkGroupObjectEditDTO {
     public List<String> getMembersId() {
         return membersId;
     }
-    
+
 }

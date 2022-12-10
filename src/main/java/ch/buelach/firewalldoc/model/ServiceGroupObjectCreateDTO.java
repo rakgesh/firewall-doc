@@ -8,7 +8,10 @@ public class ServiceGroupObjectCreateDTO {
     private List<String> port;
     private String description;
 
-    public ServiceGroupObjectCreateDTO() {
+    public ServiceGroupObjectCreateDTO(String name, List<String> port, String description) {
+        this.name = name;
+        this.port = port;
+        this.description = description;
     }
 
     public String getName() {

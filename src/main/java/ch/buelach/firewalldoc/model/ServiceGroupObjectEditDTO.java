@@ -9,7 +9,11 @@ public class ServiceGroupObjectEditDTO {
     private List<String> port;
     private String description;
 
-    public ServiceGroupObjectEditDTO() {
+    public ServiceGroupObjectEditDTO(String id, String name, List<String> port, String description) {
+        this.id = id;
+        this.name = name;
+        this.port = port;
+        this.description = description;
     }
 
     public String getId() {

@@ -6,7 +6,10 @@ public class HostObjectCreateDTO {
     private String ip;
     private String description;
     
-    public HostObjectCreateDTO() {
+    public HostObjectCreateDTO(String name, String ip, String description) {
+        this.name = name;
+        this.ip = ip;
+        this.description = description;
     }
 
     public String getName() {

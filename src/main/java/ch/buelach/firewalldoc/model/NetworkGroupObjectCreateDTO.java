@@ -8,7 +8,10 @@ public class NetworkGroupObjectCreateDTO {
     private String description;
     private List<String> membersId;
 
-    public NetworkGroupObjectCreateDTO() {
+    public NetworkGroupObjectCreateDTO(String name, String description, List<String> membersId) {
+        this.name = name;
+        this.description = description;
+        this.membersId = membersId;
     }
 
     public String getName() {

@@ -7,8 +7,13 @@ public class UseCaseCreateDTO {
     private String description;
     private List<String> tags;
 
-    public UseCaseCreateDTO() {
+    public UseCaseCreateDTO(String name, String description, List<String> tags) {
+        this.name = name;
+        this.description = description;
+        this.tags = tags;
     }
+
+
 
     public String getName() {
         return name;

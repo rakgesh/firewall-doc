@@ -8,9 +8,13 @@ public class HostObjectEditDTO {
     private String ip;
     private String description;
 
-    public HostObjectEditDTO() {
+    public HostObjectEditDTO(String id, String name, String ip, String description) {
+        this.id = id;
+        this.name = name;
+        this.ip = ip;
+        this.description = description;
     }
-
+    
     public String getId() {
         return id;
     }

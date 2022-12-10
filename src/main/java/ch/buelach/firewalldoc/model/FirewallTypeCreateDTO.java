@@ -4,8 +4,11 @@ public class FirewallTypeCreateDTO {
     
     private String name;
     private String description;
-    
-    public FirewallTypeCreateDTO() {
+
+
+    public FirewallTypeCreateDTO(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     public String getName() {

@@ -9,7 +9,11 @@ public class HostGroupObjectEditDTO {
     private String description;
     private List<String> membersId;
 
-    public HostGroupObjectEditDTO() {
+    public HostGroupObjectEditDTO(String id, String name, String description, List<String> membersId) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.membersId = membersId;
     }
 
     public String getId() {

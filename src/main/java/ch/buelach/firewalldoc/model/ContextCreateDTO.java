@@ -6,7 +6,11 @@ public class ContextCreateDTO {
     private String subnet;
     private String description;
 
-    public ContextCreateDTO() {
+    public ContextCreateDTO(String name, String ip, String subnet, String description) {
+        this.name = name;
+        this.ip = ip;
+        this.subnet = subnet;
+        this.description = description;
     }
 
     public String getName() {

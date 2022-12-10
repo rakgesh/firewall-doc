@@ -9,7 +9,11 @@ public class UseCaseEditDTO {
     private String description;
     private List<String> tags;
 
-    public UseCaseEditDTO() {
+    public UseCaseEditDTO(String id, String name, String description, List<String> tags) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.tags = tags;
     }
 
     public String getId() {

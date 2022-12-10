@@ -270,24 +270,24 @@
     fwEdit.id = fw.fwId;
     fwEdit.fwTypeId = fw.fwType.id;
     fwEdit.contextId = fw.context.id;
-    if (fw.sngoWithNo) {
-      fwEdit.sourceId = fw.sngoWithNo.ngoId;
-    } else if (fw.sno) {
-      fwEdit.sourceId = fw.sno.id;
-    } else if (fw.shgoWithHo) {
-      fwEdit.sourceId = fw.shgoWithHo.hgoId;
-    } else if (fw.sho) {
-      fwEdit.sourceId = fw.sho.id;
+    if (fw.sNgoWithNo) {
+      fwEdit.sourceId = fw.sNgoWithNo.ngoId;
+    } else if (fw.sNo) {
+      fwEdit.sourceId = fw.sNo.id;
+    } else if (fw.sHgoWithHo) {
+      fwEdit.sourceId = fw.sHgoWithHo.hgoId;
+    } else if (fw.sHo) {
+      fwEdit.sourceId = fw.sHo.id;
     }
 
-    if (fw.dngoWithNo) {
-      fwEdit.destinationId = fw.dngoWithNo.ngoId;
-    } else if (fw.dno) {
-      fwEdit.destinationId = fw.dno.id;
-    } else if (fw.dhgoWithHo) {
-      fwEdit.destinationId = fw.dhgoWithHo.hgoId;
-    } else if (fw.dho) {
-      fwEdit.destinationId = fw.dho.id;
+    if (fw.dNgoWithNo) {
+      fwEdit.destinationId = fw.dNgoWithNo.ngoId;
+    } else if (fw.dNo) {
+      fwEdit.destinationId = fw.dNo.id;
+    } else if (fw.dHgoWithHo) {
+      fwEdit.destinationId = fw.dHgoWithHo.hgoId;
+    } else if (fw.dHo) {
+      fwEdit.destinationId = fw.dHo.id;
     }
 
     fwEdit.serviceGroupObjectId = fw.sgo.id;
@@ -319,24 +319,24 @@
     fwrDelete.id = fwrD.fwId;
     fwrDelete.fwTypeName = fwrD.fwType.name;
     fwrDelete.contextName = fwrD.context.name;
-    if (fwrD.sngoWithNo) {
-      fwrDelete.sourceName = fwrD.sngoWithNo.ngoName;
-    } else if (fwrD.sno) {
-      fwrDelete.sourceName = fwrD.sno.name;
-    } else if (fwrD.shgoWithHo) {
-      fwrDelete.sourceName = fwrD.shgoWithHo.hgoName;
-    } else if (fwrD.sho) {
-      fwrDelete.sourceName = fwrD.sho.name;
+    if (fwrD.sNgoWithNo) {
+      fwrDelete.sourceName = fwrD.sNgoWithNo.ngoName;
+    } else if (fwrD.sNo) {
+      fwrDelete.sourceName = fwrD.sNo.name;
+    } else if (fwrD.sHgoWithHo) {
+      fwrDelete.sourceName = fwrD.sHgoWithHo.hgoName;
+    } else if (fwrD.sHo) {
+      fwrDelete.sourceName = fwrD.sHo.name;
     }
 
-    if (fwrD.dngoWithNo) {
-      fwrDelete.destionationName = fwrD.dngoWithNo.ngoName;
-    } else if (fwrD.dno) {
-      fwrDelete.destionationName = fwrD.dno.name;
-    } else if (fwrD.dhgoWithHo) {
-      fwrDelete.destionationName = fwrD.dhgoWithHo.hgoName;
-    } else if (fwrD.dho) {
-      fwrDelete.destionationName = fwrD.dho.name;
+    if (fwrD.dNgoWithNo) {
+      fwrDelete.destionationName = fwrD.dNgoWithNo.ngoName;
+    } else if (fwrD.dNo) {
+      fwrDelete.destionationName = fwrD.dNo.name;
+    } else if (fwrD.dHgoWithHo) {
+      fwrDelete.destionationName = fwrD.dHgoWithHo.hgoName;
+    } else if (fwrD.dHo) {
+      fwrDelete.destionationName = fwrD.dHo.name;
     }
 
     fwrDelete.serviceGroupObjectName = fwrD.sgo.name;
@@ -513,41 +513,41 @@
           <td>{fwr.context.name}</td>
 
           <td>
-            {#if fwr.sho}
+            {#if fwr.sHo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#source{fwr.sho.id}{fwr.fwId}"
+                  data-bs-target="#source{fwr.sHo.id}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="source"
                 >
-                  {fwr.sho.name}
+                  {fwr.sHo.name}
                 </button>
               </li>
-              <div class="collapse" id="source{fwr.sho.id}{fwr.fwId}">
+              <div class="collapse" id="source{fwr.sHo.id}{fwr.fwId}">
                 <li class="list-group-item" style="font-style: italic;">
-                  {fwr.sho.ip}
+                  {fwr.sHo.ip}
                 </li>
               </div>
             {/if}
 
-            {#if fwr.shgoWithHo}
+            {#if fwr.sHgoWithHo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#source{fwr.shgoWithHo.hgoId}{fwr.fwId}"
+                  data-bs-target="#source{fwr.sHgoWithHo.hgoId}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="source"
                 >
-                  {fwr.shgoWithHo.hgoName}
+                  {fwr.sHgoWithHo.hgoName}
                 </button>
               </li>
-              <div class="collapse" id="source{fwr.shgoWithHo.hgoId}{fwr.fwId}">
-                {#each fwr.shgoWithHo.members as m}
+              <div class="collapse" id="source{fwr.sHgoWithHo.hgoId}{fwr.fwId}">
+                {#each fwr.sHgoWithHo.members as m}
                   <li class="list-group-item" style="font-style: italic;">
                     {m.name}
                   </li>
@@ -558,41 +558,41 @@
               </div>
             {/if}
 
-            {#if fwr.sno}
+            {#if fwr.sNo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#source{fwr.sno.id}{fwr.fwId}"
+                  data-bs-target="#source{fwr.sNo.id}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="source"
                 >
-                  {fwr.sno.name}
+                  {fwr.sNo.name}
                 </button>
               </li>
-              <div class="collapse" id="source{fwr.sno.id}{fwr.fwId}">
+              <div class="collapse" id="source{fwr.sNo.id}{fwr.fwId}">
                 <li class="list-group-item" style="font-style: italic;">
-                  {fwr.sno.ip}{fwr.sno.subnet}
+                  {fwr.sNo.ip}{fwr.sNo.subnet}
                 </li>
               </div>
             {/if}
 
-            {#if fwr.sngoWithNo}
+            {#if fwr.sNgoWithNo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#source{fwr.sngoWithNo.ngoId}{fwr.fwId}"
+                  data-bs-target="#source{fwr.sNgoWithNo.ngoId}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="source"
                 >
-                  {fwr.sngoWithNo.ngoName}
+                  {fwr.sNgoWithNo.ngoName}
                 </button>
               </li>
-              <div class="collapse" id="source{fwr.sngoWithNo.ngoId}{fwr.fwId}">
-                {#each fwr.sngoWithNo.members as m}
+              <div class="collapse" id="source{fwr.sNgoWithNo.ngoId}{fwr.fwId}">
+                {#each fwr.sNgoWithNo.members as m}
                   <li class="list-group-item" style="font-style: italic;">
                     {m.name}
                   </li>
@@ -606,44 +606,44 @@
           <!--------------------------------------------------------------------------->
 
           <td>
-            {#if fwr.dho}
+            {#if fwr.dHo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#destination{fwr.dho.id}{fwr.fwId}"
+                  data-bs-target="#destination{fwr.dHo.id}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="destination"
                 >
-                  {fwr.dho.name}
+                  {fwr.dHo.name}
                 </button>
               </li>
-              <div class="collapse" id="destination{fwr.dho.id}{fwr.fwId}">
+              <div class="collapse" id="destination{fwr.dHo.id}{fwr.fwId}">
                 <li class="list-group-item" style="font-style: italic;">
-                  {fwr.dho.ip}
+                  {fwr.dHo.ip}
                 </li>
               </div>
             {/if}
 
-            {#if fwr.dhgoWithHo}
+            {#if fwr.dHgoWithHo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#destination{fwr.dhgoWithHo.hgoId}{fwr.fwId}"
+                  data-bs-target="#destination{fwr.dHgoWithHo.hgoId}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="destination"
                 >
-                  {fwr.dhgoWithHo.hgoName}
+                  {fwr.dHgoWithHo.hgoName}
                 </button>
               </li>
               <div
                 class="collapse"
-                id="destination{fwr.dhgoWithHo.hgoId}{fwr.fwId}"
+                id="destination{fwr.dHgoWithHo.hgoId}{fwr.fwId}"
               >
-                {#each fwr.dhgoWithHo.members as m}
+                {#each fwr.dHgoWithHo.members as m}
                   <li class="list-group-item" style="font-style: italic;">
                     {m.name}
                   </li>
@@ -654,44 +654,44 @@
               </div>
             {/if}
 
-            {#if fwr.dno}
+            {#if fwr.dNo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#destination{fwr.dno.id}{fwr.fwId}"
+                  data-bs-target="#destination{fwr.dNo.id}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="destination"
                 >
-                  {fwr.dno.name}
+                  {fwr.dNo.name}
                 </button>
               </li>
-              <div class="collapse" id="destination{fwr.dno.id}{fwr.fwId}">
+              <div class="collapse" id="destination{fwr.dNo.id}{fwr.fwId}">
                 <li class="list-group-item" style="font-style: italic;">
-                  {fwr.dno.ip}{fwr.dno.subnet}
+                  {fwr.dNo.ip}{fwr.dNo.subnet}
                 </li>
               </div>
             {/if}
 
-            {#if fwr.dngoWithNo}
+            {#if fwr.dNgoWithNo}
               <li class="list-group-item">
                 <button
                   style="border: none; background: none;"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#destination{fwr.dngoWithNo.ngoId}{fwr.fwId}"
+                  data-bs-target="#destination{fwr.dNgoWithNo.ngoId}{fwr.fwId}"
                   aria-expanded="false"
                   aria-controls="destination"
                 >
-                  {fwr.dngoWithNo.ngoName}
+                  {fwr.dNgoWithNo.ngoName}
                 </button>
               </li>
               <div
                 class="collapse"
-                id="destination{fwr.dngoWithNo.ngoId}{fwr.fwId}"
+                id="destination{fwr.dNgoWithNo.ngoId}{fwr.fwId}"
               >
-                {#each fwr.dngoWithNo.members as m}
+                {#each fwr.dNgoWithNo.members as m}
                   <li class="list-group-item" style="font-style: italic;">
                     {m.name}
                   </li>

@@ -13,7 +13,7 @@ public class NetworkGroupObject {
     private String name;
     private String description;
     private List<String> membersId;
-    
+
     public NetworkGroupObject(String name, String description, List<String> membersId) {
         this.name = name;
         this.description = description;
@@ -25,10 +25,6 @@ public class NetworkGroupObject {
 
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
