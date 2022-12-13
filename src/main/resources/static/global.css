@@ -38,4 +38,10 @@ thead {
 
 }
 
+text.inside {
+    font-size: 25px;
+    font-weight: bold;
+    fill: white;
+}
+
 

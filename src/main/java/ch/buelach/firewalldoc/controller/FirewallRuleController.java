@@ -17,11 +17,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.buelach.firewalldoc.model.FirewallRule;
+import ch.buelach.firewalldoc.model.FirewallRuleByTypeAggregationDTO;
 import ch.buelach.firewalldoc.model.FirewallRuleCreateDTO;
 import ch.buelach.firewalldoc.model.FirewallRuleEditDTO;
 import ch.buelach.firewalldoc.model.FirewallStatus;
 import ch.buelach.firewalldoc.repository.FirewallRuleRepository;
-import ch.buelach.firewalldoc.model.FirewallRuleByTypeAggregationDTO;
+import ch.buelach.firewalldoc.service.EmailServiceImpl;
 
 
 @RestController
@@ -29,12 +30,15 @@ import ch.buelach.firewalldoc.model.FirewallRuleByTypeAggregationDTO;
 public class FirewallRuleController {
     @Autowired
     FirewallRuleRepository firewallRuleRepository;
+    @Autowired
+    EmailServiceImpl emailServiceImpl;
 
     @PostMapping("")
     public ResponseEntity<FirewallRule> createFirewallRule(
         @RequestBody FirewallRuleCreateDTO fwRuleDTO) {
             FirewallRule fwRuleDAO = new FirewallRule(fwRuleDTO.getFwTypeId(), fwRuleDTO.getContextId(), fwRuleDTO.getSourceId(), fwRuleDTO.getDestinationId(), fwRuleDTO.getServiceGroupObjectId(), fwRuleDTO.getUseCaseId());
             FirewallRule fwRule = firewallRuleRepository.save(fwRuleDAO);
+            emailServiceImpl.sendSimpleMessage("ganesrak@students.zhaw.ch", "new firewall rule requested", "Test");
             return new ResponseEntity<>(fwRule, HttpStatus.CREATED);
         }
 
