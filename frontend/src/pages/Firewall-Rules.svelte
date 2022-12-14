@@ -112,6 +112,14 @@
         alert("Could not create Firewall Rules");
         console.log(error);
       });
+    firewallRule = {
+    fwTypeId: null,
+    contextId: null,
+    sourceId: null,
+    destinationId: null,
+    serviceGroupObjectId: null,
+    useCaseId: null,
+  }
   }
 
   //-----------------------------

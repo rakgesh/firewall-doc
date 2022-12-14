@@ -24,5 +24,4 @@ public class MailSender {
 
         return mailSender;
     }
-
 }

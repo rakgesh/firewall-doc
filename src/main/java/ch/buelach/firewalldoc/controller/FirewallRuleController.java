@@ -38,7 +38,7 @@ public class FirewallRuleController {
         @RequestBody FirewallRuleCreateDTO fwRuleDTO) {
             FirewallRule fwRuleDAO = new FirewallRule(fwRuleDTO.getFwTypeId(), fwRuleDTO.getContextId(), fwRuleDTO.getSourceId(), fwRuleDTO.getDestinationId(), fwRuleDTO.getServiceGroupObjectId(), fwRuleDTO.getUseCaseId());
             FirewallRule fwRule = firewallRuleRepository.save(fwRuleDAO);
-            emailServiceImpl.sendSimpleMessage("ganesrak@students.zhaw.ch", "new firewall rule requested", "Test");
+            emailServiceImpl.sendSimpleMessage("ganesrak@students.zhaw.ch", "new firewall rule requested", fwRule.getId());
             return new ResponseEntity<>(fwRule, HttpStatus.CREATED);
         }
 
