@@ -8,6 +8,7 @@ import HostObjects from "./pages/Host-Objects.svelte";
 import HostGroupObjects from "./pages/Host-Group-Objects.svelte";
 import ServiceGroupObjects from "./pages/Service-Group-Objects.svelte";
 import UseCases from "./pages/Use-Cases.svelte";
+import FirewallRuleDetails from "./pages/Firewall-Rule-Details.svelte";
 
 
 
@@ -16,6 +17,7 @@ export default {
     '/': Home,
     '/home': Home,
     '/firewall-Rules': FirewallRules,
+    '/firewall-Rule-Details/:id': FirewallRuleDetails,
     '/contexts': Contexts,
     '/network-Objects' : NetworkObjects,
     '/network-Group-Objects': NetworkGroupObjects,

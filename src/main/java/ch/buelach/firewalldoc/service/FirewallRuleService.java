@@ -150,6 +150,20 @@ public class FirewallRuleService {
 
         }
 
+        public FirewallRuleDetail getFirewallruleDetailById(String id) {
+            List<FirewallRuleDetail> all = getFirewallruleDetail();
+            FirewallRuleDetail fRuleDetail = new FirewallRuleDetail();
+            for (FirewallRuleDetail a : all) {
+                if (a.getFwId().equals(id)) {
+                    fRuleDetail = a;
+                }
+                
+            }
+    
+            return fRuleDetail;
+        }
+            
+
         public FirewallRule changeStatus(FirewallStatusChangeDTO fwSC) {
             FirewallRule fwDAO = firewallRuleRepository.findById(fwSC.getFwId()).get();
             String statusToChange = fwSC.getStatus();

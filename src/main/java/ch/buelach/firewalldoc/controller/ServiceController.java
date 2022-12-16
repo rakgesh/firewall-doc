@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,6 +51,13 @@ public class ServiceController {
         List<FirewallRuleDetail> all = firewallRuleService.getFirewallruleDetail();
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
+
+    @GetMapping("/findFwD/{id}")
+    public ResponseEntity <FirewallRuleDetail> getFwDetailbyId(@PathVariable String id) {
+        FirewallRuleDetail fwRuleById = firewallRuleService.getFirewallruleDetailById(id);
+        return new ResponseEntity<>(fwRuleById, HttpStatus.OK);
+    }
+
 
     @PostMapping("/change-status")
     public ResponseEntity<FirewallRule> changeStatus(@RequestBody FirewallStatusChangeDTO fwSC) {
