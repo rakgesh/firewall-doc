@@ -1,5 +1,6 @@
 <script>
   import axios from "axios";
+  import {jwt_token} from "../store";
 
   const api_root = "http://localhost:8080/api";
   //-----------------------------
@@ -29,7 +30,7 @@
     var config = {
       method: "get",
       url: api_root + "/service/findHo",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -51,7 +52,7 @@
     var config = {
       method: "post",
       url: api_root + "/host-group-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: hostGroupObject,
@@ -77,7 +78,7 @@
     var config = {
       method: "get",
       url: api_root + "/host-object",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -107,7 +108,7 @@
     var config = {
       method: "put",
       url: api_root + "/host-group-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: hgoEdit,
@@ -132,6 +133,7 @@
     var config = {
       method: "delete",
       url: api_root + "/host-group-object/" + id,
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)

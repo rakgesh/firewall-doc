@@ -1,7 +1,6 @@
 <script>
   import axios from "axios";
-  import { isAuthenticated, user } from "../store";
-
+  import { isAuthenticated, user, jwt_token } from "../store";
 
   const api_root = "http://localhost:8080/api";
   //-----------------------------
@@ -52,12 +51,10 @@
     useCaseName: null,
   };
 
-  
-
   let fwStatusToChange = {
     fwId: null,
     status: null,
-  }
+  };
 
   let fwrStatus = {
     id: null,
@@ -80,7 +77,7 @@
     var config = {
       method: "get",
       url: api_root + "/service/findFwD",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -101,6 +98,7 @@
       method: "post",
       url: api_root + "/firewall-rule",
       headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: firewallRule,
@@ -115,13 +113,13 @@
         console.log(error);
       });
     firewallRule = {
-    fwTypeId: null,
-    contextId: null,
-    sourceId: null,
-    destinationId: null,
-    serviceGroupObjectId: null,
-    useCaseId: null,
-  }
+      fwTypeId: null,
+      contextId: null,
+      sourceId: null,
+      destinationId: null,
+      serviceGroupObjectId: null,
+      useCaseId: null,
+    };
   }
 
   //-----------------------------
@@ -131,7 +129,7 @@
     var config = {
       method: "get",
       url: api_root + "/firewall-type",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -150,7 +148,7 @@
     var config = {
       method: "get",
       url: api_root + "/context",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -167,7 +165,7 @@
     var config = {
       method: "get",
       url: api_root + "/host-object",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -186,7 +184,7 @@
     var config = {
       method: "get",
       url: api_root + "/service/findHo",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -205,7 +203,7 @@
     var config = {
       method: "get",
       url: api_root + "/network-object",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -224,7 +222,7 @@
     var config = {
       method: "get",
       url: api_root + "/service/findNo",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -243,7 +241,7 @@
     var config = {
       method: "get",
       url: api_root + "/service-group-object",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -262,7 +260,7 @@
     var config = {
       method: "get",
       url: api_root + "/use-case",
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -310,6 +308,7 @@
       method: "put",
       url: api_root + "/firewall-rule",
       headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: fwEdit,
@@ -357,6 +356,7 @@
     var config = {
       method: "delete",
       url: api_root + "/firewall-rule/" + id,
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -744,15 +744,19 @@
             ></td
           >
           <td>{fwr.firewallStatus}</td>
-          {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin") }
-          <td><button
-            style="border: none; background: none;"
-            data-toggle="modal"
-            data-target="#changeStatusOfFW"
-            on:click={() => getFwToChangeStatus(fwr)}
-          ><i class="fa fa-check-square-o fa-lg" title="change status" /></button
-          ></td
-          >
+          {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#changeStatusOfFW"
+                on:click={() => getFwToChangeStatus(fwr)}
+                ><i
+                  class="fa fa-check-square-o fa-lg"
+                  title="change status"
+                /></button
+              ></td
+            >
           {/if}
           <td
             ><button
@@ -1238,7 +1242,6 @@
 
 <!-------------------------------------------->
 
-
 <div
   class="modal fade"
   id="changeStatusOfFW"
@@ -1250,7 +1253,9 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="changeStatusOfFW">Change Status of Firewall Rule</h5>
+        <h5 class="modal-title" id="changeStatusOfFW">
+          Change Status of Firewall Rule
+        </h5>
         <button
           type="button"
           class="close"
@@ -1290,12 +1295,12 @@
             <div class="col">
               <label class="form-label" for="context">Context</label>
               <input
-              bind:value={fwrStatus.contextName}
-              class="form-control"
-              id="id"
-              type="text"
-              disabled
-            />
+                bind:value={fwrStatus.contextName}
+                class="form-control"
+                id="id"
+                type="text"
+                disabled
+              />
             </div>
           </div>
           <div class="row mb-3">
@@ -1354,36 +1359,40 @@
                 aria-label="status"
                 bind:value={fwrStatus.status}
               >
-              <option value ="EDITED" hidden>EDITED</option>
-              {#if fwrStatus.status === "REQUESTED_FOR_APPROVAL"}
-              <option value ="REQUESTED_FOR_APPROVAL" hidden>REQUESTED_FOR_APPROVAL</option>
-              <option value="APPROVED">APPROVED</option>
-              <option value="REJECTED">REJECTED</option>
-              {:else if fwrStatus.status === "APPROVED"}
-              <option value ="APPROVED" hidden>APPROVED</option>
-              <option value="ORDERED">ORDERED</option>
-              {:else if fwrStatus.status === "ORDERED"}
-              <option value ="ORDERED" hidden>ORDERED</option>
-              <option value="ACTIVE">ACTIVE</option>
-              {:else if fwrStatus.status === "ACTIVE"}
-              <option value ="ACTIVE" hidden>ACTIVE</option>
-              <option value="DELETED">DELETED</option>
-              <option value="DISABLED">DISABLED</option>
-              {:else if fwrStatus.status === "DISABLED"}
-              <option value ="DISABLED" hidden>DISABLED</option>
-              <option value="ACTIVE">ACTIVE</option>
-              <option value="DELETED">DELETED</option>
-              {:else}
-              <option value ="REQUESTED_FOR_APPROVAL" hidden>REQUESTED_FOR_APPROVAL</option>
-              <option value="ACTIVE">ACTIVE</option>
-              <option value="APPROVED">APPROVED</option>
-              <option value="DELETED">DELETED</option>
-              <option value="DISABLED">DISABLED</option>
-              <option value ="EDITED" hidden>EDITED</option>
-              <option value="ORDERED">ORDERED</option>
-              <option value="REJECTED">REJECTED</option>
-              {/if}
-            </select>
+                <option value="EDITED" hidden>EDITED</option>
+                {#if fwrStatus.status === "REQUESTED_FOR_APPROVAL"}
+                  <option value="REQUESTED_FOR_APPROVAL" hidden
+                    >REQUESTED_FOR_APPROVAL</option
+                  >
+                  <option value="APPROVED">APPROVED</option>
+                  <option value="REJECTED">REJECTED</option>
+                {:else if fwrStatus.status === "APPROVED"}
+                  <option value="APPROVED" hidden>APPROVED</option>
+                  <option value="ORDERED">ORDERED</option>
+                {:else if fwrStatus.status === "ORDERED"}
+                  <option value="ORDERED" hidden>ORDERED</option>
+                  <option value="ACTIVE">ACTIVE</option>
+                {:else if fwrStatus.status === "ACTIVE"}
+                  <option value="ACTIVE" hidden>ACTIVE</option>
+                  <option value="DELETED">DELETED</option>
+                  <option value="DISABLED">DISABLED</option>
+                {:else if fwrStatus.status === "DISABLED"}
+                  <option value="DISABLED" hidden>DISABLED</option>
+                  <option value="ACTIVE">ACTIVE</option>
+                  <option value="DELETED">DELETED</option>
+                {:else}
+                  <option value="REQUESTED_FOR_APPROVAL" hidden
+                    >REQUESTED_FOR_APPROVAL</option
+                  >
+                  <option value="ACTIVE">ACTIVE</option>
+                  <option value="APPROVED">APPROVED</option>
+                  <option value="DELETED">DELETED</option>
+                  <option value="DISABLED">DISABLED</option>
+                  <option value="EDITED" hidden>EDITED</option>
+                  <option value="ORDERED">ORDERED</option>
+                  <option value="REJECTED">REJECTED</option>
+                {/if}
+              </select>
             </div>
           </div>
         </form>

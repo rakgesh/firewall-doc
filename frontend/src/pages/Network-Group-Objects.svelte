@@ -1,6 +1,6 @@
 <script>
   import axios from "axios";
-
+  import {jwt_token} from "../store";
 
 
  
@@ -33,7 +33,7 @@
     var config = {
       method: "get",
       url: api_root + "/service/findNo",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -55,7 +55,7 @@ function createNetworkGroupObject() {
     var config = {
       method: "post",
       url: api_root + "/network-group-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: networkGroupObject,
@@ -82,7 +82,7 @@ let networkObjects = [];
     var config = {
       method: "get",
       url: api_root + "/network-object",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -111,7 +111,7 @@ let networkObjects = [];
     var config = {
       method: "put",
       url: api_root + "/network-group-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: ngoEdit,
@@ -136,6 +136,7 @@ let networkObjects = [];
     var config = {
       method: "delete",
       url: api_root + "/network-group-object/" + id,
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)

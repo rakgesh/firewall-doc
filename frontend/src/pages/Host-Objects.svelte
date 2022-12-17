@@ -1,8 +1,7 @@
 <script>
   import axios from "axios";
+  import {jwt_token} from "../store";
 
-
-  // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
   const api_root = "http://localhost:8080/api";
 
   let hostObjects = [];
@@ -31,7 +30,7 @@
     var config = {
       method: "get",
       url: api_root + "/host-object",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -62,7 +61,7 @@
     var config = {
       method: "post",
       url: api_root + "/host-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: hostObject,
@@ -89,7 +88,7 @@
     var config = {
       method: "put",
       url: api_root + "/host-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: hoEdit,
@@ -114,6 +113,7 @@
     var config = {
       method: "delete",
       url: api_root + "/host-object/" + id,
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)

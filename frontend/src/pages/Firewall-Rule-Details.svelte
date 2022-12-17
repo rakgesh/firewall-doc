@@ -1,5 +1,6 @@
 <script>
   import axios from "axios";
+  import {jwt_token} from "../store";
   export let params = {};
 
   const api_root = "http://localhost:8080/api";
@@ -62,7 +63,7 @@
     var config = {
       method: "get",
       url: api_root + "/service/findFwD/" + id,
-      headers: {},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -94,7 +95,7 @@
     var config = {
       method: "post",
       url: api_root + "/service/change-status",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: fwStatusToChange,
@@ -116,7 +117,7 @@
     var config = {
       method: "post",
       url: api_root + "/service/change-status",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: fwStatusToChange,

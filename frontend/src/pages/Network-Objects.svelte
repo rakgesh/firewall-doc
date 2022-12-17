@@ -1,8 +1,7 @@
 <script>
   import axios from "axios";
-  import HostObjects from "./Host-Objects.svelte";
+  import {jwt_token} from "../store";
 
-  // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
   const api_root = "http://localhost:8080/api";
 
   let networkObjects = [];
@@ -32,7 +31,7 @@
     var config = {
       method: "get",
       url: api_root + "/network-object",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -62,7 +61,7 @@
     var config = {
       method: "post",
       url: api_root + "/network-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: networkObject,
@@ -90,7 +89,7 @@
     var config = {
       method: "put",
       url: api_root + "/network-object",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: noEdit,
@@ -115,6 +114,7 @@
     var config = {
       method: "delete",
       url: api_root + "/network-object/" + id,
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
