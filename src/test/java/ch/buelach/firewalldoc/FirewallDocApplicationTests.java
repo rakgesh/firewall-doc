@@ -9,10 +9,4 @@ class FirewallDocApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
-	@Test
-	public void main () {
-		FirewallDocApplication.main(new String[] {});
-	}
-
 }

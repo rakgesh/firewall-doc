@@ -1,5 +1,7 @@
 <script>
   import axios from "axios";
+  import { isAuthenticated, user } from "../store";
+
 
   const api_root = "http://localhost:8080/api";
   //-----------------------------
@@ -742,6 +744,7 @@
             ></td
           >
           <td>{fwr.firewallStatus}</td>
+          {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin") }
           <td><button
             style="border: none; background: none;"
             data-toggle="modal"
@@ -750,6 +753,7 @@
           ><i class="fa fa-check-square-o fa-lg" title="change status" /></button
           ></td
           >
+          {/if}
           <td
             ><button
               style="border: none; background: none;"

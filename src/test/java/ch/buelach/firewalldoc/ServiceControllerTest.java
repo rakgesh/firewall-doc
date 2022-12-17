@@ -115,7 +115,7 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.[0].uc.tags[2]", is("Management Server")))
                 .andExpect(jsonPath("$.[0].uc.tags[3]", is("ICT")))
                 .andExpect(jsonPath("$.[0].uc.tags[4]", is("Test")))
-                .andExpect(jsonPath("$.[0].firewallStatus", is("REQUESTED_FOR_APPROVAL")));
+                .andExpect(jsonPath("$.[0].firewallStatus", is("APPROVED")));
     }
 
     @Test

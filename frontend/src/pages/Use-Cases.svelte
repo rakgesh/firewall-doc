@@ -1,6 +1,6 @@
 <script>
   import axios from "axios";
-  import { each } from "svelte/internal";
+  import { isAuthenticated, user, jwt_token } from "../store";
 
   // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
   const api_root = "http://localhost:8080/api";
@@ -22,7 +22,7 @@
   let useCaseDelete = {
     id: null,
     name: null,
-  }  
+  };
 
   let tagsBeforeEdit = [];
 
@@ -51,6 +51,7 @@
       method: "post",
       url: api_root + "/use-case",
       headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: useCase,
@@ -83,6 +84,7 @@
       method: "put",
       url: api_root + "/use-case",
       headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: useCaseEdit,
@@ -107,6 +109,7 @@
     var config = {
       method: "delete",
       url: api_root + "/use-case/" + id,
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -142,73 +145,83 @@
     useCases = useCases.sort(sort);
   };
 </script>
+
 <div style="margin-left: -52px; margin-right: -52px;">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <h3 style="margin-top: 15px; font-weight: bold;">Use Cases</h3>
-    </div>
-    <div class="col" />
-    <div class="col" style="text-align-last: right;">
-      <button
-        type="button"
-        class="btn"
-        data-toggle="modal"
-        data-target="#crateUC"
-        style="margin-top: 9px; background-color: #c73834; color: #fff"
-        >Add Use Case</button
-      >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h3 style="margin-top: 15px; font-weight: bold;">Use Cases</h3>
+      </div>
+      <div class="col" />
+      {#if $isAuthenticated}
+        <div class="col" style="text-align-last: right;">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#crateUC"
+            style="margin-top: 9px; background-color: #c73834; color: #fff"
+            >Add Use Case</button
+          >
+        </div>
+      {/if}
     </div>
   </div>
-</div>
-<table class="table table-striped table-hover" id="allUseCases">
-  <thead>
-    <tr>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col"
-        >Name <span on:click={sort("name")}>
-          <i class="fa fa-fw fa-sort" /></span
-        ></th
-      >
-      <th scope="col">Description </th>
-      <th scope="col">Tags (Standort/Bereich)</th>
-      <th scope="col" />
-      <th scope="col" />
-    </tr>
-  </thead>
-  <tbody>
-    {#each useCases as useCase}
+  <table class="table table-striped table-hover" id="allUseCases">
+    <thead>
       <tr>
-        <td>{useCase.name}</td>
-        <td>{useCase.description}</td>
-        <td
-          >{#each useCase.tags as tags}
-            {tags};
-          {/each}</td
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <th scope="col"
+          >Name <span on:click={sort("name")}>
+            <i class="fa fa-fw fa-sort" /></span
+          ></th
         >
-        <td
-          ><button
-            style="border: none; background: none;"
-            data-toggle="modal"
-            data-target="#editUC"
-            on:click={() => getUseCaseToEdit(useCase)}
-            ><i
-              class="fa fa-pencil-square-o fa-lg"
-              aria-hidden="true"
-            /></button
-          ></td
-        >
-        <td><button
-          style="border: none; background: none;"
-          data-toggle="modal"
-          data-target="#deleteUC"
-          on:click={() => getUseCaseToDelete(useCase)}
-          >
-          <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+        <th scope="col">Description </th>
+        <th scope="col">Tags (Standort/Bereich)</th>
+        {#if $isAuthenticated}
+          <th scope="col" />
+          <th scope="col" />
+        {/if}
       </tr>
-    {/each}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {#each useCases as useCase}
+        <tr>
+          <td>{useCase.name}</td>
+          <td>{useCase.description}</td>
+          <td
+            >{#each useCase.tags as tags}
+              {tags};
+            {/each}</td
+          >
+          {#if $isAuthenticated}
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#editUC"
+                on:click={() => getUseCaseToEdit(useCase)}
+                ><i
+                  class="fa fa-pencil-square-o fa-lg"
+                  aria-hidden="true"
+                /></button
+              ></td
+            >
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#deleteUC"
+                on:click={() => getUseCaseToDelete(useCase)}
+              >
+                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+              ></td
+            >
+          {/if}
+        </tr>
+      {/each}
+    </tbody>
+  </table>
 </div>
 
 <div
@@ -383,34 +396,36 @@
   aria-labelledby="formDeleteUseCase"
   aria-hidden="true"
 >
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="deleteUseCase">Delete Use-Case</h5>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      Are you sure, that you want to delete this use case <strong>"{useCaseDelete.name}"</strong>?
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal"
-        >Close</button
-      >
-      <button
-        type="button"
-        class="btn"
-        data-dismiss="modal"
-        style="background-color: #c73834; color: #fff"
-        on:click={deleteUseCase(useCaseDelete.id)}>Delete</button
-      >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteUseCase">Delete Use-Case</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure, that you want to delete this use case <strong
+          >"{useCaseDelete.name}"</strong
+        >?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          data-dismiss="modal"
+          style="background-color: #c73834; color: #fff"
+          on:click={deleteUseCase(useCaseDelete.id)}>Delete</button
+        >
+      </div>
     </div>
   </div>
-</div>
 </div>

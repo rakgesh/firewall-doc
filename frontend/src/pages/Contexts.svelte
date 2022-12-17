@@ -1,5 +1,6 @@
 <script>
   import axios from "axios";
+  import {jwt_token} from "../store";
 
   const api_root = "http://localhost:8080/api";
 
@@ -30,7 +31,7 @@
     var config = {
       method: "get",
       url: api_root + "/context",
-      headers: {},
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -59,7 +60,7 @@
     var config = {
       method: "post",
       url: api_root + "/context",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: context,
@@ -87,7 +88,7 @@
     var config = {
       method: "put",
       url: api_root + "/context",
-      headers: {
+      headers: {Authorization: "Bearer "+$jwt_token,
         "Content-Type": "application/json",
       },
       data: cEdit,
@@ -112,6 +113,7 @@
     var config = {
       method: "delete",
       url: api_root + "/context/" + id,
+      headers: {Authorization: "Bearer "+$jwt_token},
     };
 
     axios(config)
@@ -439,7 +441,7 @@
       </button>
     </div>
     <div class="modal-body">
-      Are you sure, that you want to delete this context <strong>"{cEdit.name}"</strong>?
+      Are you sure, that you want to delete this context <strong>"{cDelete.name}"</strong>?
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-dismiss="modal"
@@ -450,7 +452,7 @@
         class="btn"
         data-dismiss="modal"
         style="background-color: #c73834; color: #fff"
-        on:click={deleteC(cEdit.id)}>Delete</button
+        on:click={deleteC(cDelete.id)}>Delete</button
       >
     </div>
   </div>
