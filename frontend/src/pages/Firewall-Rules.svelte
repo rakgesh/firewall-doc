@@ -2,7 +2,7 @@
   import axios from "axios";
   import { isAuthenticated, user, jwt_token } from "../store";
 
-  const api_root = "http://localhost:8080/api";
+  const api_root = window.location.origin +"/api";
   //-----------------------------
 
   let firewallRules = [];

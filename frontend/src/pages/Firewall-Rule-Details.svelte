@@ -3,7 +3,7 @@
   import {jwt_token} from "../store";
   export let params = {};
 
-  const api_root = "http://localhost:8080/api";
+  const api_root = window.location.origin +"/api";
 
   let id;
   let firewallRules = [];

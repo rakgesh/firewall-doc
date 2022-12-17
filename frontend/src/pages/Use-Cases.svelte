@@ -3,7 +3,7 @@
   import { isAuthenticated, user, jwt_token } from "../store";
 
   // TODO: Setze hier die URL zu deinem mit Postman erstellten Mock Server
-  const api_root = "http://localhost:8080/api";
+  const api_root = window.location.origin +"/api";
 
   let useCases = [];
   let useCase = {

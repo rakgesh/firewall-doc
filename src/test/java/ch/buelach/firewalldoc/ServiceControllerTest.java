@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,10 +31,13 @@ public class ServiceControllerTest {
     @Autowired
     private FirewallRuleRepository firewallRuleRepository;
 
+    private String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1yOGR4OGJ6TDZCUWZUWlZOTVBmSCJ9.eyJ1c2VyX3JvbGVzIjpbImFkbWluIl0sIm5pY2tuYW1lIjoidGVzdCIsIm5hbWUiOiJ0ZXN0QHRlc3QuY2giLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvMGIyYWM2OWMyMTA1YzRmOTE0MTUzNWY3YWM4OTVkOWU_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZ0ZS5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyMi0xMi0xN1QxNDo1MjowMC44NzBaIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY2giLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImlzcyI6Imh0dHBzOi8vZGV2LTBhdWZqbmhjYmRqbG10NjIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYzODY0MTA2YzBmOGFhYmZmNjRhOWQ4NiIsImF1ZCI6IkFHRUxyN2I0TzJSaHdVdDQwT2V2eWZrcDNQNTY4RDZIIiwiaWF0IjoxNjcxMjg4NzIyLCJleHAiOjE2NzM4ODA3MjIsInNpZCI6IlJWVFBDWHJrNVhhT29uc1dvMWJRbDFiVWh6NWh6Q1dRIiwibm9uY2UiOiJOa0ZSWm1JMFpVNWxla0ZvY0ZBNGZtUjRRekZZVVZSdFQyTkRaa1pDY2pWakxtMDFRV1ZOV2s1SVl3PT0ifQ.V37VjRAE-Gt18aESQBezcyf9mM6qvLrIESBjoYE3mq-QrdaImPJ3jdsghB5PXuYy6ZSWpshb5VaBn3rfHzioxjDdQboxs0xiv7TuU4QiRecwMVuPsY8qeFp0053ad7WGhFYXqmF7KjGhhmqyAcjR8MafyrNrGH6NhrycSeAgZimvmWh8yfqpM2D5YK1GVpF9ZWVBdv_aKOS9Vd73ZY8pFlrZtlJb5IVqMXjifVtTZ1vwXcPz42TI6lqcB4xSyt8I8HXG_tuA4BeT_6GsEe6xYfTPJyuDPYj_NlSouoYs5Ipfu9ACEGx5ZwCfPocI4kvhRQoypU_vBMPRvoEgPJgX2w";
+
     @Test
     public void testGetAllHoOfHgroup() throws Exception {
 
-        mvc.perform(get("/api/service/findHo"))
+        mvc.perform(get("/api/service/findHo")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.[0].hgoId", is("6373649de808a17e7e70001e")))
                 .andExpect(jsonPath("$.[0].hgoName", is("HG_RZ_BUL-DC-Server")))
@@ -55,7 +59,8 @@ public class ServiceControllerTest {
     @Test
     public void testGetAllNoOfNgroup() throws Exception {
 
-        mvc.perform(get("/api/service/findNo"))
+        mvc.perform(get("/api/service/findNo")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.[0].ngoId", is("636f9fddc021af45cf24290f")))
                 .andExpect(jsonPath("$.[0].ngoName", is("NG_OFFTRCL")))
@@ -79,7 +84,8 @@ public class ServiceControllerTest {
     @Test
     public void testGetAllFirewallRuleDetail() throws Exception {
 
-        mvc.perform(get("/api/service/findFwD"))
+        mvc.perform(get("/api/service/findFwD")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.[0].fwId", is("6385246e49775a0e240fd292")))
                 .andExpect(jsonPath("$.[0].fwType.id", is("63624cb4cad6de381d422c77")))
@@ -119,12 +125,13 @@ public class ServiceControllerTest {
     }
 
     @Test
-    public void testPostNewFirewallRule() throws Exception {
+    public void testPostStatusChangeOfFirewallrule() throws Exception {
         FirewallRuleCreateDTO fwRDTO = new FirewallRuleCreateDTO("63624cb4cad6de381d422c77",
                 "Test Status Change Context Id v1.0",
                 "Test Source Id", "Test Destination Id", "Test SGO Id", "Test Use Case Id");
         ObjectMapper mapper = new ObjectMapper();
         mvc.perform(post("/api/firewall-rule")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapper.writeValueAsBytes(fwRDTO)))
                 .andExpect(status().isCreated());
@@ -142,6 +149,7 @@ public class ServiceControllerTest {
         FirewallStatusChangeDTO fwSDTOApproved = new FirewallStatusChangeDTO(id, "APPROVED");
         ObjectMapper mapperApproved = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapperApproved.writeValueAsBytes(fwSDTOApproved)))
                 .andExpect(status().isOk())
@@ -158,6 +166,7 @@ public class ServiceControllerTest {
         FirewallStatusChangeDTO fwSDTOOrdered = new FirewallStatusChangeDTO(id, "ORDERED");
         ObjectMapper mapperOrdered = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapperOrdered.writeValueAsBytes(fwSDTOOrdered)))
                 .andExpect(status().isOk())
@@ -174,6 +183,7 @@ public class ServiceControllerTest {
         FirewallStatusChangeDTO fwSDTOActive = new FirewallStatusChangeDTO(id, "ACTIVE");
         ObjectMapper mapperActive = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapperActive.writeValueAsBytes(fwSDTOActive)))
                 .andExpect(status().isOk())
@@ -190,6 +200,7 @@ public class ServiceControllerTest {
         FirewallStatusChangeDTO fwSDTODisabled = new FirewallStatusChangeDTO(id, "DISABLED");
         ObjectMapper mapperDisabled = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapperDisabled.writeValueAsBytes(fwSDTODisabled)))
                 .andExpect(status().isOk())
@@ -206,6 +217,7 @@ public class ServiceControllerTest {
         FirewallStatusChangeDTO fwSDTODeleted = new FirewallStatusChangeDTO(id, "DELETED");
         ObjectMapper mapperDeleted = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapperDeleted.writeValueAsBytes(fwSDTODeleted)))
                 .andExpect(status().isOk())
@@ -222,6 +234,7 @@ public class ServiceControllerTest {
         FirewallStatusChangeDTO fwSDTORejected = new FirewallStatusChangeDTO(id, "REJECTED");
         ObjectMapper mapperRejected = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
                 .contentType("application/json")
                 .content(mapperRejected.writeValueAsBytes(fwSDTORejected)))
                 .andExpect(status().isOk())
@@ -233,8 +246,54 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
                 .andExpect(jsonPath("$.firewallStatus", is("REJECTED")));
 
-        mvc.perform(delete("/api/firewall-rule/{id}", id))
+        mvc.perform(delete("/api/firewall-rule/{id}", id)
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token))
                 .andExpect(status().isOk());
 
     }
+
+    @Test
+    public void testGetFirewallRuleDetailById() throws Exception {
+
+        mvc.perform(get("/api/service/findFwD/6385246e49775a0e240fd292")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.fwId", is("6385246e49775a0e240fd292")))
+                .andExpect(jsonPath("$.fwType.id", is("63624cb4cad6de381d422c77")))
+                .andExpect(jsonPath("$.fwType.name", is("Cisco Zonen Firewall")))
+                .andExpect(jsonPath("$.fwType.description",
+                        is("Kommunikation innerhalb der Zonen verläuft über diese Firewall")))
+                .andExpect(jsonPath("$.context.id", is("637f98517cba0070daec8f83")))
+                .andExpect(jsonPath("$.context.name", is("RZ")))
+                .andExpect(jsonPath("$.context.ip", is("172.31.0.0")))
+                .andExpect(jsonPath("$.context.subnet", is("/17")))
+                .andExpect(jsonPath("$.context.description", is("Servernetz GOV")))
+                .andExpect(jsonPath("$.sNo.id", is("636f9e15c021af45cf24290d")))
+                .andExpect(jsonPath("$.sNo.name", is("N_OFFTRCL_STHA")))
+                .andExpect(jsonPath("$.sNo.ip", is("172.18.20.0")))
+                .andExpect(jsonPath("$.sNo.subnet", is("/24")))
+                .andExpect(jsonPath("$.sNo.description", is("OFFTRCL Stadthaus")))
+                .andExpect(jsonPath("$.dHo.id", is("6375641f96445c4d8cf07a87")))
+                .andExpect(jsonPath("$.dHo.name", is("H_RZ_BUL-CTXIT2")))
+                .andExpect(jsonPath("$.dHo.ip", is("172.31.1.69")))
+                .andExpect(jsonPath("$.dHo.description", is("ICT Management Server")))
+                .andExpect(jsonPath("$.sgo.id", is("63851f5649775a0e240fd28f")))
+                .andExpect(jsonPath("$.sgo.name", is("SG_RDP")))
+                .andExpect(jsonPath("$.sgo.port").isArray())
+                .andExpect(jsonPath("$.sgo.port[0]", is("tcp/3389")))
+                .andExpect(jsonPath("$.sgo.port[1]", is("udp/3389")))
+                .andExpect(jsonPath("$.sgo.description", is("RDP Ports")))
+                .andExpect(jsonPath("$.uc.id", is("6385245f49775a0e240fd291")))
+                .andExpect(jsonPath("$.uc.name", is("Zugriff auf Management Server")))
+                .andExpect(jsonPath("$.uc.description", is("Zugriff von OFFTRCL im Stadthaus auf BUL-CTXIT2")))
+                .andExpect(jsonPath("$.uc.tags").isArray())
+                .andExpect(jsonPath("$.uc.tags[0]", is("OFFTRCL")))
+                .andExpect(jsonPath("$.uc.tags[1]", is("Stadthaus")))
+                .andExpect(jsonPath("$.uc.tags[2]", is("Management Server")))
+                .andExpect(jsonPath("$.uc.tags[3]", is("ICT")))
+                .andExpect(jsonPath("$.uc.tags[4]", is("Test")))
+                .andExpect(jsonPath("$.firewallStatus", is("APPROVED")));
+    }
+
 }
+

@@ -59,7 +59,7 @@ public class FirewallRuleController {
     }
 
     @PutMapping("")
-    public ResponseEntity<FirewallRule> editHostObject(@RequestBody FirewallRuleEditDTO fwEditDTO) {
+    public ResponseEntity<FirewallRule> editFWRule(@RequestBody FirewallRuleEditDTO fwEditDTO) {
         FirewallRule fwDAO = firewallRuleRepository.findById(fwEditDTO.getId()).get();
         fwDAO.setFwTypeId(fwEditDTO.getFwTypeId());
         fwDAO.setContextId(fwEditDTO.getContextId());
