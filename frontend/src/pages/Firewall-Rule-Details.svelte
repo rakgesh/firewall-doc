@@ -1,7 +1,8 @@
 <script>
   import axios from "axios";
-  import {jwt_token} from "../store";
   export let params = {};
+  import { isAuthenticated, user, jwt_token } from "../store";
+
 
   const api_root = window.location.origin +"/api";
 
@@ -234,6 +235,7 @@
           <h5 class="card-title" style="font-weight: bold;">Status</h5>
           <p class="card-text">{firewallRules.firewallStatus}</p>
         </div>
+        {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
         <div class="card-footer">
           <button
             type="button"
@@ -252,6 +254,7 @@
             on:click={changeFwStatusApproved(firewallRules)}>Approve</button
           >
         </div>
+        {/if}
       </div>
     </div>
   </div>
