@@ -5649,7 +5649,7 @@ var app = (function () {
     }
 
     // (619:12) {#if fwr.dHo}
-    function create_if_block_9(ctx) {
+    function create_if_block_9$1(ctx) {
     	let li0;
     	let button;
     	let t0_value = /*fwr*/ ctx[119].dHo.name + "";
@@ -5719,7 +5719,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_9.name,
+    		id: create_if_block_9$1.name,
     		type: "if",
     		source: "(619:12) {#if fwr.dHo}",
     		ctx
@@ -6302,7 +6302,7 @@ var app = (function () {
     	let if_block1 = /*fwr*/ ctx[119].sHgoWithHo && create_if_block_12(ctx);
     	let if_block2 = /*fwr*/ ctx[119].sNo && create_if_block_11(ctx);
     	let if_block3 = /*fwr*/ ctx[119].sNgoWithNo && create_if_block_10(ctx);
-    	let if_block4 = /*fwr*/ ctx[119].dHo && create_if_block_9(ctx);
+    	let if_block4 = /*fwr*/ ctx[119].dHo && create_if_block_9$1(ctx);
     	let if_block5 = /*fwr*/ ctx[119].dHgoWithHo && create_if_block_8$1(ctx);
     	let if_block6 = /*fwr*/ ctx[119].dNo && create_if_block_7$1(ctx);
     	let if_block7 = /*fwr*/ ctx[119].dNgoWithNo && create_if_block_6$1(ctx);
@@ -6556,7 +6556,7 @@ var app = (function () {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
-    					if_block4 = create_if_block_9(ctx);
+    					if_block4 = create_if_block_9$1(ctx);
     					if_block4.c();
     					if_block4.m(td3, t8);
     				}
@@ -22210,41 +22210,41 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[22] = list[i];
+    	child_ctx[24] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[27] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[27] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[27] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[27] = list[i];
     	return child_ctx;
     }
 
-    // (137:0) {#if success}
+    // (138:0) {#if success}
     function create_if_block$1(ctx) {
-    	let div6;
+    	let div5;
     	let div0;
     	let t0;
-    	let div5;
     	let div4;
+    	let div3;
     	let div1;
     	let t2;
     	let div2;
@@ -22291,20 +22291,15 @@ var app = (function () {
     	let t34_value = /*firewallRules*/ ctx[0].firewallStatus + "";
     	let t34;
     	let t35;
-    	let div3;
-    	let button0;
-    	let t37;
-    	let button1;
-    	let mounted;
-    	let dispose;
-    	let if_block0 = /*sHo*/ ctx[3] && create_if_block_8(ctx);
-    	let if_block1 = /*sHgoWithHo*/ ctx[4] && create_if_block_7(ctx);
-    	let if_block2 = /*sNo*/ ctx[5] && create_if_block_6(ctx);
-    	let if_block3 = /*sNgoWithNo*/ ctx[6] && create_if_block_5(ctx);
-    	let if_block4 = /*dHo*/ ctx[7] && create_if_block_4(ctx);
-    	let if_block5 = /*dHgoWithHo*/ ctx[8] && create_if_block_3(ctx);
-    	let if_block6 = /*dNo*/ ctx[9] && create_if_block_2(ctx);
-    	let if_block7 = /*dNgoWithNo*/ ctx[10] && create_if_block_1$1(ctx);
+    	let show_if = /*$isAuthenticated*/ ctx[14] && /*$user*/ ctx[15].user_roles && /*$user*/ ctx[15].user_roles.includes("admin");
+    	let if_block0 = /*sHo*/ ctx[3] && create_if_block_9(ctx);
+    	let if_block1 = /*sHgoWithHo*/ ctx[4] && create_if_block_8(ctx);
+    	let if_block2 = /*sNo*/ ctx[5] && create_if_block_7(ctx);
+    	let if_block3 = /*sNgoWithNo*/ ctx[6] && create_if_block_6(ctx);
+    	let if_block4 = /*dHo*/ ctx[7] && create_if_block_5(ctx);
+    	let if_block5 = /*dHgoWithHo*/ ctx[8] && create_if_block_4(ctx);
+    	let if_block6 = /*dNo*/ ctx[9] && create_if_block_3(ctx);
+    	let if_block7 = /*dNgoWithNo*/ ctx[10] && create_if_block_2(ctx);
     	let each_value = /*sgo*/ ctx[11].port;
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -22313,13 +22308,15 @@ var app = (function () {
     		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
     	}
 
+    	let if_block8 = show_if && create_if_block_1$1(ctx);
+
     	const block = {
     		c: function create() {
-    			div6 = element("div");
+    			div5 = element("div");
     			div0 = element("div");
     			t0 = space();
-    			div5 = element("div");
     			div4 = element("div");
+    			div3 = element("div");
     			div1 = element("div");
     			div1.textContent = "New Firewall Rule";
     			t2 = space();
@@ -22382,82 +22379,62 @@ var app = (function () {
     			p4 = element("p");
     			t34 = text(t34_value);
     			t35 = space();
-    			div3 = element("div");
-    			button0 = element("button");
-    			button0.textContent = "Reject";
-    			t37 = space();
-    			button1 = element("button");
-    			button1.textContent = "Approve";
+    			if (if_block8) if_block8.c();
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file$1, 138, 4, 3287);
+    			add_location(div0, file$1, 139, 4, 3314);
     			attr_dev(div1, "class", "card-header");
     			set_style(div1, "font-size", "24px");
-    			add_location(div1, file$1, 141, 8, 3391);
+    			add_location(div1, file$1, 142, 8, 3418);
     			attr_dev(h50, "class", "card-title");
     			set_style(h50, "font-weight", "bold");
-    			add_location(h50, file$1, 145, 10, 3531);
+    			add_location(h50, file$1, 146, 10, 3558);
     			attr_dev(p0, "class", "card-text");
-    			add_location(p0, file$1, 146, 10, 3611);
+    			add_location(p0, file$1, 147, 10, 3638);
     			attr_dev(h51, "class", "card-title");
     			set_style(h51, "font-weight", "bold");
-    			add_location(h51, file$1, 147, 10, 3667);
+    			add_location(h51, file$1, 148, 10, 3694);
     			attr_dev(p1, "class", "card-text");
-    			add_location(p1, file$1, 148, 10, 3741);
+    			add_location(p1, file$1, 149, 10, 3768);
     			attr_dev(h52, "class", "card-title");
     			set_style(h52, "font-weight", "bold");
-    			add_location(h52, file$1, 149, 10, 3792);
+    			add_location(h52, file$1, 150, 10, 3819);
     			attr_dev(h53, "class", "card-title");
     			set_style(h53, "font-weight", "bold");
-    			add_location(h53, file$1, 186, 10, 4817);
+    			add_location(h53, file$1, 187, 10, 4844);
     			attr_dev(h54, "class", "card-title");
     			set_style(h54, "font-weight", "bold");
-    			add_location(h54, file$1, 223, 10, 5847);
+    			add_location(h54, file$1, 224, 10, 5874);
     			attr_dev(p2, "class", "card-text");
-    			add_location(p2, file$1, 224, 10, 5927);
+    			add_location(p2, file$1, 225, 10, 5954);
     			attr_dev(h55, "class", "card-title");
     			set_style(h55, "font-weight", "bold");
-    			add_location(h55, file$1, 231, 10, 6097);
+    			add_location(h55, file$1, 232, 10, 6124);
     			attr_dev(p3, "class", "card-text");
-    			add_location(p3, file$1, 232, 10, 6172);
+    			add_location(p3, file$1, 233, 10, 6199);
     			attr_dev(h56, "class", "card-title");
     			set_style(h56, "font-weight", "bold");
-    			add_location(h56, file$1, 233, 10, 6218);
+    			add_location(h56, file$1, 234, 10, 6245);
     			attr_dev(p4, "class", "card-text");
-    			add_location(p4, file$1, 234, 10, 6291);
+    			add_location(p4, file$1, 235, 10, 6318);
     			attr_dev(div2, "class", "card-body");
-    			add_location(div2, file$1, 144, 8, 3496);
-    			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "data-toggle", "modal");
-    			attr_dev(button0, "data-target", "#reject");
-    			attr_dev(button0, "class", "btn");
-    			set_style(button0, "background-color", "#c73834");
-    			set_style(button0, "color", "#fff");
-    			add_location(button0, file$1, 237, 10, 6409);
-    			attr_dev(button1, "type", "button");
-    			attr_dev(button1, "data-toggle", "modal");
-    			attr_dev(button1, "data-target", "#approve");
-    			attr_dev(button1, "class", "btn btn-success");
-    			set_style(button1, "color", "#fff");
-    			add_location(button1, file$1, 245, 10, 6698);
-    			attr_dev(div3, "class", "card-footer");
-    			add_location(div3, file$1, 236, 8, 6372);
-    			attr_dev(div4, "class", "card");
-    			set_style(div4, "margin-top", "20px");
-    			add_location(div4, file$1, 140, 6, 3337);
-    			attr_dev(div5, "class", "col");
-    			add_location(div5, file$1, 139, 4, 3312);
-    			attr_dev(div6, "class", "row row-cols-1 row-cols-md-3 g-4");
-    			add_location(div6, file$1, 137, 2, 3235);
+    			add_location(div2, file$1, 145, 8, 3523);
+    			attr_dev(div3, "class", "card");
+    			set_style(div3, "margin-top", "20px");
+    			add_location(div3, file$1, 141, 6, 3364);
+    			attr_dev(div4, "class", "col");
+    			add_location(div4, file$1, 140, 4, 3339);
+    			attr_dev(div5, "class", "row row-cols-1 row-cols-md-3 g-4");
+    			add_location(div5, file$1, 138, 2, 3262);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div6, anchor);
-    			append_dev(div6, div0);
-    			append_dev(div6, t0);
-    			append_dev(div6, div5);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div0);
+    			append_dev(div5, t0);
     			append_dev(div5, div4);
-    			append_dev(div4, div1);
-    			append_dev(div4, t2);
-    			append_dev(div4, div2);
+    			append_dev(div4, div3);
+    			append_dev(div3, div1);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
     			append_dev(div2, h50);
     			append_dev(div2, t4);
     			append_dev(div2, p0);
@@ -22508,41 +22485,10 @@ var app = (function () {
     			append_dev(div2, t33);
     			append_dev(div2, p4);
     			append_dev(p4, t34);
-    			append_dev(div4, t35);
-    			append_dev(div4, div3);
-    			append_dev(div3, button0);
-    			append_dev(div3, t37);
-    			append_dev(div3, button1);
-
-    			if (!mounted) {
-    				dispose = [
-    					listen_dev(
-    						button0,
-    						"click",
-    						function () {
-    							if (is_function(/*changeFwStatusRejected*/ ctx[15](/*firewallRules*/ ctx[0]))) /*changeFwStatusRejected*/ ctx[15](/*firewallRules*/ ctx[0]).apply(this, arguments);
-    						},
-    						false,
-    						false,
-    						false
-    					),
-    					listen_dev(
-    						button1,
-    						"click",
-    						function () {
-    							if (is_function(/*changeFwStatusApproved*/ ctx[14](/*firewallRules*/ ctx[0]))) /*changeFwStatusApproved*/ ctx[14](/*firewallRules*/ ctx[0]).apply(this, arguments);
-    						},
-    						false,
-    						false,
-    						false
-    					)
-    				];
-
-    				mounted = true;
-    			}
+    			append_dev(div3, t35);
+    			if (if_block8) if_block8.m(div3, null);
     		},
-    		p: function update(new_ctx, dirty) {
-    			ctx = new_ctx;
+    		p: function update(ctx, dirty) {
     			if (dirty[0] & /*firewallType*/ 2 && t5_value !== (t5_value = /*firewallType*/ ctx[1].name + "")) set_data_dev(t5, t5_value);
     			if (dirty[0] & /*context*/ 4 && t9_value !== (t9_value = /*context*/ ctx[2].name + "")) set_data_dev(t9, t9_value);
 
@@ -22550,7 +22496,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_8(ctx);
+    					if_block0 = create_if_block_9(ctx);
     					if_block0.c();
     					if_block0.m(div2, t13);
     				}
@@ -22563,7 +22509,7 @@ var app = (function () {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
-    					if_block1 = create_if_block_7(ctx);
+    					if_block1 = create_if_block_8(ctx);
     					if_block1.c();
     					if_block1.m(div2, t14);
     				}
@@ -22576,7 +22522,7 @@ var app = (function () {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
-    					if_block2 = create_if_block_6(ctx);
+    					if_block2 = create_if_block_7(ctx);
     					if_block2.c();
     					if_block2.m(div2, t15);
     				}
@@ -22589,7 +22535,7 @@ var app = (function () {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
     				} else {
-    					if_block3 = create_if_block_5(ctx);
+    					if_block3 = create_if_block_6(ctx);
     					if_block3.c();
     					if_block3.m(div2, t16);
     				}
@@ -22602,7 +22548,7 @@ var app = (function () {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
-    					if_block4 = create_if_block_4(ctx);
+    					if_block4 = create_if_block_5(ctx);
     					if_block4.c();
     					if_block4.m(div2, t19);
     				}
@@ -22615,7 +22561,7 @@ var app = (function () {
     				if (if_block5) {
     					if_block5.p(ctx, dirty);
     				} else {
-    					if_block5 = create_if_block_3(ctx);
+    					if_block5 = create_if_block_4(ctx);
     					if_block5.c();
     					if_block5.m(div2, t20);
     				}
@@ -22628,7 +22574,7 @@ var app = (function () {
     				if (if_block6) {
     					if_block6.p(ctx, dirty);
     				} else {
-    					if_block6 = create_if_block_2(ctx);
+    					if_block6 = create_if_block_3(ctx);
     					if_block6.c();
     					if_block6.m(div2, t21);
     				}
@@ -22641,7 +22587,7 @@ var app = (function () {
     				if (if_block7) {
     					if_block7.p(ctx, dirty);
     				} else {
-    					if_block7 = create_if_block_1$1(ctx);
+    					if_block7 = create_if_block_2(ctx);
     					if_block7.c();
     					if_block7.m(div2, t22);
     				}
@@ -22678,9 +22624,23 @@ var app = (function () {
 
     			if (dirty[0] & /*uc*/ 4096 && t30_value !== (t30_value = /*uc*/ ctx[12].name + "")) set_data_dev(t30, t30_value);
     			if (dirty[0] & /*firewallRules*/ 1 && t34_value !== (t34_value = /*firewallRules*/ ctx[0].firewallStatus + "")) set_data_dev(t34, t34_value);
+    			if (dirty[0] & /*$isAuthenticated, $user*/ 49152) show_if = /*$isAuthenticated*/ ctx[14] && /*$user*/ ctx[15].user_roles && /*$user*/ ctx[15].user_roles.includes("admin");
+
+    			if (show_if) {
+    				if (if_block8) {
+    					if_block8.p(ctx, dirty);
+    				} else {
+    					if_block8 = create_if_block_1$1(ctx);
+    					if_block8.c();
+    					if_block8.m(div3, null);
+    				}
+    			} else if (if_block8) {
+    				if_block8.d(1);
+    				if_block8 = null;
+    			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div6);
+    			if (detaching) detach_dev(div5);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
     			if (if_block2) if_block2.d();
@@ -22690,8 +22650,7 @@ var app = (function () {
     			if (if_block6) if_block6.d();
     			if (if_block7) if_block7.d();
     			destroy_each(each_blocks, detaching);
-    			mounted = false;
-    			run_all(dispose);
+    			if (if_block8) if_block8.d();
     		}
     	};
 
@@ -22699,15 +22658,15 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(137:0) {#if success}",
+    		source: "(138:0) {#if success}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:10) {#if sHo}
-    function create_if_block_8(ctx) {
+    // (152:10) {#if sHo}
+    function create_if_block_9(ctx) {
     	let p;
     	let t0_value = /*sHo*/ ctx[3].name + "";
     	let t0;
@@ -22725,9 +22684,9 @@ var app = (function () {
     			br = element("br");
     			t2 = space();
     			t3 = text(t3_value);
-    			add_location(br, file$1, 153, 14, 3951);
+    			add_location(br, file$1, 154, 14, 3978);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 151, 12, 3888);
+    			add_location(p, file$1, 152, 12, 3915);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -22748,17 +22707,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_8.name,
+    		id: create_if_block_9.name,
     		type: "if",
-    		source: "(151:10) {#if sHo}",
+    		source: "(152:10) {#if sHo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (158:10) {#if sHgoWithHo}
-    function create_if_block_7(ctx) {
+    // (159:10) {#if sHgoWithHo}
+    function create_if_block_8(ctx) {
     	let p;
     	let t0_value = /*sHgoWithHo*/ ctx[4].hgoName + "";
     	let t0;
@@ -22782,7 +22741,7 @@ var app = (function () {
     			}
 
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 158, 12, 4058);
+    			add_location(p, file$1, 159, 12, 4085);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -22828,25 +22787,25 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_7.name,
+    		id: create_if_block_8.name,
     		type: "if",
-    		source: "(158:10) {#if sHgoWithHo}",
+    		source: "(159:10) {#if sHgoWithHo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (161:14) {#each sHgoWithHo.members as m}
+    // (162:14) {#each sHgoWithHo.members as m}
     function create_each_block_4(ctx) {
     	let br0;
     	let t0;
-    	let t1_value = /*m*/ ctx[25].name + "";
+    	let t1_value = /*m*/ ctx[27].name + "";
     	let t1;
     	let t2;
     	let br1;
     	let t3;
-    	let t4_value = /*m*/ ctx[25].ip + "";
+    	let t4_value = /*m*/ ctx[27].ip + "";
     	let t4;
 
     	const block = {
@@ -22858,8 +22817,8 @@ var app = (function () {
     			br1 = element("br");
     			t3 = space();
     			t4 = text(t4_value);
-    			add_location(br0, file$1, 161, 16, 4180);
-    			add_location(br1, file$1, 163, 16, 4230);
+    			add_location(br0, file$1, 162, 16, 4207);
+    			add_location(br1, file$1, 164, 16, 4257);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -22871,8 +22830,8 @@ var app = (function () {
     			insert_dev(target, t4, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*sHgoWithHo*/ 16 && t1_value !== (t1_value = /*m*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*sHgoWithHo*/ 16 && t4_value !== (t4_value = /*m*/ ctx[25].ip + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*sHgoWithHo*/ 16 && t1_value !== (t1_value = /*m*/ ctx[27].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*sHgoWithHo*/ 16 && t4_value !== (t4_value = /*m*/ ctx[27].ip + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(br0);
@@ -22889,15 +22848,15 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(161:14) {#each sHgoWithHo.members as m}",
+    		source: "(162:14) {#each sHgoWithHo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:10) {#if sNo}
-    function create_if_block_6(ctx) {
+    // (170:10) {#if sNo}
+    function create_if_block_7(ctx) {
     	let p;
     	let t0_value = /*sNo*/ ctx[5].name + "";
     	let t0;
@@ -22918,9 +22877,9 @@ var app = (function () {
     			t2 = space();
     			t3 = text(t3_value);
     			t4 = text(t4_value);
-    			add_location(br, file$1, 171, 14, 4416);
+    			add_location(br, file$1, 172, 14, 4443);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 169, 12, 4353);
+    			add_location(p, file$1, 170, 12, 4380);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -22943,17 +22902,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_6.name,
+    		id: create_if_block_7.name,
     		type: "if",
-    		source: "(169:10) {#if sNo}",
+    		source: "(170:10) {#if sNo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (176:10) {#if sNgoWithNo}
-    function create_if_block_5(ctx) {
+    // (177:10) {#if sNgoWithNo}
+    function create_if_block_6(ctx) {
     	let p;
     	let t0_value = /*sNgoWithNo*/ ctx[6].ngoName + "";
     	let t0;
@@ -22977,7 +22936,7 @@ var app = (function () {
     			}
 
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 176, 12, 4535);
+    			add_location(p, file$1, 177, 12, 4562);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23023,27 +22982,27 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_5.name,
+    		id: create_if_block_6.name,
     		type: "if",
-    		source: "(176:10) {#if sNgoWithNo}",
+    		source: "(177:10) {#if sNgoWithNo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (179:14) {#each sNgoWithNo.members as m}
+    // (180:14) {#each sNgoWithNo.members as m}
     function create_each_block_3(ctx) {
     	let br0;
     	let t0;
-    	let t1_value = /*m*/ ctx[25].name + "";
+    	let t1_value = /*m*/ ctx[27].name + "";
     	let t1;
     	let t2;
     	let br1;
     	let t3;
-    	let t4_value = /*m*/ ctx[25].ip + "";
+    	let t4_value = /*m*/ ctx[27].ip + "";
     	let t4;
-    	let t5_value = /*m*/ ctx[25].subnet + "";
+    	let t5_value = /*m*/ ctx[27].subnet + "";
     	let t5;
 
     	const block = {
@@ -23056,8 +23015,8 @@ var app = (function () {
     			t3 = space();
     			t4 = text(t4_value);
     			t5 = text(t5_value);
-    			add_location(br0, file$1, 179, 16, 4657);
-    			add_location(br1, file$1, 181, 16, 4707);
+    			add_location(br0, file$1, 180, 16, 4684);
+    			add_location(br1, file$1, 182, 16, 4734);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -23070,9 +23029,9 @@ var app = (function () {
     			insert_dev(target, t5, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*sNgoWithNo*/ 64 && t1_value !== (t1_value = /*m*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*sNgoWithNo*/ 64 && t4_value !== (t4_value = /*m*/ ctx[25].ip + "")) set_data_dev(t4, t4_value);
-    			if (dirty[0] & /*sNgoWithNo*/ 64 && t5_value !== (t5_value = /*m*/ ctx[25].subnet + "")) set_data_dev(t5, t5_value);
+    			if (dirty[0] & /*sNgoWithNo*/ 64 && t1_value !== (t1_value = /*m*/ ctx[27].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*sNgoWithNo*/ 64 && t4_value !== (t4_value = /*m*/ ctx[27].ip + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*sNgoWithNo*/ 64 && t5_value !== (t5_value = /*m*/ ctx[27].subnet + "")) set_data_dev(t5, t5_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(br0);
@@ -23090,15 +23049,15 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(179:14) {#each sNgoWithNo.members as m}",
+    		source: "(180:14) {#each sNgoWithNo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (188:10) {#if dHo}
-    function create_if_block_4(ctx) {
+    // (189:10) {#if dHo}
+    function create_if_block_5(ctx) {
     	let p;
     	let t0_value = /*dHo*/ ctx[7].name + "";
     	let t0;
@@ -23116,9 +23075,9 @@ var app = (function () {
     			br = element("br");
     			t2 = space();
     			t3 = text(t3_value);
-    			add_location(br, file$1, 190, 14, 4981);
+    			add_location(br, file$1, 191, 14, 5008);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 188, 12, 4918);
+    			add_location(p, file$1, 189, 12, 4945);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23139,17 +23098,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4.name,
+    		id: create_if_block_5.name,
     		type: "if",
-    		source: "(188:10) {#if dHo}",
+    		source: "(189:10) {#if dHo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (195:10) {#if dHgoWithHo}
-    function create_if_block_3(ctx) {
+    // (196:10) {#if dHgoWithHo}
+    function create_if_block_4(ctx) {
     	let p;
     	let t0_value = /*dHgoWithHo*/ ctx[8].hgoName + "";
     	let t0;
@@ -23173,7 +23132,7 @@ var app = (function () {
     			}
 
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 195, 12, 5088);
+    			add_location(p, file$1, 196, 12, 5115);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23219,25 +23178,25 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_4.name,
     		type: "if",
-    		source: "(195:10) {#if dHgoWithHo}",
+    		source: "(196:10) {#if dHgoWithHo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (198:14) {#each dHgoWithHo.members as m}
+    // (199:14) {#each dHgoWithHo.members as m}
     function create_each_block_2(ctx) {
     	let br0;
     	let t0;
-    	let t1_value = /*m*/ ctx[25].name + "";
+    	let t1_value = /*m*/ ctx[27].name + "";
     	let t1;
     	let t2;
     	let br1;
     	let t3;
-    	let t4_value = /*m*/ ctx[25].ip + "";
+    	let t4_value = /*m*/ ctx[27].ip + "";
     	let t4;
 
     	const block = {
@@ -23249,8 +23208,8 @@ var app = (function () {
     			br1 = element("br");
     			t3 = space();
     			t4 = text(t4_value);
-    			add_location(br0, file$1, 198, 16, 5210);
-    			add_location(br1, file$1, 200, 16, 5260);
+    			add_location(br0, file$1, 199, 16, 5237);
+    			add_location(br1, file$1, 201, 16, 5287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -23262,8 +23221,8 @@ var app = (function () {
     			insert_dev(target, t4, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*dHgoWithHo*/ 256 && t1_value !== (t1_value = /*m*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*dHgoWithHo*/ 256 && t4_value !== (t4_value = /*m*/ ctx[25].ip + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*dHgoWithHo*/ 256 && t1_value !== (t1_value = /*m*/ ctx[27].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*dHgoWithHo*/ 256 && t4_value !== (t4_value = /*m*/ ctx[27].ip + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(br0);
@@ -23280,15 +23239,15 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(198:14) {#each dHgoWithHo.members as m}",
+    		source: "(199:14) {#each dHgoWithHo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (206:10) {#if dNo}
-    function create_if_block_2(ctx) {
+    // (207:10) {#if dNo}
+    function create_if_block_3(ctx) {
     	let p;
     	let t0_value = /*dNo*/ ctx[9].name + "";
     	let t0;
@@ -23309,9 +23268,9 @@ var app = (function () {
     			t2 = space();
     			t3 = text(t3_value);
     			t4 = text(t4_value);
-    			add_location(br, file$1, 208, 14, 5446);
+    			add_location(br, file$1, 209, 14, 5473);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 206, 12, 5383);
+    			add_location(p, file$1, 207, 12, 5410);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23334,17 +23293,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_3.name,
     		type: "if",
-    		source: "(206:10) {#if dNo}",
+    		source: "(207:10) {#if dNo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (213:10) {#if dNgoWithNo}
-    function create_if_block_1$1(ctx) {
+    // (214:10) {#if dNgoWithNo}
+    function create_if_block_2(ctx) {
     	let p;
     	let t0_value = /*dNgoWithNo*/ ctx[10].ngoName + "";
     	let t0;
@@ -23368,7 +23327,7 @@ var app = (function () {
     			}
 
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 213, 12, 5565);
+    			add_location(p, file$1, 214, 12, 5592);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23414,27 +23373,27 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_2.name,
     		type: "if",
-    		source: "(213:10) {#if dNgoWithNo}",
+    		source: "(214:10) {#if dNgoWithNo}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (216:14) {#each dNgoWithNo.members as m}
+    // (217:14) {#each dNgoWithNo.members as m}
     function create_each_block_1(ctx) {
     	let br0;
     	let t0;
-    	let t1_value = /*m*/ ctx[25].name + "";
+    	let t1_value = /*m*/ ctx[27].name + "";
     	let t1;
     	let t2;
     	let br1;
     	let t3;
-    	let t4_value = /*m*/ ctx[25].ip + "";
+    	let t4_value = /*m*/ ctx[27].ip + "";
     	let t4;
-    	let t5_value = /*m*/ ctx[25].subnet + "";
+    	let t5_value = /*m*/ ctx[27].subnet + "";
     	let t5;
 
     	const block = {
@@ -23447,8 +23406,8 @@ var app = (function () {
     			t3 = space();
     			t4 = text(t4_value);
     			t5 = text(t5_value);
-    			add_location(br0, file$1, 216, 16, 5687);
-    			add_location(br1, file$1, 218, 16, 5737);
+    			add_location(br0, file$1, 217, 16, 5714);
+    			add_location(br1, file$1, 219, 16, 5764);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -23461,9 +23420,9 @@ var app = (function () {
     			insert_dev(target, t5, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*dNgoWithNo*/ 1024 && t1_value !== (t1_value = /*m*/ ctx[25].name + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*dNgoWithNo*/ 1024 && t4_value !== (t4_value = /*m*/ ctx[25].ip + "")) set_data_dev(t4, t4_value);
-    			if (dirty[0] & /*dNgoWithNo*/ 1024 && t5_value !== (t5_value = /*m*/ ctx[25].subnet + "")) set_data_dev(t5, t5_value);
+    			if (dirty[0] & /*dNgoWithNo*/ 1024 && t1_value !== (t1_value = /*m*/ ctx[27].name + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*dNgoWithNo*/ 1024 && t4_value !== (t4_value = /*m*/ ctx[27].ip + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*dNgoWithNo*/ 1024 && t5_value !== (t5_value = /*m*/ ctx[27].subnet + "")) set_data_dev(t5, t5_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(br0);
@@ -23481,18 +23440,18 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(216:14) {#each dNgoWithNo.members as m}",
+    		source: "(217:14) {#each dNgoWithNo.members as m}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:12) {#each sgo.port as p}
+    // (228:12) {#each sgo.port as p}
     function create_each_block(ctx) {
     	let br;
     	let t0;
-    	let t1_value = /*p*/ ctx[22] + "";
+    	let t1_value = /*p*/ ctx[24] + "";
     	let t1;
 
     	const block = {
@@ -23500,7 +23459,7 @@ var app = (function () {
     			br = element("br");
     			t0 = space();
     			t1 = text(t1_value);
-    			add_location(br, file$1, 227, 14, 6023);
+    			add_location(br, file$1, 228, 14, 6050);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -23508,7 +23467,7 @@ var app = (function () {
     			insert_dev(target, t1, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*sgo*/ 2048 && t1_value !== (t1_value = /*p*/ ctx[22] + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*sgo*/ 2048 && t1_value !== (t1_value = /*p*/ ctx[24] + "")) set_data_dev(t1, t1_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(br);
@@ -23521,7 +23480,94 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(227:12) {#each sgo.port as p}",
+    		source: "(228:12) {#each sgo.port as p}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (238:8) {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
+    function create_if_block_1$1(ctx) {
+    	let div;
+    	let button0;
+    	let t1;
+    	let button1;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			button0 = element("button");
+    			button0.textContent = "Reject";
+    			t1 = space();
+    			button1 = element("button");
+    			button1.textContent = "Approve";
+    			attr_dev(button0, "type", "button");
+    			attr_dev(button0, "data-toggle", "modal");
+    			attr_dev(button0, "data-target", "#reject");
+    			attr_dev(button0, "class", "btn");
+    			set_style(button0, "background-color", "#c73834");
+    			set_style(button0, "color", "#fff");
+    			add_location(button0, file$1, 239, 10, 6526);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "data-toggle", "modal");
+    			attr_dev(button1, "data-target", "#approve");
+    			attr_dev(button1, "class", "btn btn-success");
+    			set_style(button1, "color", "#fff");
+    			add_location(button1, file$1, 247, 10, 6815);
+    			attr_dev(div, "class", "card-footer");
+    			add_location(div, file$1, 238, 8, 6489);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, button0);
+    			append_dev(div, t1);
+    			append_dev(div, button1);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(
+    						button0,
+    						"click",
+    						function () {
+    							if (is_function(/*changeFwStatusRejected*/ ctx[17](/*firewallRules*/ ctx[0]))) /*changeFwStatusRejected*/ ctx[17](/*firewallRules*/ ctx[0]).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					),
+    					listen_dev(
+    						button1,
+    						"click",
+    						function () {
+    							if (is_function(/*changeFwStatusApproved*/ ctx[16](/*firewallRules*/ ctx[0]))) /*changeFwStatusApproved*/ ctx[16](/*firewallRules*/ ctx[0]).apply(this, arguments);
+    						},
+    						false,
+    						false,
+    						false
+    					)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(238:8) {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes(\\\"admin\\\")}",
     		ctx
     	});
 
@@ -23614,80 +23660,80 @@ var app = (function () {
     			button5.textContent = "OK";
     			attr_dev(h50, "class", "modal-title");
     			attr_dev(h50, "id", "reject");
-    			add_location(h50, file$1, 269, 8, 7270);
+    			add_location(h50, file$1, 272, 8, 7402);
     			attr_dev(span0, "aria-hidden", "true");
-    			add_location(span0, file$1, 276, 10, 7471);
+    			add_location(span0, file$1, 279, 10, 7603);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "close");
     			attr_dev(button0, "data-dismiss", "modal");
     			attr_dev(button0, "aria-label", "Close");
-    			add_location(button0, file$1, 270, 8, 7329);
+    			add_location(button0, file$1, 273, 8, 7461);
     			attr_dev(div0, "class", "modal-header");
-    			add_location(div0, file$1, 268, 6, 7234);
-    			add_location(p0, file$1, 280, 8, 7585);
+    			add_location(div0, file$1, 271, 6, 7366);
+    			add_location(p0, file$1, 283, 8, 7717);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary");
     			attr_dev(button1, "data-dismiss", "modal");
-    			add_location(button1, file$1, 282, 10, 7676);
+    			add_location(button1, file$1, 285, 10, 7808);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn");
     			attr_dev(button2, "data-dismiss", "modal");
     			set_style(button2, "background-color", "#c73834");
     			set_style(button2, "color", "#fff");
-    			add_location(button2, file$1, 285, 10, 7797);
+    			add_location(button2, file$1, 288, 10, 7929);
     			attr_dev(div1, "class", "modal-footer");
-    			add_location(div1, file$1, 281, 8, 7638);
+    			add_location(div1, file$1, 284, 8, 7770);
     			attr_dev(div2, "class", "modal-body");
-    			add_location(div2, file$1, 279, 6, 7551);
+    			add_location(div2, file$1, 282, 6, 7683);
     			attr_dev(div3, "class", "modal-content");
-    			add_location(div3, file$1, 267, 4, 7199);
+    			add_location(div3, file$1, 270, 4, 7331);
     			attr_dev(div4, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div4, "role", "document");
-    			add_location(div4, file$1, 266, 2, 7129);
+    			add_location(div4, file$1, 269, 2, 7261);
     			attr_dev(div5, "class", "modal fade");
     			attr_dev(div5, "id", "reject");
     			attr_dev(div5, "tabindex", "-1");
     			attr_dev(div5, "role", "dialog");
     			attr_dev(div5, "aria-hidden", "true");
-    			add_location(div5, file$1, 259, 0, 7025);
+    			add_location(div5, file$1, 262, 0, 7157);
     			attr_dev(h51, "class", "modal-title");
     			attr_dev(h51, "id", "approve");
-    			add_location(h51, file$1, 307, 8, 8284);
+    			add_location(h51, file$1, 310, 8, 8416);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$1, 314, 10, 8486);
+    			add_location(span1, file$1, 317, 10, 8618);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "close");
     			attr_dev(button3, "data-dismiss", "modal");
     			attr_dev(button3, "aria-label", "Close");
-    			add_location(button3, file$1, 308, 8, 8344);
+    			add_location(button3, file$1, 311, 8, 8476);
     			attr_dev(div6, "class", "modal-header");
-    			add_location(div6, file$1, 306, 6, 8248);
-    			add_location(p1, file$1, 318, 8, 8600);
+    			add_location(div6, file$1, 309, 6, 8380);
+    			add_location(p1, file$1, 321, 8, 8732);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn btn-secondary");
     			attr_dev(button4, "data-dismiss", "modal");
-    			add_location(button4, file$1, 320, 10, 8691);
+    			add_location(button4, file$1, 323, 10, 8823);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn");
     			attr_dev(button5, "data-dismiss", "modal");
     			set_style(button5, "background-color", "#c73834");
     			set_style(button5, "color", "#fff");
-    			add_location(button5, file$1, 323, 10, 8812);
+    			add_location(button5, file$1, 326, 10, 8944);
     			attr_dev(div7, "class", "modal-footer");
-    			add_location(div7, file$1, 319, 8, 8653);
+    			add_location(div7, file$1, 322, 8, 8785);
     			attr_dev(div8, "class", "modal-body");
-    			add_location(div8, file$1, 317, 6, 8566);
+    			add_location(div8, file$1, 320, 6, 8698);
     			attr_dev(div9, "class", "modal-content");
-    			add_location(div9, file$1, 305, 4, 8213);
+    			add_location(div9, file$1, 308, 4, 8345);
     			attr_dev(div10, "class", "modal-dialog modal-dialog-centered");
     			attr_dev(div10, "role", "document");
-    			add_location(div10, file$1, 304, 2, 8143);
+    			add_location(div10, file$1, 307, 2, 8275);
     			attr_dev(div11, "class", "modal fade");
     			attr_dev(div11, "id", "approve");
     			attr_dev(div11, "tabindex", "-1");
     			attr_dev(div11, "role", "dialog");
     			attr_dev(div11, "aria-hidden", "true");
-    			add_location(div11, file$1, 297, 0, 8038);
+    			add_location(div11, file$1, 300, 0, 8170);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -23767,8 +23813,14 @@ var app = (function () {
 
     function instance$1($$self, $$props, $$invalidate) {
     	let $jwt_token;
+    	let $isAuthenticated;
+    	let $user;
     	validate_store(jwt_token, 'jwt_token');
-    	component_subscribe($$self, jwt_token, $$value => $$invalidate(19, $jwt_token = $$value));
+    	component_subscribe($$self, jwt_token, $$value => $$invalidate(21, $jwt_token = $$value));
+    	validate_store(isAuthenticated, 'isAuthenticated');
+    	component_subscribe($$self, isAuthenticated, $$value => $$invalidate(14, $isAuthenticated = $$value));
+    	validate_store(user, 'user');
+    	component_subscribe($$self, user, $$value => $$invalidate(15, $user = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Firewall_Rule_Details', slots, []);
     	let { params = {} } = $$props;
@@ -23901,13 +23953,15 @@ var app = (function () {
     	});
 
     	$$self.$$set = $$props => {
-    		if ('params' in $$props) $$invalidate(16, params = $$props.params);
+    		if ('params' in $$props) $$invalidate(18, params = $$props.params);
     	};
 
     	$$self.$capture_state = () => ({
     		axios,
-    		jwt_token,
     		params,
+    		isAuthenticated,
+    		user,
+    		jwt_token,
     		api_root,
     		id,
     		firewallRules,
@@ -23928,11 +23982,13 @@ var app = (function () {
     		getFirewallRules,
     		changeFwStatusApproved,
     		changeFwStatusRejected,
-    		$jwt_token
+    		$jwt_token,
+    		$isAuthenticated,
+    		$user
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('params' in $$props) $$invalidate(16, params = $$props.params);
+    		if ('params' in $$props) $$invalidate(18, params = $$props.params);
     		if ('id' in $$props) id = $$props.id;
     		if ('firewallRules' in $$props) $$invalidate(0, firewallRules = $$props.firewallRules);
     		if ('firewallType' in $$props) $$invalidate(1, firewallType = $$props.firewallType);
@@ -23956,7 +24012,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*params*/ 65536) {
+    		if ($$self.$$.dirty[0] & /*params*/ 262144) {
     			{
     				id = params.id;
     				getFirewallRules();
@@ -23979,6 +24035,8 @@ var app = (function () {
     		sgo,
     		uc,
     		success,
+    		$isAuthenticated,
+    		$user,
     		changeFwStatusApproved,
     		changeFwStatusRejected,
     		params
@@ -23988,7 +24046,7 @@ var app = (function () {
     class Firewall_Rule_Details extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { params: 16 }, null, [-1, -1]);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { params: 18 }, null, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -24086,7 +24144,7 @@ var app = (function () {
     			set_style(button, "float", "right");
     			set_style(button, "margin-right", "10px");
     			set_style(button, "font-size", "18px");
-    			add_location(button, file, 36, 10, 1362);
+    			add_location(button, file, 36, 10, 1363);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -24134,7 +24192,7 @@ var app = (function () {
     			button.textContent = "Log Out";
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "form-control");
-    			attr_dev(input, "placeholder", input_placeholder_value = /*$user*/ ctx[1].name);
+    			attr_dev(input, "placeholder", input_placeholder_value = /*$user*/ ctx[1].email);
     			attr_dev(input, "aria-label", "username");
     			attr_dev(input, "aria-describedby", "button-addon2");
     			input.readOnly = true;
@@ -24145,9 +24203,9 @@ var app = (function () {
     			set_style(button, "background-color", "#c73834");
     			set_style(button, "color", "#fff");
     			set_style(button, "font-size", "18px");
-    			add_location(button, file, 28, 10, 1091);
+    			add_location(button, file, 28, 10, 1092);
     			attr_dev(div, "class", "input-group");
-    			set_style(div, "width", "300px");
+    			set_style(div, "width", "350px");
     			set_style(div, "float", "right");
     			set_style(div, "margin-right", "10px");
     			add_location(div, file, 26, 8, 855);
@@ -24164,7 +24222,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$user*/ 2 && input_placeholder_value !== (input_placeholder_value = /*$user*/ ctx[1].name)) {
+    			if (dirty & /*$user*/ 2 && input_placeholder_value !== (input_placeholder_value = /*$user*/ ctx[1].email)) {
     				attr_dev(input, "placeholder", input_placeholder_value);
     			}
     		},
@@ -24241,39 +24299,39 @@ var app = (function () {
     			attr_dev(a0, "class", "nav-link");
     			attr_dev(a0, "aria-current", "page");
     			attr_dev(a0, "href", "#/firewall-rules");
-    			add_location(a0, file, 72, 12, 2428);
+    			add_location(a0, file, 72, 12, 2429);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file, 71, 10, 2393);
+    			add_location(li0, file, 71, 10, 2394);
     			attr_dev(a1, "class", "nav-link");
     			attr_dev(a1, "href", "#/contexts");
-    			add_location(a1, file, 77, 12, 2604);
+    			add_location(a1, file, 77, 12, 2605);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file, 76, 10, 2569);
+    			add_location(li1, file, 76, 10, 2570);
     			attr_dev(a2, "class", "nav-link");
     			attr_dev(a2, "href", "#/network-Objects");
-    			add_location(a2, file, 81, 12, 2720);
+    			add_location(a2, file, 81, 12, 2721);
     			attr_dev(li2, "class", "nav-item");
-    			add_location(li2, file, 80, 10, 2685);
+    			add_location(li2, file, 80, 10, 2686);
     			attr_dev(a3, "class", "nav-link");
     			attr_dev(a3, "href", "#/network-Group-Objects");
-    			add_location(a3, file, 84, 12, 2848);
+    			add_location(a3, file, 84, 12, 2849);
     			attr_dev(li3, "class", "nav-item");
-    			add_location(li3, file, 83, 10, 2813);
+    			add_location(li3, file, 83, 10, 2814);
     			attr_dev(a4, "class", "nav-link");
     			attr_dev(a4, "href", "#/host-Objects");
-    			add_location(a4, file, 89, 12, 3018);
+    			add_location(a4, file, 89, 12, 3019);
     			attr_dev(li4, "class", "nav-item");
-    			add_location(li4, file, 88, 10, 2983);
+    			add_location(li4, file, 88, 10, 2984);
     			attr_dev(a5, "class", "nav-link");
     			attr_dev(a5, "href", "#/host-Group-Objects");
-    			add_location(a5, file, 92, 12, 3140);
+    			add_location(a5, file, 92, 12, 3141);
     			attr_dev(li5, "class", "nav-item");
-    			add_location(li5, file, 91, 10, 3105);
+    			add_location(li5, file, 91, 10, 3106);
     			attr_dev(a6, "class", "nav-link");
     			attr_dev(a6, "href", "#/service-Group-Objects");
-    			add_location(a6, file, 97, 12, 3304);
+    			add_location(a6, file, 97, 12, 3305);
     			attr_dev(li6, "class", "nav-item");
-    			add_location(li6, file, 96, 10, 3269);
+    			add_location(li6, file, 96, 10, 3270);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -24430,7 +24488,7 @@ var app = (function () {
     			set_style(div5, "background-color", "#ececee");
     			add_location(div5, file, 7, 0, 190);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file, 63, 6, 2100);
+    			add_location(span, file, 63, 6, 2101);
     			attr_dev(button, "class", "navbar-toggler");
     			attr_dev(button, "type", "button");
     			attr_dev(button, "data-bs-toggle", "collapse");
@@ -24438,31 +24496,31 @@ var app = (function () {
     			attr_dev(button, "aria-controls", "navbarNav");
     			attr_dev(button, "aria-expanded", "false");
     			attr_dev(button, "aria-label", "Toggle navigation");
-    			add_location(button, file, 54, 4, 1859);
+    			add_location(button, file, 54, 4, 1860);
     			attr_dev(a1, "class", "nav-link");
     			attr_dev(a1, "href", "#/home");
-    			add_location(a1, file, 68, 10, 2292);
+    			add_location(a1, file, 68, 10, 2293);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file, 67, 8, 2259);
+    			add_location(li0, file, 67, 8, 2260);
     			attr_dev(a2, "class", "nav-link");
     			attr_dev(a2, "href", "#/use-cases");
-    			add_location(a2, file, 103, 10, 3485);
+    			add_location(a2, file, 103, 10, 3486);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file, 102, 8, 3452);
+    			add_location(li1, file, 102, 8, 3453);
     			attr_dev(ul, "class", "navbar-nav mx-auto");
-    			add_location(ul, file, 66, 6, 2218);
+    			add_location(ul, file, 66, 6, 2219);
     			attr_dev(div6, "class", "collapse navbar-collapse");
     			attr_dev(div6, "id", "navbarNav");
-    			add_location(div6, file, 65, 4, 2157);
+    			add_location(div6, file, 65, 4, 2158);
     			attr_dev(nav, "class", "navbar navbar-expand-lg");
     			set_style(nav, "background-color", "#969FAA");
     			set_style(nav, "color", "black");
     			set_style(nav, "height", "38pt");
-    			add_location(nav, file, 50, 2, 1739);
+    			add_location(nav, file, 50, 2, 1740);
     			attr_dev(div7, "class", "container");
-    			add_location(div7, file, 109, 2, 3593);
+    			add_location(div7, file, 109, 2, 3594);
     			attr_dev(div8, "id", "app");
-    			add_location(div8, file, 49, 0, 1721);
+    			add_location(div8, file, 49, 0, 1722);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

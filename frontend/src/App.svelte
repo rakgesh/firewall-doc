@@ -24,8 +24,8 @@
       </div>
       <div class="col" style="margin-top: 6px;">
         {#if $isAuthenticated}
-        <div class="input-group" style="width: 300px; float: right; margin-right: 10px;">
-          <input type="text" class="form-control" placeholder="{$user.name}" aria-label="username" aria-describedby="button-addon2" readonly>
+        <div class="input-group" style="width: 350px; float: right; margin-right: 10px;">
+          <input type="text" class="form-control" placeholder="{$user.email}" aria-label="username" aria-describedby="button-addon2" readonly>
           <button
             type="button"
             class="btn"
