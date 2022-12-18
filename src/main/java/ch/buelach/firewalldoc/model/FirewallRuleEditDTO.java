@@ -10,9 +10,10 @@ public class FirewallRuleEditDTO {
     private String serviceGroupObjectId;
     private String useCaseId;
     private String firewallStatus;
+    private String userMail;
 
     public FirewallRuleEditDTO(String id, String fwTypeId, String contextId, String sourceId, String destinationId,
-            String serviceGroupObjectId, String useCaseId, String firewallStatus) {
+            String serviceGroupObjectId, String useCaseId, String firewallStatus, String userMail) {
         this.id = id;
         this.fwTypeId = fwTypeId;
         this.contextId = contextId;
@@ -21,6 +22,7 @@ public class FirewallRuleEditDTO {
         this.serviceGroupObjectId = serviceGroupObjectId;
         this.useCaseId = useCaseId;
         this.firewallStatus = firewallStatus;
+        this.userMail = userMail;
     }
 
     public String getId() {
@@ -53,6 +55,10 @@ public class FirewallRuleEditDTO {
 
     public String getFirewallStatus() {
         return firewallStatus;
+    }
+
+    public String getUserMail() {
+        return userMail;
     }
 
 }

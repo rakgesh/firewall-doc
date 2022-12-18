@@ -4,11 +4,13 @@ public class FirewallStatusChangeDTO {
 
     private String fwId;
     private String status;
+    private String userMail;
     
 
-    public FirewallStatusChangeDTO(String fwId, String status) {
+    public FirewallStatusChangeDTO(String fwId, String status, String userMail) {
         this.fwId = fwId;
         this.status = status;
+        this.userMail = userMail;
     }
 
     public String getFwId() {
@@ -17,6 +19,10 @@ public class FirewallStatusChangeDTO {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getUserMail() {
+        return userMail;
     }
     
 }

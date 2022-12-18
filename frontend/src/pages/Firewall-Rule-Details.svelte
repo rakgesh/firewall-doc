@@ -53,9 +53,11 @@
   let fwStatusToChange = {
     fwId: null,
     status: null,
+    userMail: null,
   };
 
   $: {
+    if ($isAuthenticated == true)
     id = params.id;
     getFirewallRules();
   }
@@ -85,7 +87,6 @@
         success = "yes";
       })
       .catch(function (error) {
-        alert("Could not get Firewall Rule");
         console.log(error);
       });
   }
@@ -93,6 +94,7 @@
   function changeFwStatusApproved(fw) {
     fwStatusToChange.fwId = fw.fwId;
     fwStatusToChange.status = "APPROVED";
+    fwStatusToChange.userMail = fw.userMail;
     var config = {
       method: "post",
       url: api_root + "/service/change-status",
@@ -115,6 +117,7 @@
   function changeFwStatusRejected(fw) {
     fwStatusToChange.fwId = fw.fwId;
     fwStatusToChange.status = "REJECTED";
+    fwStatusToChange.userMail = $user.email;
     var config = {
       method: "post",
       url: api_root + "/service/change-status",
@@ -134,6 +137,7 @@
       });
   }
 </script>
+
 
 {#if success}
   <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -259,7 +263,6 @@
     </div>
   </div>
 {/if}
-
 <div
   class="modal fade"
   id="reject"
