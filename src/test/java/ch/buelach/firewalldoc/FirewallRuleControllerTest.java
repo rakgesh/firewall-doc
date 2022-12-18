@@ -9,7 +9,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.List;
-
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -25,6 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import ch.buelach.firewalldoc.model.FirewallRule;
 import ch.buelach.firewalldoc.model.FirewallRuleCreateDTO;
 import ch.buelach.firewalldoc.model.FirewallRuleEditDTO;
+import ch.buelach.firewalldoc.model.FirewallStatus;
 import ch.buelach.firewalldoc.repository.FirewallRuleRepository;
 
 @SpringBootTest
@@ -137,6 +137,38 @@ public class FirewallRuleControllerTest {
                 .andExpect(jsonPath("$.firewallStatus", is("REQUESTED_FOR_APPROVAL")));
     }
 
+    @Test
+    @Order(6)
+    public void testPutFirewallRuleWithAnotherStatus() throws Exception {
+        List<FirewallRule> allFwR = firewallRuleRepository.findAll();
+        String id = "";
+        for (FirewallRule firewallRule : allFwR) {
+            if (firewallRule.getContextId().equals("Test Context Id v2.0")) {
+                id = firewallRule.getId();
+            }
+        }
+
+        FirewallRule fw = firewallRuleRepository.findById(id).get();
+        fw.setFirewallStatus(FirewallStatus.ACTIVE);
+
+
+        FirewallRuleEditDTO fwREDTO = new FirewallRuleEditDTO(id, "63624cb4cad6de381d422c77", "Test Context Id v3.0",
+                "Test Source Id", "Test Destination Id", "Test SGO Id", "Test Use Case Id", "ACTIVE");
+        ObjectMapper mapper = new ObjectMapper();
+        mvc.perform(put("/api/firewall-rule")
+        .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+                .contentType("application/json")
+                .content(mapper.writeValueAsBytes(fwREDTO)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.fwTypeId", is("63624cb4cad6de381d422c77")))
+                .andExpect(jsonPath("$.contextId", is("Test Context Id v3.0")))
+                .andExpect(jsonPath("$.sourceId", is("Test Source Id")))
+                .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
+                .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
+                .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
+                .andExpect(jsonPath("$.firewallStatus", is("EDITED")));
+    }
+
 
 
     @Test
@@ -145,7 +177,7 @@ public class FirewallRuleControllerTest {
         List<FirewallRule> allFwR = firewallRuleRepository.findAll();
         String id = "";
         for (FirewallRule firewallRule : allFwR) {
-            if (firewallRule.getContextId().equals("Test Context Id v2.0")) {
+            if (firewallRule.getContextId().equals("Test Context Id v3.0")) {
                 id = firewallRule.getId();
             }
         }
