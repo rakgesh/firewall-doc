@@ -7,9 +7,10 @@ public class FirewallStatusChangeDTO {
     private String userMail;
     
 
-    public FirewallStatusChangeDTO(String fwId, String status) {
+    public FirewallStatusChangeDTO(String fwId, String status, String userMail) {
         this.fwId = fwId;
         this.status = status;
+        this.userMail = userMail;
     }
 
     public String getFwId() {

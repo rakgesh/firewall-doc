@@ -146,7 +146,7 @@ public class ServiceControllerTest {
 
         // ---APPROVED---
 
-        FirewallStatusChangeDTO fwSDTOApproved = new FirewallStatusChangeDTO(id, "APPROVED");
+        FirewallStatusChangeDTO fwSDTOApproved = new FirewallStatusChangeDTO(id, "APPROVED", "rakgesh@hotmail.com");
         ObjectMapper mapperApproved = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -159,11 +159,12 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
                 .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
-                .andExpect(jsonPath("$.firewallStatus", is("APPROVED")));
+                .andExpect(jsonPath("$.firewallStatus", is("APPROVED")))
+                .andExpect(jsonPath("$.userMail", is("rakgesh@hotmail.com")));
 
         // ---ORDERED---
 
-        FirewallStatusChangeDTO fwSDTOOrdered = new FirewallStatusChangeDTO(id, "ORDERED");
+        FirewallStatusChangeDTO fwSDTOOrdered = new FirewallStatusChangeDTO(id, "ORDERED", "rakgesh@hotmail.com");
         ObjectMapper mapperOrdered = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -176,11 +177,12 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
                 .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
-                .andExpect(jsonPath("$.firewallStatus", is("ORDERED")));
+                .andExpect(jsonPath("$.firewallStatus", is("ORDERED")))
+                .andExpect(jsonPath("$.userMail", is("rakgesh@hotmail.com")));
 
         // ---ACTIVE---
 
-        FirewallStatusChangeDTO fwSDTOActive = new FirewallStatusChangeDTO(id, "ACTIVE");
+        FirewallStatusChangeDTO fwSDTOActive = new FirewallStatusChangeDTO(id, "ACTIVE", "rakgesh@hotmail.com");
         ObjectMapper mapperActive = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -193,11 +195,12 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
                 .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
-                .andExpect(jsonPath("$.firewallStatus", is("ACTIVE")));
+                .andExpect(jsonPath("$.firewallStatus", is("ACTIVE")))
+                .andExpect(jsonPath("$.userMail", is("rakgesh@hotmail.com")));
 
         // ---DISABLED---
 
-        FirewallStatusChangeDTO fwSDTODisabled = new FirewallStatusChangeDTO(id, "DISABLED");
+        FirewallStatusChangeDTO fwSDTODisabled = new FirewallStatusChangeDTO(id, "DISABLED", "rakgesh@hotmail.com");
         ObjectMapper mapperDisabled = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -210,11 +213,12 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
                 .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
-                .andExpect(jsonPath("$.firewallStatus", is("DISABLED")));
+                .andExpect(jsonPath("$.firewallStatus", is("DISABLED")))
+                .andExpect(jsonPath("$.userMail", is("rakgesh@hotmail.com")));
 
         // ---DELETED---
 
-        FirewallStatusChangeDTO fwSDTODeleted = new FirewallStatusChangeDTO(id, "DELETED");
+        FirewallStatusChangeDTO fwSDTODeleted = new FirewallStatusChangeDTO(id, "DELETED", "rakgesh@hotmail.com");
         ObjectMapper mapperDeleted = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -227,11 +231,12 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
                 .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
-                .andExpect(jsonPath("$.firewallStatus", is("DELETED")));
+                .andExpect(jsonPath("$.firewallStatus", is("DELETED")))
+                .andExpect(jsonPath("$.userMail", is("rakgesh@hotmail.com")));
 
         // ---REJECTED---
 
-        FirewallStatusChangeDTO fwSDTORejected = new FirewallStatusChangeDTO(id, "REJECTED");
+        FirewallStatusChangeDTO fwSDTORejected = new FirewallStatusChangeDTO(id, "REJECTED", "rakgesh@hotmail.com");
         ObjectMapper mapperRejected = new ObjectMapper();
         mvc.perform(post("/api/service/change-status")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
@@ -244,7 +249,8 @@ public class ServiceControllerTest {
                 .andExpect(jsonPath("$.destinationId", is("Test Destination Id")))
                 .andExpect(jsonPath("$.serviceGroupObjectId", is("Test SGO Id")))
                 .andExpect(jsonPath("$.useCaseId", is("Test Use Case Id")))
-                .andExpect(jsonPath("$.firewallStatus", is("REJECTED")));
+                .andExpect(jsonPath("$.firewallStatus", is("REJECTED")))
+                .andExpect(jsonPath("$.userMail", is("rakgesh@hotmail.com")));
 
         mvc.perform(delete("/api/firewall-rule/{id}", id)
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token))

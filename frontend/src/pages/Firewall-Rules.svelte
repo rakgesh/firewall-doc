@@ -1380,7 +1380,9 @@
                 {:else if fwrStatus.status === "ORDERED" && ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin") || $user.email === fwrStatus.userMail)}
                   <option value="ORDERED" hidden>ORDERED</option>
                   <option value="ACTIVE">ACTIVE</option>
-                {:else if fwrStatus.status === "ACTIVE" && $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
+                {:else if fwrStatus.status === "ACTIVE" && $user.email === fwrStatus.userMail}
+                  <option value="ACTIVE" hidden>ACTIVE</option>
+                  {:else if fwrStatus.status === "ACTIVE" && $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
                   <option value="ACTIVE" hidden>ACTIVE</option>
                   <option value="DELETED">DELETED</option>
                   <option value="DISABLED">DISABLED</option>
