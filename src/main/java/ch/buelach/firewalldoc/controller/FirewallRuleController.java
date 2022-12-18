@@ -36,9 +36,9 @@ public class FirewallRuleController {
     @PostMapping("")
     public ResponseEntity<FirewallRule> createFirewallRule(
         @RequestBody FirewallRuleCreateDTO fwRuleDTO) {
-            FirewallRule fwRuleDAO = new FirewallRule(fwRuleDTO.getFwTypeId(), fwRuleDTO.getContextId(), fwRuleDTO.getSourceId(), fwRuleDTO.getDestinationId(), fwRuleDTO.getServiceGroupObjectId(), fwRuleDTO.getUseCaseId());
+            FirewallRule fwRuleDAO = new FirewallRule(fwRuleDTO.getFwTypeId(), fwRuleDTO.getContextId(), fwRuleDTO.getSourceId(), fwRuleDTO.getDestinationId(), fwRuleDTO.getServiceGroupObjectId(), fwRuleDTO.getUseCaseId(), fwRuleDTO.getUserMail());
             FirewallRule fwRule = firewallRuleRepository.save(fwRuleDAO);
-            emailServiceImpl.sendSimpleMessage("ganesrak@students.zhaw.ch", "New firewall rule requested", fwRule.getId());
+            emailServiceImpl.sendMessageRequested("ganesrak@students.zhaw.ch", fwRule.getId());
             return new ResponseEntity<>(fwRule, HttpStatus.CREATED);
         }
 
@@ -68,7 +68,9 @@ public class FirewallRuleController {
         fwDAO.setServiceGroupObjectId(fwEditDTO.getServiceGroupObjectId());
         fwDAO.setUseCaseId(fwEditDTO.getUseCaseId());
         if (!fwEditDTO.getFirewallStatus().equals("REQUESTED_FOR_APPROVAL")) {
+            fwDAO.setUserMail(fwEditDTO.getUserMail());
             fwDAO.setFirewallStatus(FirewallStatus.EDITED);
+            emailServiceImpl.sendMessageEdited("ganesrak@students.zhaw.ch", fwEditDTO.getId());
         }
         FirewallRule fw = firewallRuleRepository.save(fwDAO);
         return new ResponseEntity<>(fw, HttpStatus.OK);

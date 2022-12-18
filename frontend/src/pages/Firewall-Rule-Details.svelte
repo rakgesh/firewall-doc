@@ -53,6 +53,7 @@
   let fwStatusToChange = {
     fwId: null,
     status: null,
+    userMail: null,
   };
 
   $: {
@@ -93,6 +94,7 @@
   function changeFwStatusApproved(fw) {
     fwStatusToChange.fwId = fw.fwId;
     fwStatusToChange.status = "APPROVED";
+    fwStatusToChange.userMail = fw.userMail;
     var config = {
       method: "post",
       url: api_root + "/service/change-status",
@@ -115,6 +117,7 @@
   function changeFwStatusRejected(fw) {
     fwStatusToChange.fwId = fw.fwId;
     fwStatusToChange.status = "REJECTED";
+    fwStatusToChange.userMail = fw.userMail;
     var config = {
       method: "post",
       url: api_root + "/service/change-status",

@@ -2,7 +2,7 @@
   import axios from "axios";
   import { isAuthenticated, user, jwt_token } from "../store";
 
-  const api_root = window.location.origin +"/api";
+  const api_root = window.location.origin + "/api";
   //-----------------------------
 
   let firewallRules = [];
@@ -13,6 +13,7 @@
     destinationId: null,
     serviceGroupObjectId: null,
     useCaseId: null,
+    userMail: null,
   };
 
   let fwTypes = [];
@@ -54,6 +55,7 @@
   let fwStatusToChange = {
     fwId: null,
     status: null,
+    userMail: null,
   };
 
   let fwrStatus = {
@@ -65,6 +67,7 @@
     serviceGroupObjectName: null,
     useCaseName: null,
     status: null,
+    userMail: null,
   };
 
   function getusecase(uc) {
@@ -94,6 +97,7 @@
   //-----------------------------
 
   function createFirewallRule() {
+    firewallRule.userMail = $user.email;
     var config = {
       method: "post",
       url: api_root + "/firewall-rule",
@@ -373,38 +377,41 @@
     fwrStatus.id = fw.fwId;
     fwrStatus.fwTypeName = fw.fwType.name;
     fwrStatus.contextName = fw.context.name;
-    if (fw.sngoWithNo) {
-      fwrStatus.sourceName = fw.sngoWithNo.ngoName;
-    } else if (fw.sno) {
-      fwrStatus.sourceName = fw.sno.name;
-    } else if (fw.shgoWithHo) {
-      fwrStatus.sourceName = fw.shgoWithHo.hgoName;
-    } else if (fw.sho) {
-      fwrStatus.sourceName = fw.sho.name;
+    if (fw.sNgoWithNo) {
+      fwrStatus.sourceName = fw.sNgoWithNo.ngoName;
+    } else if (fw.sNo) {
+      fwrStatus.sourceName = fw.sNo.name;
+    } else if (fw.sHgoWithHo) {
+      fwrStatus.sourceName = fw.sHgoWithHo.hgoName;
+    } else if (fw.sHo) {
+      fwrStatus.sourceName = fw.sHo.name;
     }
 
-    if (fw.dngoWithNo) {
-      fwrStatus.destionationName = fw.dngoWithNo.ngoName;
-    } else if (fw.dno) {
-      fwrStatus.destionationName = fw.dno.name;
-    } else if (fw.dhgoWithHo) {
-      fwrStatus.destionationName = fw.dhgoWithHo.hgoName;
-    } else if (fw.dho) {
-      fwrStatus.destionationName = fw.dho.name;
+    if (fw.dNgoWithNo) {
+      fwrStatus.destionationName = fw.dNgoWithNo.ngoName;
+    } else if (fw.dNo) {
+      fwrStatus.destionationName = fw.dNo.name;
+    } else if (fw.dHgoWithHo) {
+      fwrStatus.destionationName = fw.dHgoWithHo.hgoName;
+    } else if (fw.dHo) {
+      fwrStatus.destionationName = fw.dHo.name;
     }
 
     fwrStatus.serviceGroupObjectName = fw.sgo.name;
     fwrStatus.useCaseName = fw.uc.name;
     fwrStatus.status = fw.firewallStatus;
+    fwrStatus.userMail = fw.userMail;
   }
 
   function changeFwStatus() {
     fwStatusToChange.fwId = fwrStatus.id;
     fwStatusToChange.status = fwrStatus.status;
+    fwStatusToChange.userMail = fwrStatus.userMail;
     var config = {
       method: "post",
       url: api_root + "/service/change-status",
       headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: fwStatusToChange,
@@ -744,7 +751,7 @@
             ></td
           >
           <td>{fwr.firewallStatus}</td>
-          {#if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
+          {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || $user.email === fwr.userMail}
             <td
               ><button
                 style="border: none; background: none;"
@@ -756,7 +763,8 @@
                   title="change status"
                 /></button
               ></td
-            >
+            >{:else}
+            <td />
           {/if}
           <td
             ><button
@@ -1360,27 +1368,27 @@
                 bind:value={fwrStatus.status}
               >
                 <option value="EDITED" hidden>EDITED</option>
-                {#if fwrStatus.status === "REQUESTED_FOR_APPROVAL"}
+                {#if fwrStatus.status === "REQUESTED_FOR_APPROVAL" && $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
                   <option value="REQUESTED_FOR_APPROVAL" hidden
                     >REQUESTED_FOR_APPROVAL</option
                   >
                   <option value="APPROVED">APPROVED</option>
                   <option value="REJECTED">REJECTED</option>
-                {:else if fwrStatus.status === "APPROVED"}
+                {:else if fwrStatus.status === "APPROVED" && ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin") || $user.email === fwrStatus.userMail)}
                   <option value="APPROVED" hidden>APPROVED</option>
                   <option value="ORDERED">ORDERED</option>
-                {:else if fwrStatus.status === "ORDERED"}
+                {:else if fwrStatus.status === "ORDERED" && ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin") || $user.email === fwrStatus.userMail)}
                   <option value="ORDERED" hidden>ORDERED</option>
                   <option value="ACTIVE">ACTIVE</option>
-                {:else if fwrStatus.status === "ACTIVE"}
+                {:else if fwrStatus.status === "ACTIVE" && $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
                   <option value="ACTIVE" hidden>ACTIVE</option>
                   <option value="DELETED">DELETED</option>
                   <option value="DISABLED">DISABLED</option>
-                {:else if fwrStatus.status === "DISABLED"}
+                {:else if fwrStatus.status === "DISABLED" && $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
                   <option value="DISABLED" hidden>DISABLED</option>
                   <option value="ACTIVE">ACTIVE</option>
                   <option value="DELETED">DELETED</option>
-                {:else}
+                {:else if $isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")}
                   <option value="REQUESTED_FOR_APPROVAL" hidden
                     >REQUESTED_FOR_APPROVAL</option
                   >
@@ -1388,7 +1396,7 @@
                   <option value="APPROVED">APPROVED</option>
                   <option value="DELETED">DELETED</option>
                   <option value="DISABLED">DISABLED</option>
-                  <option value="EDITED" hidden>EDITED</option>
+                  <option value="EDITED">EDITED</option>
                   <option value="ORDERED">ORDERED</option>
                   <option value="REJECTED">REJECTED</option>
                 {/if}

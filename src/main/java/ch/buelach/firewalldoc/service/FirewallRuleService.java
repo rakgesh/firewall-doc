@@ -67,6 +67,7 @@ public class FirewallRuleService {
         for (FirewallRule f : allFirewallRules) {
             FirewallRuleDetail one = new FirewallRuleDetail();
             one.setFwId(f.getId());
+            one.setUserMail(f.getUserMail());
 
             for (FirewallType ft : allFirewallTypes) {
                 if (ft.getId().equals(f.getFwTypeId())) {

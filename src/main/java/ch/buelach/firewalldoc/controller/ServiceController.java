@@ -17,6 +17,7 @@ import ch.buelach.firewalldoc.model.FirewallStatusChangeDTO;
 import ch.buelach.firewalldoc.model.HostObjectsToHostGroup;
 import ch.buelach.firewalldoc.model.NetworkObjectsToNetworkGroup;
 import ch.buelach.firewalldoc.repository.FirewallRuleRepository;
+import ch.buelach.firewalldoc.service.EmailServiceImpl;
 import ch.buelach.firewalldoc.service.FirewallRuleService;
 import ch.buelach.firewalldoc.service.HostGroupObjectService;
 import ch.buelach.firewalldoc.service.NetworkGroupObjectService;
@@ -33,6 +34,8 @@ public class ServiceController {
     FirewallRuleService firewallRuleService;
     @Autowired
     FirewallRuleRepository firewallRuleRepository;
+    @Autowired
+    EmailServiceImpl emailServiceImpl;
 
     @GetMapping("/findHo")
     public ResponseEntity<List<HostObjectsToHostGroup>> getHoOfHgroup() {
@@ -62,6 +65,11 @@ public class ServiceController {
     @PostMapping("/change-status")
     public ResponseEntity<FirewallRule> changeStatus(@RequestBody FirewallStatusChangeDTO fwSC) {
         FirewallRule toChange = firewallRuleService.changeStatus(fwSC);
+        if (fwSC.getStatus().equals("REJECTED")) {
+            emailServiceImpl.sendMessageRejected(toChange.getUserMail(), fwSC.getUserMail(), fwSC.getFwId());
+        } else if (fwSC.getStatus().equals("APPROVED")) {
+            emailServiceImpl.sendMessageApproved(fwSC.getUserMail(), fwSC.getFwId());
+        }
         return new ResponseEntity<>(toChange, HttpStatus.OK);
     }
 

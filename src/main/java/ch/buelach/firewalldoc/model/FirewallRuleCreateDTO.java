@@ -8,15 +8,17 @@ public class FirewallRuleCreateDTO {
     private String destinationId;
     private String serviceGroupObjectId;
     private String useCaseId;
+    private String userMail;
 
     public FirewallRuleCreateDTO(String fwTypeId, String contextId, String sourceId, String destinationId,
-            String serviceGroupObjectId, String useCaseId) {
+            String serviceGroupObjectId, String useCaseId, String userMail) {
         this.fwTypeId = fwTypeId;
         this.contextId = contextId;
         this.sourceId = sourceId;
         this.destinationId = destinationId;
         this.serviceGroupObjectId = serviceGroupObjectId;
         this.useCaseId = useCaseId;
+        this.userMail = userMail;
     }
 
     public String getFwTypeId() {
@@ -41,6 +43,10 @@ public class FirewallRuleCreateDTO {
 
     public String getUseCaseId() {
         return useCaseId;
+    }
+
+    public String getUserMail() {
+        return userMail;
     }
 
 }

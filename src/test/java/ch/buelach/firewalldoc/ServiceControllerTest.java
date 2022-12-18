@@ -128,7 +128,7 @@ public class ServiceControllerTest {
     public void testPostStatusChangeOfFirewallrule() throws Exception {
         FirewallRuleCreateDTO fwRDTO = new FirewallRuleCreateDTO("63624cb4cad6de381d422c77",
                 "Test Status Change Context Id v1.0",
-                "Test Source Id", "Test Destination Id", "Test SGO Id", "Test Use Case Id");
+                "Test Source Id", "Test Destination Id", "Test SGO Id", "Test Use Case Id", "rakgesh@hotmail.com");
         ObjectMapper mapper = new ObjectMapper();
         mvc.perform(post("/api/firewall-rule")
         .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
