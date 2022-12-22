@@ -1,6 +1,6 @@
 <script>
   import axios from "axios";
-  import { jwt_token } from "../store";
+  import { isAuthenticated, user, jwt_token } from "../store";
 
   const api_root = window.location.origin + "/api";
 
@@ -164,16 +164,18 @@
         <h3 style="margin-top: 15px; font-weight: bold;">Host Objects</h3>
       </div>
       <div class="col" />
-      <div class="col" style="text-align-last: right;">
-        <button
-          type="button"
-          class="btn"
-          data-toggle="modal"
-          data-target="#crateHO"
-          style="margin-top: 9px; background-color: #c73834; color: #fff"
-          >Add Host-Object</button
-        >
-      </div>
+      {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+        <div class="col" style="text-align-last: right;">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#crateHO"
+            style="margin-top: 9px; background-color: #c73834; color: #fff"
+            >Add Host-Object</button
+          >
+        </div>
+      {/if}
     </div>
     <div class="row g-3">
       <div class="col">
@@ -217,28 +219,33 @@
             <td>{hostObject.name}</td>
             <td>{hostObject.ip}</td>
             <td>{hostObject.description}</td>
-            <td
-              ><button
-                style="border: none; background: none;"
-                data-toggle="modal"
-                data-target="#editHO"
-                on:click={() => getHoToEdit(hostObject)}
-                ><i
-                  class="fa fa-pencil-square-o fa-lg"
-                  aria-hidden="true"
-                /></button
-              ></td
-            >
-            <td
-              ><button
-                style="border: none; background: none;"
-                data-toggle="modal"
-                data-target="#deleteHO"
-                on:click={() => getHoToDelete(hostObject)}
+            {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+              <td
+                ><button
+                  style="border: none; background: none;"
+                  data-toggle="modal"
+                  data-target="#editHO"
+                  on:click={() => getHoToEdit(hostObject)}
+                  ><i
+                    class="fa fa-pencil-square-o fa-lg"
+                    aria-hidden="true"
+                  /></button
+                ></td
               >
-                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
-              ></td
-            >
+              <td
+                ><button
+                  style="border: none; background: none;"
+                  data-toggle="modal"
+                  data-target="#deleteHO"
+                  on:click={() => getHoToDelete(hostObject)}
+                >
+                  <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+                ></td
+              >
+            {:else}
+              <td />
+              <td />
+            {/if}
           </tr>
         {/each}
       </tbody>

@@ -1,6 +1,6 @@
 <script>
   import axios from "axios";
-  import { jwt_token } from "../store";
+  import { isAuthenticated, user, jwt_token } from "../store";
 
   const api_root = window.location.origin + "/api";
   //-----------------------------
@@ -185,16 +185,18 @@
         <h3 style="margin-top: 15px; font-weight: bold;">Host Group Objects</h3>
       </div>
       <div class="col" />
-      <div class="col" style="text-align-last: right;">
-        <button
-          type="button"
-          class="btn"
-          data-toggle="modal"
-          data-target="#crateHO"
-          style="margin-top: 9px; background-color: #c73834; color: #fff"
-          >Add Host-Group-Object</button
-        >
-      </div>
+      {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+        <div class="col" style="text-align-last: right;">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#crateHO"
+            style="margin-top: 9px; background-color: #c73834; color: #fff"
+            >Add Host-Group-Object</button
+          >
+        </div>
+      {/if}
     </div>
   </div>
   <table class="table table-striped table-hover" id="allHostObjects">
@@ -225,28 +227,33 @@
             {/each}
           </td>
           <td>{h1.hgoDescription}</td>
-          <td
-            ><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#editHGO"
-              on:click={() => getHgoToEdit(h1)}
-              ><i
-                class="fa fa-pencil-square-o fa-lg"
-                aria-hidden="true"
-              /></button
-            ></td
-          >
-          <td
-            ><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#deleteHGO"
-              on:click={() => getHgoToDelete(h1)}
+          {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#editHGO"
+                on:click={() => getHgoToEdit(h1)}
+                ><i
+                  class="fa fa-pencil-square-o fa-lg"
+                  aria-hidden="true"
+                /></button
+              ></td
             >
-              <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
-            ></td
-          >
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#deleteHGO"
+                on:click={() => getHgoToDelete(h1)}
+              >
+                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+              ></td
+            >
+          {:else}
+            <td />
+            <td />
+          {/if}
         </tr>
       {/each}
     </tbody>
