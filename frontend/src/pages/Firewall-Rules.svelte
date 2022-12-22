@@ -308,7 +308,7 @@
     fwEdit.serviceGroupObjectId = fw.sgo.id;
     fwEdit.useCaseId = fw.uc.id;
     fwEdit.firewallStatus = fw.firewallStatus;
-    fwEdit.userMail = $user.email;
+    fwEdit.userMail = $user.email; 
   }
 
   function editFw() {
