@@ -1,8 +1,8 @@
 <script>
   import axios from "axios";
-  import {jwt_token} from "../store";
+  import { jwt_token } from "../store";
 
-  const api_root = window.location.origin +"/api";
+  const api_root = window.location.origin + "/api";
 
   let contexts = [];
   let context = {
@@ -31,7 +31,7 @@
     var config = {
       method: "get",
       url: api_root + "/context",
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -60,7 +60,8 @@
     var config = {
       method: "post",
       url: api_root + "/context",
-      headers: {Authorization: "Bearer "+$jwt_token,
+      headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: context,
@@ -74,6 +75,13 @@
         alert("Could not create Context");
         console.log(error);
       });
+
+    context = {
+      name: null,
+      ip: null,
+      subnet: null,
+      description: null,
+    };
   }
 
   function getCToEdit(c) {
@@ -88,7 +96,8 @@
     var config = {
       method: "put",
       url: api_root + "/context",
-      headers: {Authorization: "Bearer "+$jwt_token,
+      headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: cEdit,
@@ -113,7 +122,7 @@
     var config = {
       method: "delete",
       url: api_root + "/context/" + id,
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -220,13 +229,16 @@
                 /></button
               ></td
             >
-            <td><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#deleteC"
-              on:click={() => getCToDelete(context)}
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#deleteC"
+                on:click={() => getCToDelete(context)}
               >
-              <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+              ></td
+            >
           </tr>
         {/each}
       </tbody>
@@ -418,7 +430,6 @@
   </div>
 </div>
 
-
 <div
   class="modal fade"
   id="deleteC"
@@ -427,34 +438,36 @@
   aria-labelledby="formDeletC"
   aria-hidden="true"
 >
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="deleteC">Delete Context</h5>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      Are you sure, that you want to delete this context <strong>"{cDelete.name}"</strong>?
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal"
-        >Close</button
-      >
-      <button
-        type="button"
-        class="btn"
-        data-dismiss="modal"
-        style="background-color: #c73834; color: #fff"
-        on:click={deleteC(cDelete.id)}>Delete</button
-      >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteC">Delete Context</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure, that you want to delete this context <strong
+          >"{cDelete.name}"</strong
+        >?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          data-dismiss="modal"
+          style="background-color: #c73834; color: #fff"
+          on:click={deleteC(cDelete.id)}>Delete</button
+        >
+      </div>
     </div>
   </div>
-</div>
 </div>
