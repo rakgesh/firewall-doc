@@ -1,8 +1,8 @@
 <script>
   import axios from "axios";
-  import {jwt_token} from "../store";
+  import { jwt_token } from "../store";
 
-  const api_root = window.location.origin +"/api";
+  const api_root = window.location.origin + "/api";
   //-----------------------------
 
   let hostGroupObjects = [];
@@ -24,13 +24,13 @@
   let hgoDelete = {
     id: null,
     name: null,
-  }
+  };
 
   function getHostGroupObjects() {
     var config = {
       method: "get",
       url: api_root + "/service/findHo",
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -52,7 +52,8 @@
     var config = {
       method: "post",
       url: api_root + "/host-group-object",
-      headers: {Authorization: "Bearer "+$jwt_token,
+      headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: hostGroupObject,
@@ -66,8 +67,12 @@
         alert("Could not create Host Group Object");
         console.log(error);
       });
-    hostGroupObject.name = null;
-    hostGroupObject.description = null;
+
+    hostGroupObject = {
+      name: null,
+      description: null,
+      membersId: null,
+    };
   }
 
   //-----------------------------
@@ -78,7 +83,7 @@
     var config = {
       method: "get",
       url: api_root + "/host-object",
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -108,7 +113,8 @@
     var config = {
       method: "put",
       url: api_root + "/host-group-object",
-      headers: {Authorization: "Bearer "+$jwt_token,
+      headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: hgoEdit,
@@ -133,7 +139,7 @@
     var config = {
       method: "delete",
       url: api_root + "/host-group-object/" + id,
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -171,78 +177,80 @@
 
   // search
 </script>
+
 <div style="margin-left: -52px; margin-right: -52px;">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <h3 style="margin-top: 15px; font-weight: bold;">
-       Host Group Objects
-      </h3>
-    </div>
-    <div class="col" />
-    <div class="col" style="text-align-last: right;">
-      <button
-        type="button"
-        class="btn"
-        data-toggle="modal"
-        data-target="#crateHO"
-        style="margin-top: 9px; background-color: #c73834; color: #fff"
-        >Add Host-Group-Object</button
-      >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h3 style="margin-top: 15px; font-weight: bold;">Host Group Objects</h3>
+      </div>
+      <div class="col" />
+      <div class="col" style="text-align-last: right;">
+        <button
+          type="button"
+          class="btn"
+          data-toggle="modal"
+          data-target="#crateHO"
+          style="margin-top: 9px; background-color: #c73834; color: #fff"
+          >Add Host-Group-Object</button
+        >
+      </div>
     </div>
   </div>
-</div>
-<table class="table table-striped table-hover" id="allHostObjects">
-  <thead>
-    <tr>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col"
-        >Name <span on:click={sort("hgoName")}>
-          <i class="fa fa-fw fa-sort" /></span
-        ></th
-      >
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <th scope="col">Members</th>
-      <th scope="col">Description</th>
-      <th scope="col" />
-      <th scope="col" />
-    </tr>
-  </thead>
-  <tbody>
-    {#each hostGroupObjects as h1}
+  <table class="table table-striped table-hover" id="allHostObjects">
+    <thead>
       <tr>
-        <td>{h1.hgoName} </td><td>
-          {#each h1.members as member}
-            <li class="list-group-item">{member.name}</li>
-            <li class="list-group-item" style="font-style: italic;">
-              {member.ip}
-            </li>
-          {/each}
-        </td>
-        <td>{h1.hgoDescription}</td>
-        <td
-          ><button
-            style="border: none; background: none;"
-            data-toggle="modal"
-            data-target="#editHGO"
-            on:click={() => getHgoToEdit(h1)}
-            ><i
-              class="fa fa-pencil-square-o fa-lg"
-              aria-hidden="true"
-            /></button
-          ></td
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <th scope="col"
+          >Name <span on:click={sort("hgoName")}>
+            <i class="fa fa-fw fa-sort" /></span
+          ></th
         >
-        <td><button
-          style="border: none; background: none;"
-          data-toggle="modal"
-          data-target="#deleteHGO"
-          on:click={() => getHgoToDelete(h1)}
-          >
-          <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></td>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <th scope="col">Members</th>
+        <th scope="col">Description</th>
+        <th scope="col" />
+        <th scope="col" />
       </tr>
-    {/each}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {#each hostGroupObjects as h1}
+        <tr>
+          <td>{h1.hgoName} </td><td>
+            {#each h1.members as member}
+              <li class="list-group-item">{member.name}</li>
+              <li class="list-group-item" style="font-style: italic;">
+                {member.ip}
+              </li>
+            {/each}
+          </td>
+          <td>{h1.hgoDescription}</td>
+          <td
+            ><button
+              style="border: none; background: none;"
+              data-toggle="modal"
+              data-target="#editHGO"
+              on:click={() => getHgoToEdit(h1)}
+              ><i
+                class="fa fa-pencil-square-o fa-lg"
+                aria-hidden="true"
+              /></button
+            ></td
+          >
+          <td
+            ><button
+              style="border: none; background: none;"
+              data-toggle="modal"
+              data-target="#deleteHGO"
+              on:click={() => getHgoToDelete(h1)}
+            >
+              <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+            ></td
+          >
+        </tr>
+      {/each}
+    </tbody>
+  </table>
 </div>
 
 <div
@@ -477,7 +485,6 @@
   </div>
 </div>
 
-
 <div
   class="modal fade"
   id="deleteHGO"
@@ -486,34 +493,36 @@
   aria-labelledby="formDeleteHGO"
   aria-hidden="true"
 >
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="deleteHGO">Delete Host-Group-Object</h5>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      Are you sure, that you want to delete this host group object <strong>"{hgoDelete.name}"</strong>?
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal"
-        >Close</button
-      >
-      <button
-        type="button"
-        class="btn"
-        data-dismiss="modal"
-        style="background-color: #c73834; color: #fff"
-        on:click={deleteHgo(hgoDelete.id)}>Delete</button
-      >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteHGO">Delete Host-Group-Object</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure, that you want to delete this host group object <strong
+          >"{hgoDelete.name}"</strong
+        >?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+          >Close</button
+        >
+        <button
+          type="button"
+          class="btn"
+          data-dismiss="modal"
+          style="background-color: #c73834; color: #fff"
+          on:click={deleteHgo(hgoDelete.id)}>Delete</button
+        >
+      </div>
     </div>
   </div>
-</div>
 </div>

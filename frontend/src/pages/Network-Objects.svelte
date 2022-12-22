@@ -1,8 +1,8 @@
 <script>
   import axios from "axios";
-  import {jwt_token} from "../store";
+  import { jwt_token } from "../store";
 
-  const api_root = window.location.origin +"/api";
+  const api_root = window.location.origin + "/api";
 
   let networkObjects = [];
   let networkObject = {
@@ -31,7 +31,7 @@
     var config = {
       method: "get",
       url: api_root + "/network-object",
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -61,7 +61,8 @@
     var config = {
       method: "post",
       url: api_root + "/network-object",
-      headers: {Authorization: "Bearer "+$jwt_token,
+      headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: networkObject,
@@ -75,6 +76,13 @@
         alert("Could not create Network Object");
         console.log(error);
       });
+
+    networkObject = {
+      name: null,
+      ip: null,
+      subnet: null,
+      description: null,
+    };
   }
 
   function getNoToEdit(no) {
@@ -89,7 +97,8 @@
     var config = {
       method: "put",
       url: api_root + "/network-object",
-      headers: {Authorization: "Bearer "+$jwt_token,
+      headers: {
+        Authorization: "Bearer " + $jwt_token,
         "Content-Type": "application/json",
       },
       data: noEdit,
@@ -114,7 +123,7 @@
     var config = {
       method: "delete",
       url: api_root + "/network-object/" + id,
-      headers: {Authorization: "Bearer "+$jwt_token},
+      headers: { Authorization: "Bearer " + $jwt_token },
     };
 
     axios(config)
@@ -208,41 +217,41 @@
       </tr>
     </thead>
     {#if visibleData.length}
-    <tbody>
-      {#each visibleData as networkObject}
-        <tr>
-          <td>{networkObject.name}</td>
-          <td>{networkObject.ip}</td>
-          <td>{networkObject.subnet}</td>
-          <td>{networkObject.description}</td>
-          <td
-            ><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#editNO"
-              on:click={() => getNoToEdit(networkObject)}
-              ><i
-                class="fa fa-pencil-square-o fa-lg"
-                aria-hidden="true"
-              /></button
-            ></td
-          >
-          <td
-            ><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#deleteNO"
-              on:click={() => getNoToDelete(networkObject)}
+      <tbody>
+        {#each visibleData as networkObject}
+          <tr>
+            <td>{networkObject.name}</td>
+            <td>{networkObject.ip}</td>
+            <td>{networkObject.subnet}</td>
+            <td>{networkObject.description}</td>
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#editNO"
+                on:click={() => getNoToEdit(networkObject)}
+                ><i
+                  class="fa fa-pencil-square-o fa-lg"
+                  aria-hidden="true"
+                /></button
+              ></td
             >
-              <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
-            ></td
-          >
-        </tr>
-      {/each}
-    </tbody>
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#deleteNO"
+                on:click={() => getNoToDelete(networkObject)}
+              >
+                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+              ></td
+            >
+          </tr>
+        {/each}
+      </tbody>
     {:else}
-    <div>No data available</div>
-  {/if}
+      <div>No data available</div>
+    {/if}
   </table>
 </div>
 <div
