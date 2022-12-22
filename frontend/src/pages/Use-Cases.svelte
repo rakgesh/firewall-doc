@@ -160,16 +160,18 @@
       </div>
       <div class="col" />
       {#if $isAuthenticated}
-        <div class="col" style="text-align-last: right;">
-          <button
-            type="button"
-            class="btn"
-            data-toggle="modal"
-            data-target="#crateUC"
-            style="margin-top: 9px; background-color: #c73834; color: #fff"
-            >Add Use Case</button
-          >
-        </div>
+        {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+          <div class="col" style="text-align-last: right;">
+            <button
+              type="button"
+              class="btn"
+              data-toggle="modal"
+              data-target="#crateUC"
+              style="margin-top: 9px; background-color: #c73834; color: #fff"
+              >Add Use Case</button
+            >
+          </div>
+        {/if}
       {/if}
     </div>
   </div>
@@ -201,28 +203,33 @@
             {/each}</td
           >
           {#if $isAuthenticated}
-            <td
-              ><button
-                style="border: none; background: none;"
-                data-toggle="modal"
-                data-target="#editUC"
-                on:click={() => getUseCaseToEdit(useCase)}
-                ><i
-                  class="fa fa-pencil-square-o fa-lg"
-                  aria-hidden="true"
-                /></button
-              ></td
-            >
-            <td
-              ><button
-                style="border: none; background: none;"
-                data-toggle="modal"
-                data-target="#deleteUC"
-                on:click={() => getUseCaseToDelete(useCase)}
+            {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+              <td
+                ><button
+                  style="border: none; background: none;"
+                  data-toggle="modal"
+                  data-target="#editUC"
+                  on:click={() => getUseCaseToEdit(useCase)}
+                  ><i
+                    class="fa fa-pencil-square-o fa-lg"
+                    aria-hidden="true"
+                  /></button
+                ></td
               >
-                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
-              ></td
-            >
+              <td
+                ><button
+                  style="border: none; background: none;"
+                  data-toggle="modal"
+                  data-target="#deleteUC"
+                  on:click={() => getUseCaseToDelete(useCase)}
+                >
+                  <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+                ></td
+              >
+            {:else}
+              <td />
+              <td />
+            {/if}
           {/if}
         </tr>
       {/each}

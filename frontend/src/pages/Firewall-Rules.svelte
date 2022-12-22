@@ -116,7 +116,7 @@
         alert("Could not create Firewall Rules");
         console.log(error);
       });
-      
+
     firewallRule = {
       fwTypeId: null,
       contextId: null,
@@ -462,16 +462,18 @@
         <h3 style="margin-top: 15px; font-weight: bold;">Firewall Rules</h3>
       </div>
       <div class="col" />
-      <div class="col" style="text-align-last: right;">
-        <button
-          type="button"
-          class="btn"
-          data-toggle="modal"
-          data-target="#createFWR"
-          style="margin-top: 9px; background-color: #c73834; color: #fff"
-          >Add Firewall Rule</button
-        >
-      </div>
+      {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+        <div class="col" style="text-align-last: right;">
+          <button
+            type="button"
+            class="btn"
+            data-toggle="modal"
+            data-target="#createFWR"
+            style="margin-top: 9px; background-color: #c73834; color: #fff"
+            >Add Firewall Rule</button
+          >
+        </div>
+      {/if}
     </div>
   </div>
   <table class="table table-striped table-hover" id="allFirwallRules">
@@ -753,7 +755,7 @@
             ></td
           >
           <td>{fwr.firewallStatus}</td>
-          {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || $user.email === fwr.userMail}
+          {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk") && $user.email === fwr.userMail)}
             <td
               ><button
                 style="border: none; background: none;"
@@ -768,28 +770,33 @@
             >{:else}
             <td />
           {/if}
-          <td
-            ><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#editFW"
-              on:click={() => getFwToEdit(fwr)}
-              ><i
-                class="fa fa-pencil-square-o fa-lg"
-                aria-hidden="true"
-              /></button
-            ></td
-          >
-          <td
-            ><button
-              style="border: none; background: none;"
-              data-toggle="modal"
-              data-target="#deleteFWR"
-              on:click={() => getFwrToDelete(fwr)}
+          {#if ($isAuthenticated && $user.user_roles && $user.user_roles.includes("admin")) || ($isAuthenticated && $user.user_roles && $user.user_roles.includes("helpdesk"))}
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#editFW"
+                on:click={() => getFwToEdit(fwr)}
+                ><i
+                  class="fa fa-pencil-square-o fa-lg"
+                  aria-hidden="true"
+                /></button
+              ></td
             >
-              <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
-            ></td
-          >
+            <td
+              ><button
+                style="border: none; background: none;"
+                data-toggle="modal"
+                data-target="#deleteFWR"
+                on:click={() => getFwrToDelete(fwr)}
+              >
+                <i class="fa fa-trash-o fa-lg" aria-hidden="true" /></button
+              ></td
+            >
+          {:else}
+            <td />
+            <td />
+          {/if}
         </tr>
       {/each}
     </tbody>
