@@ -302,7 +302,7 @@
           </div>
           <div class="row mb-3">
             <div class="col">
-              <label class="form-label" for="subnet">Subent</label>
+              <label class="form-label" for="subnet">Subnet</label>
               <input
                 bind:value={networkObject.subnet}
                 class="form-control"
